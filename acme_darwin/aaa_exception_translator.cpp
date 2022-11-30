@@ -1,4 +1,4 @@
-﻿// Created on 2021-04-29 1:03 PM BRT <3TBS_!! Second celebration of Mummis Birthday 70!!
+// Created on 2021-04-29 1:03 PM BRT <3TBS_!! Second celebration of Mummis Birthday 70!!
 #include "framework.h"
 #include "exception_translator.h"
 #include "acme/exception/standard.h"
@@ -7,7 +7,7 @@
 #include "acme/user/nano/nano.h"
 
 
-namespace acme_posix
+namespace acme_darwin
 {
 
 

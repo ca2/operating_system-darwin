@@ -25,7 +25,7 @@
 #include "acme/exception/translator.h"
 
 
-namespace acme_posix
+namespace acme_darwin
 {
 
 class address_to_line :
