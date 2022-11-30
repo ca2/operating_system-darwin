@@ -4,15 +4,15 @@
 // 18:18 BRT
 
 
-#include "acme/filesystem/filesystem/acme_path.h"
+#include "acme_posix/acme_path.h"
 
 
-namespace acme_posix
+namespace acme_darwin
 {
 
 
    class CLASS_DECL_ACME acme_path :
-      virtual public ::acme_path
+      virtual public ::acme_posix::acme_path
    {
    public:
 
@@ -24,9 +24,9 @@ namespace acme_posix
       ~acme_path() override;
 
 
-      ::file::enum_type get_type(const char * path1) override;
-
-      ::file::path _final(const char * path) override;
+//      ::file::enum_type get_type(const char * path1) override;
+//
+//      ::file::path _final(const char * path) override;
 
 
    };
