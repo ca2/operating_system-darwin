@@ -145,7 +145,7 @@ void clipboard_received_func(GtkClipboard * clipboard, GtkSelectionData * select
 
       string strItem = stra[i];
 
-      strItem.begins_eat_ci("file://");
+      strItem.case_insensitive_begins_eat("file://");
 
       pdata->m_patha.add(::file::path(strItem));
 

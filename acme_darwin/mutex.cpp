@@ -1639,7 +1639,7 @@ namespace acme_posix
 
       string strName(lpszName);
 
-      if (strName.begins_ci("Global"))
+      if (strName.case_insensitive_begins("Global"))
       {
 
          path = "/var/tmp/ca2/lock/mutex/named";

@@ -677,7 +677,7 @@ namespace windowing_x11
 ////         string strHkl = straHkl[i];
 ////         HKL hkl;
 ////         strHkl.trim();
-////         if(strHkl.begins_eat_ci("0x"))
+////         if(strHkl.case_insensitive_begins_eat("0x"))
 ////         {
 ////            hkl = (HKL) ::hex::to_uptr(strHkl);
 ////         }

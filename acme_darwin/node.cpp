@@ -453,7 +453,7 @@ void node::initialize(::particle * pparticle)
 //
 //   string strName(lpszName);
 //
-//   if (strName.begins_ci("Global"))
+//   if (strName.case_insensitive_begins("Global"))
 //   {
 //
 //      path = "/var/tmp/ca2/lock/mutex/named";
@@ -834,7 +834,7 @@ void node::initialize(::particle * pparticle)
 //      if (status == 0)
 //      {
 //
-//         if (strExe.ends_ci("_app_core_clockverse"))
+//         if (strExe.case_insensitive_ends("_app_core_clockverse"))
 //         {
 //
 //            ::output_debug_string("app-core/clockverse");
@@ -854,7 +854,7 @@ void node::initialize(::particle * pparticle)
 //      else
 //      {
 //
-//         if (strExe.ends_ci("_app_core_clockverse"))
+//         if (strExe.case_insensitive_ends("_app_core_clockverse"))
 //         {
 //
 //            ::output_debug_string("app-core/clockverse");
@@ -1230,7 +1230,7 @@ void node::initialize(::particle * pparticle)
 //
 //            string strPath = path;
 //
-//            strPath.ends_eat_ci(" (deleted)");
+//            strPath.case_insensitive_ends_eat(" (deleted)");
 //
 //            //if (strTitle == strApp ||
 //               //  strTitle == strApp2)
