@@ -2307,7 +2307,7 @@ else if(detail == 3)
 
                         msg.oswindow->m_point = point;
 
-                        msg.m_atom = e_message_move;
+                        msg.m_atom = e_message_reposition;
                         msg.wParam = 0;
                         msg.lParam = point.lparam();
 

@@ -7,8 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07B657CF190F3CBF002DAADE /* libios_aura_posix.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B657B8190F3CBF002DAADE /* libios_aura_posix.a */; };
-		9A2BB8772654F8D400ABA8B9 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AC2D0022653DB2E00CC8096 /* libaura.dylib */; };
+		07B657CF190F3CBF002DAADE /* libios_aura_darwin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B657B8190F3CBF002DAADE /* libios_aura_darwin.a */; };
 		9A412446266C3FC500C3FF0E /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A412445266C3FC500C3FF0E /* libacme_posix.dylib */; };
 		9A412448266C3FC500C3FF0E /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A412447266C3FC500C3FF0E /* libapex.dylib */; };
 		9A41244A266C3FC500C3FF0E /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A412449266C3FC500C3FF0E /* libapex_posix.dylib */; };
@@ -45,68 +44,54 @@
 			remoteGlobalIDString = 07B657B7190F3CBF002DAADE;
 			remoteInfo = music_midi_core_audio_ios;
 		};
-		9A413D37266EDEA500C3FF0E /* PBXContainerItemProxy */ = {
+		9AE6DF7429645315008A1335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */;
+			containerPortal = 9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A0C1680264A29B800B5CC33;
-			remoteInfo = apex_posix;
+			remoteInfo = apex_darwin;
 		};
-		9A8E9ED1282A3362005FF778 /* PBXContainerItemProxy */ = {
+		9AE6DF7629645315008A1335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */;
+			containerPortal = 9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9A8E9E0E282A2FCA005FF778;
-			remoteInfo = ios_apex_posix;
+			remoteInfo = ios_apex_darwin;
 		};
-		9A951359282AF3BF009D7C28 /* PBXContainerItemProxy */ = {
+		9AE6DF7E29645377008A1335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */;
+			containerPortal = 9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteInfo = aura_posix;
+		};
+		9AE6DF8029645377008A1335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B657B8190F3CBF002DAADE;
+			remoteInfo = ios_aura_posix;
+		};
+		9AE6DF8229645377008A1335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 07B657C7190F3CBF002DAADE;
+			remoteInfo = music_midi_core_audio_iosTests;
+		};
+		9AE6DF8429645399008A1335 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 9A0C167F264A29B800B5CC33;
-			remoteInfo = apex_posix;
+			remoteInfo = apex_darwin;
 		};
-		9A95135B282AF3C8009D7C28 /* PBXContainerItemProxy */ = {
+		9AE6DF86296453A5008A1335 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
+			containerPortal = 9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9A98A6031771D67E000AE16E;
-			remoteInfo = aura;
-		};
-		9A95135D282AF3D4009D7C28 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A8E9DF4282A2FCA005FF778;
-			remoteInfo = ios_apex_posix;
-		};
-		9A95135F282AF3E1009D7C28 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A20198924772E9000A31CBF;
-			remoteInfo = ios_aura;
-		};
-		9AC2D0012653DB2E00CC8096 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9A98A6151771D67E000AE16E;
-			remoteInfo = aura;
-		};
-		9AC2D0052653DB2E00CC8096 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AE24D431904CEFE001AEFFB;
-			remoteInfo = aura_iosTests;
-		};
-		9AEA17C9275FFA31006437A3 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 9AEA1773275FF4F2006437A3;
-			remoteInfo = ios_aura;
+			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteInfo = aura_posix;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -123,16 +108,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		07B657B8190F3CBF002DAADE /* libios_aura_posix.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_aura_posix.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		07B657B8190F3CBF002DAADE /* libios_aura_darwin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libios_aura_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		07B657C7190F3CBF002DAADE /* music_midi_core_audio_iosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = music_midi_core_audio_iosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_posix.xcodeproj; path = ../apex_posix/apex_posix.xcodeproj; sourceTree = "<group>"; };
 		9A412445266C3FC500C3FF0E /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A412447266C3FC500C3FF0E /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A412449266C3FC500C3FF0E /* libapex_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A41244B266C3FE300C3FF0E /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A91C2AE2761845100FE3905 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		9A91C2B12761845100FE3905 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura.xcodeproj; path = ../../../source/app/aura/aura.xcodeproj; sourceTree = "<group>"; };
 		9AC2D00D2653DB5B00CC8096 /* shell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = shell.h; sourceTree = "<group>"; };
 		9AC2D0142653DB5B00CC8096 /* clipboard_data.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clipboard_data.h; sourceTree = "<group>"; };
 		9AC2D0152653DB5B00CC8096 /* framework.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
@@ -147,7 +130,9 @@
 		9AC2D0282653DB5B00CC8096 /* _library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _library.h; sourceTree = "<group>"; };
 		9AC2D0292653DB5B00CC8096 /* shell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = shell.cpp; sourceTree = "<group>"; };
 		9AC2D02C2653DB5B00CC8096 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
-		A1CFD778154F5EAA007447E2 /* libaura_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libaura_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_darwin.xcodeproj; path = ../apex_darwin/apex_darwin.xcodeproj; sourceTree = "<group>"; };
+		9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../operating-system-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = "<group>"; };
+		A1CFD778154F5EAA007447E2 /* libaura_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				07B657CF190F3CBF002DAADE /* libios_aura_posix.a in Frameworks */,
+				07B657CF190F3CBF002DAADE /* libios_aura_darwin.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,7 +161,6 @@
 				9A412446266C3FC500C3FF0E /* libacme_posix.dylib in Frameworks */,
 				9A412448266C3FC500C3FF0E /* libapex.dylib in Frameworks */,
 				9A41244A266C3FC500C3FF0E /* libapex_posix.dylib in Frameworks */,
-				9A2BB8772654F8D400ABA8B9 /* libaura.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,25 +178,6 @@
 				9A412449266C3FC500C3FF0E /* libapex_posix.dylib */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9A413D34266EDEA500C3FF0E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A413D38266EDEA500C3FF0E /* apex_posix.dylib */,
-				9A8E9ED2282A3362005FF778 /* libios_apex_posix.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		9AC2CFFA2653DB2E00CC8096 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9AC2D0022653DB2E00CC8096 /* libaura.dylib */,
-				9AEA17CA275FFA31006437A3 /* libios_aura.a */,
-				9AC2D0062653DB2E00CC8096 /* aura_iosTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9AC2D0092653DB5B00CC8096 /* aura_posix */ = {
@@ -236,11 +201,30 @@
 			name = aura_posix;
 			sourceTree = "<group>";
 		};
+		9AE6DF7029645315008A1335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AE6DF7529645315008A1335 /* libapex_darwin.dylib */,
+				9AE6DF7729645315008A1335 /* libios_apex_darwin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9AE6DF7929645377008A1335 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9AE6DF7F29645377008A1335 /* libaura_posix.dylib */,
+				9AE6DF8129645377008A1335 /* libios_aura_posix.a */,
+				9AE6DF8329645377008A1335 /* music_midi_core_audio_iosTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		A1CFD76D154F5EA7007447E2 = {
 			isa = PBXGroup;
 			children = (
-				9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */,
-				9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */,
+				9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */,
+				9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */,
 				9AC2D0092653DB5B00CC8096 /* aura_posix */,
 				07B657B9190F3CBF002DAADE /* Frameworks */,
 				A1CFD779154F5EAA007447E2 /* Products */,
@@ -250,8 +234,8 @@
 		A1CFD779154F5EAA007447E2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A1CFD778154F5EAA007447E2 /* libaura_posix.dylib */,
-				07B657B8190F3CBF002DAADE /* libios_aura_posix.a */,
+				A1CFD778154F5EAA007447E2 /* libaura_darwin.dylib */,
+				07B657B8190F3CBF002DAADE /* libios_aura_darwin.a */,
 				07B657C7190F3CBF002DAADE /* music_midi_core_audio_iosTests.xctest */,
 			);
 			name = Products;
@@ -278,9 +262,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		07B657B7190F3CBF002DAADE /* ios_aura_posix */ = {
+		07B657B7190F3CBF002DAADE /* ios_aura_darwin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 07B657DC190F3CBF002DAADE /* Build configuration list for PBXNativeTarget "ios_aura_posix" */;
+			buildConfigurationList = 07B657DC190F3CBF002DAADE /* Build configuration list for PBXNativeTarget "ios_aura_darwin" */;
 			buildPhases = (
 				07B657B4190F3CBF002DAADE /* Sources */,
 				07B657B5190F3CBF002DAADE /* Frameworks */,
@@ -289,12 +273,10 @@
 			buildRules = (
 			);
 			dependencies = (
-				9A951360282AF3E1009D7C28 /* PBXTargetDependency */,
-				9A95135E282AF3D4009D7C28 /* PBXTargetDependency */,
 			);
-			name = ios_aura_posix;
+			name = ios_aura_darwin;
 			productName = music_midi_core_audio_ios;
-			productReference = 07B657B8190F3CBF002DAADE /* libios_aura_posix.a */;
+			productReference = 07B657B8190F3CBF002DAADE /* libios_aura_darwin.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		07B657C6190F3CBF002DAADE /* music_midi_core_audio_iosTests */ = {
@@ -315,9 +297,9 @@
 			productReference = 07B657C7190F3CBF002DAADE /* music_midi_core_audio_iosTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A1CFD777154F5EAA007447E2 /* aura_posix */ = {
+		A1CFD777154F5EAA007447E2 /* aura_darwin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1CFD77C154F5EAA007447E2 /* Build configuration list for PBXNativeTarget "aura_posix" */;
+			buildConfigurationList = A1CFD77C154F5EAA007447E2 /* Build configuration list for PBXNativeTarget "aura_darwin" */;
 			buildPhases = (
 				A1CFD776154F5EAA007447E2 /* Headers */,
 				A1CFD774154F5EAA007447E2 /* Sources */,
@@ -326,12 +308,12 @@
 			buildRules = (
 			);
 			dependencies = (
-				9A95135C282AF3C8009D7C28 /* PBXTargetDependency */,
-				9A95135A282AF3BF009D7C28 /* PBXTargetDependency */,
+				9AE6DF87296453A5008A1335 /* PBXTargetDependency */,
+				9AE6DF8529645399008A1335 /* PBXTargetDependency */,
 			);
-			name = aura_posix;
+			name = aura_darwin;
 			productName = os;
-			productReference = A1CFD778154F5EAA007447E2 /* libaura_posix.dylib */;
+			productReference = A1CFD778154F5EAA007447E2 /* libaura_darwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -348,7 +330,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A1CFD772154F5EA7007447E2 /* Build configuration list for PBXProject "aura_posix" */;
+			buildConfigurationList = A1CFD772154F5EA7007447E2 /* Build configuration list for PBXProject "aura_darwin" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -361,57 +343,57 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A413D34266EDEA500C3FF0E /* Products */;
-					ProjectRef = 9A2BB87E2654F8FB00ABA8B9 /* apex_posix.xcodeproj */;
+					ProductGroup = 9AE6DF7029645315008A1335 /* Products */;
+					ProjectRef = 9AE6DF6F29645315008A1335 /* apex_darwin.xcodeproj */;
 				},
 				{
-					ProductGroup = 9AC2CFFA2653DB2E00CC8096 /* Products */;
-					ProjectRef = 9AC2CFF92653DB2E00CC8096 /* aura.xcodeproj */;
+					ProductGroup = 9AE6DF7929645377008A1335 /* Products */;
+					ProjectRef = 9AE6DF7829645377008A1335 /* aura_posix.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				A1CFD777154F5EAA007447E2 /* aura_posix */,
-				07B657B7190F3CBF002DAADE /* ios_aura_posix */,
+				A1CFD777154F5EAA007447E2 /* aura_darwin */,
+				07B657B7190F3CBF002DAADE /* ios_aura_darwin */,
 				07B657C6190F3CBF002DAADE /* music_midi_core_audio_iosTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A413D38266EDEA500C3FF0E /* apex_posix.dylib */ = {
+		9AE6DF7529645315008A1335 /* libapex_darwin.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libapex_posix.dylib;
-			remoteRef = 9A413D37266EDEA500C3FF0E /* PBXContainerItemProxy */;
+			path = libapex_darwin.dylib;
+			remoteRef = 9AE6DF7429645315008A1335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A8E9ED2282A3362005FF778 /* libios_apex_posix.a */ = {
+		9AE6DF7729645315008A1335 /* libios_apex_darwin.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libios_apex_posix.a;
-			remoteRef = 9A8E9ED1282A3362005FF778 /* PBXContainerItemProxy */;
+			path = libios_apex_darwin.a;
+			remoteRef = 9AE6DF7629645315008A1335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AC2D0022653DB2E00CC8096 /* libaura.dylib */ = {
+		9AE6DF7F29645377008A1335 /* libaura_posix.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = libaura.dylib;
-			remoteRef = 9AC2D0012653DB2E00CC8096 /* PBXContainerItemProxy */;
+			path = libaura_posix.dylib;
+			remoteRef = 9AE6DF7E29645377008A1335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AC2D0062653DB2E00CC8096 /* aura_iosTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = aura_iosTests.xctest;
-			remoteRef = 9AC2D0052653DB2E00CC8096 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9AEA17CA275FFA31006437A3 /* libios_aura.a */ = {
+		9AE6DF8129645377008A1335 /* libios_aura_posix.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libios_aura.a;
-			remoteRef = 9AEA17C9275FFA31006437A3 /* PBXContainerItemProxy */;
+			path = libios_aura_posix.a;
+			remoteRef = 9AE6DF8029645377008A1335 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AE6DF8329645377008A1335 /* music_midi_core_audio_iosTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = music_midi_core_audio_iosTests.xctest;
+			remoteRef = 9AE6DF8229645377008A1335 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -465,28 +447,18 @@
 /* Begin PBXTargetDependency section */
 		07B657CE190F3CBF002DAADE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 07B657B7190F3CBF002DAADE /* ios_aura_posix */;
+			target = 07B657B7190F3CBF002DAADE /* ios_aura_darwin */;
 			targetProxy = 07B657CD190F3CBF002DAADE /* PBXContainerItemProxy */;
 		};
-		9A95135A282AF3BF009D7C28 /* PBXTargetDependency */ = {
+		9AE6DF8529645399008A1335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = apex_posix;
-			targetProxy = 9A951359282AF3BF009D7C28 /* PBXContainerItemProxy */;
+			name = apex_darwin;
+			targetProxy = 9AE6DF8429645399008A1335 /* PBXContainerItemProxy */;
 		};
-		9A95135C282AF3C8009D7C28 /* PBXTargetDependency */ = {
+		9AE6DF87296453A5008A1335 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = aura;
-			targetProxy = 9A95135B282AF3C8009D7C28 /* PBXContainerItemProxy */;
-		};
-		9A95135E282AF3D4009D7C28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_apex_posix;
-			targetProxy = 9A95135D282AF3D4009D7C28 /* PBXContainerItemProxy */;
-		};
-		9A951360282AF3E1009D7C28 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ios_aura;
-			targetProxy = 9A95135F282AF3E1009D7C28 /* PBXContainerItemProxy */;
+			name = aura_posix;
+			targetProxy = 9AE6DF86296453A5008A1335 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -787,7 +759,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		07B657DC190F3CBF002DAADE /* Build configuration list for PBXNativeTarget "ios_aura_posix" */ = {
+		07B657DC190F3CBF002DAADE /* Build configuration list for PBXNativeTarget "ios_aura_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				07B657D8190F3CBF002DAADE /* Debug */,
@@ -805,7 +777,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1CFD772154F5EA7007447E2 /* Build configuration list for PBXProject "aura_posix" */ = {
+		A1CFD772154F5EA7007447E2 /* Build configuration list for PBXProject "aura_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1CFD77A154F5EAA007447E2 /* Debug */,
@@ -814,7 +786,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1CFD77C154F5EAA007447E2 /* Build configuration list for PBXNativeTarget "aura_posix" */ = {
+		A1CFD77C154F5EAA007447E2 /* Build configuration list for PBXNativeTarget "aura_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A1CFD77D154F5EAA007447E2 /* Debug */,
