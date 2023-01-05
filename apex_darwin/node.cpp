@@ -1,11 +1,11 @@
-﻿//
+//
 // Created by camilo on 19/01/2021. --<33ThomasBS!!
 //
 #include "framework.h"
 #include "node.h"
 #include "acme/filesystem/filesystem/acme_file.h"
 #include "acme/platform/system.h"
-#include "apex/operating_system/freedesktop/desktop_file.h"
+//#include "apex/operating_system/freedesktop/desktop_file.h"
 #include "apex/platform/application.h"
 
 
@@ -44,43 +44,43 @@ namespace apex_posix
    void node::on_start_application(::apex::application *papplication)
    {
 
-#if !defined(RASPBIAN) && !defined(ANDROID)
-
-      try
-      {
-
-         auto psystem = acmesystem();
-
-         auto pnode = psystem->node()->m_papexnode;
-
-         auto papp = papplication;
-
-         ::file::path path = pnode->get_desktop_file_path(papp);
-
-         if(path.has_char() && !acmefile()->exists(path))
-         {
-
-            auto pfile = papp->__create_new< ::freedesktop::desktop_file >();
-
-            pfile->set_app_id(papp->m_strAppId);
-
-            pfile->set_file_path(path);
-
-            pfile->create();
-
-            pfile->write();
-
-         }
-
-      }
-      catch(...)
-      {
-
-         TRACE("Could not create .desktop shortcut file for the Linux papp for the current user.");
-
-      }
-
-#endif
+//#if !defined(RASPBIAN) && !defined(ANDROID)
+//
+//      try
+//      {
+//
+//         auto psystem = acmesystem();
+//
+//         auto pnode = psystem->node()->m_papexnode;
+//
+//         auto papp = papplication;
+//
+//         ::file::path path = pnode->get_desktop_file_path(papp);
+//
+//         if(path.has_char() && !acmefile()->exists(path))
+//         {
+//
+//            auto pfile = papp->__create_new< ::freedesktop::desktop_file >();
+//
+//            pfile->set_app_id(papp->m_strAppId);
+//
+//            pfile->set_file_path(path);
+//
+//            pfile->create();
+//
+//            pfile->write();
+//
+//         }
+//
+//      }
+//      catch(...)
+//      {
+//
+//         TRACE("Could not create .desktop shortcut file for the Linux papp for the current user.");
+//
+//      }
+//
+//#endif
 
    }
 
