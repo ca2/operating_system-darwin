@@ -3,23 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>07B657B7190F3CBF002DAADE</key>
+		<key>aura_darwin.xcscheme_^#shared#^_</key>
 		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>07B657C6190F3CBF002DAADE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A1CFD777154F5EAA007447E2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 </dict>
