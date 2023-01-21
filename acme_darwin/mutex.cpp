@@ -1,4 +1,4 @@
-﻿//
+//
 // Created by camilo on 2022-10-25 13:42 <3ThomasBorregaardSorensen!!
 //
 #include "framework.h"
@@ -317,7 +317,7 @@ namespace acme_posix
 
          path /= pstrName;
 
-         ::get_system()->m_pacmedirectory->create(path.folder());
+         acmesystem()->m_pacmedirectory->create(path.folder());
 
          m_iFd = open(path, O_RDWR | O_CREAT, S_IRWXU);
 
