@@ -107,13 +107,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9AFD80B6297B584000BAD9DD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -218,7 +211,6 @@
 			buildPhases = (
 				9AFD80B4297B584000BAD9DD /* Headers */,
 				9AFD80B5297B584000BAD9DD /* Sources */,
-				9AFD80B6297B584000BAD9DD /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -562,6 +554,11 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CUBE,
+					"DEBUG=1",
+					"$(inherited)",
+				);
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = macos;
 				SKIP_INSTALL = YES;
@@ -596,6 +593,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
 				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = CUBE;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = macos;
 				SKIP_INSTALL = YES;

@@ -324,11 +324,15 @@ namespace acme_posix
          if(m_iFd < 0)
          {
 
-            int iErr = errno;
+            int iErrNo = errno;
+            
+            auto estatus = errno_status(iErrNo);
+            
+            auto errorcode = errno_error_code(iErrNo);
 
-            const char * pszError = strerror(iErr);
+            const char * pszError = strerror(iErrNo);
 
-            throw ::exception(error_resource);
+            throw ::exception(estatus, { errorcode }, "open < 0", pszError);
 
          }
 
@@ -754,13 +758,19 @@ namespace acme_posix
       if (m_strName.has_char())
       {
 
-         int rc = pthread_mutex_lock(&m_mutex);
-
-         if (rc < 0)
+         int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+         
+         if(iErrorNumberLock != 0)
          {
-
-            throw ::exception(error_failed);
-
+            
+            auto estatus = errno_status(iErrorNumberLock);
+            
+            auto errorcode = errno_error_code(iErrorNumberLock);
+            
+            const char * pszError = strerror(iErrorNumberLock);
+            
+            throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+            
          }
 
          auto tickStart = ::time::now();
@@ -776,9 +786,20 @@ namespace acme_posix
 
                   m_count++;
 
-                  int iError = pthread_mutex_unlock(&m_mutex);
-
-                  ASSERT(iError == 0);
+                  int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
+                  
+                  if(iErrNoUnlock != 0)
+                  {
+                     
+                     auto estatus = errno_status(iErrNoUnlock);
+                     
+                     auto errorcode = errno_error_code(iErrNoUnlock);
+                     
+                     const char * pszError = strerror(iErrNoUnlock);
+                     
+                     throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock != 0", pszError);
+                     
+                  }
 
                   return true;
 
@@ -797,10 +818,21 @@ namespace acme_posix
 
                   m_thread = pthread_self();
 
-                  int iError = pthread_mutex_unlock(&m_mutex);
-
-                  ASSERT(iError == 0);
-
+                  int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
+                  
+                  if(iErrNoUnlock != 0)
+                  {
+                     
+                     auto estatus = errno_status(iErrNoUnlock);
+                     
+                     auto errorcode = errno_error_code(iErrNoUnlock);
+                     
+                     const char * pszError = strerror(iErrNoUnlock);
+                     
+                     throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock != 0", pszError);
+                     
+                  }
+                  
                   return true;
 
                }
@@ -812,25 +844,37 @@ namespace acme_posix
                   if (rc != EAGAIN && rc != EACCES)
                   {
 
-                     int iError = pthread_mutex_unlock(&m_mutex);
-
-                     ASSERT(iError == 0);
-
-                     throw ::exception(error_failed);
-
+                     int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
+                     
+                     if(iErrNoUnlock != 0)
+                     {
+                        
+                        auto estatus = errno_status(iErrNoUnlock);
+                        
+                        auto errorcode = errno_error_code(iErrNoUnlock);
+                        
+                        const char * pszError = strerror(iErrNoUnlock);
+                        
+                        throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock != 0", pszError);
+                        
+                     }
                   }
 
                }
 
-               int iError = pthread_mutex_unlock(&m_mutex);
-
-               if (iError < 0)
+               int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
+               
+               if(iErrNoUnlock != 0)
                {
-
-                  ASSERT(false);
-
-                  throw ::exception(error_failed);
-
+                  
+                  auto estatus = errno_status(iErrNoUnlock);
+                  
+                  auto errorcode = errno_error_code(iErrNoUnlock);
+                  
+                  const char * pszError = strerror(iErrNoUnlock);
+                  
+                  throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock != 0", pszError);
+                  
                }
 
                auto tickElapsed = tickStart.elapsed();
@@ -844,15 +888,22 @@ namespace acme_posix
 
                preempt(minimum_maximum((timeWait - tickElapsed) / 50, 1_ms, 1000_ms));
 
-               rc = pthread_mutex_lock(&m_mutex);
-
-               if (rc < 0)
+               
+               int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+               
+               if(iErrorNumberLock != 0)
                {
-
-                  throw ::exception(error_failed);
-
+                  
+                  auto estatus = errno_status(iErrorNumberLock);
+                  
+                  auto errorcode = errno_error_code(iErrorNumberLock);
+                  
+                  const char * pszError = strerror(iErrorNumberLock);
+                  
+                  throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+                  
                }
-
+               
             }
 
          }
@@ -915,14 +966,20 @@ namespace acme_posix
    #if defined(MUTEX_COND_TIMED)
          {
 
-         int iErrorLock = pthread_mutex_lock(&m_mutex);
-
-         if(iErrorLock != 0)
-         {
-
-            throw ::exception(error_failed);
-
-         }
+            int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+            
+            if(iErrorNumberLock != 0)
+            {
+               
+               auto estatus = errno_status(iErrorNumberLock);
+               
+               auto errorcode = errno_error_code(iErrorNumberLock);
+               
+               const char * pszError = strerror(iErrorNumberLock);
+               
+               throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+               
+            }
 
          bool bFirst = true;
 
@@ -1145,13 +1202,19 @@ namespace acme_posix
       if (m_strName.has_char())
       {
 
-         int rc = pthread_mutex_lock(&m_mutex);
-
-         if (rc < 0)
+         int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+         
+         if(iErrorNumberLock != 0)
          {
-
-            throw ::exception(error_failed);
-
+            
+            auto estatus = errno_status(iErrorNumberLock);
+            
+            auto errorcode = errno_error_code(iErrorNumberLock);
+            
+            const char * pszError = strerror(iErrorNumberLock);
+            
+            throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+            
          }
 
          if (m_count > 0 && pthread_equal(m_thread, pthread_self()))
@@ -1200,7 +1263,7 @@ namespace acme_posix
             else
             {
 
-               rc = lockf(m_iFd, F_LOCK, 0);
+               auto rc = lockf(m_iFd, F_LOCK, 0);
 
                if (rc == 0)
                {
@@ -1224,18 +1287,23 @@ namespace acme_posix
                else
                {
 
-                  rc = errno;
+                  auto rc = errno;
 
                   if (rc != EAGAIN && rc != EACCES)
                   {
 
-                     int rc = pthread_mutex_unlock(&m_mutex);
+                     int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
 
-                     if(rc < 0)
+                     if(iErrNoUnlock != 0)
                      {
 
-                        throw ::exception(error_failed);
+                        auto estatus = errno_status(iErrNoUnlock);
+                        
+                        auto errorcode = errno_error_code(iErrNoUnlock);
+                        
+                        auto pszError = strerror(iErrNoUnlock);
 
+                        throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock failed", pszError);
                      }
 
                      throw ::exception(error_failed);
@@ -1246,26 +1314,38 @@ namespace acme_posix
 
             }
 
-            int rc = pthread_mutex_unlock(&m_mutex);
+            int iErrNoUnlock = pthread_mutex_unlock(&m_mutex);
 
-            if (rc < 0)
+            if (iErrNoUnlock != 0)
             {
 
-               throw ::exception(error_failed);
+               auto estatus = errno_status(iErrNoUnlock);
+               
+               auto errorcode = errno_error_code(iErrNoUnlock);
+               
+               auto pszError = strerror(iErrNoUnlock);
 
+               throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock failed", pszError);
+               
             }
 
             preempt(100_ms);
 
-            rc = pthread_mutex_lock(&m_mutex);
-
-            if (rc < 0)
+            int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+            
+            if(iErrorNumberLock != 0)
             {
-
-               throw ::exception(error_failed);
-
+               
+               auto estatus = errno_status(iErrorNumberLock);
+               
+               auto errorcode = errno_error_code(iErrorNumberLock);
+               
+               const char * pszError = strerror(iErrorNumberLock);
+               
+               throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+               
             }
-
+            
          }
 
          //return ::success;
@@ -1301,14 +1381,20 @@ namespace acme_posix
    #ifdef MUTEX_COND_TIMED
          {
 
-         int iErrorLock = pthread_mutex_lock(&m_mutex);
-
-         if(iErrorLock != 0)
-         {
-
-            throw ::exception(error_failed);
-
-         }
+            int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+            
+            if(iErrorNumberLock != 0)
+            {
+               
+               auto estatus = errno_status(iErrorNumberLock);
+               
+               auto errorcode = errno_error_code(iErrorNumberLock);
+               
+               const char * pszError = strerror(iErrorNumberLock);
+               
+               throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+               
+            }
 
          while ((m_thread != 0) && !pthread_equal(m_thread, pthread_self()))
          {
@@ -1318,9 +1404,13 @@ namespace acme_posix
             if(iErrorCondWait != 0)
             {
 
-               int iErrorUnlock1 = pthread_mutex_unlock(&m_mutex);
+               auto estatus = errno_status(iErrorCondWait);
+               
+               auto errorcode = errno_error_code(iErrorCondWait);
+               
+               auto pszError = strerror(iErrorCondWait);
 
-               throw ::exception(error_failed);
+               throw ::exception(estatus, { errorcode }, "pthread_cond_wait failed", pszError);
 
             }
 
@@ -1335,13 +1425,19 @@ namespace acme_posix
 
          m_count++;
 
-         int iErrorUnlock2 = pthread_mutex_unlock(&m_mutex);
+         auto iErrNoUnlock2 = pthread_mutex_unlock(&m_mutex);
 
-         if(iErrorUnlock2 != 0)
+         if(iErrNoUnlock2 != 0)
          {
+            
+            auto estatus = errno_status(iErrNoUnlock2);
+            
+            auto errorcode = errno_error_code(iErrNoUnlock2);
+            
+            auto pszError = strerror(iErrNoUnlock2);
 
-            throw ::exception(error_failed);
-
+            throw ::exception(estatus, { errorcode }, "pthread_mutex_unlock failed", pszError);
+            
          }
 
       }
@@ -1350,13 +1446,19 @@ namespace acme_posix
 
       {
 
-         int irc = pthread_mutex_lock(&m_mutex);
-
-         if (irc)
+         int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+         
+         if(iErrorNumberLock != 0)
          {
-
-            throw ::exception(error_failed);
-
+            
+            auto estatus = errno_status(iErrorNumberLock);
+            
+            auto errorcode = errno_error_code(iErrorNumberLock);
+            
+            const char * pszError = strerror(iErrorNumberLock);
+            
+            throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+            
          }
 
       }
@@ -1411,15 +1513,20 @@ namespace acme_posix
       if (m_strName.has_char())
       {
 
-         int rc = pthread_mutex_lock(&m_mutex);
-
-         if (rc < 0)
+         int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+         
+         if(iErrorNumberLock != 0)
          {
-
-            throw ::exception(error_failed);
-
+            
+            auto estatus = errno_status(iErrorNumberLock);
+            
+            auto errorcode = errno_error_code(iErrorNumberLock);
+            
+            const char * pszError = strerror(iErrorNumberLock);
+            
+            throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+            
          }
-
          if (!pthread_equal(m_thread, pthread_self()))
          {
 
@@ -1433,7 +1540,7 @@ namespace acme_posix
 
          }
 
-         rc = 0;
+         int rc = 0;
 
          if (m_count > 1)
          {
@@ -1491,15 +1598,22 @@ namespace acme_posix
 
          {
 
-         int iErrorLock = pthread_mutex_lock(&m_mutex);
-
-         if(iErrorLock != 0)
-         {
-
-            throw ::exception(error_failed);
-
-         }
-
+            int iErrorNumberLock = pthread_mutex_lock(&m_mutex);
+            
+            if(iErrorNumberLock != 0)
+            {
+               
+               auto estatus = errno_status(iErrorNumberLock);
+               
+               auto errorcode = errno_error_code(iErrorNumberLock);
+               
+               const char * pszError = strerror(iErrorNumberLock);
+               
+               throw ::exception(estatus, { errorcode }, "pthread_mutex_lock != 0", pszError);
+               
+            }
+            
+            
          if(!pthread_equal(m_thread, pthread_self()))
          {
 
