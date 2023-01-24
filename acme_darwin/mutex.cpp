@@ -1643,7 +1643,22 @@ namespace acme_posix
 
                int iErrorUnlock2 = pthread_mutex_unlock(&m_mutex);
 
-               throw ::exception(error_failed);
+               if(iErrorUnlock2 != 0)
+               {
+                  
+                  auto estatus = errno_status(iErrorUnlock2);
+                
+                  auto errorcode = errno_error_code(iErrorUnlock2);
+                  
+                  throw ::exception(estatus, {errorcode}, "pthread_mutex_unlock != 0");
+                  
+               }
+               
+               auto estatus = errno_status(iErrorSignal);
+             
+               auto errorcode = errno_error_code(iErrorSignal);
+               
+               throw ::exception(estatus, {errorcode}, "pthread_cond_signal != 0");
 
             }
 

@@ -710,7 +710,7 @@ namespace windowing_x11
 
 //    x11_get_window_rect(display, oswindow->window(), rectangle);
 
-//    //r = oswindow->m_pimpl->m_puserinteraction->get_window_rect();
+//    //r = oswindow->m_pimpl->m_puserinteraction->window_rectangle();
 
 //    string strTopic = x11_get_name(display, oswindow->window());
 
@@ -2493,7 +2493,7 @@ else if(detail == 3)
 //
 //      ::rectangle_i32 r;
 //
-//      get_window_rect(msg.oswindow, &r);
+//      window_rectangle(msg.oswindow, &r);
 //
 //      int l1 = r.left;
 //      int t1 = r.top;
@@ -2915,7 +2915,7 @@ else if(detail == 3)
 
 
 
-//int_bool get_window_rect(oswindow hwnd, RECTANGLE_I32 * prectangle)
+//int_bool window_rectangle(oswindow hwnd, RECTANGLE_I32 * prectangle)
 //{
 //
 //   synchronous_lock synchronouslock(user_synchronization());
@@ -2925,7 +2925,7 @@ else if(detail == 3)
 //   if(d.is_null())
 //   {
 //
-//      windowing_output_debug_string("\n::get_window_rect 1.1");
+//      windowing_output_debug_string("\n::window_rectangle 1.1");
 //
 //      return false;
 //
@@ -2942,7 +2942,7 @@ else if(detail == 3)
 //
 //   synchronous_lock synchronouslock(window->m_pimpl->m_puserinteraction->synchronization());
 //
-//   window->m_pimpl->m_puserinteraction->get_window_rect(prectangle);
+//   window->m_pimpl->m_puserinteraction->window_rectangle(prectangle);
 //
 //   offset_rect(prectangle, -prectangle->left, -prectangle->top);
 //
@@ -3651,7 +3651,7 @@ bool x11_get_client_rect(Display * pdisplay, Window window, RECTANGLE_I32 *prect
    if (XGetWindowAttributes(pdisplay, window, &attr) == 0)
    {
 
-      windowing_output_debug_string("\n::get_client_rect 1.2 (xgetwindowattributes failed");
+      windowing_output_debug_string("\n::client_rectangle 1.2 (xgetwindowattributes failed");
 
       return false;
 
@@ -3665,7 +3665,7 @@ bool x11_get_client_rect(Display * pdisplay, Window window, RECTANGLE_I32 *prect
 
    prectangle->bottom = prectangle->top + attr.height;
 
-   windowing_output_debug_string("\n::get_client_rect 2");
+   windowing_output_debug_string("\n::client_rectangle 2");
 
    return true;
 

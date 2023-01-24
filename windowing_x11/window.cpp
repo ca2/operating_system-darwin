@@ -575,7 +575,7 @@ namespace windowing_x11
 
          //::rectangle_i32 rect32;
 
-         //(::get_window_rect((oswindow) get_handle(), rect32))
+         //(::window_rectangle((oswindow) get_handle(), rect32))
          {
 
 
@@ -2877,7 +2877,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   ::e_status window::get_window_rect(RECTANGLE_I32 * prectangle)
+   ::e_status window::window_rectangle(RECTANGLE_I32 * prectangle)
    {
 
       return x11_get_window_rect(prectangle);
@@ -2893,7 +2893,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   ::e_status window::get_client_rect(RECTANGLE_I32 * prectangle)
+   ::e_status window::client_rectangle(RECTANGLE_I32 * prectangle)
    {
 
       return x11_get_client_rect(prectangle);
@@ -2942,7 +2942,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
       x11_get_window_rect(rectangle);
 
-//r = oswindow->m_puserinteractionimpl->m_puserinteraction->get_window_rect();
+//r = oswindow->m_puserinteractionimpl->m_puserinteraction->window_rectangle();
 
 //string strTopic = x11_get_name(x11_display(), Window());
 
@@ -3737,7 +3737,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 //
 //   }
 
-//   int_bool window::get_client_rect(RECTANGLE_I32 *prectangle)
+//   int_bool window::client_rectangle(RECTANGLE_I32 *prectangle)
 //   {
 //
 //      synchronous_lock synchronouslock(user_synchronization());
@@ -3747,7 +3747,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 //      if (x11_display()->is_null())
 //      {
 //
-//         windowing_output_debug_string("\n::get_client_rect 1.1 (display is null)");
+//         windowing_output_debug_string("\n::client_rectangle 1.1 (display is null)");
 //
 //         return false;
 //
@@ -3758,7 +3758,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 //      if (XGetWindowAttributes(Display(), Window(), &attr) == 0)
 //      {
 //
-//         windowing_output_debug_string("\n::get_client_rect 1.2 (xgetwindowattributes failed");
+//         windowing_output_debug_string("\n::client_rectangle 1.2 (xgetwindowattributes failed");
 //
 //         return false;
 //
@@ -3772,7 +3772,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 //
 //      prectangle->bottom = prectangle->top + attr.height;
 //
-//      windowing_output_debug_string("\n::get_client_rect 2");
+//      windowing_output_debug_string("\n::client_rectangle 2");
 //
 //      return true;
 //
