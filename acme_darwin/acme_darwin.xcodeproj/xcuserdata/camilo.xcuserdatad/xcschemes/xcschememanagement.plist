@@ -7,7 +7,7 @@
 		<key>_acme_darwin.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>19</integer>
+			<integer>10</integer>
 		</dict>
 		<key>acme_darwin copy.xcscheme_^#shared#^_</key>
 		<dict>
@@ -17,7 +17,7 @@
 		<key>acme_darwin.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>17</integer>
+			<integer>5</integer>
 		</dict>
 	</dict>
 </dict>
