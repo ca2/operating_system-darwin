@@ -1,15 +1,15 @@
 #pragma once
 
 
-#include "apex/platform/os_context.h"
+#include "apex_posix/os_context.h"
 
 
-namespace apex_posix
+namespace apex_darwin
 {
 
 
    class CLASS_DECL_APEX os_context :
-      virtual public ::os_context
+      virtual public ::apex_posix::os_context
    {
    public:
 
@@ -27,7 +27,7 @@ namespace apex_posix
    };
 
 
-} // namespace apex_posix
+} // namespace apex_darwin
 
 
 

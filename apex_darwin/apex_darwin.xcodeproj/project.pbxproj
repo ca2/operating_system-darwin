@@ -6,7 +6,80 @@
 	objectVersion = 56;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		9A865EBE29928B910042465F /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E4729928A770042465F /* node.cpp */; };
+		9A865EBF29928B980042465F /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6929928A770042465F /* _factory.cpp */; };
+		9A865EC429928E3C0042465F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC329928E3C0042465F /* libacme.dylib */; };
+		9A865EC629928E430042465F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC529928E430042465F /* libapex.dylib */; };
+		9A865ECF29928E720042465F /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECE29928E720042465F /* libacme_posix.dylib */; };
+		9A865ED029928E850042465F /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865E3B29928A5C0042465F /* libapex_posix.dylib */; };
+		9A865ED82992950A0042465F /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* libacme_darwin.dylib */; };
+		9A865EE72992979E0042465F /* os_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6529928A770042465F /* os_context.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A865E3A29928A5C0042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A0C1680264A29B800B5CC33;
+			remoteInfo = apex_posix;
+		};
+		9A865E3C29928A5C0042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9A8E9E0E282A2FCA005FF778;
+			remoteInfo = ios_apex_posix;
+		};
+		9A865E3E29928A6A0042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0C167F264A29B800B5CC33;
+			remoteInfo = apex_posix;
+		};
+		9A865EB829928B780042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AFD807F297B578700BAD9DD;
+			remoteInfo = acme_darwin;
+		};
+		9A865EBA29928B780042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AFD80BA297B584000BAD9DD;
+			remoteInfo = _acme_darwin;
+		};
+		9A865EBC29928B820042465F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AFD807E297B578700BAD9DD;
+			remoteInfo = acme_darwin;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9A865E3529928A5C0042465F /* apex_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_posix.xcodeproj; path = "../../operating-system-posix/apex_posix/apex_posix.xcodeproj"; sourceTree = "<group>"; };
+		9A865E4529928A770042465F /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		9A865E4729928A770042465F /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
+		9A865E5329928A770042465F /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		9A865E5B29928A770042465F /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
+		9A865E5C29928A770042465F /* file_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_context.h; sourceTree = "<group>"; };
+		9A865E5D29928A770042465F /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
+		9A865E6029928A770042465F /* os_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = os_context.h; sourceTree = "<group>"; };
+		9A865E6129928A770042465F /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		9A865E6329928A770042465F /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		9A865E6529928A770042465F /* os_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = os_context.cpp; sourceTree = "<group>"; };
+		9A865E6929928A770042465F /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
+		9A865E6A29928A770042465F /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
+		9A865EB329928B780042465F /* acme_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_darwin.xcodeproj; path = ../acme_darwin/acme_darwin.xcodeproj; sourceTree = "<group>"; };
+		9A865EC329928E3C0042465F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A865EC529928E430042465F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A865ECE29928E720042465F /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -15,16 +88,72 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A865ED82992950A0042465F /* libacme_darwin.dylib in Frameworks */,
+				9A865ED029928E850042465F /* libapex_posix.dylib in Frameworks */,
+				9A865ECF29928E720042465F /* libacme_posix.dylib in Frameworks */,
+				9A865EC629928E430042465F /* libapex.dylib in Frameworks */,
+				9A865EC429928E3C0042465F /* libacme.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A865E3629928A5C0042465F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A865E3B29928A5C0042465F /* libapex_posix.dylib */,
+				9A865E3D29928A5C0042465F /* libios_apex_posix.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A865E4029928A770042465F /* apex_darwin */ = {
+			isa = PBXGroup;
+			children = (
+				9A865E5D29928A770042465F /* _.cpp */,
+				9A865E6A29928A770042465F /* _.h */,
+				9A865E6929928A770042465F /* _factory.cpp */,
+				9A865E5B29928A770042465F /* file_context.cpp */,
+				9A865E5C29928A770042465F /* file_context.h */,
+				9A865E4529928A770042465F /* framework.cpp */,
+				9A865E6329928A770042465F /* framework.h */,
+				9A865E4729928A770042465F /* node.cpp */,
+				9A865E5329928A770042465F /* node.h */,
+				9A865E6529928A770042465F /* os_context.cpp */,
+				9A865E6029928A770042465F /* os_context.h */,
+				9A865E6129928A770042465F /* resource.h */,
+			);
+			name = apex_darwin;
+			sourceTree = "<group>";
+		};
+		9A865EB429928B780042465F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A865EB929928B780042465F /* libacme_darwin.dylib */,
+				9A865EBB29928B780042465F /* lib_acme_darwin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A865EC229928E3C0042465F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A865ECE29928E720042465F /* libacme_posix.dylib */,
+				9A865EC529928E430042465F /* libapex.dylib */,
+				9A865EC329928E3C0042465F /* libacme.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9AFD8086297B57C400BAD9DD = {
 			isa = PBXGroup;
 			children = (
+				9A865EB329928B780042465F /* acme_darwin.xcodeproj */,
+				9A865E3529928A5C0042465F /* apex_posix.xcodeproj */,
+				9A865E4029928A770042465F /* apex_darwin */,
 				9AFD8090297B57C400BAD9DD /* Products */,
+				9A865EC229928E3C0042465F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +189,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				9A865EBD29928B820042465F /* PBXTargetDependency */,
+				9A865E3F29928A6A0042465F /* PBXTargetDependency */,
 			);
 			name = apex_darwin;
 			productName = apex_darwin;
@@ -91,6 +222,16 @@
 			mainGroup = 9AFD8086297B57C400BAD9DD;
 			productRefGroup = 9AFD8090297B57C400BAD9DD /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 9A865EB429928B780042465F /* Products */;
+					ProjectRef = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+				},
+				{
+					ProductGroup = 9A865E3629928A5C0042465F /* Products */;
+					ProjectRef = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9AFD808E297B57C400BAD9DD /* apex_darwin */,
@@ -98,15 +239,62 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		9A865E3B29928A5C0042465F /* libapex_posix.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libapex_posix.dylib;
+			remoteRef = 9A865E3A29928A5C0042465F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A865E3D29928A5C0042465F /* libios_apex_posix.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_apex_posix.a;
+			remoteRef = 9A865E3C29928A5C0042465F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A865EB929928B780042465F /* libacme_darwin.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libacme_darwin.dylib;
+			remoteRef = 9A865EB829928B780042465F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9A865EBB29928B780042465F /* lib_acme_darwin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = lib_acme_darwin.a;
+			remoteRef = 9A865EBA29928B780042465F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9AFD808C297B57C400BAD9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A865EBF29928B980042465F /* _factory.cpp in Sources */,
+				9A865EE72992979E0042465F /* os_context.cpp in Sources */,
+				9A865EBE29928B910042465F /* node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A865E3F29928A6A0042465F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = apex_posix;
+			targetProxy = 9A865E3E29928A6A0042465F /* PBXContainerItemProxy */;
+		};
+		9A865EBD29928B820042465F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = acme_darwin;
+			targetProxy = 9A865EBC29928B820042465F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		9AFD8091297B57C400BAD9DD /* Debug */ = {
@@ -159,11 +347,47 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/source/app",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating-system/operating-system-posix",
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Debug;
 		};
@@ -211,10 +435,46 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/storage-$(PLATFORM_MODIFIER)/library",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SYSTEM_HEADER_SEARCH_PATHS = (
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/source/app",
+				);
+				USER_HEADER_SEARCH_PATHS = (
+					.,
+					"$(WorkspaceDir)/source",
+					"$(WorkspaceDir)/source/include",
+					"$(WorkspaceDir)/source/app",
+					"$(WorkspaceDir)/source/app/include",
+					"$(WorkspaceDir)/operating-system",
+					"$(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)",
+					"$(WorkspaceDir)/operating-system/operating-system-$(PLATFORM_MODIFIER)/include",
+					"$(WorkspaceDir)/operating-system/operating-system-posix",
+					"$(WorkspaceDir)/source/port/include",
+					"$(WorkspaceDir)/source/port",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include/include",
+					"$(WorkspaceDir)/operating-system/third-$(PLATFORM_MODIFIER)/third/include",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/..",
+					"$(PROJECT_DIR)/../..",
+					"$(HOME)/sensitive/sensitive/include",
+				);
+				USE_HEADERMAP = NO;
+				WorkspaceDir = "$(SRCROOT)/../../..";
 			};
 			name = Release;
 		};
@@ -226,6 +486,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -239,6 +500,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				PLATFORM_MODIFIER = macos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
