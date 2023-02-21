@@ -2,15 +2,7 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict/>
-	<key>SuppressBuildableAutocreation</key>
-	<dict>
-		<key>9AFD809E297B57D500BAD9DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-	</dict>
+	<key>com.apple.application-identifier</key>
+	<string>L8N5V6TZE5.</string>
 </dict>
 </plist>

@@ -4,20 +4,23 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>_acme_darwin.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>10</integer>
-		</dict>
 		<key>acme_darwin copy.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>acme_darwin.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>9AFD807E297B578700BAD9DD</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9AFD80B3297B584000BAD9DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

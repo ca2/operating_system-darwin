@@ -1082,7 +1082,12 @@ namespace acme_posix
 
                int iErrorUnlock2 = pthread_mutex_unlock(&m_mutex);
 
-               ASSERT(iErrorUnlock2 == 0);
+               if(iErrorUnlock2 != 0)
+               {
+               
+                  throw ::exception(error_failed);
+                  
+               }
 
                throw ::exception(error_failed);
 
@@ -1534,7 +1539,12 @@ namespace acme_posix
 
             int iError = pthread_mutex_unlock(&m_mutex);
 
-            ASSERT(iError == 0);
+            if(iError != 0)
+            {
+               
+               throw ::exception(error_failed);
+               
+            }
 
             throw ::exception(error_failed);
 
@@ -1564,7 +1574,12 @@ namespace acme_posix
 
          int iError = pthread_mutex_unlock(&m_mutex);
 
-         ASSERT(iError == 0);
+         if(iError != 0)
+         {
+            
+            throw ::exception(error_failed);
+            
+         }
 
          if(rc != 0)
          {
@@ -1621,7 +1636,12 @@ namespace acme_posix
 
             int iErrorUnlock1 = pthread_mutex_unlock(&m_mutex);
 
-            ASSERT(iErrorUnlock1 == 0);
+            if(iErrorUnlock1 != 0)
+            {
+               
+               throw ::exception(error_failed);
+               
+            }
 
             throw ::exception(error_failed);
 
