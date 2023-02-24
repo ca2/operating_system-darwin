@@ -9,6 +9,20 @@
 /* Begin PBXBuildFile section */
 		9A8EA538298079AD00B26CB9 /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFD80AE297B583700BAD9DD /* libacme_posix.dylib */; };
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
+		9AB15D2729A8811400DFDF90 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
+		9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
+		9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
+		9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
+		9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
+		9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
+		9AB15D2D29A8811400DFDF90 /* exclusive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D2297B589800BAD9DD /* exclusive.cpp */; };
+		9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
+		9AB15D2F29A8811400DFDF90 /* list_serial_ports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */; };
+		9AB15D3029A8811400DFDF90 /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C2297B589800BAD9DD /* mutex.cpp */; };
+		9AB15D3129A8811400DFDF90 /* node_clang_callstack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */; };
+		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
+		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
+		9AB15D3529A8811400DFDF90 /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFD80AE297B583700BAD9DD /* libacme_posix.dylib */; };
 		9AFD8176297B58F900BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
 		9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
@@ -36,6 +50,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9AB15D2429A8811400DFDF90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AFD80A6297B583700BAD9DD /* acme_posix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A0C1637264A281D00B5CC33;
+			remoteInfo = acme_posix;
+		};
 		9AFD80AD297B583700BAD9DD /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9AFD80A6297B583700BAD9DD /* acme_posix.xcodeproj */;
@@ -75,9 +96,10 @@
 
 /* Begin PBXFileReference section */
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80A6297B583700BAD9DD /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating-system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
-		9AFD80BA297B584000BAD9DD /* lib_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = lib_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80C2297B589800BAD9DD /* mutex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mutex.cpp; sourceTree = "<group>"; };
 		9AFD80C3297B589800BAD9DD /* acme_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_directory.h; sourceTree = "<group>"; };
 		9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = list_serial_ports.cpp; sourceTree = "<group>"; };
@@ -103,6 +125,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9AB15D3329A8811400DFDF90 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */,
+				9AB15D3529A8811400DFDF90 /* libacme_posix.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AFD807D297B578700BAD9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -137,7 +168,8 @@
 			isa = PBXGroup;
 			children = (
 				9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */,
-				9AFD80BA297B584000BAD9DD /* lib_acme_darwin.a */,
+				9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */,
+				9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -184,6 +216,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9AB15D2529A8811400DFDF90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AFD807B297B578700BAD9DD /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -201,6 +240,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9AB15D2229A8811400DFDF90 /* ios_acme_darwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AB15D3629A8811400DFDF90 /* Build configuration list for PBXNativeTarget "ios_acme_darwin" */;
+			buildPhases = (
+				9AB15D2529A8811400DFDF90 /* Headers */,
+				9AB15D2629A8811400DFDF90 /* Sources */,
+				9AB15D3329A8811400DFDF90 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AB15D2329A8811400DFDF90 /* PBXTargetDependency */,
+			);
+			name = ios_acme_darwin;
+			productName = acme_darwin;
+			productReference = 9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		9AFD807E297B578700BAD9DD /* acme_darwin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AFD8083297B578700BAD9DD /* Build configuration list for PBXNativeTarget "acme_darwin" */;
@@ -219,9 +276,9 @@
 			productReference = 9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
-		9AFD80B3297B584000BAD9DD /* _acme_darwin */ = {
+		9AFD80B3297B584000BAD9DD /* static_acme_darwin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFD80B7297B584000BAD9DD /* Build configuration list for PBXNativeTarget "_acme_darwin" */;
+			buildConfigurationList = 9AFD80B7297B584000BAD9DD /* Build configuration list for PBXNativeTarget "static_acme_darwin" */;
 			buildPhases = (
 				9AFD80B4297B584000BAD9DD /* Headers */,
 				9AFD80B5297B584000BAD9DD /* Sources */,
@@ -231,9 +288,9 @@
 			dependencies = (
 				9AFD80BC297B585200BAD9DD /* PBXTargetDependency */,
 			);
-			name = _acme_darwin;
+			name = static_acme_darwin;
 			productName = acme_darwin;
-			productReference = 9AFD80BA297B584000BAD9DD /* lib_acme_darwin.a */;
+			productReference = 9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -270,7 +327,8 @@
 			projectRoot = "";
 			targets = (
 				9AFD807E297B578700BAD9DD /* acme_darwin */,
-				9AFD80B3297B584000BAD9DD /* _acme_darwin */,
+				9AB15D2229A8811400DFDF90 /* ios_acme_darwin */,
+				9AFD80B3297B584000BAD9DD /* static_acme_darwin */,
 			);
 		};
 /* End PBXProject section */
@@ -300,6 +358,25 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9AB15D2629A8811400DFDF90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AB15D2729A8811400DFDF90 /* _.cpp in Sources */,
+				9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */,
+				9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */,
+				9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */,
+				9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */,
+				9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */,
+				9AB15D2D29A8811400DFDF90 /* exclusive.cpp in Sources */,
+				9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */,
+				9AB15D2F29A8811400DFDF90 /* list_serial_ports.cpp in Sources */,
+				9AB15D3029A8811400DFDF90 /* mutex.cpp in Sources */,
+				9AB15D3129A8811400DFDF90 /* node_clang_callstack.cpp in Sources */,
+				9AB15D3229A8811400DFDF90 /* node.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9AFD807C297B578700BAD9DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +418,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9AB15D2329A8811400DFDF90 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = acme_posix;
+			targetProxy = 9AB15D2429A8811400DFDF90 /* PBXContainerItemProxy */;
+		};
 		9AFD80BC297B585200BAD9DD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = _acme_posix;
@@ -354,6 +436,28 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		9AB15D3729A8811400DFDF90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9AB15D3829A8811400DFDF90 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
 		9AFD8081297B578700BAD9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -647,6 +751,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9AB15D3629A8811400DFDF90 /* Build configuration list for PBXNativeTarget "ios_acme_darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AB15D3729A8811400DFDF90 /* Debug */,
+				9AB15D3829A8811400DFDF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9AFD807A297B578700BAD9DD /* Build configuration list for PBXProject "acme_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -665,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AFD80B7297B584000BAD9DD /* Build configuration list for PBXNativeTarget "_acme_darwin" */ = {
+		9AFD80B7297B584000BAD9DD /* Build configuration list for PBXNativeTarget "static_acme_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9AFD80B8297B584000BAD9DD /* Debug */,

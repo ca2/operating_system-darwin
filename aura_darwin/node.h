@@ -8,37 +8,37 @@
 #pragma once
 
 
-#include "apex_posix/node.h"
-#include "aura/platform/node.h"
+#include "apex_darwin/node.h"
+#include "aura_posix/node.h"
 
 
-namespace aura_posix
+namespace aura_darwin
 {
 
 
    class CLASS_DECL_AURA_POSIX node :
-      virtual public ::apex_posix::node,
-      virtual public ::aura::node
+      virtual public ::apex_darwin::node,
+      virtual public ::aura_posix::node
    {
    public:
 
 
-#if defined(WITH_X11) || defined(WITH_XCB)
+//#if defined(WITH_X11) || defined(WITH_XCB)
+//
+//
+//      void *                                 m_pX11Display;
+//
+//
+//#endif
 
 
-      void *                                 m_pX11Display;
-
-
-#endif
-
-
-#if defined(WITH_XCB)
-
-
-      void *                                 m_pxcbconnection;
-
-
-#endif
+//#if defined(WITH_XCB)
+//
+//
+//      void *                                 m_pxcbconnection;
+//
+//
+//#endif
 
 
       node();
@@ -81,40 +81,40 @@ namespace aura_posix
       //void delete_this() override;
 
 
-#if defined(WITH_X11) || defined(WITH_XCB)
+//#if defined(WITH_X11) || defined(WITH_XCB)
+//
+//      virtual ::e_status _allocate_Display_and_connection();
+//
+//      void * _get_Display();
+//
+//      void * get_os_xcb_connection() override;
+//
+//      bool has_xcb() const override;
+//
+//#endif // WITH_X11 || WITH_XCB
 
-      virtual ::e_status _allocate_Display_and_connection();
-
-      void * _get_Display();
-
-      void * get_os_xcb_connection() override;
-
-      bool has_xcb() const override;
-
-#endif // WITH_X11 || WITH_XCB
-
-
-
-#if defined(WITH_XCB)
-
-      /// ^ ^^^
-
-      void * _get_connection();
-
-
-#endif // WITH_XCB
-
-
-      ::file::path get_desktop_file_path(::apex::application * papp) override;
-
-
-      void main() override;
-
+//
+//
+//#if defined(WITH_XCB)
+//
+//      /// ^ ^^^
+//
+//      void * _get_connection();
+//
+//
+//#endif // WITH_XCB
+//
+//
+//      ::file::path get_desktop_file_path(::apex::application * papp) override;
+//
+//
+//      void main() override;
+//
 
    };
 
 
-} // namespace aura_posix
+} // namespace aura_darwin
 
 
 

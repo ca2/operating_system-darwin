@@ -1,4 +1,4 @@
-﻿//
+//
 // Created by camilo on 19/01/2021. <33TBS!!
 //
 //
@@ -7,17 +7,17 @@
 #pragma once
 
 
-#include "acme_posix/node.h"
-#include "apex/platform/node.h"
+#include "acme_darwin/node.h"
+#include "apex_posix/node.h"
 
 
-namespace apex_posix
+namespace apex_darwin
 {
 
 
    class CLASS_DECL_ACME node :
-      virtual public ::apex::node,
-      virtual public ::acme_posix::node
+      virtual public ::acme_darwin::node,
+      virtual public ::apex_posix::node
    {
    public:
 
