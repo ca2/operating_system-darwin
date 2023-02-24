@@ -11,7 +11,7 @@
 #endif
 
 
-namespace apex_posix
+namespace apex_darwin
 {
 
 
@@ -117,7 +117,7 @@ bool file_context::is_read_only(const ::file::path &psz)
    }
 
 
-} // namespace apex_posix
+} // namespace apex_darwin
 
 
 

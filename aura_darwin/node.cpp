@@ -14,8 +14,7 @@
 #endif
 
 
-
-namespace aura_posix
+namespace aura_darwin
 {
 
 
@@ -524,60 +523,60 @@ namespace aura_posix
 #endif
    
 
-   ::file::path node::get_desktop_file_path(::apex::application * papp)
-   {
-
-      ::file::path path;
-
-      path = acmedirectory()->home();
-
-      path /= ".local/share/applications";
-
-      string strApplicationServerName = papp->m_strAppId;
-
-      strApplicationServerName.find_replace("/", ".");
-
-      strApplicationServerName.find_replace("_", "-");
-
-      path /= (strApplicationServerName + ".desktop");
-
-      return path;
-
-   }
-
-
-   void node::main()
-   {
-
-      //auto estatus =
-
-
-         system_main();
+//   ::file::path node::get_desktop_file_path(::apex::application * papp)
+//   {
 //
-//         if(!estatus)
-//         {
+//      ::file::path path;
 //
-//            return estatus;
+//      path = acmedirectory()->home();
 //
-//         }
+//      path /= ".local/share/applications";
 //
-//         //auto psystem = acmesystem();
+//      string strApplicationServerName = papp->m_strAppId;
 //
-//         //auto estatus = psystem->system_main();
+//      strApplicationServerName.find_replace("/", ".");
 //
-//         //if(!estatus)
-//         //{
+//      strApplicationServerName.find_replace("_", "-");
 //
-//           // return estatus;
+//      path /= (strApplicationServerName + ".desktop");
 //
-//         //}
+//      return path;
 //
-//         return estatus;
-
-   }
+//   }
 
 
-} // namespace aura_posix
+//   void node::main()
+//   {
+//
+//      //auto estatus =
+//
+//
+//         system_main();
+////
+////         if(!estatus)
+////         {
+////
+////            return estatus;
+////
+////         }
+////
+////         //auto psystem = acmesystem();
+////
+////         //auto estatus = psystem->system_main();
+////
+////         //if(!estatus)
+////         //{
+////
+////           // return estatus;
+////
+////         //}
+////
+////         return estatus;
+//
+//   }
+
+
+} // namespace aura_darwin
 
 
 

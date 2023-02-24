@@ -15,14 +15,14 @@ void os_post_quit();
 void apex_application_run(const char * pszAppName, const char * pszProgName);
 
 
-namespace apex_posix
+namespace apex_darwin
 {
 
 
    node::node()
    {
 
-      m_pApexPosix = this;
+      //m_pApexPosix = this;
 
    }
 
@@ -85,7 +85,7 @@ namespace apex_posix
    }
 
 
-} // namespace apex_posix
+} // namespace apex_darwin
 
 
 
