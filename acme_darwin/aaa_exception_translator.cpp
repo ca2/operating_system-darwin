@@ -85,7 +85,7 @@ namespace acme_darwin
          
       }
 
-      output_debug_string("exception standard translator");
+      //output_debug_string("exception standard translator");
 
 #if defined(__SANITIZE_ADDRESS__) || defined(__FOR_PERF__)
 
