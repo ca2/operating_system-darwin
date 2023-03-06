@@ -9,14 +9,14 @@
 			<key>orderHint</key>
 			<integer>13</integer>
 		</dict>
-		<key>ios_acme_darwin.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>9AB15D2229A8811400DFDF90</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9AFD807E297B578700BAD9DD</key>
 		<dict>
 			<key>primary</key>
