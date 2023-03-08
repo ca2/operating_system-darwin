@@ -96,7 +96,7 @@
 /* Begin PBXFileReference section */
 		9A5FB483299ED2C000094E43 /* app_launcher.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = app_launcher.cpp; sourceTree = "<group>"; };
 		9A5FB486299ED2C200094E43 /* app_launcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = app_launcher.h; sourceTree = "<group>"; };
-		9A865E3529928A5C0042465F /* apex_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_posix.xcodeproj; path = "../../operating-system-posix/apex_posix/apex_posix.xcodeproj"; sourceTree = "<group>"; };
+		9A865E3529928A5C0042465F /* apex_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_posix.xcodeproj; path = "../../operating_system-posix/apex_posix/apex_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A865E4529928A770042465F /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9A865E4729928A770042465F /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
 		9A865E5329928A770042465F /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
