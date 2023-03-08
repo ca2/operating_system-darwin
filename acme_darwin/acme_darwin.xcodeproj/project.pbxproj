@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
+		9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9DCB7429B8240E00D1255B /* libacme_posix.dylib */; };
 		9AB15D2729A8811400DFDF90 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
 		9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
@@ -128,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */,
 				9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
