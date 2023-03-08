@@ -185,11 +185,11 @@ namespace apex_darwin
 //      auto psystem = acmesystem();
 //
 //      auto pnode = psystem->node();
-::string_array straOutput;
-int iExitCod = 0;
+//::string_array straOutput;
+//int iExitCod = 0;
 ::string strCommand = get_executable_path();
 //
-      acmenode()->command_system(straOutput, iExitCod, strCommand);
+      acmenode()->command_system(strCommand);
 //
 //      //pnode->call_async(strPath, strParams, strDir, e_display_none, false);
 //
