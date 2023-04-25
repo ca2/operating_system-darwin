@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9DCB7429B8240E00D1255B /* libacme_posix.dylib */; };
+		9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
 		9AB15D2729A8811400DFDF90 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
 		9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
@@ -89,6 +90,8 @@
 /* Begin PBXFileReference section */
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
+		9A9E55EB29F6D742001559E9 /* darwin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = darwin.cpp; sourceTree = "<group>"; };
+		9A9E55EC29F6D742001559E9 /* darwin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = darwin.hpp; sourceTree = "<group>"; };
 		9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -200,6 +203,8 @@
 				9AFD80CE297B589800BAD9DD /* node.cpp */,
 				9AFD80D4297B589800BAD9DD /* node.h */,
 				9AFD80E5297B589800BAD9DD /* resource.h */,
+				9A9E55EB29F6D742001559E9 /* darwin.cpp */,
+				9A9E55EC29F6D742001559E9 /* darwin.hpp */,
 			);
 			name = acme_darwin;
 			sourceTree = "<group>";
@@ -378,6 +383,7 @@
 				9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */,
 				9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */,
 				9AFD81A9297B59E200BAD9DD /* exclusive.cpp in Sources */,
+				9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */,
 				9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */,
 				9AFD81AB297B59E200BAD9DD /* list_serial_ports.cpp in Sources */,
 				9AFD81AC297B59E200BAD9DD /* mutex.cpp in Sources */,

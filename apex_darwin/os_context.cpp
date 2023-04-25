@@ -55,12 +55,12 @@ namespace apex_darwin
    }
 
 
-   int os_context::get_pid()
+   ::process_identifier os_context::current_process_identifier()
    {
       
       //return ::getpid();
       
-      return ::apex_posix::os_context::get_pid();
+      return ::apex_posix::os_context::os_context::current_process_identifier();
 
    }
 

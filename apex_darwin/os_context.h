@@ -21,7 +21,7 @@ namespace apex_darwin
       bool is_alias(const ::file::path & path) override;
       
       
-      virtual int get_pid() override;
+      virtual ::process_identifier current_process_identifier() override;
 
 
    };
