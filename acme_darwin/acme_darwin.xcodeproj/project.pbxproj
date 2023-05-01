@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A1BD6B52A00797400152CD1 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9DCB7429B8240E00D1255B /* libacme_posix.dylib */; };
 		9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
@@ -403,6 +404,7 @@
 				9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */,
 				9AFD8179297B58F900BAD9DD /* acme_file.cpp in Sources */,
 				9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */,
+				9A1BD6B52A00797400152CD1 /* darwin.cpp in Sources */,
 				9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */,
 				9AFD817C297B58FA00BAD9DD /* exclusive.cpp in Sources */,
 				9AFD817D297B58FA00BAD9DD /* mutex.cpp in Sources */,
