@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -89,6 +89,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A77244C2A25687A00B9A835 /* machine.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = machine.xcconfig; path = ../../../../operating_system/machine.xcconfig; sourceTree = "<group>"; };
+		9A77244F2A25688D00B9A835 /* machine.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = machine.xcconfig; path = ../../../../operating_system/machine.xcconfig; sourceTree = "<group>"; };
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A9E55EB29F6D742001559E9 /* darwin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = darwin.cpp; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		9AFD8076297B578700BAD9DD = {
 			isa = PBXGroup;
 			children = (
+				9A77244C2A25687A00B9A835 /* machine.xcconfig */,
 				9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */,
 				9AFD80BE297B589800BAD9DD /* acme_darwin */,
 				9AFD8080297B578700BAD9DD /* Products */,
@@ -182,6 +185,7 @@
 		9AFD80BE297B589800BAD9DD /* acme_darwin */ = {
 			isa = PBXGroup;
 			children = (
+				9A77244F2A25688D00B9A835 /* machine.xcconfig */,
 				9AFD80DE297B589800BAD9DD /* _.cpp */,
 				9AFD80F5297B589800BAD9DD /* _.h */,
 				9AFD80EF297B589800BAD9DD /* _factory.cpp */,
@@ -304,7 +308,7 @@
 				};
 			};
 			buildConfigurationList = 9AFD807A297B578700BAD9DD /* Build configuration list for PBXProject "acme_darwin" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -453,6 +457,7 @@
 		};
 		9AFD8081297B578700BAD9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A77244C2A25687A00B9A835 /* machine.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -527,6 +532,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(WorkspaceDir)/source/app",
 				);
 				USER_HEADER_SEARCH_PATHS = (
@@ -541,6 +547,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-posix",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -553,6 +560,7 @@
 		};
 		9AFD8082297B578700BAD9DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A77244C2A25687A00B9A835 /* machine.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -621,6 +629,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-$(PLATFORM_MODIFIER)/include",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(WorkspaceDir)/source/app",
 				);
 				USER_HEADER_SEARCH_PATHS = (
@@ -635,6 +644,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-posix",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -690,6 +700,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-posix",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
@@ -723,6 +734,7 @@
 					"$(WorkspaceDir)/operating_system/operating_system-posix",
 					"$(WorkspaceDir)/port/_",
 					"$(WorkspaceDir)/port/include",
+					"$(WorkspaceDir)/../operating_system/include",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/..",
 					"$(PROJECT_DIR)/../..",
