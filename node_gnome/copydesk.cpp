@@ -669,7 +669,7 @@ namespace node_gnome
 ////            if(pdata->m_pimage = create_image({w,  h)})
 ////            {
 ////
-////               ::copy_colorref(
+////               ::copy_image32(
 ////                  pdata->m_pimage->width(),
 ////                  pdata->m_pimage->height(),
 ////                  pdata->m_pimage->m_pcolorref,
