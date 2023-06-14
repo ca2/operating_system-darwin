@@ -84,7 +84,7 @@ namespace multimedia
             // fetches the first card
             if ((err = snd_card_next(&cardNum)) < 0)
             {
-               FORMATTED_TRACE("Can't get the next card number: %s\n", snd_strerror(err));
+               information("Can't get the next card number: %s\n", snd_strerror(err));
                break;
             }
 
@@ -103,7 +103,7 @@ namespace multimedia
                strFormat.format("hw:%i", cardNum);
                if ((err = snd_ctl_open(&cardHandle, strFormat, 0)) < 0)
                {
-                  FORMATTED_TRACE("Can't open card %i: %s\n", cardNum, snd_strerror(err));
+                  information("Can't open card %i: %s\n", cardNum, snd_strerror(err));
                   continue;
                }
 
@@ -117,7 +117,7 @@ namespace multimedia
                   // Get the number of the next wave device on this card
                   if ((err = snd_ctl_pcm_next_device(cardHandle, &devNum)) < 0)
                   {
-                     FORMATTED_TRACE("Can't get next wave device number: %s\n", snd_strerror(err));
+                     information("Can't get next wave device number: %s\n", snd_strerror(err));
                      break;
                   }
 
@@ -141,7 +141,7 @@ namespace multimedia
 
                   subDevCount = snd_pcm_info_get_subdevices_count(pcmInfo);
 
-                  FORMATTED_TRACE("\nFound %i wave output subdevices on card %i, %i : %s \n", subDevCount, cardNum, devNum, snd_strerror(err));
+                  information("\nFound %i wave output subdevices on card %i, %i : %s \n", subDevCount, cardNum, devNum, snd_strerror(err));
 
                   if (subDevCount <= 0)
                   {
@@ -165,7 +165,7 @@ namespace multimedia
                         if ((err = snd_ctl_pcm_info(cardHandle, pcmInfo)) < 0)
                         {
 
-                           FORMATTED_TRACE("No wave output subdevice hw:%i,%i : %s\n", cardNum, devNum, snd_strerror(err));
+                           information("No wave output subdevice hw:%i,%i : %s\n", cardNum, devNum, snd_strerror(err));
 
                            continue;
                         }
@@ -534,7 +534,7 @@ namespace multimedia
          if ((err = ::snd_pcm_close(m_ppcm)) < 0)
          {
 
-            FORMATTED_TRACE("failed to close successfully sound interface (%s)\n", snd_strerror(err));
+            information("failed to close successfully sound interface (%s)\n", snd_strerror(err));
 
             return error_failed;
          }

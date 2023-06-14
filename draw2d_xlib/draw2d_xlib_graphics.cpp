@@ -83,7 +83,7 @@ namespace draw2d_xlib
                bool bDeleted = ::DeleteDC(hdc) != false;
                if(!bDeleted)
                {
-                  TRACE("Failed to delete GDI device context");
+                  information("Failed to delete GDI device context");
                }
             }*/
 
@@ -3421,7 +3421,7 @@ namespace draw2d_xlib
    /*      hdc_map* pMap = afxMapHDC();
          if (pMap != nullptr && pMap->lookup_permanent(get_handle1()) == this)
          {
-            TRACE(::aura::trace::category_AppMsg, 0, "cannot Set Output hDC on Attached graphics.\n");
+            information(::aura::trace::category_AppMsg, 0, "cannot Set Output hDC on Attached graphics.\n");
             ASSERT(false);
          }*/
 //#endif
@@ -3439,7 +3439,7 @@ namespace draw2d_xlib
    /*      hdc_map* pMap = afxMapHDC();
          if (pMap != nullptr && pMap->lookup_permanent(get_handle1()) == this)
          {
-            TRACE(::aura::trace::category_AppMsg, 0, "cannot Release Output hDC on Attached graphics.\n");
+            information(::aura::trace::category_AppMsg, 0, "cannot Release Output hDC on Attached graphics.\n");
             ASSERT(false);
          }*/
 //#endif
@@ -4318,7 +4318,7 @@ namespace draw2d_xlib
                HRGN hRgn = ::CreateRectRgn(0, 0, 0, 0);
                if (::GetClipRgn(get_handle1(), hRgn) < 0 || !::SelectClipRgn(get_handle2(), hRgn))
                {
-                  TRACE(::aura::trace::category_AppMsg, 0, "Error: unable to transfer clip region in graphics::SelectClipPath!\n");
+                  information(::aura::trace::category_AppMsg, 0, "Error: unable to transfer clip region in graphics::SelectClipPath!\n");
                   bResult = false;
                }
                ::DeleteObject(hRgn);

@@ -789,7 +789,7 @@ int_bool thumbnail_dc::GrayString(::draw2d::brush*,
             int_bool (CALLBACK *)(HDC, LPARAM, i32),
                LPARAM lpData, i32 nCount, i32 x, i32 y, i32, i32)
 {
-   TRACE(::aura::trace::category_AppMsg, 0, "text_out() substituted for GrayString() in Print Thumbnail.\n");
+   information(::aura::trace::category_AppMsg, 0, "text_out() substituted for GrayString() in Print Thumbnail.\n");
    return text_out(x, y, (const char *)lpData, nCount);
 }
 
