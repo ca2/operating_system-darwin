@@ -792,7 +792,7 @@ namespace draw2d_xlib
             try
             {
 
-               //Gdiplus::Bitmap b(cx, cy, cx * 4 , PixelFormat32bppARGB, (byte *) pcolorref);
+               //Gdiplus::Bitmap b(cx, cy, cx * 4 , PixelFormat32bppARGB, (::u8 *) pcolorref);
 
                ::draw2d::bitmap_pointer b(e_create);
 
@@ -2547,7 +2547,7 @@ namespace draw2d_xlib
 
    }
 
-   i32 graphics::GetPath(POINT_I32 * lpPoints, byte * lpTypes, i32 nCount) const
+   i32 graphics::GetPath(POINT_I32 * lpPoints, ::u8 * lpTypes, i32 nCount) const
    {
 
       throw ::not_implemented();
@@ -2625,7 +2625,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::AddMetaFileComment(::u32 nDataSize, const byte* pCommentData)
+   bool graphics::AddMetaFileComment(::u32 nDataSize, const ::u8* pCommentData)
    {
 
       throw ::not_implemented();
@@ -4219,7 +4219,7 @@ namespace draw2d_xlib
 
    }
 
-   bool graphics::PolyDraw(const POINT_I32* lpPoints, const byte* lpTypes, i32 nCount)
+   bool graphics::PolyDraw(const POINT_I32* lpPoints, const ::u8* lpTypes, i32 nCount)
    {
 
       throw ::not_implemented();

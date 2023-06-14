@@ -605,7 +605,7 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
          *lpszOutputString++ = *lpszCurChar;
          if (_istlead(*lpszCurChar))
          {
-            *lpszOutputString++ = *(lpszCurChar+1); // copy trailing byte
+            *lpszOutputString++ = *(lpszCurChar+1); // copy trailing ::u8
             *(pnCurDelta + 1) = *pnCurDelta;        // double wide
             nCurrentPos += *pnCurDelta;
             pnCurDelta++;
