@@ -2993,7 +2993,7 @@ else if(detail == 3)
 //CLASS_DECL_AURA void defer_dock_application(int_bool bDock)
 //{
 //
-//   __UNREFERENCED_PARAMETER(bDock);
+//   UNREFERENCED_PARAMETER(bDock);
 //
 //}
 
