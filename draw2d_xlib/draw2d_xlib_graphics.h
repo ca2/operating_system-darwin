@@ -240,7 +240,7 @@ namespace draw2d_xlib
       i32 GetArcDirection() const;
       i32 SetArcDirection(i32 nArcDirection);
 
-      bool PolyDraw(const POINT_I32* lpPoints, const byte* lpTypes, i32 nCount);
+      bool PolyDraw(const POINT_I32* lpPoints, const ::u8* lpTypes, i32 nCount);
       bool polyline_to(const POINT_I32* lpPoints, i32 nCount);
       bool poly_polyline(const POINT_I32* lpPoints,
                         const u32* lpPolyPoints, i32 nCount);
@@ -405,7 +405,7 @@ namespace draw2d_xlib
 //      bool DrawFrameControl(RECTANGLE_I32 * prectangle, ::u32 nType, ::u32 nState);
 
       // Scrolling Functions
-      bool ScrollDC(i32 Δx, i32 Δy, rectangle_i32 lpRectScroll, const ::rectangle_i32 & rectangleClip,
+      bool ScrollDC(i32 greekdeltax, i32 greekdeltay, rectangle_i32 lpRectScroll, const ::rectangle_i32 & rectangleClip,
                     ::draw2d::region* pRgnUpdate, RECTANGLE_I32 * lpRectUpdate);
 
       // font Functions
@@ -452,7 +452,7 @@ namespace draw2d_xlib
       // MetaFile Functions
 //xxx      bool PlayMetaFile(HMETAFILE hMF);
       bool PlayMetaFile(HENHMETAFILE hEnhMetaFile, rectangle_i32 lpBounds);
-      bool AddMetaFileComment(::u32 nDataSize, const byte* pCommentData);
+      bool AddMetaFileComment(::u32 nDataSize, const ::u8* pCommentData);
       // can be used for enhanced metafiles only
 
       // Path Functions

@@ -1769,7 +1769,7 @@ bool node::set_process_priority(::enum_priority epriority)
    
    pid_t * pids = (pid_t *) memory.data();
    
-   const int pidcount = proc_listallpids(pids, memory.size());
+   const int pidcount = proc_listallpids(pids, (int) memory.size());
    
    process_identifier_array a;
    

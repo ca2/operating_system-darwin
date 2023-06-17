@@ -64,7 +64,7 @@ namespace acme_posix
    {
 
    #ifdef _DEBUG
-      m_itask = -1;
+      //m_itask = -1;
    #endif
 
       set_own_synchronization_flag();
@@ -129,7 +129,7 @@ namespace acme_posix
    {
 
    #ifdef _DEBUG
-      m_itask = -1;
+      //m_itask = -1;
    #endif
 
       initialize(pparticle);
@@ -552,7 +552,7 @@ namespace acme_posix
    mutex::mutex(enum_create_new, const char * lpszName, int iFd, bool bOwner)
    {
    #ifdef _DEBUG
-      m_itask = -1;
+      //m_itask = -1;
    #endif
 
       m_strName = lpszName;

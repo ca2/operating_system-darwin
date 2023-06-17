@@ -83,7 +83,7 @@ namespace draw2d_xlib
                bool bDeleted = ::DeleteDC(hdc) != false;
                if(!bDeleted)
                {
-                  TRACE("Failed to delete GDI device context");
+                  information("Failed to delete GDI device context");
                }
             }*/
 
@@ -479,7 +479,7 @@ namespace draw2d_xlib
 
    size_i32 graphics::set_context_extents(const ::size_i32 & size)
    {
-      //return set_context_extents(size.cx, size.cy);
+      //return set_context_extents(size.cx(), size.cy());
       return ::size_i32(0, 0);
    }
 
@@ -491,7 +491,7 @@ namespace draw2d_xlib
 
    size_i32 graphics::set_window_ext(const ::size_i32 & size)
    {
-      //return set_window_ext(size.cx, size.cy);
+      //return set_window_ext(size.cx(), size.cy());
       return ::size_i32(0, 0);
    }
 
@@ -792,7 +792,7 @@ namespace draw2d_xlib
             try
             {
 
-               //Gdiplus::Bitmap b(cx, cy, cx * 4 , PixelFormat32bppARGB, (byte *) pcolorref);
+               //Gdiplus::Bitmap b(cx, cy, cx * 4 , PixelFormat32bppARGB, (::u8 *) pcolorref);
 
                ::draw2d::bitmap_pointer b(e_create);
 
@@ -862,7 +862,7 @@ namespace draw2d_xlib
 //      throw ::not_implemented();
 //      return false;
 ////      ASSERT(get_handle1() != nullptr);
-////      return ::DrawState(get_handle1(), hBrush, nullptr, (LPARAM)hBitmap, 0, point.x, point.y, size.cx, size.cy, nFlags|DST_BITMAP) != false;
+////      return ::DrawState(get_handle1(), hBrush, nullptr, (LPARAM)hBitmap, 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_BITMAP) != false;
 //
 //   }
 //
@@ -872,7 +872,7 @@ namespace draw2d_xlib
 //      throw ::not_implemented();
 //      return false;
 ////      ASSERT(get_handle1() != nullptr);
-////      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)pBitmap->get_os_data(), 0, point.x, point.y, size.cx, size.cy, nFlags|DST_BITMAP) != false;
+////      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)pBitmap->get_os_data(), 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_BITMAP) != false;
 //
 //   }
 //
@@ -882,7 +882,7 @@ namespace draw2d_xlib
 //         throw ::not_implemented();
 //         return false;
 //   //      ASSERT(get_handle1() != nullptr);
-//   //      return ::DrawState(get_handle1(), hBrush, nullptr, (LPARAM)hIcon, 0, point.x, point.y, size.cx, size.cy, nFlags|DST_ICON) != false;
+//   //      return ::DrawState(get_handle1(), hBrush, nullptr, (LPARAM)hIcon, 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_ICON) != false;
 //
 //      }
 //
@@ -893,7 +893,7 @@ namespace draw2d_xlib
 //         throw ::not_implemented();
 //         return false;
 //   //      ASSERT(get_handle1() != nullptr);
-//   //      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)hIcon, 0, point.x, point.y, size.cx, size.cy, nFlags|DST_ICON) != false;
+//   //      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)hIcon, 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_ICON) != false;
 //
 //      }*/
 //
@@ -903,7 +903,7 @@ namespace draw2d_xlib
 //      throw ::not_implemented();
 //      return false;
 ////      ASSERT(get_handle1() != nullptr);
-////      return ::DrawState(get_handle1(), hBrush,  nullptr, (LPARAM)lpszText, (WPARAM)nTextLen, point.x, point.y, size.cx, size.cy, nFlags|(bPrefixText ? DST_PREFIXTEXT : DST_TEXT)) != false;
+////      return ::DrawState(get_handle1(), hBrush,  nullptr, (LPARAM)lpszText, (WPARAM)nTextLen, point.x, point.y, size.cx(), size.cy(), nFlags|(bPrefixText ? DST_PREFIXTEXT : DST_TEXT)) != false;
 //
 //   }
 //
@@ -913,7 +913,7 @@ namespace draw2d_xlib
 //      throw ::not_implemented();
 //      return false;
 ////      ASSERT(get_handle1() != nullptr);
-////      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)lpszText, (WPARAM)nTextLen, point.x, point.y, size.cx, size.cy, nFlags|(bPrefixText ? DST_PREFIXTEXT : DST_TEXT)) != false;
+////      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), nullptr, (LPARAM)lpszText, (WPARAM)nTextLen, point.x, point.y, size.cx(), size.cy(), nFlags|(bPrefixText ? DST_PREFIXTEXT : DST_TEXT)) != false;
 //
 //   }
 
@@ -926,7 +926,7 @@ namespace draw2d_xlib
 //         return false;
 //
 //   //      ASSERT(get_handle1() != nullptr);
-//   //      return ::DrawState(get_handle1(), hBrush, lpDrawProc, lData, 0, point.x, point.y, size.cx, size.cy, nFlags|DST_COMPLEX) != false;
+//   //      return ::DrawState(get_handle1(), hBrush, lpDrawProc, lData, 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_COMPLEX) != false;
 //
 //      }
 //
@@ -937,7 +937,7 @@ namespace draw2d_xlib
 //         return false;
 //
 //   //      ASSERT(get_handle1() != nullptr);
-//   //      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), lpDrawProc, lData, 0, point.x, point.y, size.cx, size.cy, nFlags|DST_COMPLEX) != false;
+//   //      return ::DrawState(get_handle1(), (HBRUSH)pBrush->get_os_data(), lpDrawProc, lData, 0, point.x, point.y, size.cx(), size.cy(), nFlags|DST_COMPLEX) != false;
 //
 //      }
 //
@@ -1446,7 +1446,7 @@ namespace draw2d_xlib
 
          imageWork.from(point_i32(maximum(0, m_pointAlphaBlend.x - x), maximum(0, m_pointAlphaBlend.y - y)),
             m_pimageAlphaBlend->get_graphics(), point_i32(maximum(0, x - m_pointAlphaBlend.x), maximum(0, y - m_pointAlphaBlend.y)),
-                               ::size_i32(maximum(0, size.cx - maximum(0, x - m_pointAlphaBlend.x)), maximum(0, size.cy - maximum(0, y - m_pointAlphaBlend.y))));*/
+                               ::size_i32(maximum(0, size.cx() - maximum(0, x - m_pointAlphaBlend.x)), maximum(0, size.cy() - maximum(0, y - m_pointAlphaBlend.y))));*/
 
          //keeper < image > keep(&m_pimageAlphaBlend, nullptr, m_pimageAlphaBlend, true);
 
@@ -1931,9 +1931,9 @@ namespace draw2d_xlib
       size_i32 sz1 = get_text_extent(str1);
       size_i32 sz2 = get_text_extent(str2);
 
-      lpMetrics->tmAveCharWidth = sz2.cx / (double) str2.get_length();
-      lpMetrics->tmAscent = sz1.cy;
-      lpMetrics->tmDescent = sz2.cy - sz1.cy;
+      lpMetrics->tmAveCharWidth = sz2.cx() / (double) str2.get_length();
+      lpMetrics->tmAscent = sz1.cy();
+      lpMetrics->tmDescent = sz2.cy() - sz1.cy();
 
 
       //retry_single_lock slGdiplus(psystem->s_mutexGdiplus, ::time(1), ::time(1));
@@ -2062,14 +2062,14 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::ScrollDC(i32 Δx, i32 Δy, rectangle_i32 lpRectScroll, const ::rectangle_i32 & rectangleClip, ::draw2d::region* pRgnUpdate, RECTANGLE_I32 * lpRectUpdate)
+   bool graphics::ScrollDC(i32 greekdeltax, i32 greekdeltay, rectangle_i32 lpRectScroll, const ::rectangle_i32 & rectangleClip, ::draw2d::region* pRgnUpdate, RECTANGLE_I32 * lpRectUpdate)
    {
 
       throw ::not_implemented();
       return false;
 
 //      ASSERT(get_handle1() != nullptr);
-//      return ::ScrollDC(get_handle1(), Δx, Δy, lpRectScroll, lpRectClip, (HRGN)pRgnUpdate->get_os_data(), lpRectUpdate) != false;
+//      return ::ScrollDC(get_handle1(), greekdeltax, greekdeltay, lpRectScroll, lpRectClip, (HRGN)pRgnUpdate->get_os_data(), lpRectUpdate) != false;
 
    }
 
@@ -2547,7 +2547,7 @@ namespace draw2d_xlib
 
    }
 
-   i32 graphics::GetPath(POINT_I32 * lpPoints, byte * lpTypes, i32 nCount) const
+   i32 graphics::GetPath(POINT_I32 * lpPoints, ::u8 * lpTypes, i32 nCount) const
    {
 
       throw ::not_implemented();
@@ -2625,7 +2625,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::AddMetaFileComment(::u32 nDataSize, const byte* pCommentData)
+   bool graphics::AddMetaFileComment(::u32 nDataSize, const ::u8* pCommentData)
    {
 
       throw ::not_implemented();
@@ -3202,7 +3202,7 @@ namespace draw2d_xlib
             ::draw2d::region rgnOutside, rgnInside;
             rgnOutside.CreateRectRgnIndirect(rectangle);
             const ::rectangle_i32 & rectangle = *rectangle;
-            rectangle.inflate(-size.cx, -size.cy);
+            rectangle.inflate(-size.cx(), -size.cy());
             rectangle.intersect(rectangle, rectangle);
             rgnInside.CreateRectRgnIndirect(rectangle);
             rgnNew.CreateRectRgn(0, 0, 0, 0);
@@ -3228,7 +3228,7 @@ namespace draw2d_xlib
                rgnLast.CreateRectRgn(0, 0, 0, 0);
                rgnOutside.SetRectRgn(lpRectLast);
                rectangle = *lpRectLast;
-               rectangle.inflate(-sizeLast.cx, -sizeLast.cy);
+               rectangle.inflate(-sizeLast.cx(), -sizeLast.cy());
                rectangle.intersect(rectangle, lpRectLast);
                rgnInside.SetRectRgn(rectangle);
                rgnLast.CombineRgn(&rgnOutside, &rgnInside, RGN_XOR);
@@ -3421,7 +3421,7 @@ namespace draw2d_xlib
    /*      hdc_map* pMap = afxMapHDC();
          if (pMap != nullptr && pMap->lookup_permanent(get_handle1()) == this)
          {
-            TRACE(::aura::trace::category_AppMsg, 0, "cannot Set Output hDC on Attached graphics.\n");
+            information(::aura::trace::category_AppMsg, 0, "cannot Set Output hDC on Attached graphics.\n");
             ASSERT(false);
          }*/
 //#endif
@@ -3439,7 +3439,7 @@ namespace draw2d_xlib
    /*      hdc_map* pMap = afxMapHDC();
          if (pMap != nullptr && pMap->lookup_permanent(get_handle1()) == this)
          {
-            TRACE(::aura::trace::category_AppMsg, 0, "cannot Release Output hDC on Attached graphics.\n");
+            information(::aura::trace::category_AppMsg, 0, "cannot Release Output hDC on Attached graphics.\n");
             ASSERT(false);
          }*/
 //#endif
@@ -4002,9 +4002,9 @@ namespace draw2d_xlib
       /*
             i32 nRetVal = ERROR;
             if(get_handle1() != nullptr && get_handle1() != get_handle2())
-               nRetVal = ::OffsetClipRgn(get_handle1(), size.cx, size.cy);
+               nRetVal = ::OffsetClipRgn(get_handle1(), size.cx(), size.cy());
             if(get_handle2() != nullptr)
-               nRetVal = ::OffsetClipRgn(get_handle2(), size.cx, size.cy);
+               nRetVal = ::OffsetClipRgn(get_handle2(), size.cx(), size.cy());
             return nRetVal;
       */
    }
@@ -4219,7 +4219,7 @@ namespace draw2d_xlib
 
    }
 
-   bool graphics::PolyDraw(const POINT_I32* lpPoints, const byte* lpTypes, i32 nCount)
+   bool graphics::PolyDraw(const POINT_I32* lpPoints, const ::u8* lpTypes, i32 nCount)
    {
 
       throw ::not_implemented();
@@ -4318,7 +4318,7 @@ namespace draw2d_xlib
                HRGN hRgn = ::CreateRectRgn(0, 0, 0, 0);
                if (::GetClipRgn(get_handle1(), hRgn) < 0 || !::SelectClipRgn(get_handle2(), hRgn))
                {
-                  TRACE(::aura::trace::category_AppMsg, 0, "Error: unable to transfer clip region in graphics::SelectClipPath!\n");
+                  information(::aura::trace::category_AppMsg, 0, "Error: unable to transfer clip region in graphics::SelectClipPath!\n");
                   bResult = false;
                }
                ::DeleteObject(hRgn);
@@ -4482,8 +4482,8 @@ namespace draw2d_xlib
 
             size_i32 sizeWinExt = GetWindowExt();
             size_i32 sizeVpExt = get_context_extents();
-            LPSIZE32->cx = MulDiv(LPSIZE32->cx, abs(sizeVpExt.cx), abs(sizeWinExt.cx));
-            LPSIZE32->cy = MulDiv(LPSIZE32->cy, abs(sizeVpExt.cy), abs(sizeWinExt.cy));
+            LPSIZE32->cx = MulDiv(LPSIZE32->cx, abs(sizeVpExt.cx()), abs(sizeWinExt.cx()));
+            LPSIZE32->cy = MulDiv(LPSIZE32->cy, abs(sizeVpExt.cy()), abs(sizeWinExt.cy()));
       */
 
    }
@@ -4499,8 +4499,8 @@ namespace draw2d_xlib
 
             size_i32 sizeWinExt = GetWindowExt();
             size_i32 sizeVpExt = get_context_extents();
-            LPSIZE32->cx = MulDiv(LPSIZE32->cx, abs(sizeWinExt.cx), abs(sizeVpExt.cx));
-            LPSIZE32->cy = MulDiv(LPSIZE32->cy, abs(sizeWinExt.cy), abs(sizeVpExt.cy));
+            LPSIZE32->cx = MulDiv(LPSIZE32->cx, abs(sizeWinExt.cx()), abs(sizeVpExt.cx()));
+            LPSIZE32->cy = MulDiv(LPSIZE32->cy, abs(sizeWinExt.cy()), abs(sizeVpExt.cy()));
       */
 
    }
@@ -4545,34 +4545,34 @@ namespace draw2d_xlib
 
       xlib_keep keep(this);
 
-      double Δx;
+      double greekdeltax;
 
-      double Δy;
+      double greekdeltay;
 
       if(nFormat & e_align_right)
       {
-         Δx = rectangle.right - rectangle.left - sz.cx;
+         greekdeltax = rectangle.right - rectangle.left - sz.cx();
       }
       else if(nFormat & e_align_horizontal_center)
       {
-         Δx = ((rectangle.right - rectangle.left) - (sz.cx)) / 2.0;
+         greekdeltax = ((rectangle.right - rectangle.left) - (sz.cx())) / 2.0;
       }
       else
       {
-         Δx = 0.;
+         greekdeltax = 0.;
       }
 
       if(nFormat & e_align_bottom)
       {
-         Δy = rectangle.bottom - rectangle.top - sz.cy;
+         greekdeltay = rectangle.bottom - rectangle.top - sz.cy();
       }
       else if(nFormat & e_align_vertical_center)
       {
-         Δy = ((rectangle.bottom - rectangle.top) - (sz.cy)) / 2.0;
+         greekdeltay = ((rectangle.bottom - rectangle.top) - (sz.cy())) / 2.0;
       }
       else
       {
-         Δy = 0.;
+         greekdeltay = 0.;
       }
 
       /*      array < XChar2b > xa = utf8toXChar2b(str);
@@ -4581,8 +4581,8 @@ namespace draw2d_xlib
                m_pdc->m_pdisplay,
                m_pdc->m_drawable,
                m_pdc->m_gc,
-               rectangle.left + Δx + m_pdc->m_pointOffset.x,
-               rectangle.top + h + Δy + m_pdc->m_pointOffset.y,
+               rectangle.left + greekdeltax + m_pdc->m_pointOffset.x,
+               rectangle.top + h + greekdeltay + m_pdc->m_pointOffset.y,
                xa.get_data(),
                xa.get_count());*/
 
@@ -4609,8 +4609,8 @@ namespace draw2d_xlib
 //      XftColorAllocValue(m_pdc->m_pdisplay, pbitmap->m_ui.m_window->draw2d(), pbitmap->m_ui.m_window->m_colormap, &c, &ftc);
 
       XftDrawStringUtf8(pdraw, &ftc, pfont->m_pft,
-                        rectangle.left + Δx + m_pdc->m_pointOffset.x,
-                        rectangle.top + h + Δy + m_pdc->m_pointOffset.y, (const FcChar8 *) (const char *) str);
+                        rectangle.left + greekdeltax + m_pdc->m_pointOffset.x,
+                        rectangle.top + h + greekdeltay + m_pdc->m_pointOffset.y, (const FcChar8 *) (const char *) str);
 
 //      XftColorFree(m_pdc->m_pdisplay, pbitmap->m_ui.m_window->draw2d(), pbitmap->m_ui.m_window->m_colormap, &ftc);
 
@@ -4759,9 +4759,9 @@ namespace draw2d_xlib
 
       ::size_i32  sz = get_text_extent(lpszString, nCount, iIndex);
 
-      size.cx = sz.cx;
+      size.cx() = sz.cx();
 
-      size.cy = sz.cy;
+      size.cy() = sz.cy();
 
       return true;
 
@@ -5702,7 +5702,7 @@ ok:
    {
 
       size_i32 sz = get_text_extent(L"Ac");
-      return sz.cy;
+      return sz.cy();
       /*
             ::draw2d_xlib::bitmap * pbitmap = dynamic_cast < ::draw2d_xlib::bitmap * > (m_pbitmap.m_p);
 
@@ -5727,8 +5727,8 @@ ok:
             XftColorAllocValue(m_pdc->m_pdisplay, pbitmap->m_ui.m_window->draw2d(), pbitmap->m_ui.m_window->m_colormap, &c, &ftc);
 
             XftDrawString8(pdraw, &ftc, pfont->m_pft,
-            rectangle.left + Δx + m_pdc->m_pointOffset.x,
-            rectangle.top + h + Δy + m_pdc->m_pointOffset.y, (FcChar8 *) (const char *) str);
+            rectangle.left + greekdeltax + m_pdc->m_pointOffset.x,
+            rectangle.top + h + greekdeltay + m_pdc->m_pointOffset.y, (FcChar8 *) (const char *) str);
 
             XftColorFree(m_pdc->m_pdisplay, pbitmap->m_ui.m_window->draw2d(), pbitmap->m_ui.m_window->m_colormap, &ftc);
 

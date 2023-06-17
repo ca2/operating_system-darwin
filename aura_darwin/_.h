@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "aura/_.h"
-#include "apex_posix/_.h"
+#include "aura_posix/_.h"
+#include "apex_darwin/_.h"
 
 
 #if defined(_AURA_POSIX_LIBRARY)
@@ -17,29 +17,9 @@ namespace aura_posix
 
 
    class node;
-   class appindicator;
 
 
 } // namespace aura_posix
-
-
-namespace xim
-{
-
-
-   class keyboard;
-
-
-} // namespace xim
-
-
-#if defined(LINUX)
-
-
-#include "x11/_.h"
-
-
-#endif
 
 
 

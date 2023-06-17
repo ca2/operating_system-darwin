@@ -107,7 +107,7 @@ namespace multimedia
 
          synchronous_lock sl(synchronization());
 
-         TRACE("multimedia::audio_alsa::out_open_ex");
+         information("multimedia::audio_alsa::out_open_ex");
 
          if(m_ppcm != NULL && m_eoutstate != ::wave::e_out_state_initial)
          {
@@ -198,7 +198,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params_current(m_ppcm, m_pswparams)) < 0)
          {
 
-            FORMATTED_TRACE("unable to determine current m_pswparams for playback: %s\n", snd_strerror(err));
+            information("unable to determine current m_pswparams for playback: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -210,7 +210,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params_set_start_threshold(m_ppcm, m_pswparams, framesThreshold)) < 0)
          {
 
-            FORMATTED_TRACE("unable to set start threshold mode for playback: %s\n", snd_strerror(err));
+            information("unable to set start threshold mode for playback: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -220,7 +220,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params_set_avail_min(m_ppcm, m_pswparams, m_frameCount)) < 0)
          {
 
-            FORMATTED_TRACE("unable to set avail min for playback: %s\n", snd_strerror(err));
+            information("unable to set avail min for playback: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -229,7 +229,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params_set_tstamp_mode(m_ppcm, m_pswparams, SND_PCM_TSTAMP_ENABLE)) < 0)
          {
 
-            FORMATTED_TRACE("unable to set time stamp mode: %s\n", snd_strerror(err));
+            information("unable to set time stamp mode: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -238,7 +238,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params_set_tstamp_type(m_ppcm, m_pswparams,SND_PCM_TSTAMP_TYPE_GETTIMEOFDAY)) <0)
          {
 
-            FORMATTED_TRACE("unable to set time stamp type: %s\n", snd_strerror(err));
+            information("unable to set time stamp type: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -248,7 +248,7 @@ namespace multimedia
          if((err = snd_pcm_sw_params(m_ppcm, m_pswparams)) < 0)
          {
 
-            FORMATTED_TRACE("unable to set sw params for playback: %s\n", snd_strerror(err));
+            information("unable to set sw params for playback: %s\n", snd_strerror(err));
 
             throw ::exception(error_failed);
 
@@ -270,7 +270,7 @@ namespace multimedia
 
          synchronous_lock sl(synchronization());
 
-         TRACE("multimedia::audio_alsa::out_close");
+         information("multimedia::audio_alsa::out_close");
 
          if(m_eoutstate == ::wave::e_out_state_playing)
          {
@@ -308,7 +308,7 @@ namespace multimedia
 
          synchronous_lock sl(synchronization());
 
-         TRACE("multimedia::audio_alsa::out_stop");
+         information("multimedia::audio_alsa::out_stop");
 
          if(m_eoutstate != ::wave::e_out_state_playing && m_eoutstate != ::wave::e_out_state_paused)
          {
@@ -352,7 +352,7 @@ namespace multimedia
 
          ASSERT(m_eoutstate == ::wave::e_out_state_playing);
 
-         TRACE("multimedia::audio_alsa::out_pause");
+         information("multimedia::audio_alsa::out_pause");
 
          if(m_eoutstate != ::wave::e_out_state_playing)
          {
@@ -394,7 +394,7 @@ namespace multimedia
 
          ASSERT(m_eoutstate == ::wave::e_out_state_paused);
 
-         TRACE("multimedia::audio_alsa::out_restart");
+         information("multimedia::audio_alsa::out_restart");
 
          if(m_eoutstate != ::wave::e_out_state_paused)
          {
@@ -507,7 +507,7 @@ namespace multimedia
       void wave_out::out_on_playback_end()
       {
 
-         TRACE("multimedia::audio_alsa::out_on_playback_end");
+         information("multimedia::audio_alsa::out_on_playback_end");
 
          ::wave::out::out_on_playback_end();
 
@@ -542,7 +542,7 @@ namespace multimedia
          if(m_ppcm == NULL)
          {
 
-            TRACE("alsa_out_buffer_ready m_ppcm == NULL");
+            information("alsa_out_buffer_ready m_ppcm == NULL");
 
             return false;
 
@@ -551,7 +551,7 @@ namespace multimedia
          if(m_eoutstate != ::wave::e_out_state_playing && m_eoutstate != ::wave::e_out_state_stopping)
          {
 
-            TRACE("alsa_out_buffer_ready failure: !playing && !stopping");
+            information("alsa_out_buffer_ready failure: !playing && !stopping");
 
             return false;
 
@@ -608,26 +608,26 @@ namespace multimedia
 
                   const char * pszError = snd_strerror(iFrameFreeCount);
 
-                  FORMATTED_TRACE("ALSA wave_out snd_pcm_avail error: %s (%d)\n", pszError, iFrameFreeCount);
+                  information("ALSA wave_out snd_pcm_avail error: %s (%d)\n", pszError, iFrameFreeCount);
 
                   iFrameFreeCount = defer_underrun_recovery(iFrameFreeCount);
 
                   if (iFrameFreeCount >= 0)
                   {
 
-                     TRACE("ALSA wave_out snd_pcm_avail underrun recovery success (snd_pcm_avail)");
+                     information("ALSA wave_out snd_pcm_avail underrun recovery success (snd_pcm_avail)");
 
                      break;
 
                   }
 
-                  FORMATTED_TRACE("ALSA wave_out snd_pcm_avail minimum byte count %d\n", iFramesToWrite);
+                  information("ALSA wave_out snd_pcm_avail minimum ::u8 count %d\n", iFramesToWrite);
 
                   m_eoutstate = ::wave::e_out_state_opened;
 
                   m_estatusWave = error_failed;
 
-                  FORMATTED_TRACE("ALSA wave_out snd_pcm_avail error: %s\n", snd_strerror(iFrameFreeCount));
+                  information("ALSA wave_out snd_pcm_avail error: %s\n", snd_strerror(iFrameFreeCount));
 
                   return;
 
@@ -645,7 +645,7 @@ namespace multimedia
 
          }
 
-         byte * pdata;
+         ::u8 * pdata;
 
          memory m;
 
@@ -656,7 +656,7 @@ namespace multimedia
 
             pbuffer = m_pwavebuffer->m_buffera[iBuffer];
 
-            pdata = (byte *) out_get_buffer_data(iBuffer);
+            pdata = (::u8 *) out_get_buffer_data(iBuffer);
 
          }
          else
@@ -666,7 +666,7 @@ namespace multimedia
 
             m.zero();
 
-            pdata = (byte *) m.get_data();
+            pdata = (::u8 *) m.get_data();
 
          }
 
@@ -695,7 +695,7 @@ namespace multimedia
             if(iFramesJustWritten == -EINTR)
             {
 
-               TRACE("snd_pcm_writei -EINTR\n");
+               information("snd_pcm_writei -EINTR\n");
 
                continue;
 
@@ -703,7 +703,7 @@ namespace multimedia
             else if(iFramesJustWritten == -EAGAIN)
             {
 
-               //TRACE("snd_pcm_writei -EAGAIN\n");
+               //information("snd_pcm_writei -EAGAIN\n");
 
                sl.unlock();
 
@@ -717,9 +717,9 @@ namespace multimedia
             else if(iFramesJustWritten < 0)
             {
 
-               TRACE("snd_pcm_writei Underrun\n");
+               information("snd_pcm_writei Underrun\n");
 
-               FORMATTED_TRACE("ALSA wave_out snd_pcm_writei error: %s (%d)\n", snd_strerror(iFramesJustWritten), iFramesJustWritten);
+               information("ALSA wave_out snd_pcm_writei error: %s (%d)\n", snd_strerror(iFramesJustWritten), iFramesJustWritten);
 
                iFramesJustWritten = defer_underrun_recovery(iFramesJustWritten);
 
@@ -730,7 +730,7 @@ namespace multimedia
 
                   m_estatusWave = error_failed;
 
-                  FORMATTED_TRACE("ALSA wave_out snd_pcm_writei couldn't recover from error: %s\n", snd_strerror(iFramesJustWritten));
+                  information("ALSA wave_out snd_pcm_writei couldn't recover from error: %s\n", snd_strerror(iFramesJustWritten));
 
                   return;
 
@@ -835,13 +835,13 @@ namespace multimedia
          if ((err = snd_pcm_prepare (m_ppcm)) < 0)
          {
 
-            FORMATTED_TRACE ("out_start: Cannot prepare audio interface for use (%s)\n",snd_strerror (err));
+            information ("out_start: Cannot prepare audio interface for use (%s)\n",snd_strerror (err));
 
             throw ::exception(error_failed);
 
          }
 
-         TRACE("out_start: snd_pcm_prepare OK");
+         information("out_start: snd_pcm_prepare OK");
 
          m_bStarted = false;
 
@@ -850,7 +850,7 @@ namespace multimedia
          if(!m_estatusWave)
          {
 
-            TRACE("out_start: ::wave::out::out_start FAILED");
+            information("out_start: ::wave::out::out_start FAILED");
 
             throw ::exception(m_estatusWave);
 
@@ -863,7 +863,7 @@ namespace multimedia
 //
 //         });
 
-         TRACE("out_start: ::wave::out::out_start OK");
+         information("out_start: ::wave::out::out_start OK");
 
          //return success;
 
@@ -878,14 +878,14 @@ namespace multimedia
 //         if (err == -EPIPE)
 //         {
 //
-//            FORMATTED_TRACE("underrun_recovery, going to snd_pcm_prepare: %s\n", snd_strerror(err));
+//            information("underrun_recovery, going to snd_pcm_prepare: %s\n", snd_strerror(err));
 //
 //
 //
 //            if (err < 0)
 //            {
 //
-//               FORMATTED_TRACE("Can't recover from underrun, snd_pcm_prepare failed: %s\n", snd_strerror(err));
+//               information("Can't recover from underrun, snd_pcm_prepare failed: %s\n", snd_strerror(err));
 //
 //            }
 //
@@ -893,12 +893,12 @@ namespace multimedia
 //         else if (err == -ESTRPIPE)
 //         {
 //
-//            FORMATTED_TRACE("underrun_recovery, snd_pcm_prepare returned -ESTRPIPE: %s\n", snd_strerror(err));
+//            information("underrun_recovery, snd_pcm_prepare returned -ESTRPIPE: %s\n", snd_strerror(err));
 //
 //            while ((err = snd_pcm_resume(m_ppcm)) == -EAGAIN)
 //            {
 //
-//               FORMATTED_TRACE("underrun_recovery, snd_pcm_resume returned -EAGAIN: %s\n", snd_strerror(err));
+//               information("underrun_recovery, snd_pcm_resume returned -EAGAIN: %s\n", snd_strerror(err));
 //
 //               sleep(1); /* wait until the suspend flag is released */
 //
@@ -912,7 +912,7 @@ namespace multimedia
 //               if (err < 0)
 //               {
 //
-//                  FORMATTED_TRACE("Can't recovery from suspend, snd_pcm_prepare failed: %s\n", snd_strerror(err));
+//                  information("Can't recovery from suspend, snd_pcm_prepare failed: %s\n", snd_strerror(err));
 //
 //               }
 //

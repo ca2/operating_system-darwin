@@ -66,7 +66,7 @@ namespace acme_posix
 
       for (int path_index = 0; path_index < glob_results.gl_pathc; path_index++)
       {
-         paths_found.push_back(glob_results.gl_pathv[path_index]);
+         paths_found.add(glob_results.gl_pathv[path_index]);
       }
 
       globfree(&glob_results);
@@ -257,9 +257,9 @@ namespace acme_posix
 
       string_array result;
 
-      result.push_back(friendly_name);
+      result.add(friendly_name);
 
-      result.push_back(hardware_id);
+      result.add(hardware_id);
 
       return result;
 

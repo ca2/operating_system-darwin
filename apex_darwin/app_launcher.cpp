@@ -189,7 +189,7 @@ namespace apex_darwin
 //int iExitCod = 0;
 ::string strCommand = get_executable_path();
 //
-      acmenode()->command_system(strCommand);
+      acmenode()->command_system(strCommand, 2_h);
 //
 //      //pnode->call_async(strPath, strParams, strDir, e_display_none, false);
 //
