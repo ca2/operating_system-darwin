@@ -35,24 +35,24 @@ namespace multimedia
       ::e_status snd_pcm::snd_pcm_open(snd_pcm_stream_t stream_type)
       {
 
-         INFORMATION("snd_pcm::snd_pcm_open");
+         information("snd_pcm::snd_pcm_open");
 
          if(stream_type == SND_PCM_STREAM_PLAYBACK)
          {
 
-            INFORMATION("Open for SND_PCM_STREAM_PLAYBACK");
+            information("Open for SND_PCM_STREAM_PLAYBACK");
 
          }
          else if(stream_type == SND_PCM_STREAM_CAPTURE)
          {
 
-            INFORMATION("Open for SND_PCM_STREAM_CAPTURE");
+            information("Open for SND_PCM_STREAM_CAPTURE");
 
          }
          else
          {
 
-            WARNING("Unknown stream_type!!");
+            warning("Unknown stream_type!!");
 
          }
 
@@ -201,7 +201,7 @@ namespace multimedia
          for (int i = 0; i < straDevice.get_count(); i++)
          {
 
-            INFORMATION("snd_pcm::snd_pcm_open " << straName[i] << " : " << straDevice[i]);
+            information("snd_pcm::snd_pcm_open " << straName[i] << " : " << straDevice[i]);
          }
 
          //string strHw = "hw:0,0";
@@ -210,7 +210,7 @@ namespace multimedia
          if ((err = ::snd_pcm_open(&m_ppcm, strHw, stream_type, SND_PCM_NONBLOCK | SND_PCM_ASYNC)) < 0)
          {
 
-            ERROR("cannot open audio device " << strHw << " (" << snd_strerror(err) << ")");
+            error() << "cannot open audio device " << strHw << " (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -221,7 +221,7 @@ namespace multimedia
          if ((err = snd_pcm_hw_params_any(m_ppcm, m_phwparams)) < 0)
          {
 
-            ERROR("cannot initialize hardware parameter structure (" << snd_strerror(err) << ")");
+            error() << "cannot initialize hardware parameter structure (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -230,7 +230,7 @@ namespace multimedia
          if ((err = snd_pcm_hw_params_set_access(m_ppcm, m_phwparams, SND_PCM_ACCESS_RW_INTERLEAVED)) < 0)
          {
 
-            ERROR("cannot set access type (" << snd_strerror(err) << ")");
+            error() << "cannot set access type (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -256,7 +256,7 @@ namespace multimedia
 
             string strError = snd_strerror(err);
 
-            ERROR("cannot set sample format (" << strError << ")");
+            error() << "cannot set sample format (" << strError << ")";
 
             return error_failed;
 
@@ -269,7 +269,7 @@ namespace multimedia
          if ((err = snd_pcm_hw_params_set_rate_near(m_ppcm, m_phwparams, &uiFreq, &dir)) < 0)
          {
 
-            ERROR("cannot set sample rate (" << snd_strerror(err) << ")");
+            error() << "cannot set sample rate (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -280,7 +280,7 @@ namespace multimedia
          if ((err = snd_pcm_hw_params_set_channels(m_ppcm, m_phwparams, pformat->m_waveformat.nChannels)) < 0)
          {
 
-            ERROR("cannot set channel count (" << snd_strerror(err) << ")");
+            error() << "cannot set channel count (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -297,7 +297,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_periods_min failed: (" << pszError << ")");
+            error() << "snd_pcm_hw_params_get_periods_min failed: (" << pszError << ")";
 
             return error_failed;
 
@@ -314,7 +314,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_period_size failed: " << pszError);
+            error() << "snd_pcm_hw_params_get_period_size failed: " << pszError;
 
             return error_failed;
 
@@ -331,7 +331,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_periods failed: " << pszError);
+            error() << "snd_pcm_hw_params_get_periods failed: " << pszError;
 
             return error_failed;
 
@@ -348,7 +348,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_period_size_min failed: " << pszError);
+            error() << "snd_pcm_hw_params_get_period_size_min failed: " << pszError;
 
             return error_failed;
 
@@ -365,7 +365,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_period_size_max failed: " << pszError);
+            error() << "snd_pcm_hw_params_get_period_size_max failed: " << pszError;
 
             return error_failed;
 
@@ -382,7 +382,7 @@ namespace multimedia
 
             const char *pszError = snd_strerror(err);
 
-            ERROR("snd_pcm_hw_params_get_period_size failed: " << pszError);
+            error() << "snd_pcm_hw_params_get_period_size failed: " << pszError;
 
             return error_failed;
 
@@ -397,7 +397,7 @@ namespace multimedia
          if(err < 0)
          {
 
-            ERROR("Unable to get buffer size for playback: " << snd_strerror(err));
+            error() << "Unable to get buffer size for playback: " << snd_strerror(err);
 
             return error_failed;
 
@@ -411,7 +411,7 @@ namespace multimedia
          if ((err = snd_pcm_hw_params(m_ppcm, m_phwparams)) < 0)
          {
 
-            ERROR("cannot set parameters (" << snd_strerror(err) << ")");
+            error() << "cannot set parameters (" << snd_strerror(err) << ")";
 
             return error_failed;
 
@@ -424,7 +424,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to determine current m_pswparams: " << snd_strerror(err));
+            error() << "Unable to determine current m_pswparams: " << snd_strerror(err);
 
             return error_failed;
 
@@ -435,7 +435,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to set tstamp mode : " << snd_strerror(err));
+            error() << "Unable to set tstamp mode : " << snd_strerror(err);
 
             return error_failed;
 
@@ -446,7 +446,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to set tstamp type : " << snd_strerror(err));
+            error() << "Unable to set tstamp type : " << snd_strerror(err);
 
             return error_failed;
 
@@ -457,7 +457,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to set start threshold type : " << snd_strerror(err));
+            error() << "Unable to set start threshold type : " << snd_strerror(err);
 
             return error_failed;
 
@@ -483,7 +483,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to set start threshold type : " << snd_strerror(err));
+            error() << "Unable to set start threshold type : " << snd_strerror(err);
 
             return error_failed;
 
@@ -494,7 +494,7 @@ namespace multimedia
          if (err < 0)
          {
 
-            ERROR("Unable to set swparams_p : " << snd_strerror(err));
+            error() << "Unable to set swparams_p : " << snd_strerror(err);
 
             return error_failed;
 

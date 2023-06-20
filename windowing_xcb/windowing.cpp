@@ -835,7 +835,7 @@ namespace windowing_xcb
 
          m_pointCursor.y = pmotion->root_y;
 
-         FORMATTED_INFORMATION("XCB_MOTION_NOTIFY %d,%d", pmotion->root_x, pmotion->root_y);
+         information("XCB_MOTION_NOTIFY %d,%d", pmotion->root_x, pmotion->root_y);
 
          if (msg.oswindow != nullptr && msg.oswindow->m_puserinteractionimpl != nullptr)
          {
@@ -1547,7 +1547,7 @@ namespace windowing_xcb
 
             //auto & screen_origin = window.screen_origin();
 
-            //FORMATTED_INFORMATION("");
+            //information("");
             //::output_debug_string("\nwindow(origin=" + as_string(origin.x) + ", " + as_string(origin.y));
             //::output_debug_string("\nwindow.screen_origin=" + as_string(screen_origin.x) + ", " + as_string(screen_origin.y));
             //::output_debug_string("\nbutton.root_x=" + as_string(pbutton->root_x));
@@ -1603,7 +1603,7 @@ namespace windowing_xcb
 
                }
 
-               FORMATTED_INFORMATION("XCB_BUTTON_PRESS %d,%d window %d,%d %d,%d",
+               information("XCB_BUTTON_PRESS %d,%d window %d,%d %d,%d",
                                      pbutton->root_x, pbutton->root_y,
                                      origin.x, origin.y,
                                      origin.x + size.cx(), origin.y + size.cy());
@@ -1639,7 +1639,7 @@ namespace windowing_xcb
 
                }
 
-               FORMATTED_INFORMATION("XCB_BUTTON_RELEASE %d,%d window %d,%d %d,%d",
+               information("XCB_BUTTON_RELEASE %d,%d window %d,%d %d,%d",
                                      pbutton->root_x, pbutton->root_y,
                                      origin.x, origin.y,
                                      origin.x + size.cx(), origin.y + size.cy());
@@ -1671,7 +1671,7 @@ namespace windowing_xcb
 
                screen_pixel = msg.oswindow->screen_pixel(pbutton->root_x, pbutton->root_y);
 
-               FORMATTED_INFORMATION("pixel argb(%d,%d,%d,%d)", screen_pixel.alpha, screen_pixel.red, screen_pixel.green, screen_pixel.blue);
+               information("pixel argb(%d,%d,%d,%d)", screen_pixel.alpha, screen_pixel.red, screen_pixel.green, screen_pixel.blue);
 
                alpha = screen_pixel.alpha;
 
