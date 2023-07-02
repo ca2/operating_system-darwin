@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(apex_posix CXX)
+project(apex_darwin CXX)
 
 
 list(APPEND library_source
@@ -67,7 +67,7 @@ add_library(${PROJECT_NAME} SHARED ${library_source})
 if (FILE_SYSTEM_INOTIFY)
 
 
-    target_compile_definitions(apex_posix PRIVATE FILE_SYSTEM_INOTIFY)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE FILE_SYSTEM_INOTIFY)
 
 
 endif ()
@@ -75,32 +75,32 @@ endif ()
 
 if (INTERPROCESS_COMMUNICATION_SYSTEM_5)
 
-    target_compile_definitions(apex_posix PRIVATE INTERPROCESS_COMMUNICATION_SYSTEM_5)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE INTERPROCESS_COMMUNICATION_SYSTEM_5)
 
 endif ()
 
 
 if (POSIX_SPAWN)
 
-    target_compile_definitions(apex_posix PRIVATE POSIX_SPAWN)
+    target_compile_definitions(${PROJECT_NAME} PRIVATE POSIX_SPAWN)
 
 endif ()
 
 
-target_precompile_headers(apex_posix PRIVATE framework.h)
+target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
 
 
-set_target_properties(apex_posix PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
 
 
-    target_compile_options(apex_posix PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(apex_posix PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_options(apex_posix PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(apex_posix PRIVATE ${library_references})
-    add_dependencies(apex_posix draw2d_gdiplus)
+    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+    add_dependencies(${PROJECT_NAME} draw2d_gdiplus)
 
 
 elseif (LINUX OR FREEBSD)
@@ -108,14 +108,14 @@ elseif (LINUX OR FREEBSD)
 
     if (FILE_SYSTEM_INOTIFY AND NOT DEFINED DEBIAN_LIKE AND NOT DONT_USE_PKG_CONFIG)
         pkg_check_modules(PKGCONFIG libinotify)
-        target_compile_options(apex_posix PRIVATE ${PKGCONFIG_CFLAGS})
-        target_link_options(apex_posix PRIVATE ${PKGCONFIG_LDFLAGS})
-        target_link_libraries(apex_posix PRIVATE ${PKGCONFIG_LIBRARIES})
+        target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+        target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
+        target_link_libraries(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LIBRARIES})
     endif ()
 
-    target_compile_options(apex_posix PRIVATE -fpermissive)
-    target_link_libraries(apex_posix PRIVATE ${library_references})
-    target_link_options(apex_posix PRIVATE -Wl,-z,defs)
+    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
+    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
 
 
 endif ()
@@ -128,7 +128,7 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
-target_compile_definitions(apex_posix PRIVATE _APEX_POSIX_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_LIBRARY)
 
 
 
