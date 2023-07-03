@@ -4,10 +4,10 @@
 #include "framework.h"
 #include "mutex.h"
 #include "acme/_operating_system.h"
-//#include "acme/primitive/time/time.h"
+#include "acme/operating_system/posix/_.h"
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/platform/system.h"
-////#include "acme/exception/exception.h"
+#include "acme/primitive/time/timespec.h"
 
 
 #ifdef MACOS
@@ -1127,11 +1127,11 @@ namespace acme_posix
 
          timespec timespecWait{};
 
-         copy(timespecWait, timeWait);
+         copy(&timespecWait, &timeWait);
 
          timespec timespecFinal{};
 
-         timespecFinal = addition(timespecNow, timespecWait);
+         timespecFinal = timespecNow + timespecWait;
 
          int rc = pthread_mutex_timedlock (&m_mutex, &timespecFinal);
 

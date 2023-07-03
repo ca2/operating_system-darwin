@@ -30,6 +30,10 @@
 #endif
 
 
+#include <sys/time.h>
+#include <sys/resource.h>
+
+
 int kern_max_proc();
 
 

@@ -60,9 +60,31 @@ endif()
 
 
 add_library(${PROJECT_NAME} SHARED ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
+add_library(static_${PROJECT_NAME} STATIC ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
 
 
-target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
+list(APPEND library_references
+        acme
+        acme_posix
+        acme_darwin
+        apex
+        apex_posix
+        apex_darwin
+        aura
+        aura_posix)
+
+if (NOT ${NO_PRECOMPILED_HEADER})
+
+   target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
+   target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
+
+endif ()
+
+
+
+list(APPEND static_library_references ${library_references})
+
+list(TRANSFORM static_library_references PREPEND static_)
 
 
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
@@ -77,7 +99,7 @@ if (MSVC)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
 
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
 
    list(APPEND extra_pkg_modules
@@ -106,12 +128,21 @@ endif()
    if(NOT DONT_USE_PKG_CONFIG)
       pkg_check_modules(PKGCONFIG ${extra_pkg_modules})
    endif()
-   target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
+     target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
+   target_compile_options(static_${PROJECT_NAME} PRIVATE -fpermissive)
+   target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
+
+
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-   target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
-   target_link_libraries(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LIBRARIES})
-   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_link_options(acme_posix PRIVATE ${PKGCONFIG_LDFLAGS})
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
+   target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${PKGCONFIG_LIBRARIES})
    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
+   target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
+
 
 
 endif ()
@@ -121,7 +152,9 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR})
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/..)
 list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 
+
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
+target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
 
 
 
