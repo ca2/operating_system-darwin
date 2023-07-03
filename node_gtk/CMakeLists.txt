@@ -58,7 +58,7 @@ if (MSVC)
    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
 
 
-elseif(LINUX OR FREEBSD)
+elseif(${LINUX} OR ${FREEBSD})
 
 
    #if(NOT DONT_USE_PKG_CONFIG)
