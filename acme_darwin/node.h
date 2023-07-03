@@ -113,8 +113,8 @@ namespace acme_darwin
 //
 //      void command_system(string_array & straOutput, int& iExitCode, const char* psz, enum_command_system ecommandsystem, const class ::time& timeTimeout, ::particle * pparticleSynchronization, ::file::file * pfileLog) override;
 
-      ::process_identifier_array processes_identifiers() override;
-      
+//      ::process_identifier_array processes_identifiers() override;
+//      
       
    };
 
