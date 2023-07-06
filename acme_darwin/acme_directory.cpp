@@ -40,6 +40,7 @@ char * get_current_dir_name();
 #include <sys/stat.h>
 #include <dirent.h>
 #include <unistd.h>
+#include <errno.h>
 char * get_current_dir_name();
 #endif
 
