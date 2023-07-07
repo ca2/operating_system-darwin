@@ -98,11 +98,11 @@ namespace acme_darwin
 //      if (rc)
 //      {
 //
-//         int iErrorNumber = errno;
+//         auto cerrornumber = c_error_number();
 //
-//         auto estatus = errno_status(iErrorNumber);
+//         auto estatus = cerrornumber.estatus();
 //
-//         auto errorcode = errno_error_code(iErrorNumber);
+//         auto error_code = cerrornumber.error_code();
 //
 //         throw ::file::exception(estatus, errorcode, path, "utimes");
 //

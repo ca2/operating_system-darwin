@@ -409,7 +409,7 @@ namespace acme_posix
          portinfo.description = friendly_name;
          portinfo.hardware_id = hardware_id;
 
-         portinfoa.push_back(portinfo);
+         portinfoa.add(portinfo);
 
       }
 
