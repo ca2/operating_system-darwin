@@ -3,7 +3,7 @@ project(acme_darwin CXX)
 
 
 list(APPEND library_source
-        dbus/gsm_proxy.cpp
+        #dbus/gsm_proxy.cpp
         _.cpp
         _.h
         _factory.cpp
@@ -15,7 +15,7 @@ list(APPEND library_source
         acme_file.h
         acme_path.cpp
         acme_path.h
-        dbus.cpp
+        #dbus.cpp
         #exception_translator.cpp
         #exception_translator.h
         #file_memory_map.cpp
@@ -34,24 +34,24 @@ list(APPEND library_source
         )
 
 
-if (POSIX_LIST_SERIAL_PORTS)
-
-
-    list(APPEND library_source list_serial_ports.cpp)
-
-
-endif ()
+#if (POSIX_LIST_SERIAL_PORTS)
+#
+#
+#    list(APPEND library_source list_serial_ports.cpp)
+#
+#
+#endif ()
 
 
 add_library(${PROJECT_NAME} SHARED ${library_source})
 add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 
-if (POSIX_LIST_SERIAL_PORTS)
-
-    target_compile_definitions(${PROJECT_NAME} PRIVATE POSIX_LIST_SERIAL_PORTS)
-
-endif ()
+#if (POSIX_LIST_SERIAL_PORTS)
+#
+#    target_compile_definitions(${PROJECT_NAME} PRIVATE POSIX_LIST_SERIAL_PORTS)
+#
+#endif ()
 
 
 list(APPEND library_references

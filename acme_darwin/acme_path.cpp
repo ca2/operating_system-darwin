@@ -12,10 +12,17 @@ namespace acme_darwin
 {
 
 
-   acme_path::acme_path() = default;
+   acme_path::acme_path()
+   {
 
 
-   acme_path::~acme_path() = default;
+   }
+
+   acme_path::~acme_path()
+   {
+
+
+   }
 
 
 //   ::file::enum_type acme_path::get_type(const char * path1)
@@ -81,7 +88,7 @@ namespace acme_darwin
 //   }
 
 
-} // namespace acme_posix
+} // namespace acme_darwin
 
 
 

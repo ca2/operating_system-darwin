@@ -16,8 +16,7 @@
 #include "acme/primitive/primitive/memory.h"
 #include "acme/operating_system/ansi/_pthread.h"
 //#include "acme/primitive/primitive/payload.h"
-#include <signal.h>
-
+//#include <signal.h>
 
 
 #ifdef FREEBSD
@@ -39,9 +38,13 @@ int kern_max_proc();
 
 #include <sys/wait.h>
 #include <unistd.h>
+
 #if !defined(ANDROID)
+
 #include <wordexp.h>
+
 #endif
+
 #include <fcntl.h>
 
 
@@ -98,55 +101,55 @@ int kern_max_proc();
 
 
 
-void init_chldstatus_cs();
+//void init_chldstatus_cs();
 
 
-void term_chldstatus_cs();
+//void term_chldstatus_cs();
 
 
-void os_post_quit();
+//void os_post_quit();
 
 
-void ansios_sigchld_handler(int sig);
+//void ansios_sigchld_handler(int sig);
 
 
-void apex_application_run(const char * pszAppName, const char * pszProgName);
+//void apex_application_run(const char * pszAppName, const char * pszProgName);
 
 
 namespace acme_darwin
 {
 
 
-::i32 get_os_process_priority(::enum_priority epriority);
+   ::i32 get_os_process_priority(::enum_priority epriority);
 
 
-node::node()
-{
-   
-   m_pAcmePosix = this;
-   
-   init_chldstatus_cs();
-   
-   //install_sigfpe_handler();
-   
-}
+   node::node()
+   {
+
+      //m_pAcmePosix = this;
+
+      //init_chldstatus_cs();
+
+      //install_sigfpe_handler();
+
+   }
 
 
-node::~node()
-{
-   
-   //      if(m_pGtkSettingsDefault)
-   //      {
-   //
-   //         g_object_unref(m_pGtkSettingsDefault);
-   //
-   //      }
-   
-   //uninstall_sigfpe_handler();
-   
-   term_chldstatus_cs();
-   
-}
+   node::~node()
+   {
+
+      //      if(m_pGtkSettingsDefault)
+      //      {
+      //
+      //         g_object_unref(m_pGtkSettingsDefault);
+      //
+      //      }
+
+      //uninstall_sigfpe_handler();
+
+      //term_chldstatus_cs();
+
+   }
 
 
 //      ::e_status node::call_async(const char * pszPath, const char * pszParam, const char * pszDir, ::e_display edisplay, bool bPrivileged, unsigned int * puiPid)
@@ -289,24 +292,24 @@ node::~node()
 ////      }
 //
 
-void node::initialize(::particle * pparticle)
-{
-   
-   //auto estatus =
-   //
-   //
-   ::acme_posix::node::initialize(pparticle);
-   
-   //         if(!estatus)
-   //         {
-   //
-   //            return estatus;
-   //
-   //         }
-   //
-   //         return estatus;
-   
-}
+   void node::initialize(::particle * pparticle)
+   {
+
+      //auto estatus =
+      //
+      //
+      ::acme_posix::node::initialize(pparticle);
+
+      //         if(!estatus)
+      //         {
+      //
+      //            return estatus;
+      //
+      //         }
+      //
+      //         return estatus;
+
+   }
 //
 //
 //   void node::install_sigchld_handler()
@@ -1428,16 +1431,16 @@ void node::initialize(::particle * pparticle)
 //   }
 //
 
-bool node::set_process_priority(::enum_priority epriority)
-{
-   
-   int iOsPriority = get_os_process_priority(epriority);
-   
-   setpriority(PRIO_PROCESS, getpid(), iOsPriority);
-   
-   return true;
-   
-}
+   bool node::set_process_priority(::enum_priority epriority)
+   {
+
+      int iOsPriority = get_os_process_priority(epriority);
+
+      setpriority(PRIO_PROCESS, getpid(), iOsPriority);
+
+      return true;
+
+   }
 
 //
 //   void node::command_system(string_array & straOutput, int& iExitCode, const char* psz, enum_command_system ecommandsystem, const class time & timeTimeout, ::particle * pparticleSynchronization, ::file::file * pfileLog)
@@ -1703,64 +1706,55 @@ bool node::set_process_priority(::enum_priority epriority)
 
    ::i32 get_os_process_priority(::enum_priority epriority)
    {
-      
-      if(epriority == e_priority_normal)
+
+      if (epriority == e_priority_normal)
       {
-         
+
          return 0;
-         
-      }
-      else if(epriority < e_priority_normal)
+
+      } else if (epriority < e_priority_normal)
       {
-         
-         if(epriority >= e_priority_below_normal)
+
+         if (epriority >= e_priority_below_normal)
          {
-            
+
             return -10;
-            
-         }
-         else if(epriority >= e_priority_lowest)
+
+         } else if (epriority >= e_priority_lowest)
          {
-            
+
             return -15;
-            
-         }
-         else
+
+         } else
          {
-            
-            return - 20;
-            
+
+            return -20;
+
          }
-         
-      }
-      else
+
+      } else
       {
-         
-         if(epriority >= e_priority_above_normal)
+
+         if (epriority >= e_priority_above_normal)
          {
-            
+
             return 10;
-            
-         }
-         else if(epriority >= e_priority_highest)
+
+         } else if (epriority >= e_priority_highest)
          {
-            
+
             return 15;
-            
-         }
-         else
+
+         } else
          {
-            
+
             return 20;
-            
+
          }
-         
+
       }
-      
+
    }
-
-
-
 
 
 } // namespace acme_darwin
