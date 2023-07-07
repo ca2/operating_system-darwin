@@ -386,11 +386,11 @@ namespace acme_posix
 
       string_array search_globs;
 
-      search_globs.push_back("/dev/ttyACM*");
-      search_globs.push_back("/dev/ttyS*");
-      search_globs.push_back("/dev/ttyUSB*");
-      search_globs.push_back("/dev/tty.*");
-      search_globs.push_back("/dev/cu.*");
+      search_globs.add("/dev/ttyACM*");
+      search_globs.add("/dev/ttyS*");
+      search_globs.add("/dev/ttyUSB*");
+      search_globs.add("/dev/tty.*");
+      search_globs.add("/dev/cu.*");
 
       string_array devices_found = glob(search_globs);
 

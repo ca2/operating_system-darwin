@@ -22,8 +22,8 @@ list(APPEND library_source
         #file_memory_map.h
         framework.cpp
         framework.h
-        mutex.cpp
-        mutex.h
+        #mutex.cpp
+        #mutex.h
         node.cpp
         node.h
         #pipe.cpp
