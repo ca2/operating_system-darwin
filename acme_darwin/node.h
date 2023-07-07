@@ -15,7 +15,7 @@ namespace acme_darwin
 {
 
 
-   class CLASS_DECL_ACME node :
+   class CLASS_DECL_ACME_DARWIN node :
       virtual public ::acme_posix::node
    {
    public:
