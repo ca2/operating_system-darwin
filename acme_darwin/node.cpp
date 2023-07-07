@@ -1454,7 +1454,7 @@ bool node::set_process_priority(::enum_priority epriority)
 //      if(iError != 0)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         estatus = errno_status(iErrNo);
 //
@@ -1469,7 +1469,7 @@ bool node::set_process_priority(::enum_priority epriority)
 //      if(iError != 0)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         estatus = errno_status(iErrNo);
 //

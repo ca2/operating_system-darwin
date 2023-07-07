@@ -324,9 +324,9 @@ namespace acme_posix
          if(m_iFd < 0)
          {
 
-            int iErrNo = errno;
+            auto cerrornumber = c_error_number();
             
-            auto estatus = errno_status(iErrNo);
+            auto estatus = cerrornumber.estatus();
             
             auto errorcode = errno_error_code(iErrNo);
 

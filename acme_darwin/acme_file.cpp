@@ -177,9 +177,9 @@ namespace acme_darwin
 //      if (ftruncate(iFileDescriptor, size) == -1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
-//         auto estatus = errno_status(iErrNo);
+//         auto estatus = cerrornumber.estatus();
 //
 //         throw ::exception(estatus, "::posix::acme_file::set_size");
 //
@@ -212,7 +212,7 @@ namespace acme_darwin
 //      if (fstat(iFileDescriptor, &st) == -1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -301,7 +301,7 @@ namespace acme_darwin
 //
 //         }
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -441,7 +441,7 @@ namespace acme_darwin
 //      if (pfile == nullptr)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -475,7 +475,7 @@ namespace acme_darwin
 //      if(stat(path, &st) != 0)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -563,7 +563,7 @@ namespace acme_darwin
 //      if ((output.m_i = ::open(pszNew, flags, 0666)) == -1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -575,7 +575,7 @@ namespace acme_darwin
 //      if ((input.m_i = ::open(pszSrc, O_RDONLY)) == -1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -588,7 +588,7 @@ namespace acme_darwin
 //      if(filesize < 0)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -599,7 +599,7 @@ namespace acme_darwin
 //      if(ftruncate(output.m_i, filesize) < 0)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -610,7 +610,7 @@ namespace acme_darwin
 //      if ((source = mmap(0, filesize, PROT_READ, MAP_PRIVATE, input.m_i, 0)) == (void *)-1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -622,7 +622,7 @@ namespace acme_darwin
 //      if ((target = mmap(0, filesize, PROT_WRITE, MAP_SHARED, output.m_i, 0)) == (void *)-1)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -797,7 +797,7 @@ namespace acme_darwin
 //      if (pfile == nullptr)
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
@@ -849,9 +849,9 @@ namespace acme_darwin
 //      if(stat(pszPath, &statAttribute))
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
-//         auto estatus = errno_status(iErrNo);
+//         auto estatus = cerrornumber.estatus();
 //
 //         string strMessage;
 //
@@ -882,9 +882,9 @@ namespace acme_darwin
 //      if(stat(pszPath, &statAttribute))
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
-//         auto estatus = errno_status(iErrNo);
+//         auto estatus = cerrornumber.estatus();
 //
 //         string strMessage;
 //
@@ -903,9 +903,9 @@ namespace acme_darwin
 //      if(utime(pszPath, &utimbuf))
 //      {
 //
-//         int iErrNo = errno;
+//         auto cerrornumber = c_error_number();
 //
-//         auto estatus = errno_status(iErrNo);
+//         auto estatus = cerrornumber.estatus();
 //
 //         string strMessage;
 //
@@ -924,9 +924,9 @@ namespace acme_darwin
 //        if (::unlink(path) == -1)
 //        {
 //
-//            int iErrNo = errno;
+//            auto cerrornumber = c_error_number();
 //
-//            auto estatus = errno_status(iErrNo);
+//            auto estatus = cerrornumber.estatus();
 //
 //            if(estatus != error_file_not_found)
 //            {
