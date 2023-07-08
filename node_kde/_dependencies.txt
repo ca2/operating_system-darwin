@@ -1,2 +1,0 @@
-operating-system-posix/windowing_xcb
-operating-system-posix/windowing_x11
