@@ -21,57 +21,62 @@ list(APPEND library_source
 list(APPEND library_references
    acme
    acme_posix
+   acme_darwin
    apex
    apex_posix
+   apex_darwin
    aqua
    aura
+   aura_posix
    )
 
-
-if(WITH_X11 OR WITH_XCB)
-
-
-   list(APPEND library_source
-           x11/_.h
-
-           x11/_.cpp
-      x11/_constant.h
-      x11/window.cpp
-      x11/window.h
-      x11/windowing.cpp
-      x11/windowing.h
-   )
-
-
-#   if(WITH_X11)
-
-      list(APPEND library_source
-      x11/display_lock.cpp
-      x11/display_lock.h
-     x11/startup-notification.cpp
-     x11/startup-notification.h
-      x11/xim_keyboard.cpp
-      x11/xim_keyboard.h
-         )
-
- #  endif()
-
-endif()
-
-
-add_library(${PROJECT_NAME} SHARED ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
-add_library(static_${PROJECT_NAME} STATIC ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
+#
+#if(WITH_X11 OR WITH_XCB)
+#
+#
+#   list(APPEND library_source
+#           x11/_.h
+#
+#           x11/_.cpp
+#      x11/_constant.h
+#      x11/window.cpp
+#      x11/window.h
+#      x11/windowing.cpp
+#      x11/windowing.h
+#   )
+#
+#
+##   if(WITH_X11)
+#
+#      list(APPEND library_source
+#      x11/display_lock.cpp
+#      x11/display_lock.h
+#     x11/startup-notification.cpp
+#     x11/startup-notification.h
+#      x11/xim_keyboard.cpp
+#      x11/xim_keyboard.h
+#         )
+#
+# #  endif()
+#
+#endif()
 
 
-list(APPEND library_references
-        acme
-        acme_posix
-        acme_darwin
-        apex
-        apex_posix
-        apex_darwin
-        aura
-        aura_posix)
+#add_library(${PROJECT_NAME} SHARED ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
+#add_library(static_${PROJECT_NAME} STATIC ${library_source} user_notify_icon_bridge.h x11/desktop_environment.h x11/desktop_environment.cpp)
+add_library(${PROJECT_NAME} SHARED ${library_source})
+add_library(static_${PROJECT_NAME} STATIC ${library_source})
+
+
+#list(APPEND library_references
+#        acme
+#        acme_posix
+#        acme_darwin
+#        apex
+#        apex_posix
+#        apex_darwin
+#        aura
+#        aura_posix)
 
 if (NOT ${NO_PRECOMPILED_HEADER})
 
