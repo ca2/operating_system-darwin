@@ -8,6 +8,7 @@
 #include <sys/types.h>
 #include <sys/ipc.h>
 #include <sys/msg.h>
+#include <errno.h>
 
 
 namespace system_5
@@ -57,7 +58,7 @@ namespace system_5
 
          auto cerrornumber = c_error_number();
 
-         if(iErrorNumber == EEXIST)
+         if(cerrornumber == EEXIST)
          {
 
             if ((m_iQueue = msgget(m_key,  0660)) == -1)
@@ -251,9 +252,9 @@ namespace system_5
 
          i32 length;
 
-         data_struct *pdata = (data_struct *) m.get_data();
+         data_struct *pdata = (data_struct *) m.data();
 
-         length = m.get_size() - sizeof(long);
+         length = m.size() - sizeof(long);
 
          if ((result = msgrcv(m_iQueue, pdata, length, 20170101, IPC_NOWAIT)) == -1)
          {

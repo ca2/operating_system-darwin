@@ -96,7 +96,7 @@ namespace system_5
 
       m.set_size(sizeof(data_struct) + iLen);
 
-      data_struct *pdata = (data_struct *) m.get_data();
+      data_struct *pdata = (data_struct *) m.data();
 
       pdata->mtype = 20170101;
 
@@ -104,7 +104,7 @@ namespace system_5
 
       pdata->size = iLen;
 
-      ::memcpy_dup(pdata->data, pszMessage, iLen);
+      ::memory_copy(pdata->data, pszMessage, iLen);
 
       int result = 0;
 
@@ -112,10 +112,10 @@ namespace system_5
 
       zero(b);
 
-      if ((result = msgsnd(m_iQueue, pdata, m.get_size() - sizeof(long), 0)) == -1)
+      if ((result = msgsnd(m_iQueue, pdata, m.size() - sizeof(long), 0)) == -1)
       {
 
-         int iError = errno;
+         auto cerrornumber = c_error_number();
 
          throw ::exception(error_failed);
 
