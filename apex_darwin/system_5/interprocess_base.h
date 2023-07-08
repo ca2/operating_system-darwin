@@ -4,6 +4,10 @@
 
 
 #include "apex/interprocess/base.h"
+#if defined(FREEBSD)
+#include <sys/types.h>
+#include <sys/ipc.h>
+#endif
 
 
 namespace system_5
