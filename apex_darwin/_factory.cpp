@@ -3,18 +3,18 @@
 #include "os_context.h"
 #include "node.h"
 #include "app_launcher.h"
-#include "posix_spawn/process.h"
-#if defined(INTERPROCESS_COMMUNICATION_SYSTEM_5)
-#include "system_5/interprocess_caller.h"
-#include "system_5/interprocess_target.h"
-#endif
-
-#ifdef FILE_SYSTEM_INOTIFY
-
-#include "inotify/watch.h"
-#include "inotify/watcher.h"
-
-#endif
+//#include "posix_spawn/process.h"
+//#if defined(INTERPROCESS_COMMUNICATION_SYSTEM_5)
+//#include "system_5/interprocess_caller.h"
+//#include "system_5/interprocess_target.h"
+//#endif
+//
+//#ifdef FILE_SYSTEM_INOTIFY
+//
+//#include "inotify/watch.h"
+//#include "inotify/watcher.h"
+//
+//#endif
 
 
 __FACTORY_EXPORT void apex_posix_factory(::factory::factory * pfactory);

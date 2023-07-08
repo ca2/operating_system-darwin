@@ -18,44 +18,44 @@ list(APPEND library_source
         #system_time.cpp
         )
 
-
-if (FILE_SYSTEM_INOTIFY)
-
-
-    list(APPEND library_source
-            inotify/watcher.cpp
-            inotify/watcher.h
-            inotify/watch.cpp
-            inotify/watch.h
-            )
-
-
-endif ()
-
-
-if (INTERPROCESS_COMMUNICATION_SYSTEM_5)
-
-    list(APPEND library_source
-            system_5/interprocess_base.cpp
-            system_5/interprocess_base.h
-            system_5/interprocess_caller.cpp
-            system_5/interprocess_caller.h
-            system_5/interprocess_target.cpp
-            system_5/interprocess_target.h
-            )
-
-endif ()
-
-
-if (POSIX_SPAWN)
-
-
-    list(APPEND library_source
-            posix_spawn/process.cpp
-            posix_spawn/process.h)
-
-
-endif ()
+#
+#if (FILE_SYSTEM_INOTIFY)
+#
+#
+#    list(APPEND library_source
+#            inotify/watcher.cpp
+#            inotify/watcher.h
+#            inotify/watch.cpp
+#            inotify/watch.h
+#            )
+#
+#
+#endif ()
+#
+#
+#if (INTERPROCESS_COMMUNICATION_SYSTEM_5)
+#
+#    list(APPEND library_source
+#            system_5/interprocess_base.cpp
+#            system_5/interprocess_base.h
+#            system_5/interprocess_caller.cpp
+#            system_5/interprocess_caller.h
+#            system_5/interprocess_target.cpp
+#            system_5/interprocess_target.h
+#            )
+#
+#endif ()
+#
+#
+#if (POSIX_SPAWN)
+#
+#
+#    list(APPEND library_source
+#            posix_spawn/process.cpp
+#            posix_spawn/process.h)
+#
+#
+#endif ()
 
 
 list(APPEND library_references acme acme_posix acme_darwin apex apex_posix)
@@ -64,29 +64,29 @@ list(APPEND library_references acme acme_posix acme_darwin apex apex_posix)
 add_library(${PROJECT_NAME} SHARED ${library_source})
 add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
-
-if (FILE_SYSTEM_INOTIFY)
-
-
-    target_compile_definitions(${PROJECT_NAME} PRIVATE FILE_SYSTEM_INOTIFY)
-
-
-endif ()
-
-
-if (INTERPROCESS_COMMUNICATION_SYSTEM_5)
-
-    target_compile_definitions(${PROJECT_NAME} PRIVATE INTERPROCESS_COMMUNICATION_SYSTEM_5)
-
-endif ()
-
-
-if (POSIX_SPAWN)
-
-    target_compile_definitions(${PROJECT_NAME} PRIVATE POSIX_SPAWN)
-
-endif ()
-
+#
+#if (FILE_SYSTEM_INOTIFY)
+#
+#
+#    target_compile_definitions(${PROJECT_NAME} PRIVATE FILE_SYSTEM_INOTIFY)
+#
+#
+#endif ()
+#
+#
+#if (INTERPROCESS_COMMUNICATION_SYSTEM_5)
+#
+#    target_compile_definitions(${PROJECT_NAME} PRIVATE INTERPROCESS_COMMUNICATION_SYSTEM_5)
+#
+#endif ()
+#
+#
+#if (POSIX_SPAWN)
+#
+#    target_compile_definitions(${PROJECT_NAME} PRIVATE POSIX_SPAWN)
+#
+#endif ()
+#
 
 if (NOT ${NO_PRECOMPILED_HEADER})
 
