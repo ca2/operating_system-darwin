@@ -8,6 +8,7 @@
 
 #if defined(FREEBSD) || defined(__APPLE__)
 #include <unistd.h>
+#include <errno.h>
 #endif
 
 
@@ -97,9 +98,9 @@ bool file_context::is_read_only(const ::file::path &psz)
       if (unlink(psz) != 0)
       {
       
-         i32 err = errno;
+         auto cerrornumber = c_error_number();
       
-         if (err != ENOENT) // already does not exist - consider removal successful - does not issue an exception
+         if (cerrornumber.m_iErrorNumber != ENOENT) // already does not exist - consider removal successful - does not issue an exception
          {
          
             string strError;
