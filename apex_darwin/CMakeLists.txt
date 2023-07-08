@@ -3,20 +3,22 @@ project(apex_darwin CXX)
 
 
 list(APPEND library_source
-        _.h
-        _.cpp
-        _factory.cpp
-        file_context.cpp
-        file_context.h
-        framework.cpp
-        framework.h
-        node.cpp
-        node.h
-        os_context.cpp
-        os_context.h
-        #system_color.cpp
-        #system_time.cpp
-        )
+   _.h
+   _.cpp
+   _factory.cpp
+   app_launcher.cpp
+   app_launcher.h
+   file_context.cpp
+   file_context.h
+   framework.cpp
+   framework.h
+   node.cpp
+   node.h
+   os_context.cpp
+   os_context.h
+   #system_color.cpp
+   #system_time.cpp
+   )
 
 #
 #if (FILE_SYSTEM_INOTIFY)
@@ -90,11 +92,10 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 if (NOT ${NO_PRECOMPILED_HEADER})
 
-    target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
-    target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
+   target_precompile_headers(${PROJECT_NAME} PRIVATE framework.h)
+   target_precompile_headers(static_${PROJECT_NAME} PRIVATE framework.h)
 
 endif ()
-
 
 
 list(APPEND static_library_references ${library_references})
@@ -108,38 +109,37 @@ set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 if (MSVC)
 
 
-    target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
-    target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
-    target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
-    add_dependencies(${PROJECT_NAME} draw2d_gdiplus)
+   target_compile_options(${PROJECT_NAME} PRIVATE "/MD$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/DEFAULTLIB:msvcrt$<$<CONFIG:Debug>:d>")
+   target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
+   add_dependencies(${PROJECT_NAME} draw2d_gdiplus)
 
 
 elseif (${LINUX} OR ${FREEBSD})
 
 
-    if (FILE_SYSTEM_INOTIFY AND NOT DEFINED DEBIAN_LIKE AND NOT DONT_USE_PKG_CONFIG)
-        pkg_check_modules(PKGCONFIG libinotify)
-        target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-        target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
-        target_link_libraries(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LIBRARIES})
-    endif ()
+   if (FILE_SYSTEM_INOTIFY AND NOT DEFINED DEBIAN_LIKE AND NOT DONT_USE_PKG_CONFIG)
+      pkg_check_modules(PKGCONFIG libinotify)
+      target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+      target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS})
+      target_link_libraries(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LIBRARIES})
+   endif ()
 
-    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
-    target_compile_options(static_${PROJECT_NAME} PRIVATE -fpermissive)
-    target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
+   target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
+   target_compile_options(static_${PROJECT_NAME} PRIVATE -fpermissive)
+   target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
 
 
-    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-    target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-    target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
-    target_link_options(acme_posix PRIVATE ${PKGCONFIG_LDFLAGS})
-    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
-    target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${PKGCONFIG_LIBRARIES})
-    target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
-    target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
-
+   target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_link_options(acme_posix PRIVATE ${PKGCONFIG_LDFLAGS})
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
+   target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${PKGCONFIG_LIBRARIES})
+   target_link_options(${PROJECT_NAME} PRIVATE -Wl,-z,defs)
+   target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
 
 
 endif ()
@@ -152,7 +152,6 @@ list(APPEND library_include_directories ${CMAKE_CURRENT_SOURCE_DIR}/../..)
 
 target_include_directories(${PROJECT_NAME} PRIVATE ${library_include_directories})
 target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_directories})
-
 
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_LIBRARY)

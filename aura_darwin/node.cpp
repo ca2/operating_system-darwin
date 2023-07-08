@@ -436,91 +436,91 @@ namespace aura_darwin
    //}
 
 
-#if defined(WITH_X11) || defined(WITH_XCB)
+//#if defined(WITH_X11) || defined(WITH_XCB)
+//
+//
+//   ::e_status node::_allocate_Display_and_connection()
+//   {
+//
+//      m_pX11Display = XOpenDisplay(nullptr);
+//
+//      if(!m_pX11Display)
+//      {
+//
+//         return error_failed;
+//
+//      }
+//
+//#if defined(WITH_XCB)
+//
+//      m_pxcbconnection = XGetXCBConnection((Display *) m_pX11Display);
+//
+//      if(!m_pxcbconnection)
+//      {
+//
+//         return error_failed;
+//
+//      }
+//
+//#endif
+//
+//      return ::success;
+//
+//   }
+
    
-
-   ::e_status node::_allocate_Display_and_connection()
-   {
-
-      m_pX11Display = XOpenDisplay(nullptr);
-
-      if(!m_pX11Display)
-      {
-
-         return error_failed;
-
-      }
-
-#if defined(WITH_XCB)
-
-      m_pxcbconnection = XGetXCBConnection((Display *) m_pX11Display);
-
-      if(!m_pxcbconnection)
-      {
-
-         return error_failed;
-
-      }
-
-#endif
-
-      return ::success;
-
-   }
-
-   
-   void * node::_get_Display()
-   {
-
-      return m_pX11Display;
-
-   }
+//   void * node::_get_Display()
+//   {
+//
+//      return m_pX11Display;
+//
+//   }
 
 
-   void * node::get_os_xcb_connection()
-   {
-
-#if defined(WITH_XCB)
-
-      return m_pxcbconnection;
-
-#else
-
-      return nullptr;
-
-#endif
-
-   }
-
-
-   bool node::has_xcb() const
-   {
-
-#if defined(WITH_XCB)
-
-      return ::is_set(m_pxcbconnection);
-
-#else
-
-      return false;
-
-#endif
-
-   }
+//   void * node::get_os_xcb_connection()
+//   {
+//
+//#if defined(WITH_XCB)
+//
+//      return m_pxcbconnection;
+//
+//#else
+//
+//      return nullptr;
+//
+//#endif
+//
+//   }
 
 
-#if defined(WITH_XCB)
+//   bool node::has_xcb() const
+//   {
+//
+//#if defined(WITH_XCB)
+//
+//      return ::is_set(m_pxcbconnection);
+//
+//#else
+//
+//      return false;
+//
+//#endif
+//
+//   }
 
-   void * node::_get_connection()
-   {
 
-      return m_pxcbconnection;
-
-   }
-
-#endif
-   
-#endif
+//#if defined(WITH_XCB)
+//
+//   void * node::_get_connection()
+//   {
+//
+//      return m_pxcbconnection;
+//
+//   }
+//
+//#endif
+//
+//#endif
    
 
 //   ::file::path node::get_desktop_file_path(::apex::application * papp)
