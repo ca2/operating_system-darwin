@@ -16,10 +16,8 @@
 		9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
 		9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
 		9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
-		9AB15D2D29A8811400DFDF90 /* exclusive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D2297B589800BAD9DD /* exclusive.cpp */; };
 		9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AB15D2F29A8811400DFDF90 /* list_serial_ports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */; };
-		9AB15D3029A8811400DFDF90 /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C2297B589800BAD9DD /* mutex.cpp */; };
 		9AB15D3129A8811400DFDF90 /* node_clang_callstack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */; };
 		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
@@ -30,8 +28,6 @@
 		9AFD8179297B58F900BAD9DD /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
 		9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
 		9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
-		9AFD817C297B58FA00BAD9DD /* exclusive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D2297B589800BAD9DD /* exclusive.cpp */; };
-		9AFD817D297B58FA00BAD9DD /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C2297B589800BAD9DD /* mutex.cpp */; };
 		9AFD817E297B58FA00BAD9DD /* node_clang_callstack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */; };
 		9AFD817F297B58FA00BAD9DD /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AFD8180297B590000BAD9DD /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
@@ -42,10 +38,8 @@
 		9AFD81A6297B59E200BAD9DD /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
 		9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
 		9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
-		9AFD81A9297B59E200BAD9DD /* exclusive.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D2297B589800BAD9DD /* exclusive.cpp */; };
 		9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AFD81AB297B59E200BAD9DD /* list_serial_ports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */; };
-		9AFD81AC297B59E200BAD9DD /* mutex.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C2297B589800BAD9DD /* mutex.cpp */; };
 		9AFD81AD297B59E200BAD9DD /* node_clang_callstack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */; };
 		9AFD81AE297B59E200BAD9DD /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 /* End PBXBuildFile section */
@@ -98,7 +92,6 @@
 		9AB5228F2A4C07DB001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFD80C2297B589800BAD9DD /* mutex.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mutex.cpp; sourceTree = "<group>"; };
 		9AFD80C3297B589800BAD9DD /* acme_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_directory.h; sourceTree = "<group>"; };
 		9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = list_serial_ports.cpp; sourceTree = "<group>"; };
 		9AFD80C5297B589800BAD9DD /* acme_directory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_directory.cpp; sourceTree = "<group>"; };
@@ -107,7 +100,6 @@
 		9AFD80CA297B589800BAD9DD /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9AFD80CB297B589800BAD9DD /* acme_path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_path.cpp; sourceTree = "<group>"; };
 		9AFD80CE297B589800BAD9DD /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
-		9AFD80D2297B589800BAD9DD /* exclusive.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = exclusive.cpp; sourceTree = "<group>"; };
 		9AFD80D4297B589800BAD9DD /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
 		9AFD80D7297B589800BAD9DD /* acme_file.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_file.cpp; sourceTree = "<group>"; };
 		9AFD80DE297B589800BAD9DD /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
@@ -115,8 +107,6 @@
 		9AFD80E4297B589800BAD9DD /* file_lock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_lock.h; sourceTree = "<group>"; };
 		9AFD80E5297B589800BAD9DD /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
 		9AFD80E7297B589800BAD9DD /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9AFD80E8297B589800BAD9DD /* mutex.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mutex.h; sourceTree = "<group>"; };
-		9AFD80E9297B589800BAD9DD /* exclusive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = exclusive.h; sourceTree = "<group>"; };
 		9AFD80EF297B589800BAD9DD /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AFD80F4297B589800BAD9DD /* acme_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_file.h; sourceTree = "<group>"; };
 		9AFD80F5297B589800BAD9DD /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
@@ -196,14 +186,10 @@
 				9AFD80CB297B589800BAD9DD /* acme_path.cpp */,
 				9AFD80DF297B589800BAD9DD /* acme_path.h */,
 				9AFD80C9297B589800BAD9DD /* dbus.cpp */,
-				9AFD80D2297B589800BAD9DD /* exclusive.cpp */,
-				9AFD80E9297B589800BAD9DD /* exclusive.h */,
 				9AFD80E4297B589800BAD9DD /* file_lock.h */,
 				9AFD80CA297B589800BAD9DD /* framework.cpp */,
 				9AFD80E7297B589800BAD9DD /* framework.h */,
 				9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */,
-				9AFD80C2297B589800BAD9DD /* mutex.cpp */,
-				9AFD80E8297B589800BAD9DD /* mutex.h */,
 				9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */,
 				9AFD80CE297B589800BAD9DD /* node.cpp */,
 				9AFD80D4297B589800BAD9DD /* node.h */,
@@ -368,10 +354,8 @@
 				9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */,
 				9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */,
 				9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */,
-				9AB15D2D29A8811400DFDF90 /* exclusive.cpp in Sources */,
 				9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */,
 				9AB15D2F29A8811400DFDF90 /* list_serial_ports.cpp in Sources */,
-				9AB15D3029A8811400DFDF90 /* mutex.cpp in Sources */,
 				9AB15D3129A8811400DFDF90 /* node_clang_callstack.cpp in Sources */,
 				9AB15D3229A8811400DFDF90 /* node.cpp in Sources */,
 			);
@@ -387,11 +371,9 @@
 				9AFD81A6297B59E200BAD9DD /* acme_file.cpp in Sources */,
 				9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */,
 				9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */,
-				9AFD81A9297B59E200BAD9DD /* exclusive.cpp in Sources */,
 				9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */,
 				9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */,
 				9AFD81AB297B59E200BAD9DD /* list_serial_ports.cpp in Sources */,
-				9AFD81AC297B59E200BAD9DD /* mutex.cpp in Sources */,
 				9AFD81AD297B59E200BAD9DD /* node_clang_callstack.cpp in Sources */,
 				9AFD81AE297B59E200BAD9DD /* node.cpp in Sources */,
 			);
@@ -410,8 +392,6 @@
 				9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */,
 				9AB522932A4C0911001EB2F0 /* darwin.cpp in Sources */,
 				9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */,
-				9AFD817C297B58FA00BAD9DD /* exclusive.cpp in Sources */,
-				9AFD817D297B58FA00BAD9DD /* mutex.cpp in Sources */,
 				9AFD817E297B58FA00BAD9DD /* node_clang_callstack.cpp in Sources */,
 				9AFD817F297B58FA00BAD9DD /* node.cpp in Sources */,
 			);
