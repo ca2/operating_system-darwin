@@ -25,6 +25,10 @@
 		9AB15E9E29A8848C00DFDF90 /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECE29928E720042465F /* libacme_posix.dylib */; };
 		9AB15E9F29A8848C00DFDF90 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC529928E430042465F /* libapex.dylib */; };
 		9AB15EA029A8848C00DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC329928E3C0042465F /* libacme.dylib */; };
+		9AC9818A2A71B53F00B1BCF3 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6929928A770042465F /* _factory.cpp */; };
+		9AC9818B2A71B53F00B1BCF3 /* os_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6529928A770042465F /* os_context.cpp */; };
+		9AC9818C2A71B53F00B1BCF3 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E4729928A770042465F /* node.cpp */; };
+		9AC9818D2A71B53F00B1BCF3 /* app_launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A5FB483299ED2C000094E43 /* app_launcher.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,27 @@
 			remoteGlobalIDString = 9AB15D3929A8811400DFDF90;
 			remoteInfo = ios_acme_darwin;
 		};
+		9AC9819C2A71B53F00B1BCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC980A32A71B3D700B1BCF3;
+			remoteInfo = static_apex_posix;
+		};
+		9AC9819E2A71B55800B1BCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AFD80B3297B584000BAD9DD;
+			remoteInfo = static_acme_darwin;
+		};
+		9AC981A02A71B56500B1BCF3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC980892A71B3D700B1BCF3;
+			remoteInfo = static_apex_posix;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +139,7 @@
 		9A865EC529928E430042465F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A865ECE29928E720042465F /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB15EA429A8848C00DFDF90 /* libios_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -150,6 +176,7 @@
 			children = (
 				9A865E3B29928A5C0042465F /* libapex_posix.dylib */,
 				9A865E3D29928A5C0042465F /* libios_apex_posix.a */,
+				9AC9819D2A71B53F00B1BCF3 /* libstatic_apex_posix.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -180,7 +207,7 @@
 			children = (
 				9A865EB929928B780042465F /* libacme_darwin.dylib */,
 				9AB15EA729A8848C00DFDF90 /* libios_acme_darwin.a */,
-				9A865EBB29928B780042465F /* lib_acme_darwin.a */,
+				9A865EBB29928B780042465F /* libstatic_acme_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +238,7 @@
 			children = (
 				9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */,
 				9AB15EA429A8848C00DFDF90 /* libios_apex_darwin.a */,
+				9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +247,13 @@
 
 /* Begin PBXHeadersBuildPhase section */
 		9AB15E9529A8848C00DFDF90 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC981882A71B53F00B1BCF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -254,6 +289,24 @@
 			productReference = 9AB15EA429A8848C00DFDF90 /* libios_apex_darwin.a */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		9AC981832A71B53F00B1BCF3 /* static_apex_darwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC981942A71B53F00B1BCF3 /* Build configuration list for PBXNativeTarget "static_apex_darwin" */;
+			buildPhases = (
+				9AC981882A71B53F00B1BCF3 /* Headers */,
+				9AC981892A71B53F00B1BCF3 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9AC981A12A71B56500B1BCF3 /* PBXTargetDependency */,
+				9AC9819F2A71B55800B1BCF3 /* PBXTargetDependency */,
+			);
+			name = static_apex_darwin;
+			productName = apex_darwin;
+			productReference = 9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		9AFD808E297B57C400BAD9DD /* apex_darwin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9AFD8093297B57C400BAD9DD /* Build configuration list for PBXNativeTarget "apex_darwin" */;
@@ -280,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					9AFD808E297B57C400BAD9DD = {
 						CreatedOnToolsVersion = 14.2;
@@ -312,6 +365,7 @@
 			targets = (
 				9AFD808E297B57C400BAD9DD /* apex_darwin */,
 				9AB15E9029A8848C00DFDF90 /* ios_apex_darwin */,
+				9AC981832A71B53F00B1BCF3 /* static_apex_darwin */,
 			);
 		};
 /* End PBXProject section */
@@ -338,10 +392,10 @@
 			remoteRef = 9A865EB829928B780042465F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A865EBB29928B780042465F /* lib_acme_darwin.a */ = {
+		9A865EBB29928B780042465F /* libstatic_acme_darwin.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = lib_acme_darwin.a;
+			path = libstatic_acme_darwin.a;
 			remoteRef = 9A865EBA29928B780042465F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -350,6 +404,13 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libios_acme_darwin.a;
 			remoteRef = 9AB15EA629A8848C00DFDF90 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC9819D2A71B53F00B1BCF3 /* libstatic_apex_posix.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_apex_posix.a;
+			remoteRef = 9AC9819C2A71B53F00B1BCF3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -363,6 +424,17 @@
 				9AB15E9829A8848C00DFDF90 /* os_context.cpp in Sources */,
 				9AB15E9929A8848C00DFDF90 /* node.cpp in Sources */,
 				9AB15E9A29A8848C00DFDF90 /* app_launcher.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC981892A71B53F00B1BCF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC9818A2A71B53F00B1BCF3 /* _factory.cpp in Sources */,
+				9AC9818B2A71B53F00B1BCF3 /* os_context.cpp in Sources */,
+				9AC9818C2A71B53F00B1BCF3 /* node.cpp in Sources */,
+				9AC9818D2A71B53F00B1BCF3 /* app_launcher.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,6 +472,16 @@
 			name = apex_posix;
 			targetProxy = 9AB15E9429A8848C00DFDF90 /* PBXContainerItemProxy */;
 		};
+		9AC9819F2A71B55800B1BCF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = static_acme_darwin;
+			targetProxy = 9AC9819E2A71B55800B1BCF3 /* PBXContainerItemProxy */;
+		};
+		9AC981A12A71B56500B1BCF3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = static_apex_posix;
+			targetProxy = 9AC981A02A71B56500B1BCF3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -422,6 +504,34 @@
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		9AC981952A71B53F00B1BCF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					CUBE,
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		9AC981962A71B53F00B1BCF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				GCC_PREPROCESSOR_DEFINITIONS = CUBE;
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = macos;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -486,7 +596,7 @@
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -581,7 +691,7 @@
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
@@ -643,6 +753,15 @@
 			buildConfigurations = (
 				9AB15EA229A8848C00DFDF90 /* Debug */,
 				9AB15EA329A8848C00DFDF90 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AC981942A71B53F00B1BCF3 /* Build configuration list for PBXNativeTarget "static_apex_darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC981952A71B53F00B1BCF3 /* Debug */,
+				9AC981962A71B53F00B1BCF3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
