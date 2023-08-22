@@ -87,6 +87,8 @@
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A9E55EB29F6D742001559E9 /* darwin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = darwin.cpp; sourceTree = "<group>"; };
 		9A9E55EC29F6D742001559E9 /* darwin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = darwin.hpp; sourceTree = "<group>"; };
+		9AA3F6AE2A945E38004283CA /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
+		9AA3F6B02A945E38004283CA /* file_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_context.h; sourceTree = "<group>"; };
 		9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB5228D2A4C07DB001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AB5228F2A4C07DB001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
@@ -185,7 +187,11 @@
 				9AFD80F4297B589800BAD9DD /* acme_file.h */,
 				9AFD80CB297B589800BAD9DD /* acme_path.cpp */,
 				9AFD80DF297B589800BAD9DD /* acme_path.h */,
+				9A9E55EB29F6D742001559E9 /* darwin.cpp */,
+				9A9E55EC29F6D742001559E9 /* darwin.hpp */,
 				9AFD80C9297B589800BAD9DD /* dbus.cpp */,
+				9AA3F6AE2A945E38004283CA /* file_context.cpp */,
+				9AA3F6B02A945E38004283CA /* file_context.h */,
 				9AFD80E4297B589800BAD9DD /* file_lock.h */,
 				9AFD80CA297B589800BAD9DD /* framework.cpp */,
 				9AFD80E7297B589800BAD9DD /* framework.h */,
@@ -194,8 +200,6 @@
 				9AFD80CE297B589800BAD9DD /* node.cpp */,
 				9AFD80D4297B589800BAD9DD /* node.h */,
 				9AFD80E5297B589800BAD9DD /* resource.h */,
-				9A9E55EB29F6D742001559E9 /* darwin.cpp */,
-				9A9E55EC29F6D742001559E9 /* darwin.hpp */,
 			);
 			name = acme_darwin;
 			sourceTree = "<group>";

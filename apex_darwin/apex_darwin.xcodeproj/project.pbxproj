@@ -125,8 +125,6 @@
 		9A865E4529928A770042465F /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
 		9A865E4729928A770042465F /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
 		9A865E5329928A770042465F /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
-		9A865E5B29928A770042465F /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
-		9A865E5C29928A770042465F /* file_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_context.h; sourceTree = "<group>"; };
 		9A865E5D29928A770042465F /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
 		9A865E6029928A770042465F /* os_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = os_context.h; sourceTree = "<group>"; };
 		9A865E6129928A770042465F /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
@@ -189,8 +187,6 @@
 				9A865E6929928A770042465F /* _factory.cpp */,
 				9A5FB483299ED2C000094E43 /* app_launcher.cpp */,
 				9A5FB486299ED2C200094E43 /* app_launcher.h */,
-				9A865E5B29928A770042465F /* file_context.cpp */,
-				9A865E5C29928A770042465F /* file_context.h */,
 				9A865E4529928A770042465F /* framework.cpp */,
 				9A865E6329928A770042465F /* framework.h */,
 				9A865E4729928A770042465F /* node.cpp */,

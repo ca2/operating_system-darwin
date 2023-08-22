@@ -3809,7 +3809,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
                                                  if (::is_set(pimpl2))
                                                  {
 
-                                                    auto pprodevian = pimpl2->m_pprodevian;
+                                                    auto pprodevian = pimpl2->m_pgraphicsthread;
 
                                                     if (::is_set(pprodevian))
                                                     {
