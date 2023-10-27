@@ -22,6 +22,7 @@
 		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9AB522932A4C0911001EB2F0 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
+		9ABBB6F42AEB65CB007611C5 /* libdarwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */; };
 		9AFD8176297B58F900BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
 		9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
@@ -80,6 +81,20 @@
 			remoteGlobalIDString = 9AC14CB7297B3370006D9BD3;
 			remoteInfo = static_acme_posix;
 		};
+		9ABBB6DE2AEB6442007611C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9ABBB6D22AEB636C007611C5;
+			remoteInfo = darwin;
+		};
+		9ABBB6F22AEB65AF007611C5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9ABBB6D12AEB636C007611C5;
+			remoteInfo = darwin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +107,7 @@
 		9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB5228D2A4C07DB001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AB5228F2A4C07DB001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
+		9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = darwin.xcodeproj; path = ../darwin/darwin.xcodeproj; sourceTree = "<group>"; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80C3297B589800BAD9DD /* acme_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_directory.h; sourceTree = "<group>"; };
@@ -127,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ABBB6F42AEB65CB007611C5 /* libdarwin.dylib in Frameworks */,
 				9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */,
 				9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */,
 			);
@@ -153,9 +170,18 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9ABBB6DA2AEB6441007611C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		9AFD8076297B578700BAD9DD = {
 			isa = PBXGroup;
 			children = (
+				9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */,
 				9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */,
 				9AFD80BE297B589800BAD9DD /* acme_darwin */,
 				9AFD8080297B578700BAD9DD /* Products */,
@@ -259,6 +285,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				9ABBB6F32AEB65AF007611C5 /* PBXTargetDependency */,
 				9A9DCB7A29B8244100D1255B /* PBXTargetDependency */,
 			);
 			name = acme_darwin;
@@ -313,6 +340,10 @@
 					ProductGroup = 9A9DCB6D29B8240E00D1255B /* Products */;
 					ProjectRef = 9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */;
 				},
+				{
+					ProductGroup = 9ABBB6DA2AEB6441007611C5 /* Products */;
+					ProjectRef = 9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -343,6 +374,13 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libstatic_acme_posix.a;
 			remoteRef = 9A9DCB7729B8240E00D1255B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libdarwin.dylib;
+			remoteRef = 9ABBB6DE2AEB6442007611C5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -413,6 +451,11 @@
 			isa = PBXTargetDependency;
 			name = static_acme_posix;
 			targetProxy = 9A9DCB7B29B8245000D1255B /* PBXContainerItemProxy */;
+		};
+		9ABBB6F32AEB65AF007611C5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = darwin;
+			targetProxy = 9ABBB6F22AEB65AF007611C5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

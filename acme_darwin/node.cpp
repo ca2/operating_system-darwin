@@ -59,7 +59,7 @@ int kern_max_proc();
 #include <fcntl.h>
 #include <stdio.h>
 #include <sys/select.h>
-
+#include "operating_system-darwin/darwin/arp_a.h"
 #if defined(__clang__) && !defined(ANDROID)
 ::string clang_backtrace();
 #endif
@@ -1754,6 +1754,23 @@ namespace acme_darwin
 
       }
 
+   }
+
+
+   void node::arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status))
+   {
+   
+      auto pszError = ::arp_a(p, callback);
+      
+      if(pszError)
+      {
+         
+         auto strError(pszError);
+         
+         throw ::exception(error_failed, strError);
+         
+      }
+      
    }
 
 
