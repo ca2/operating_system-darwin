@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A682B222AED4EAD00A9502D /* arp_a.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABBB6E32AEB6467007611C5 /* arp_a.h */; };
+		9A682B242AED4EAD00A9502D /* arp_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */; };
 		9ABBB6EE2AEB6467007611C5 /* arp_a.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABBB6E32AEB6467007611C5 /* arp_a.h */; };
 		9ABBB6EF2AEB6467007611C5 /* arp_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A682B292AED4EAD00A9502D /* libstatic_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBB6E32AEB6467007611C5 /* arp_a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arp_a.h; sourceTree = "<group>"; };
 		9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arp_a.cpp; sourceTree = "<group>"; };
@@ -20,6 +23,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9A682B252AED4EAD00A9502D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ABBB6D02AEB636C007611C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,6 +52,7 @@
 			isa = PBXGroup;
 			children = (
 				9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */,
+				9A682B292AED4EAD00A9502D /* libstatic_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,6 +71,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9A682B212AED4EAD00A9502D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A682B222AED4EAD00A9502D /* arp_a.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ABBB6CE2AEB636C007611C5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -71,6 +90,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		9A682B202AED4EAD00A9502D /* static_darwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A682B262AED4EAD00A9502D /* Build configuration list for PBXNativeTarget "static_darwin" */;
+			buildPhases = (
+				9A682B212AED4EAD00A9502D /* Headers */,
+				9A682B232AED4EAD00A9502D /* Sources */,
+				9A682B252AED4EAD00A9502D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = static_darwin;
+			productName = darwin;
+			productReference = 9A682B292AED4EAD00A9502D /* libstatic_darwin.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 		9ABBB6D12AEB636C007611C5 /* darwin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9ABBB6D62AEB636C007611C5 /* Build configuration list for PBXNativeTarget "darwin" */;
@@ -116,11 +152,20 @@
 			projectRoot = "";
 			targets = (
 				9ABBB6D12AEB636C007611C5 /* darwin */,
+				9A682B202AED4EAD00A9502D /* static_darwin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9A682B232AED4EAD00A9502D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A682B242AED4EAD00A9502D /* arp_a.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9ABBB6CF2AEB636C007611C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -132,6 +177,36 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		9A682B272AED4EAD00A9502D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9A682B282AED4EAD00A9502D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		9ABBB6D42AEB636C007611C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9ABBB6F12AEB64A2007611C5 /* _____debug.xcconfig */;
@@ -278,6 +353,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9A682B262AED4EAD00A9502D /* Build configuration list for PBXNativeTarget "static_darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A682B272AED4EAD00A9502D /* Debug */,
+				9A682B282AED4EAD00A9502D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9ABBB6CD2AEB636C007611C5 /* Build configuration list for PBXProject "darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
