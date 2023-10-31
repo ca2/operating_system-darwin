@@ -42,7 +42,7 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 
 
 template < const int n >
-void scatprintf(char * s, const char * pszFormat, ...)
+void scatprintf(char * s, int buffer_size, const char * pszFormat, ...)
 {
    
    char szBuffer[n];
@@ -51,7 +51,7 @@ void scatprintf(char * s, const char * pszFormat, ...)
 
    va_start(arguments, pszFormat);
 
-   vsprintf(szBuffer, pszFormat, arguments);
+   vsnprintf(szBuffer, buffer_size, pszFormat, arguments);
    
    va_end(arguments);
    
@@ -62,16 +62,16 @@ void scatprintf(char * s, const char * pszFormat, ...)
 
 /* Note: could also use malloc() and free() */
 void
-ether_sprint(char * s, u_char * cp)
+ether_sprint(char * s, int buffer_size, u_char * cp)
 {
-    sprintf(s, "%x:%x:%x:%x:%x:%x", cp[0], cp[1], cp[2], cp[3], cp[4], cp[5]);
+    snprintf(s, buffer_size, "%x:%x:%x:%x:%x:%x", cp[0], cp[1], cp[2], cp[3], cp[4], cp[5]);
 }
 
 
 const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status))
 {
    
-   int nflag;
+   //int nflag;
 
    char szStatus[2048];
    int mib[6];
@@ -82,7 +82,7 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
     struct sockaddr_inarp *sin;
     struct sockaddr_dl *sdl;
     extern int h_errno;
-    struct hostent *hp;
+    //struct hostent *hp;
 //    int found_entry = 0;
 
     mib[0] = CTL_NET;
@@ -132,21 +132,21 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 //       pitema->add(paddress);
 
         if (sdl->sdl_alen)
-           ether_sprint(szStatus, ((u_char *)LLADDR(sdl)));
+           ether_sprint(szStatus, sizeof(szStatus),  ((u_char *)LLADDR(sdl)));
         else
-           sprintf(szStatus, "%s","(incomplete)");
+           snprintf(szStatus, sizeof(szStatus), "%s","(incomplete)");
         if (rtm->rtm_rmx.rmx_expire == 0)
-           scatprintf<256>(szStatus, "%s"," permanent");
+           scatprintf<256>(szStatus, sizeof(szStatus), "%s"," permanent");
         if (sin->sin_other & SIN_PROXY)
-           scatprintf<256>(szStatus, "%s"," published (proxy only)");
+           scatprintf<256>(szStatus, sizeof(szStatus), "%s"," published (proxy only)");
         if (rtm->rtm_addrs & RTA_NETMASK)
         {
             sin = (struct sockaddr_inarp *)
                 (sdl->sdl_len + (char *)sdl);
             if (sin->sin_addr.s_addr == 0xffffffff)
-               scatprintf<256>(szStatus, "%s", " published");
+               scatprintf<256>(szStatus, sizeof(szStatus), "%s", " published");
             if (sin->sin_len != 8)
-               scatprintf<256>(szStatus, "%s", "(weird)");
+               scatprintf<256>(szStatus, sizeof(szStatus), "%s", "(weird)");
         }
        callback(p, sin->sin_addr.s_addr, szStatus);
         //printf("\n");
