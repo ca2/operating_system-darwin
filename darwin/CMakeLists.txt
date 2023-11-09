@@ -27,7 +27,7 @@ if (MSVC)
     target_link_options(${PROJECT_NAME} PRIVATE "/SUBSYSTEM:WINDOWS")
     target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references})
     target_link_libraries(${PROJECT_NAME} PRIVATE ws2_32 winmm shlwapi)
-elseif(${LINUX} OR ${FREEBSD})
+elseif(${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
 
 
 if(!FEDORA)
