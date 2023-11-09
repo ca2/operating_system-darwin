@@ -8,8 +8,8 @@ list(APPEND library_source
    _factory.cpp
    app_launcher.cpp
    app_launcher.h
-   file_context.cpp
-   file_context.h
+   #file_context.cpp
+   #file_context.h
    framework.cpp
    framework.h
    node.cpp
