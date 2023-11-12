@@ -17,6 +17,7 @@
 #include "acme/operating_system/ansi/_pthread.h"
 //#include "acme/primitive/primitive/payload.h"
 //#include <signal.h>
+int darwin_node_process_identifier_modules_paths(int pid, void * p, void (*callback)(void *, const char *, int ));
 
 
 #ifdef FREEBSD
@@ -1772,6 +1773,32 @@ namespace acme_darwin
       }
       
    }
+
+   void callback_modules_paths(void * p, const char * pszPath, int size)
+{
+      ::string strPath(pszPath, size);
+      ::file::path path(strPath);
+      auto ppatha = (::file::path_array *) p;
+      
+      ppatha->add(path);
+   }
+
+::file::path_array node::process_identifier_modules_paths(::process_identifier processidentifier)
+{
+   ::file::path_array patha;
+   int iError = darwin_node_process_identifier_modules_paths(processidentifier, &patha, &callback_modules_paths);
+   
+   if(iError != 0)
+   {
+      
+      throw ::exception(error_failed);
+      
+   }
+   
+   
+   return patha;
+
+}
 
 
 } // namespace acme_darwin
