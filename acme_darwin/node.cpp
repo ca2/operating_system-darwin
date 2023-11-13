@@ -1786,7 +1786,7 @@ namespace acme_darwin
 ::file::path_array node::process_identifier_modules_paths(::process_identifier processidentifier)
 {
    ::file::path_array patha;
-   int iError = darwin_node_process_identifier_modules_paths(processidentifier, &patha, &callback_modules_paths);
+   int iError = darwin_node_process_identifier_modules_paths((int)processidentifier, &patha, &callback_modules_paths);
    
    if(iError != 0)
    {

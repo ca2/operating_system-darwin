@@ -14,7 +14,7 @@
 #include <mach-o/dyld_images.h>
 #include <mach/vm_map.h>
 
-#define PATH_MAX 2048
+//#define PATH_MAX 2048
 
 
 // to build.
