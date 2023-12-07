@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A754F8A2B21266800FFB669 /* _library.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A754F882B21266800FFB669 /* _library.h */; };
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9DCB7429B8240E00D1255B /* libacme_posix.dylib */; };
 		9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
@@ -113,6 +114,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A754F882B21266800FFB669 /* _library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _library.h; sourceTree = "<group>"; };
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
 		9A9E55EB29F6D742001559E9 /* darwin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = darwin.cpp; sourceTree = "<group>"; };
@@ -224,6 +226,7 @@
 				9AFD80DE297B589800BAD9DD /* _.cpp */,
 				9AFD80F5297B589800BAD9DD /* _.h */,
 				9AFD80EF297B589800BAD9DD /* _factory.cpp */,
+				9A754F882B21266800FFB669 /* _library.h */,
 				9AFD80C5297B589800BAD9DD /* acme_directory.cpp */,
 				9AFD80C3297B589800BAD9DD /* acme_directory.h */,
 				9AFD80D7297B589800BAD9DD /* acme_file.cpp */,
@@ -240,10 +243,10 @@
 				9AFD80E7297B589800BAD9DD /* framework.h */,
 				9AFD80C4297B589800BAD9DD /* list_serial_ports.cpp */,
 				9AFD80C7297B589800BAD9DD /* node_clang_callstack.cpp */,
+				9ABF3A352B0028F90095A652 /* node_process_identifier_modules_paths.cpp */,
 				9AFD80CE297B589800BAD9DD /* node.cpp */,
 				9AFD80D4297B589800BAD9DD /* node.h */,
 				9AFD80E5297B589800BAD9DD /* resource.h */,
-				9ABF3A352B0028F90095A652 /* node_process_identifier_modules_paths.cpp */,
 			);
 			name = acme_darwin;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A754F8A2B21266800FFB669 /* _library.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

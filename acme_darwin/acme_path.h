@@ -2,6 +2,7 @@
 // From acme_posix/acme_file.h
 // on 2021-08-12
 // 18:18 BRT
+#pragma once
 
 
 #include "acme_posix/acme_path.h"
