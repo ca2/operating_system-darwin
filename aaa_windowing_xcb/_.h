@@ -38,6 +38,6 @@ namespace windowing_xcb
 
 
 
-extern ::particle * user_synchronization();
+//extern ::particle * user_synchronization();
 
 
