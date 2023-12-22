@@ -26,6 +26,9 @@ list(APPEND library_source
         #mutex.h
         node.cpp
         node.h
+#   node_process_identifier_modules_paths.cpp
+
+ #  node_clang_callstack.cpp
         #pipe.cpp
         #pipe.h
         #stdio_file.cpp
@@ -56,7 +59,8 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 list(APPEND library_references
    acme
-   acme_posix)
+   acme_posix
+darwin)
 
 
 if (NOT ${NO_PRECOMPILED_HEADER})

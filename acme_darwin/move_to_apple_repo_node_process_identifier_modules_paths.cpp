@@ -11,8 +11,10 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#if defined(__APPLE__)
 #include <mach-o/dyld_images.h>
 #include <mach/vm_map.h>
+#endif
 
 //#define PATH_MAX 2048
 

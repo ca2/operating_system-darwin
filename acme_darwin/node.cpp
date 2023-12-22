@@ -1786,8 +1786,13 @@ namespace acme_darwin
 ::file::path_array node::process_identifier_modules_paths(::process_identifier processidentifier)
 {
    ::file::path_array patha;
+
+#if defined(FREEBSD)
+
+   int iError = 0;
+#else
    int iError = darwin_node_process_identifier_modules_paths((int)processidentifier, &patha, &callback_modules_paths);
-   
+#endif
    if(iError != 0)
    {
       

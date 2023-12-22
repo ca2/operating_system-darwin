@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.16)
-project(unac CXX)
+project(darwin CXX)
 
 
 list(APPEND library_source
-    unac.c
+   arp_a.cpp
    )
 
 
