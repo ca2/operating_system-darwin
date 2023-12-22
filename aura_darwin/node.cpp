@@ -21,19 +21,19 @@ namespace aura_darwin
    node::node()
    {
 
-#if defined(WITH_X11) || defined(WITH_XCB)
-         
-         
-      m_pX11Display = nullptr;
+//#if defined(WITH_X11) || defined(WITH_XCB)
+//
+//
+//      m_pX11Display = nullptr;
+//
+//#endif // WITH_X11 || WITH_XCB
 
-#endif // WITH_X11 || WITH_XCB
 
-
-#if defined(WITH_XCB)
-
-      m_pxcbconnection = nullptr;
-         
-#endif
+//#if defined(WITH_XCB)
+//
+//      m_pxcbconnection = nullptr;
+//
+//#endif
 
       m_pAuraPosix = this;
 

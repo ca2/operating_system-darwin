@@ -12,7 +12,7 @@
 #endif
 
 
-namespace apex_darwin
+namespace acme_darwin
 {
 
 
@@ -105,7 +105,7 @@ bool file_context::is_read_only(const ::file::path &psz)
          
             string strError;
          
-            strError.format("Failed to delete file error=%d", cerrornumber.m_iErrorNumber);
+            strError.formatf("Failed to delete file error=%d", cerrornumber.m_iErrorNumber);
          
             throw ::exception(error_failed, strError);
       
@@ -118,7 +118,7 @@ bool file_context::is_read_only(const ::file::path &psz)
    }
 
 
-} // namespace apex_darwin
+} // namespace acme_darwin
 
 
 
