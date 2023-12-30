@@ -118,8 +118,8 @@ namespace acme_darwin
 
 
       void arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status)) override;
-      ::file::path_array process_identifier_modules_paths(::process_identifier processidentifier) override;
-      
+//      ::file::path_array process_identifier_modules_paths(::process_identifier processidentifier) override;
+//      
       
    };
 

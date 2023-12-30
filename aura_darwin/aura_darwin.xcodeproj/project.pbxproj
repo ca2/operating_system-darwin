@@ -109,6 +109,13 @@
 			remoteGlobalIDString = 9AB15EA429A8848C00DFDF90;
 			remoteInfo = ios_apex_darwin;
 		};
+		9ABBFEDC2B3FFDC80036DF8C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9AB15BC829A8727C00DFDF90 /* apex_darwin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC981972A71B53F00B1BCF3;
+			remoteInfo = static_apex_darwin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -138,6 +145,8 @@
 		9AB1607229A89D9200DFDF90 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB1607429A89DB000DFDF90 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB1607D29A8A16A00DFDF90 /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABBFED92B3FFDC80036DF8C /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
+		9ABBFEE02B3FFDC80036DF8C /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +198,8 @@
 		9AB15B3729A871C800DFDF90 /* aura_darwin */ = {
 			isa = PBXGroup;
 			children = (
+				9ABBFEE02B3FFDC80036DF8C /* _____debug.xcconfig */,
+				9ABBFED92B3FFDC80036DF8C /* _____release.xcconfig */,
 				9AB15B4C29A871C800DFDF90 /* _.cpp */,
 				9AB15B8829A871CA00DFDF90 /* _.h */,
 				9AB15B8629A871CA00DFDF90 /* _factory.cpp */,
@@ -224,6 +235,7 @@
 			children = (
 				9AB15BCD29A8727D00DFDF90 /* libapex_darwin.dylib */,
 				9AB1605B29A89BF600DFDF90 /* libios_apex_darwin.a */,
+				9ABBFEDD2B3FFDC80036DF8C /* libstatic_apex_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -398,6 +410,13 @@
 			remoteRef = 9AB1605A29A89BF600DFDF90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9ABBFEDD2B3FFDC80036DF8C /* libstatic_apex_darwin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libstatic_apex_darwin.a;
+			remoteRef = 9ABBFEDC2B3FFDC80036DF8C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -451,6 +470,7 @@
 /* Begin XCBuildConfiguration section */
 		9AB15B3229A8715900DFDF90 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABBFEE02B3FFDC80036DF8C /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -491,9 +511,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -507,7 +525,7 @@
 					"$(inherited)",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -542,6 +560,7 @@
 		};
 		9AB15B3329A8715900DFDF90 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABBFED92B3FFDC80036DF8C /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -593,7 +612,7 @@
 					"$(inherited)",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = "10.13";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";

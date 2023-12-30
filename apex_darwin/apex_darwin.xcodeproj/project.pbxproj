@@ -137,6 +137,8 @@
 		9A865EC529928E430042465F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A865ECE29928E720042465F /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB15EA429A8848C00DFDF90 /* libios_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABBFED12B3FFD0B0036DF8C /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
+		9ABBFED22B3FFD0B0036DF8C /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -182,6 +184,8 @@
 		9A865E4029928A770042465F /* apex_darwin */ = {
 			isa = PBXGroup;
 			children = (
+				9ABBFED22B3FFD0B0036DF8C /* _____debug.xcconfig */,
+				9ABBFED12B3FFD0B0036DF8C /* _____release.xcconfig */,
 				9A865E5D29928A770042465F /* _.cpp */,
 				9A865E6A29928A770042465F /* _.h */,
 				9A865E6929928A770042465F /* _factory.cpp */,
@@ -533,6 +537,7 @@
 		};
 		9AFD8091297B57C400BAD9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABBFED22B3FFD0B0036DF8C /* _____debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -575,9 +580,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -634,6 +637,7 @@
 		};
 		9AFD8092297B57C400BAD9DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABBFED12B3FFD0B0036DF8C /* _____release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
