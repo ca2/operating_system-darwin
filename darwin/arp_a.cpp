@@ -19,8 +19,18 @@
 #include <net/if_types.h>
 
 #include <TargetConditionals.h>
+const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status));
 
-#if !defined(APPLE_IOS)
+#if defined(APPLE_IOS)
+
+const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status))
+{
+   
+   return nullptr; // A-ha!! this is first version of arp_a (returns nullptr)
+   
+}
+
+#else
 
 #include <net/route.h>
 
@@ -43,7 +53,6 @@
 #include <stdarg.h>
 
 
-const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status));
 
 
 template < const int n >

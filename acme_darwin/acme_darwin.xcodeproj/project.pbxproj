@@ -211,8 +211,8 @@
 			isa = PBXGroup;
 			children = (
 				9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */,
-				9A682B332AED4F2000A9502D /* libstatic_darwin.a */,
 				9AC107542B6ACBF20053DB45 /* libios_darwin.a */,
+				9A682B332AED4F2000A9502D /* libstatic_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
