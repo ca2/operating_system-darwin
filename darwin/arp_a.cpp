@@ -1,5 +1,5 @@
 // Created by Camilo on 2023-10-27 00:30 <3ThomasBorregaardSorensen!!
-
+#include "configuration/config.h"
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -17,6 +17,11 @@
 #include <net/if.h>
 #include <net/if_dl.h>
 #include <net/if_types.h>
+
+#include <TargetConditionals.h>
+
+#if !defined(APPLE_IOS)
+
 #include <net/route.h>
 
 #include <netinet/in.h>
@@ -190,3 +195,4 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
    }
 
 
+#endif

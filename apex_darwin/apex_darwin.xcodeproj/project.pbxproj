@@ -74,26 +74,26 @@
 			remoteGlobalIDString = 9AFD807E297B578700BAD9DD;
 			remoteInfo = acme_darwin;
 		};
-		9AB15E9229A8848C00DFDF90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9AFD807E297B578700BAD9DD;
-			remoteInfo = acme_darwin;
-		};
-		9AB15E9429A8848C00DFDF90 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 9A0C167F264A29B800B5CC33;
-			remoteInfo = apex_posix;
-		};
 		9AB15EA629A8848C00DFDF90 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 9AB15D3929A8811400DFDF90;
 			remoteInfo = ios_acme_darwin;
+		};
+		9AC107602B6ACCAC0053DB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865EB329928B780042465F /* acme_darwin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AB15D2229A8811400DFDF90;
+			remoteInfo = ios_acme_darwin;
+		};
+		9AC107622B6ACCBE0053DB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A865E3529928A5C0042465F /* apex_posix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8E9DF4282A2FCA005FF778;
+			remoteInfo = ios_apex_posix;
 		};
 		9AC9819C2A71B53F00B1BCF3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -281,8 +281,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				9AB15E9129A8848C00DFDF90 /* PBXTargetDependency */,
-				9AB15E9329A8848C00DFDF90 /* PBXTargetDependency */,
+				9AC107632B6ACCBE0053DB45 /* PBXTargetDependency */,
+				9AC107612B6ACCAC0053DB45 /* PBXTargetDependency */,
 			);
 			name = ios_apex_darwin;
 			productName = apex_darwin;
@@ -333,7 +333,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					9AFD808E297B57C400BAD9DD = {
 						CreatedOnToolsVersion = 14.2;
@@ -462,15 +462,15 @@
 			name = acme_darwin;
 			targetProxy = 9A865EBC29928B820042465F /* PBXContainerItemProxy */;
 		};
-		9AB15E9129A8848C00DFDF90 /* PBXTargetDependency */ = {
+		9AC107612B6ACCAC0053DB45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = acme_darwin;
-			targetProxy = 9AB15E9229A8848C00DFDF90 /* PBXContainerItemProxy */;
+			name = ios_acme_darwin;
+			targetProxy = 9AC107602B6ACCAC0053DB45 /* PBXContainerItemProxy */;
 		};
-		9AB15E9329A8848C00DFDF90 /* PBXTargetDependency */ = {
+		9AC107632B6ACCBE0053DB45 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = apex_posix;
-			targetProxy = 9AB15E9429A8848C00DFDF90 /* PBXContainerItemProxy */;
+			name = ios_apex_posix;
+			targetProxy = 9AC107622B6ACCBE0053DB45 /* PBXContainerItemProxy */;
 		};
 		9AC9819F2A71B55800B1BCF3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

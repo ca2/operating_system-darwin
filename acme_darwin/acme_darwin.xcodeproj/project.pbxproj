@@ -110,6 +110,27 @@
 			remoteGlobalIDString = 9ABBB6D12AEB636C007611C5;
 			remoteInfo = darwin;
 		};
+		9AC1074D2B6ACBF20053DB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9AC107432B6ACB8F0053DB45;
+			remoteInfo = ios_darwin;
+		};
+		9AC1074F2B6ACBF20053DB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A8E9DBB282A2F7E005FF778;
+			remoteInfo = ios_acme_posix;
+		};
+		9AC107532B6ACBF20053DB45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9AC1074C2B6ACB8F0053DB45;
+			remoteInfo = ios_darwin;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -191,6 +212,7 @@
 			children = (
 				9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */,
 				9A682B332AED4F2000A9502D /* libstatic_darwin.a */,
+				9AC107542B6ACBF20053DB45 /* libios_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,6 +309,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				9AC1074E2B6ACBF20053DB45 /* PBXTargetDependency */,
+				9AC107502B6ACBF20053DB45 /* PBXTargetDependency */,
 			);
 			name = ios_acme_darwin;
 			productName = acme_darwin;
@@ -337,7 +361,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					9AFD807E297B578700BAD9DD = {
 						CreatedOnToolsVersion = 14.2;
@@ -408,6 +432,13 @@
 			fileType = "compiled.mach-o.dylib";
 			path = libdarwin.dylib;
 			remoteRef = 9ABBB6DE2AEB6442007611C5 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9AC107542B6ACBF20053DB45 /* libios_darwin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.dylib";
+			path = libios_darwin.a;
+			remoteRef = 9AC107532B6ACBF20053DB45 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -488,6 +519,16 @@
 			isa = PBXTargetDependency;
 			name = darwin;
 			targetProxy = 9ABBB6F22AEB65AF007611C5 /* PBXContainerItemProxy */;
+		};
+		9AC1074E2B6ACBF20053DB45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_darwin;
+			targetProxy = 9AC1074D2B6ACBF20053DB45 /* PBXContainerItemProxy */;
+		};
+		9AC107502B6ACBF20053DB45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ios_acme_posix;
+			targetProxy = 9AC1074F2B6ACBF20053DB45 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

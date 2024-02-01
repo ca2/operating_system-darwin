@@ -11,6 +11,8 @@
 		9A682B242AED4EAD00A9502D /* arp_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */; };
 		9ABBB6EE2AEB6467007611C5 /* arp_a.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABBB6E32AEB6467007611C5 /* arp_a.h */; };
 		9ABBB6EF2AEB6467007611C5 /* arp_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */; };
+		9AC107452B6ACB8F0053DB45 /* arp_a.h in Headers */ = {isa = PBXBuildFile; fileRef = 9ABBB6E32AEB6467007611C5 /* arp_a.h */; };
+		9AC107472B6ACB8F0053DB45 /* arp_a.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,7 @@
 		9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arp_a.cpp; sourceTree = "<group>"; };
 		9ABBB6F02AEB64A2007611C5 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9ABBB6F12AEB64A2007611C5 /* _____debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
+		9AC1074C2B6ACB8F0053DB45 /* libios_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9ABBB6D02AEB636C007611C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC107482B6ACB8F0053DB45 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -53,6 +63,7 @@
 			children = (
 				9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */,
 				9A682B292AED4EAD00A9502D /* libstatic_darwin.a */,
+				9AC1074C2B6ACB8F0053DB45 /* libios_darwin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,6 +95,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABBB6EE2AEB6467007611C5 /* arp_a.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC107442B6ACB8F0053DB45 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC107452B6ACB8F0053DB45 /* arp_a.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -124,6 +143,23 @@
 			productReference = 9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
+		9AC107432B6ACB8F0053DB45 /* ios_darwin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9AC107492B6ACB8F0053DB45 /* Build configuration list for PBXNativeTarget "ios_darwin" */;
+			buildPhases = (
+				9AC107442B6ACB8F0053DB45 /* Headers */,
+				9AC107462B6ACB8F0053DB45 /* Sources */,
+				9AC107482B6ACB8F0053DB45 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ios_darwin;
+			productName = darwin;
+			productReference = 9AC1074C2B6ACB8F0053DB45 /* libios_darwin.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -131,7 +167,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1500;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					9ABBB6D12AEB636C007611C5 = {
 						CreatedOnToolsVersion = 15.0;
@@ -152,6 +188,7 @@
 			projectRoot = "";
 			targets = (
 				9ABBB6D12AEB636C007611C5 /* darwin */,
+				9AC107432B6ACB8F0053DB45 /* ios_darwin */,
 				9A682B202AED4EAD00A9502D /* static_darwin */,
 			);
 		};
@@ -171,6 +208,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ABBB6EF2AEB6467007611C5 /* arp_a.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9AC107462B6ACB8F0053DB45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC107472B6ACB8F0053DB45 /* arp_a.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -253,9 +298,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"$(inherited)",
-				);
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -436,6 +479,38 @@
 			};
 			name = Release;
 		};
+		9AC1074A2B6ACB8F0053DB45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		9AC1074B2B6ACB8F0053DB45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PLATFORM_MODIFIER = ios;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -462,6 +537,15 @@
 			buildConfigurations = (
 				9ABBB6D72AEB636C007611C5 /* Debug */,
 				9ABBB6D82AEB636C007611C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9AC107492B6ACB8F0053DB45 /* Build configuration list for PBXNativeTarget "ios_darwin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9AC1074A2B6ACB8F0053DB45 /* Debug */,
+				9AC1074B2B6ACB8F0053DB45 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
