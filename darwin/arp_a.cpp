@@ -32,17 +32,22 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 
 #else
 
+//#ifdef APPLE_IOS
+//#include <net/ethernet.h>
+//#else
 #include <net/route.h>
 
 #include <netinet/in.h>
 #include <netinet/if_ether.h>
+//#endif
+
 
 #include <arpa/inet.h>
 
 #include <err.h>
 #include <errno.h>
 #include <netdb.h>
-#include <nlist.h>
+//#include <nlist.h>
 #include <paths.h>
 #include <stdio.h>
 #include <stdlib.h>
