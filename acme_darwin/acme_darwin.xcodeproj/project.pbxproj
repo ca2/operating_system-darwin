@@ -527,7 +527,7 @@
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				PLATFORM_MODIFIER = macos;
+				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -538,7 +538,7 @@
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
-				PLATFORM_MODIFIER = macos;
+				PLATFORM_MODIFIER = ios;
 				SDKROOT = iphoneos;
 			};
 			name = Release;
