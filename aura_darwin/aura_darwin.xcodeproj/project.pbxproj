@@ -663,6 +663,8 @@
 		9AB15C7F29A87CAC00DFDF90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
@@ -674,6 +676,8 @@
 		9AB15C8029A87CAC00DFDF90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
 				EXECUTABLE_EXTENSION = a;
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
