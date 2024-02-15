@@ -530,7 +530,8 @@
 		9AB15D3729A8811400DFDF90 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_EXTENSION = a;
+				DEAD_CODE_STRIPPING = NO;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
@@ -541,7 +542,8 @@
 		9AB15D3829A8811400DFDF90 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_EXTENSION = a;
+				DEAD_CODE_STRIPPING = NO;
+				EXECUTABLE_EXTENSION = "$(STATIC_LIBRARY_EXTENSION:default=a)";
 				EXECUTABLE_PREFIX = lib;
 				MACH_O_TYPE = staticlib;
 				PLATFORM_MODIFIER = ios;
@@ -615,7 +617,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(WorkspaceDir)/operating_system",
@@ -712,7 +713,6 @@
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SYSTEM_HEADER_SEARCH_PATHS = (
 					"$(WorkspaceDir)/operating_system",
@@ -751,6 +751,7 @@
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				PLATFORM_MODIFIER = macos;
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
@@ -759,6 +760,7 @@
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
 				PLATFORM_MODIFIER = macos;
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
