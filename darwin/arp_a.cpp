@@ -18,7 +18,9 @@
 #include <net/if_dl.h>
 #include <net/if_types.h>
 
+#ifdef __APPLE__
 #include <TargetConditionals.h>
+#endif
 const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status));
 
 #if defined(APPLE_IOS)
