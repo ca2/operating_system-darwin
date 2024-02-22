@@ -85,6 +85,50 @@ namespace apex_darwin
    }
 
 
+bool node::is_alias(const ::file::path & path)
+{
+   
+   return ::apex_posix::node::is_alias(path);
+//
+//      if (::is_empty(path))
+//      {
+//
+//         return false;
+//
+//      }
+//
+//      struct stat st;
+//
+//      if (lstat(path, &st) == -1)
+//      {
+//
+//         return false;
+//
+//      }
+//
+//      if (S_ISLNK(st.st_mode))
+//      {
+//
+//         return true;
+//
+//      }
+//
+//      return false;
+//
+}
+
+
+::process_identifier node::current_process_identifier()
+{
+   
+   //return ::getpid();
+   
+   return ::apex_posix::node::current_process_identifier();
+
+}
+
+
+
 } // namespace apex_darwin
 
 

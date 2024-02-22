@@ -30,6 +30,10 @@ namespace apex_darwin
 
       void on_start_application(::apex::application *papplication) override;
 
+      bool is_alias(const ::file::path & path) override;
+      
+      
+      virtual ::process_identifier current_process_identifier() override;
 
    };
 
