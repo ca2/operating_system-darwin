@@ -50,7 +50,7 @@ elseif(${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
     target_link_options(write_text_pango PRIVATE ${PKGCONFIG_LDFLAGS})
     target_link_libraries(write_text_pango PRIVATE ${PKGCONFIG_LIBRARIES} ${library_references})
     target_link_options(write_text_pango PRIVATE -Wl,-z,defs)
-    message("PKGCONFIG_LIBRARIES is " ${PKGCONFIG_LIBRARIES})
+    message("(1) PKGCONFIG_LIBRARIES is " ${PKGCONFIG_LIBRARIES})
 
 
 endif()
