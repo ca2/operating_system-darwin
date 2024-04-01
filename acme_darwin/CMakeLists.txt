@@ -60,7 +60,6 @@ add_library(static_${PROJECT_NAME} STATIC ${library_source})
 
 
 list(APPEND library_references
-   acme
    acme_posix
    darwin)
 
@@ -78,7 +77,12 @@ list(APPEND static_library_references ${library_references})
 list(TRANSFORM static_library_references PREPEND static_)
 
 
+list(APPEND library_references
+   acme)
+
+
 set_target_properties(${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
+set_target_properties(static_${PROJECT_NAME} PROPERTIES LINKER_LANGUAGE CXX)
 
 
 if (MSVC)
@@ -94,6 +98,11 @@ if (MSVC)
 elseif (${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
 
 
+   target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
+   #set_target_properties(${PROJECT_NAME} PROPERTIES CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+   target_compile_features(static_${PROJECT_NAME} PRIVATE cxx_std_20)
+
+
    if (NOT ${DONT_USE_PKG_CONFIG})
       pkg_check_modules(PKGCONFIG dbus-glib-1)
    endif ()
@@ -103,11 +112,11 @@ elseif (${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
 
 
    target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
-   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
    target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
    target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${PKGCONFIG_LIBRARIES})
    target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS} ${GLOBAL_EXTRA_LINKER_FLAGS} -Wl${GLOBAL_EXTRA_LINK_FLAGS},-z,defs)
-   target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
+   # target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
 
 endif ()
 
@@ -122,6 +131,7 @@ target_include_directories(static_${PROJECT_NAME} PRIVATE ${library_include_dire
 
 
 target_compile_definitions(${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
+target_compile_definitions(static_${PROJECT_NAME} PRIVATE _${PROJECT_NAME}_project)
 
 
 
