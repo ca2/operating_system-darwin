@@ -147,10 +147,10 @@ namespace node_gtk
 //
 //   Window default_root_window();
 
-      virtual ::count get_monitor_count() override;
+      virtual ::collection::count get_monitor_count() override;
 
 
-      bool impl_set_wallpaper(::index, string strWallpaper) override;
+      bool impl_set_wallpaper(::collection::index, string strWallpaper) override;
 
 };
 

@@ -289,7 +289,7 @@ namespace node_gtk
 //   }
 
    /// should be run in user thread
-   ::count display::get_monitor_count()
+   ::collection::count display::get_monitor_count()
    {
 
 
@@ -302,7 +302,7 @@ namespace node_gtk
 
          }
 
-        ::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
+        ::collection::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
 
         return iMonitorCount;
 
@@ -310,7 +310,7 @@ namespace node_gtk
 
 
 
-   bool display::impl_set_wallpaper(::index, string strWallpaper)
+   bool display::impl_set_wallpaper(::collection::index, string strWallpaper)
    {
 
       // wall-changer sourceforge.net contribution

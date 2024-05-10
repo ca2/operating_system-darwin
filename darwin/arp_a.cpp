@@ -197,7 +197,7 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 
       //::informationf(strLog);
 
-//      for (::index iItem = 0; iItem < pitema->size(); iItem++)
+//      for (::collection::index iItem = 0; iItem < pitema->size(); iItem++)
 //      {
 //
 //         auto pitem = pitema->element_at(iItem);

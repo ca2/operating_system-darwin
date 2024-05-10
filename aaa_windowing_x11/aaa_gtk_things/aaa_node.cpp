@@ -495,7 +495,7 @@ void node::os_calc_user_dark_mode()
 
                               synchronous_lock slSession(psession->mutex());
 
-                              ::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
+                              ::collection::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
 
                               psession->m_rectangleaWorkspace.set_size(iMonitorCount);
 

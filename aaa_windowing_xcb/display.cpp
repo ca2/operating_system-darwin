@@ -132,7 +132,7 @@ namespace windowing_xcb
 
       }
 
-      for (::index iAtomName = 0; iAtomName < ::x11::e_atom_count; iAtomName++)
+      for (::collection::index iAtomName = 0; iAtomName < ::x11::e_atom_count; iAtomName++)
       {
 
          if(!m_atoma[iAtomName])

@@ -230,7 +230,7 @@ namespace acme_darwin
 //
 //
 //
-//   void acme_file::put_contents(const char * path, const char * contents, ::count len)
+//   void acme_file::put_contents(const char * path, const char * contents, ::collection::count len)
 //   {
 //
 //      acmedirectory()->create(::file_path_folder(path));
@@ -333,7 +333,7 @@ namespace acme_darwin
 //
 //      char * psz = str.get_buffer(iToRead);
 //
-//      ::count iRead = fread(psz, 1, iToRead, pfile);
+//      ::collection::count iRead = fread(psz, 1, iToRead, pfile);
 //
 //      psz[iRead] = '\0';
 //

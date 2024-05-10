@@ -208,7 +208,7 @@
 ////
 ////                              synchronous_lock slSession(psession->synchronization());
 ////
-////                              ::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
+////                              ::collection::count iMonitorCount = gdk_display_get_n_monitors(pdisplay);
 ////
 ////                              psession->m_rectangleaWorkspace.set_size(iMonitorCount);
 ////

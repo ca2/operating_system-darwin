@@ -144,7 +144,7 @@ namespace node_gnome
 //
 //   Window default_root_window();
 
-      virtual ::count get_monitor_count() override;
+      virtual ::collection::count get_monitor_count() override;
 
 
 };
