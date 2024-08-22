@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		9A682B292AED4EAD00A9502D /* libstatic_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdarwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABBB6D22AEB636C007611C5 /* darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABBB6E32AEB6467007611C5 /* arp_a.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = arp_a.h; sourceTree = "<group>"; };
 		9ABBB6EC2AEB6467007611C5 /* arp_a.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = arp_a.cpp; sourceTree = "<group>"; };
 		9ABBB6F02AEB64A2007611C5 /* _____release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
@@ -61,7 +61,7 @@
 		9ABBB6D32AEB636C007611C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */,
+				9ABBB6D22AEB636C007611C5 /* darwin.dylib */,
 				9A682B292AED4EAD00A9502D /* libstatic_darwin.a */,
 				9AC1074C2B6ACB8F0053DB45 /* libios_darwin.a */,
 			);
@@ -140,7 +140,7 @@
 			);
 			name = darwin;
 			productName = darwin;
-			productReference = 9ABBB6D22AEB636C007611C5 /* libdarwin.dylib */;
+			productReference = 9ABBB6D22AEB636C007611C5 /* darwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		9AC107432B6ACB8F0053DB45 /* ios_darwin */ = {
@@ -456,20 +456,26 @@
 		9ABBB6D72AEB636C007611C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
 		9ABBB6D82AEB636C007611C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};

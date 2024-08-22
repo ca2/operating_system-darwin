@@ -142,7 +142,7 @@
 		9AB5228D2A4C07DB001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AB5228F2A4C07DB001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = darwin.xcodeproj; path = ../darwin/darwin.xcodeproj; sourceTree = "<group>"; };
-		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFD807F297B578700BAD9DD /* acme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = acme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80C3297B589800BAD9DD /* acme_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_directory.h; sourceTree = "<group>"; };
 		9AFD80C4297B589800BAD9DD /* aaa_list_serial_ports.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_list_serial_ports.cpp; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		9AFD8080297B578700BAD9DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */,
+				9AFD807F297B578700BAD9DD /* acme_darwin.dylib */,
 				9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */,
 				9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */,
 			);
@@ -330,7 +330,7 @@
 			);
 			name = acme_darwin;
 			productName = acme_darwin;
-			productReference = 9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */;
+			productReference = 9AFD807F297B578700BAD9DD /* acme_darwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 		9AFD80B3297B584000BAD9DD /* static_acme_darwin */ = {
@@ -751,8 +751,14 @@
 		9AFD8084297B578700BAD9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_EXTENSION = dylib;
+				MACH_O_TYPE = mh_dylib;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -760,8 +766,14 @@
 		9AFD8085297B578700BAD9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_EXTENSION = dylib;
+				MACH_O_TYPE = mh_dylib;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 			};
 			name = Release;

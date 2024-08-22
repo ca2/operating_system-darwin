@@ -137,7 +137,7 @@
 		9ABBFED12B3FFD0B0036DF8C /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9ABBFED22B3FFD0B0036DF8C /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
 		9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_apex_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libapex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9AFD808F297B57C400BAD9DD /* apex_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = apex_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -233,7 +233,7 @@
 		9AFD8090297B57C400BAD9DD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */,
+				9AFD808F297B57C400BAD9DD /* apex_darwin.dylib */,
 				9AB15EA429A8848C00DFDF90 /* libios_apex_darwin.a */,
 				9AC981972A71B53F00B1BCF3 /* libstatic_apex_darwin.a */,
 			);
@@ -320,7 +320,7 @@
 			);
 			name = apex_darwin;
 			productName = apex_darwin;
-			productReference = 9AFD808F297B57C400BAD9DD /* libapex_darwin.dylib */;
+			productReference = 9AFD808F297B57C400BAD9DD /* apex_darwin.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
@@ -733,16 +733,30 @@
 		9AFD8094297B57C400BAD9DD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_EXTENSION = dylib;
+				MACH_O_TYPE = mh_dylib;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 			};
 			name = Debug;
 		};
 		9AFD8095297B57C400BAD9DD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				EXECUTABLE_PREFIX = lib;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L8N5V6TZE5;
+				ENABLE_HARDENED_RUNTIME = YES;
+				EXECUTABLE_EXTENSION = dylib;
+				MACH_O_TYPE = mh_dylib;
 				PLATFORM_MODIFIER = macos;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = macosx;
 			};
 			name = Release;
 		};
