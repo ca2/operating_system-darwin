@@ -40,7 +40,7 @@
 		9AB1607129A89D6400DFDF90 /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1607029A89D6400DFDF90 /* libapex_posix.dylib */; };
 		9AB1607329A89D9200DFDF90 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1607229A89D9200DFDF90 /* libapex.dylib */; };
 		9AB1607529A89DB000DFDF90 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1607429A89DB000DFDF90 /* libaura.dylib */; };
-		9AB1607629A89DD600DFDF90 /* apex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15BCD29A8727D00DFDF90 /* apex_darwin.dylib */; };
+		9AB1607629A89DD600DFDF90 /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15BCD29A8727D00DFDF90 /* libapex_darwin.dylib */; };
 		9AB1607729A89E0000DFDF90 /* libaura_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB15BC329A8725C00DFDF90 /* libaura_posix.dylib */; };
 		9AB1607E29A8A16A00DFDF90 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB1607D29A8A16A00DFDF90 /* libacme_darwin.dylib */; };
 /* End PBXBuildFile section */
@@ -155,7 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AB1607E29A8A16A00DFDF90 /* libacme_darwin.dylib in Frameworks */,
-				9AB1607629A89DD600DFDF90 /* apex_darwin.dylib in Frameworks */,
+				9AB1607629A89DD600DFDF90 /* libapex_darwin.dylib in Frameworks */,
 				9AB1607729A89E0000DFDF90 /* libaura_posix.dylib in Frameworks */,
 				9AB1607529A89DB000DFDF90 /* libaura.dylib in Frameworks */,
 				9AB1607329A89D9200DFDF90 /* libapex.dylib in Frameworks */,
@@ -233,7 +233,7 @@
 		9AB15BC929A8727C00DFDF90 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AB15BCD29A8727D00DFDF90 /* apex_darwin.dylib */,
+				9AB15BCD29A8727D00DFDF90 /* libapex_darwin.dylib */,
 				9AB1605B29A89BF600DFDF90 /* libios_apex_darwin.a */,
 				9ABBFEDD2B3FFDC80036DF8C /* libstatic_apex_darwin.a */,
 			);
@@ -396,10 +396,10 @@
 			remoteRef = 9AB15BC629A8725C00DFDF90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9AB15BCD29A8727D00DFDF90 /* apex_darwin.dylib */ = {
+		9AB15BCD29A8727D00DFDF90 /* libapex_darwin.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = apex_darwin.dylib;
+			path = libapex_darwin.dylib;
 			remoteRef = 9AB15BCC29A8727D00DFDF90 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -555,7 +555,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
@@ -669,7 +668,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;

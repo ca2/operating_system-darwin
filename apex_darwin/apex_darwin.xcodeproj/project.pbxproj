@@ -14,11 +14,11 @@
 		9A865EC629928E430042465F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC529928E430042465F /* libapex.dylib */; };
 		9A865ECF29928E720042465F /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECE29928E720042465F /* libacme_posix.dylib */; };
 		9A865ED029928E850042465F /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865E3B29928A5C0042465F /* libapex_posix.dylib */; };
-		9A865ED82992950A0042465F /* acme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* acme_darwin.dylib */; };
+		9A865ED82992950A0042465F /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* libacme_darwin.dylib */; };
 		9AB15E9729A8848C00DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6929928A770042465F /* _factory.cpp */; };
 		9AB15E9929A8848C00DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E4729928A770042465F /* node.cpp */; };
 		9AB15E9A29A8848C00DFDF90 /* app_launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A5FB483299ED2C000094E43 /* app_launcher.cpp */; };
-		9AB15E9C29A8848C00DFDF90 /* acme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* acme_darwin.dylib */; };
+		9AB15E9C29A8848C00DFDF90 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* libacme_darwin.dylib */; };
 		9AB15E9D29A8848C00DFDF90 /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865E3B29928A5C0042465F /* libapex_posix.dylib */; };
 		9AB15E9E29A8848C00DFDF90 /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECE29928E720042465F /* libacme_posix.dylib */; };
 		9AB15E9F29A8848C00DFDF90 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC529928E430042465F /* libapex.dylib */; };
@@ -145,7 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9AB15E9C29A8848C00DFDF90 /* acme_darwin.dylib in Frameworks */,
+				9AB15E9C29A8848C00DFDF90 /* libacme_darwin.dylib in Frameworks */,
 				9AB15E9D29A8848C00DFDF90 /* libapex_posix.dylib in Frameworks */,
 				9AB15E9E29A8848C00DFDF90 /* libacme_posix.dylib in Frameworks */,
 				9AB15E9F29A8848C00DFDF90 /* libapex.dylib in Frameworks */,
@@ -157,7 +157,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A865ED82992950A0042465F /* acme_darwin.dylib in Frameworks */,
+				9A865ED82992950A0042465F /* libacme_darwin.dylib in Frameworks */,
 				9A865ED029928E850042465F /* libapex_posix.dylib in Frameworks */,
 				9A865ECF29928E720042465F /* libacme_posix.dylib in Frameworks */,
 				9A865EC629928E430042465F /* libapex.dylib in Frameworks */,
@@ -202,7 +202,7 @@
 		9A865EB429928B780042465F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A865EB929928B780042465F /* acme_darwin.dylib */,
+				9A865EB929928B780042465F /* libacme_darwin.dylib */,
 				9AB15EA729A8848C00DFDF90 /* libios_acme_darwin.a */,
 				9A865EBB29928B780042465F /* libstatic_acme_darwin.a */,
 			);
@@ -382,10 +382,10 @@
 			remoteRef = 9A865E3C29928A5C0042465F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A865EB929928B780042465F /* acme_darwin.dylib */ = {
+		9A865EB929928B780042465F /* libacme_darwin.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = acme_darwin.dylib;
+			path = libacme_darwin.dylib;
 			remoteRef = 9A865EB829928B780042465F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -621,7 +621,6 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = macosx;
@@ -745,7 +744,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SDKROOT = macosx;

@@ -11,7 +11,6 @@
 		9A7DCF812B7D8E0A004C0943 /* file_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F6AE2A945E38004283CA /* file_context.cpp */; };
 		9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A9DCB7429B8240E00D1255B /* libacme_posix.dylib */; };
-		9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
 		9AB09AA22B72039700E2C3A5 /* file_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F6AE2A945E38004283CA /* file_context.cpp */; };
 		9AB09AA32B72039A00E2C3A5 /* file_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F6AE2A945E38004283CA /* file_context.cpp */; };
 		9AB15D2729A8811400DFDF90 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
@@ -23,7 +22,6 @@
 		9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
-		9AB522932A4C0911001EB2F0 /* darwin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A9E55EB29F6D742001559E9 /* darwin.cpp */; };
 		9ABBB6F42AEB65CB007611C5 /* darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6DF2AEB6442007611C5 /* darwin.dylib */; };
 		9AFD8176297B58F900BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
@@ -134,7 +132,6 @@
 		9A754F882B21266800FFB669 /* _library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _library.h; sourceTree = "<group>"; };
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
-		9A9E55EB29F6D742001559E9 /* darwin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = darwin.cpp; sourceTree = "<group>"; };
 		9A9E55EC29F6D742001559E9 /* darwin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = darwin.hpp; sourceTree = "<group>"; };
 		9AA3F6AE2A945E38004283CA /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
 		9AA3F6B02A945E38004283CA /* file_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_context.h; sourceTree = "<group>"; };
@@ -252,7 +249,6 @@
 				9AFD80F4297B589800BAD9DD /* acme_file.h */,
 				9AFD80CB297B589800BAD9DD /* acme_path.cpp */,
 				9AFD80DF297B589800BAD9DD /* acme_path.h */,
-				9A9E55EB29F6D742001559E9 /* darwin.cpp */,
 				9A9E55EC29F6D742001559E9 /* darwin.hpp */,
 				9AFD80C9297B589800BAD9DD /* dbus.cpp */,
 				9AA3F6AE2A945E38004283CA /* file_context.cpp */,
@@ -468,7 +464,6 @@
 				9AFD81A6297B59E200BAD9DD /* acme_file.cpp in Sources */,
 				9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */,
 				9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */,
-				9A9E55EE29F6D959001559E9 /* darwin.cpp in Sources */,
 				9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */,
 				9AFD81AE297B59E200BAD9DD /* node.cpp in Sources */,
 			);
@@ -485,7 +480,6 @@
 				9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */,
 				9AFD8179297B58F900BAD9DD /* acme_file.cpp in Sources */,
 				9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */,
-				9AB522932A4C0911001EB2F0 /* darwin.cpp in Sources */,
 				9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */,
 				9AFD817F297B58FA00BAD9DD /* node.cpp in Sources */,
 			);
@@ -636,12 +630,10 @@
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
@@ -760,11 +752,9 @@
 					"$(WorkspaceDir)/operating_system",
 					"$(WorkspaceDir)/../operating_system/storage-$(PLATFORM_MODIFIER)/$(CONFIGURATION)/library",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_LDFLAGS = "-all_load";
-				PRESERVE_DEAD_CODE_INITS_AND_TERMS = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = NO;
 				SKIP_INSTALL = YES;
