@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "apex_posix/_.h"
-#include "acme_darwin/_.h"
+#include "operating_system-posix/apex_posix/_.h"
+#include "operating_system-darwin/acme_darwin/_.h"
 
 
 #if defined(_apex_posix_project)

@@ -1,8 +1,8 @@
 #pragma once
 
 
-#include "aura_posix/_.h"
-#include "apex_darwin/_.h"
+#include "operating_system-posix/aura_posix/_.h"
+#include "operating_system-darwin/apex_darwin/_.h"
 
 
 #if defined(_AURA_POSIX_LIBRARY)
