@@ -2,7 +2,7 @@
 #include "framework.h"
 #include "interprocess_target.h"
 #include "acme/filesystem/filesystem/acme_file.h"
-#include "acme/primitive/primitive/memory.h"
+#include "acme/prototype/prototype/memory.h"
 
 
 #include <sys/types.h>

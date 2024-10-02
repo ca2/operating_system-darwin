@@ -8,8 +8,8 @@
 #include "acme/filesystem/file/exception.h"
 #include "acme/operating_system/ansi/int_handle.h"
 #include "acme/platform/system.h"
-#include "acme/primitive/primitive/memory.h"
-////#include "acme/primitive/datetime/earth_time.h"
+#include "acme/prototype/prototype/memory.h"
+////#include "acme/prototype/datetime/earth_time.h"
 #include <sys/stat.h>
 //Copy file using mmap()
 #include <sys/mman.h>

@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.16)
 project(node_xfce CXX)
 
 
+message(STATUS "Project: ${PROJECT_NAME}")
+
 list(APPEND library_source
    _.cpp
    _.h
