@@ -3,7 +3,7 @@
 #include "acme/filesystem/filesystem/acme_directory.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/prototype/string/international.h"
-#include "aura/graphics/image/context_image.h"
+#include "aura/graphics/image/context.h"
 
 
 
