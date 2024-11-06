@@ -5,15 +5,15 @@
 #pragma once
 
 
-#include "acme_posix/acme_file.h"
+#include "acme_posix/file_system.h"
 
 
 namespace acme_darwin
 {
 
 
-   class CLASS_DECL_ACME acme_file :
-      virtual public ::acme_posix::acme_file
+   class CLASS_DECL_ACME file_system :
+      virtual public ::acme_posix::file_system
    {
    public:
 
@@ -21,8 +21,8 @@ namespace acme_darwin
       //__creatable_from_library(acme_file, ::acme_file, "acme_posix");
 
 
-      acme_file();
-      ~acme_file() noexcept override;
+      file_system();
+      ~file_system() noexcept override;
 
 //      
 //      bool exists(const ::file::path & path) override;

@@ -3,7 +3,7 @@
 // on 2021-08-12
 // 18:20 BRT
 #include "framework.h"
-#include "acme_path.h"
+#include "path_system.h"
 #include "acme/filesystem/filesystem/path.h"
 #include <sys/stat.h>
 
@@ -12,20 +12,20 @@ namespace acme_darwin
 {
 
 
-   acme_path::acme_path()
+   path_system::path_system()
    {
 
 
    }
 
-   acme_path::~acme_path()
+   path_system::~path_system()
    {
 
 
    }
 
 
-//   ::file::enum_type acme_path::get_type(const char * path1)
+//   ::file::enum_type path_system::get_type(const char * path1)
 //   {
 //
 //      struct stat st;
@@ -53,7 +53,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::file::path acme_path::_final(const char * path)
+//   ::file::path path_system::_final(const char * path)
 //   {
 //
 //      if (::is_null(path))

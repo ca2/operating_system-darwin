@@ -5,15 +5,15 @@
 #pragma once
 
 
-#include "acme_posix/acme_path.h"
+#include "acme_posix/path_system.h"
 
 
 namespace acme_darwin
 {
 
 
-   class CLASS_DECL_ACME acme_path :
-      virtual public ::acme_posix::acme_path
+   class CLASS_DECL_ACME path_system :
+      virtual public ::acme_posix::path_system
    {
    public:
 
@@ -21,8 +21,8 @@ namespace acme_darwin
       //__creatable_from_library(acme_path, ::acme_path, "acme_posix");
 
 
-      acme_path();
-      ~acme_path() override;
+      path_system();
+      ~path_system() override;
 
 
 //      ::file::enum_type get_type(const char * path1) override;

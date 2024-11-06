@@ -114,7 +114,7 @@ namespace acme_darwin
 //   ::file::path acme_directory::module()
 //   {
 //
-//      ::file::path pathModule (m_pacmefile->module());
+//      ::file::path pathModule (file_system()->module());
 //
 //      return pathModule.folder();
 //
@@ -428,7 +428,7 @@ namespace acme_darwin
 //
 //         strCandidate = ::file::path(stra[i]) / pszTopic;
 //
-//         if (m_pacmefile->exists(strCandidate))
+//         if (file_system()->exists(strCandidate))
 //         {
 //
 //            return strCandidate;
@@ -531,7 +531,7 @@ namespace acme_darwin
 ////
 ////   auto psystem = acmesystem();
 ////
-////   auto pacmedir = psystem->m_pacmedirectory;
+////   auto pacmedir = psystem->directory_system();
 ////
 ////   return pacmedir->localconfig() / "bookmark";
 ////

@@ -4,15 +4,15 @@
 #pragma once
 
 
-#include "acme_posix/acme_directory.h"
+#include "acme_posix/directory_system.h"
 
 
 namespace acme_darwin
 {
 
 
-   class CLASS_DECL_ACME_POSIX acme_directory :
-      virtual public ::acme_posix::acme_directory
+   class CLASS_DECL_ACME_POSIX directory_system :
+      virtual public ::acme_posix::directory_system
    {
    public:
 
@@ -20,8 +20,8 @@ namespace acme_darwin
       //__creatable_from_library(acme_directory, ::acme_directory, "acme_posix");
 
 
-      acme_directory();
-      ~acme_directory() override;
+      directory_system();
+      ~directory_system() override;
       
 //
 //      //virtual string name(const char * path1) override;
