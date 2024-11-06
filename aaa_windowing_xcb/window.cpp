@@ -1961,12 +1961,12 @@ namespace windowing_xcb
    }
 
 
-   ::rectangle_i32_array window::upper_window_rects()
+   ::rectangle_int_array window::upper_window_rects()
    {
 
       synchronous_lock synchronouslock(user_synchronization());
 
-      rectangle_i32_array recta;
+      rectangle_int_array recta;
 
       windowing_output_debug_string("\n::GetFocus 1");
 

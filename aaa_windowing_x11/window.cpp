@@ -2901,7 +2901,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   void window::upper_window_rects(rectangle_i32_array & ra)
+   void window::upper_window_rects(rectangle_int_array & ra)
    {
 
       synchronous_lock synchronouslock(user_synchronization());

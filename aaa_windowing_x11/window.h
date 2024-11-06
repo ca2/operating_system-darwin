@@ -198,7 +198,7 @@ namespace windowing_x11
       //virtual unsigned long x11_get_long_property( WINDOWING_X11_WINDOW_MEMBER char* property_name);
       virtual string x11_get_name( WINDOWING_X11_WINDOW_MEMBER );
       //virtual ::e_status set_active_window();
-      virtual void upper_window_rects( WINDOWING_X11_WINDOW_MEMBER  rectangle_i32_array & ra);
+      virtual void upper_window_rects( WINDOWING_X11_WINDOW_MEMBER  rectangle_int_array & ra);
       //virtual oswindow set_active_window( WINDOWING_X11_WINDOW_MEMBER );
 //      virtual  WINDOWING_X11_WINDOW_MEMBER _get_if_found(Window w);
       //virtual oswindow get_parent( WINDOWING_X11_WINDOW_MEMBER );

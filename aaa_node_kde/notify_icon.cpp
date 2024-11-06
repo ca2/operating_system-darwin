@@ -100,7 +100,7 @@ namespace node_kde
 
       image_source imagesource(pimage);
 
-      auto rectangle = rectangle_f64_dimension(0., 0., 24., 24.);
+      auto rectangle = rectangle_double_dimension(0., 0., 24., 24.);
 
       image_drawing_options imagedrawingoptions(rectangle);
 
