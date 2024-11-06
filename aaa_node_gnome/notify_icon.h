@@ -32,7 +32,7 @@ namespace node_gnome
 //      };
 
 
-      //::u32                                             m_uiId;
+      //unsigned int                                             m_uiId;
       //bool                                              m_bCreated;
       //string                                            m_strId;
 //#ifdef WINDOWS_DESKTOP

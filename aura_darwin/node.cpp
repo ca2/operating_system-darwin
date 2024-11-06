@@ -336,7 +336,7 @@ namespace aura_darwin
    //}
 
 
-   //bool node::process_modules(string_array & stra, u32 processID)
+   //bool node::process_modules(string_array & stra, unsigned int processID)
    //{
 
    //   return ::apex::posix::node::process_modules(stra, processID);
@@ -366,7 +366,7 @@ namespace aura_darwin
    //}
 
 
-   //string node::module_path_from_pid(u32 pid)
+   //string node::module_path_from_pid(unsigned int pid)
    //{
 
    //   return ::apex::posix::node::module_path_from_pid(pid);
@@ -374,13 +374,13 @@ namespace aura_darwin
    //}
    //
    //
-   //string node::command_line_from_pid(u32 pid)
+   //string node::command_line_from_pid(unsigned int pid)
    //{
 
    //   return ::apex::posix::node::command_line_from_pid(pid);
 
    //}
-   //   bool node::is_shared_library_busy(u32 processid, const string_array & stra)
+   //   bool node::is_shared_library_busy(unsigned int processid, const string_array & stra)
    //{
 
    //   return ::apex::posix::node::is_shared_library_busy(processid, stra);
@@ -393,7 +393,7 @@ namespace aura_darwin
    //   return ::apex::posix::node::is_shared_library_busy(stra);
 
    //}
-   //   bool node::process_contains_module(string & strImage, ::u32 processID, const ::string & pszLibrary)
+   //   bool node::process_contains_module(string & strImage, unsigned int processID, const ::string & pszLibrary)
    //{
 
    //   return ::apex::posix::node::process_contains_module(strImage, processID, pszLibrary);
@@ -408,7 +408,7 @@ namespace aura_darwin
    //}
    //
    //
-   //bool node::is_process_running(::u32 pid)
+   //bool node::is_process_running(unsigned int pid)
    //{
 
    //   return ::apex::posix::node::is_process_running(pid);

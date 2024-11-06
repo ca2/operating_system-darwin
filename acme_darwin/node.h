@@ -41,23 +41,23 @@ namespace acme_darwin
 //      // defined at process.cpp
 //      void call_async(const ::string & pszPath, const ::string & pszParam, const ::string & pszDir, ::e_display edisplay, bool bPrivileged, unsigned int * puiPid = nullptr) override;
 //      void call_sync(const ::string & pszPath, const ::string & pszParam, const ::string & pszDir, ::e_display edisplay, const class time & timeTimeout, ::property_set & set, int * piExitCode) override;
-//      void create_process(const ::string & pszCommandLine, u32 * pprocessID) override;
+//      void create_process(const ::string & pszCommandLine, unsigned int * pprocessID) override;
 //      virtual int _create_process3(const ::string & _cmd_line, int * pprocessId) override;
 //      void run_silent(const ::string & strFunct, const ::string & strstrParams) override;
 //      //::e_status shell_execute_sync(const ::string & pszFile, const ::string & pszParams, class ::time timeTimeout) override;
 //
 //
 //      // defined at process.cpp
-//      string module_path_from_pid(u32 pid) override;
+//      string module_path_from_pid(unsigned int pid) override;
 //      atom_array module_path_get_pid(const ::string & pszModulePath, bool bModuleNameIsPropertyFormatted) override;
-//      string command_line_from_pid(u32 pid) override;
-//      bool is_shared_library_busy(u32 processid, const string_array & stra) override;
+//      string command_line_from_pid(unsigned int pid) override;
+//      bool is_shared_library_busy(unsigned int processid, const string_array & stra) override;
 //      bool is_shared_library_busy(const string_array & stra) override;
 //
 //
-//      bool is_process_running(::u32 pid) override;
+//      bool is_process_running(unsigned int pid) override;
 //
-//      bool process_modules(string_array& stra, u32 processID) override;
+//      bool process_modules(string_array& stra, unsigned int processID) override;
 //
 //      bool load_modules_diff(string_array& straOld, string_array& straNew, const ::string & pszExceptDir) override;
 //
@@ -74,7 +74,7 @@ namespace acme_darwin
 //
 //      ::pointer < ::acme::exclusive > get_exclusive(::particle * pparticleContext, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
 //
-//      bool process_contains_module(string& strImage, ::u32 processID, const ::string & pszLibrary) override;
+//      bool process_contains_module(string& strImage, unsigned int processID, const ::string & pszLibrary) override;
 //
 //      void shared_library_process(dword_array& dwa, string_array& straProcesses, const ::string & pszLibrary) override;
 //
@@ -120,7 +120,7 @@ namespace acme_darwin
       //virtual int performance_core_count() override;
       
 
-      void arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status)) override;
+      void arp_a(void *p, void(*callback)(void *p, unsigned int uIp, const char * status)) override;
 //      ::file::path_array process_identifier_modules_paths(::process_identifier processidentifier) override;
 //      
       

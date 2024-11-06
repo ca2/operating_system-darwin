@@ -123,7 +123,7 @@ namespace acme_posix
    bool pipe::write(const char * psz)
    {
 
-      u32 dwLen = (u32)strlen(psz);
+      unsigned int dwLen = (unsigned int)strlen(psz);
 
       bool bSuccess = false;
 

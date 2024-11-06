@@ -1810,7 +1810,7 @@ namespace windowing_xcb
 
             xcb_keycode_t code = pkeyevent->detail;
 
-            ::u16 state = pkeyevent->state;
+            unsigned short state = pkeyevent->state;
 
             msg.time = pkeyevent->time;
 

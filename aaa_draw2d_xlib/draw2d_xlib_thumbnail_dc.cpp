@@ -475,11 +475,11 @@ size_i32 thumbnail_dc::scale_window_ext(int xNum, int xDenom, int yNum, int yDen
 
 // private helpers for text_out functions
 
-__STATIC int CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(int x, ::u32 nTabStops, LPINT lpnTabStops, int nTabOrigin, int nTabWidth)
+__STATIC int CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(int x, unsigned int nTabStops, LPINT lpnTabStops, int nTabOrigin, int nTabWidth)
 {
    ENSURE(nTabWidth!=0);
    x -= nTabOrigin;        // normalize position to tab origin
-   for (::u32 i = 0; i < nTabStops; i++, lpnTabStops++)
+   for (unsigned int i = 0; i < nTabStops; i++, lpnTabStops++)
    {
       if (*lpnTabStops > x)
         {
@@ -491,8 +491,8 @@ __STATIC int CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(int x, ::u32 nTabStops, L
 
 // Compute a character delta table for correctly positioning the screen
 // font characters where the printer characters will appear on the page
-size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, ::u32 &nCount,
-   int_bool bTabbed, ::u32 nTabStops, LPINT lpnTabStops, int nTabOrigin,
+size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned int &nCount,
+   int_bool bTabbed, unsigned int nTabStops, LPINT lpnTabStops, int nTabOrigin,
    __out_z char * lpszOutputString, int* pnDxWidths, int& nRightFixup)
 {
    ASSERT_VALID(this);
@@ -506,7 +506,7 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, ::u32 &nCo
    ::GetTextExtentPoint32A(get_handle2(), "A", 1, &sizeExtent);
 
    point_i32 ptCurrent;
-   ::u32 nAlignment = ::GetTextAlign(get_handle2());
+   unsigned int nAlignment = ::GetTextAlign(get_handle2());
    int_bool bUpdateCP = (nAlignment & TA_UPDATECP) != 0;
    if (bUpdateCP)
    {
@@ -536,7 +536,7 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, ::u32 &nCo
       }
    }
 
-   for (::u32 i = 0; i < nCount; i++)
+   for (unsigned int i = 0; i < nCount; i++)
    {
       int_bool bSpace = ((_TUCHAR)*lpszCurChar == (_TUCHAR)tmAttrib.tmBreakChar);
       if (bSpace || (bTabbed && *lpszCurChar == '\t'))
@@ -630,7 +630,7 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, ::u32 &nCo
    if (bUpdateCP)
       ::MoveToEx(get_os_data(), x, ptCurrent.y, nullptr);
 
-   nCount = (::u32)(pnCurDelta - pnDxWidths);   // number of characters output
+   nCount = (unsigned int)(pnCurDelta - pnDxWidths);   // number of characters output
    return sizeExtent;
 }
 
@@ -639,8 +639,8 @@ int_bool thumbnail_dc::text_out(int x, int y, const char * lpszString, int nCoun
    return ExtTextOut(x, y, 0, nullptr, lpszString, nCount, nullptr);
 }
 
-int_bool thumbnail_dc::ExtTextOut(int x, int y, ::u32 nOptions, const ::rectangle_i32 & rectangle,
-   const char * lpszString, ::u32 nCount, LPINT lpDxWidths)
+int_bool thumbnail_dc::ExtTextOut(int x, int y, unsigned int nOptions, const ::rectangle_i32 & rectangle,
+   const char * lpszString, unsigned int nCount, LPINT lpDxWidths)
 {
    ASSERT(get_os_data() != nullptr);
    ASSERT(get_handle2() != nullptr);
@@ -704,7 +704,7 @@ size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
             false));
 
    if (nCount <= 0)
-      return (::u32) 0;         // nCount is zero, there is nothing to print
+      return (unsigned int) 0;         // nCount is zero, there is nothing to print
 
    int* pDeltas = nullptr;
    char * pOutputString = nullptr;
@@ -719,11 +719,11 @@ size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
    {
       delete[] pDeltas;
       // Note: DELETE_EXCEPTION(e) not required
-      return (::u32) 0;           // signify error
+      return (unsigned int) 0;           // signify error
    }
 
 
-   ::u32 uCount = nCount;
+   unsigned int uCount = nCount;
    size_i32 sizeFinalExtent = ComputeDeltas(x, lpszString, uCount, true,
                      nTabPositions, lpnTabStopPositions, nTabOrigin,
                      pOutputString, pDeltas, nRightFixup);
@@ -746,7 +746,7 @@ size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
 // This one is too complicated to do character-by-character output positioning
 // All we really need to do here is mirror the current position
 int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
-   ::u32 nFormat)
+   unsigned int nFormat)
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);
@@ -766,7 +766,7 @@ int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * 
 }
 
 int thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
-   ::u32 nFormat, LPDRAWTEXTPARAMS lpDTParams)
+   unsigned int nFormat, LPDRAWTEXTPARAMS lpDTParams)
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);

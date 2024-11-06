@@ -346,7 +346,7 @@ namespace acme_darwin
 //   // void node::is_shared_library_busy see process.cpp
 //   // void node::is_shared_library_busy see process.cpp
 //
-//   bool node::is_process_running(::u32 pid)
+//   bool node::is_process_running(unsigned int pid)
 //   {
 //
 //      return ::platform::node::is_process_running(pid);
@@ -354,7 +354,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool node::process_modules(string_array& stra, u32 processID)
+//   bool node::process_modules(string_array& stra, unsigned int processID)
 //   {
 //
 //      throw ::interface_only();
@@ -588,7 +588,7 @@ namespace acme_darwin
 //
 //
 //
-//   bool node::process_contains_module(string& strImage, ::u32 processID, const ::string & strLibrary)
+//   bool node::process_contains_module(string& strImage, unsigned int processID, const ::string & strLibrary)
 //   {
 //
 //      return ::platform::node::process_contains_module(strImage, processID, strLibrary);
@@ -758,7 +758,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      u32 processId;
+//      unsigned int processId;
 //
 //      create_process(strCmdLine, &processId);
 //
@@ -789,7 +789,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      u32 processId;
+//      unsigned int processId;
 //
 //      create_process(strCmdLine, &processId);
 //
@@ -812,7 +812,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void node::create_process(const ::string & pszCommandLine, u32 * pprocessId)
+//   void node::create_process(const ::string & pszCommandLine, unsigned int * pprocessId)
 //   {
 //
 //      string_array stra;
@@ -1041,7 +1041,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      u32 processId;
+//      unsigned int processId;
 //
 //      create_process(strCmdLine, &processId);
 //      //         {
@@ -1366,7 +1366,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool node::is_shared_library_busy(u32 processid, const string_array & stra)
+//   bool node::is_shared_library_busy(unsigned int processid, const string_array & stra)
 //   {
 //
 //      return false;
@@ -1761,7 +1761,7 @@ namespace acme_darwin
    }
 
 
-   void node::arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status))
+   void node::arp_a(void *p, void(*callback)(void *p, unsigned int uIp, const char * status))
    {
    
       auto pszError = ::arp_a(p, callback);

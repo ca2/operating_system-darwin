@@ -314,7 +314,7 @@ namespace ansios
 
       }
 
-      ::u32 dwExitCode = 0;
+      unsigned int dwExitCode = 0;
 
       if(!has_exited())
       {

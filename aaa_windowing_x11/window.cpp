@@ -453,7 +453,7 @@ namespace windowing_x11
 
       ::Window * pchildren = nullptr;
 
-      u32 ncount = 0;
+      unsigned int ncount = 0;
 
       XQueryTree(display, window, &root, &m_parent, &pchildren, &ncount);
 
@@ -2178,7 +2178,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 #undef SET_WINDOW_POS_LOG
 
 
-//   bool window::set_window_pos(class ::zorder zorder, int x, int y, int cx, int cy, ::u32 nFlags)
+//   bool window::set_window_pos(class ::zorder zorder, int x, int y, int cx, int cy, unsigned int nFlags)
 //   {
 //
 //      bool bOk = false;
@@ -3192,7 +3192,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
             ::Window root = 0;
             ::Window parent = 0;
             ::Window * pchildren = nullptr;
-            u32 numItems = 0;
+            unsigned int numItems = 0;
 
             int status = XQueryTree(Display(), Window(),
                                     &root, &parent, &pchildren, &numItems);
@@ -3219,7 +3219,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
          ::Window root = 0;
          ::Window parent = 0;
          ::Window * pchildren = nullptr;
-         u32 numItems = 0;
+         unsigned int numItems = 0;
 
          int status = XQueryTree(Display(), Window(),
                                  &root, &parent, &pchildren, &numItems);

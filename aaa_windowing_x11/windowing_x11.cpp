@@ -940,10 +940,10 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
    bool g_bSkipMouseMessageInXcess = true;
 
 
-   ::u32 g_dwLastMotion = 0;
+   unsigned int g_dwLastMotion = 0;
 
 
-   ::u32 g_dwMotionSkipTimeout = 23;
+   unsigned int g_dwMotionSkipTimeout = 23;
 
 
 #ifdef display_lock_LOCK_LOG
@@ -2902,7 +2902,7 @@ else if(detail == 3)
 ////} // namespace aura
 ////
 
-//int_bool set_window_position(oswindow hwnd, oswindow hwndInsertAfter, int x, int y, int cx, int cy, ::u32 nFlags)
+//int_bool set_window_position(oswindow hwnd, oswindow hwndInsertAfter, int x, int y, int cx, int cy, unsigned int nFlags)
 //{
 //
 //   synchronous_lock synchronouslock(user_synchronization());
@@ -3115,7 +3115,7 @@ else if(detail == 3)
 
 
 //
-//int_bool WINAPI SetWindowPos(oswindow hWnd,oswindow hWndInsertAfter,int X,int Y,int cx,int cy,::u32 uFlags)
+//int_bool WINAPI SetWindowPos(oswindow hWnd,oswindow hWndInsertAfter,int X,int Y,int cx,int cy,unsigned int uFlags)
 //{
 //
 //   return hWnd->set_window_position(hWndInsertAfter, X, Y, cx, cy, uFlags);

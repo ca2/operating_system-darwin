@@ -25,7 +25,7 @@ namespace draw2d_xlib
 /*   int_bool pen::CreatePenIndirect(LPLOGPEN lpLogPen)
    { return Attach(::CreatePenIndirect(lpLogPen)); }*/
 /*   int_bool pen::CreatePen(int nPenStyle, int nWidth, const LOGBRUSH* pLogBrush,
-      int nStyleCount, const ::u32* lpStyle)
+      int nStyleCount, const unsigned int* lpStyle)
    { return Attach(::ExtCreatePen(nPenStyle, nWidth, pLogBrush, nStyleCount,
    lpStyle)); }*/
 /*   int pen::GetExtLogPen(EXTLOGPEN* pLogPen)
@@ -48,7 +48,7 @@ namespace draw2d_xlib
 */
 /*
    void pen::construct(int nPenStyle, int nWidth, const LOGBRUSH* pLogBrush,
-      int nStyleCount, const ::u32* lpStyle)
+      int nStyleCount, const unsigned int* lpStyle)
    {
       if (!Attach(::ExtCreatePen(nPenStyle, nWidth, pLogBrush, nStyleCount,
          lpStyle)))

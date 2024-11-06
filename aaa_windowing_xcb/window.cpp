@@ -313,7 +313,7 @@ namespace windowing_xcb
 
       ::xcb_window_t *pchildren = nullptr;
 
-      u32 ncount = 0;
+      unsigned int ncount = 0;
 
       htask_t htask = ::get_current_htask();
 
@@ -1643,7 +1643,7 @@ namespace windowing_xcb
    }
 
 
-   bool window::set_window_position(const class ::zorder & zorder, int x, int y, int cx, int cy, ::u32 nFlags)
+   bool window::set_window_position(const class ::zorder & zorder, int x, int y, int cx, int cy, unsigned int nFlags)
    {
 
       synchronous_lock sl(user_synchronization());
@@ -2244,7 +2244,7 @@ namespace windowing_xcb
 //            ::xcb_window_t root = 0;
 //            ::xcb_window_t parent = 0;
 //            ::xcb_window_t *pchildren = nullptr;
-//            u32 numItems = 0;
+//            unsigned int numItems = 0;
 //
 //            int status = XQueryTree(xcb_connection(), xcb_window(),
 //                                    &root, &parent, &pchildren, &numItems);
@@ -2274,7 +2274,7 @@ namespace windowing_xcb
 //         ::xcb_window_t root = 0;
 //         ::xcb_window_t parent = 0;
 //         ::xcb_window_t *pchildren = nullptr;
-//         u32 numItems = 0;
+//         unsigned int numItems = 0;
 //
 //         int status = XQueryTree(xcb_connection(), xcb_window(),
 //                                 &root, &parent, &pchildren, &numItems);
@@ -2887,7 +2887,7 @@ namespace windowing_xcb
                                                   mask |= XCB_CONFIG_WINDOW_WIDTH;
                                                   mask |= XCB_CONFIG_WINDOW_HEIGHT;
 
-                                                  ::u32 ua[] = {(::u32) x, (::u32) y, (::u32) cx, (::u32) cy};
+                                                  unsigned int ua[] = {(unsigned int) x, (unsigned int) y, (unsigned int) cx, (unsigned int) cy};
 
                                                   auto cookie = xcb_configure_window(xcb_connection(), m_window, mask, ua);
 
@@ -2927,7 +2927,7 @@ namespace windowing_xcb
                                                   mask |= XCB_CONFIG_WINDOW_X;
                                                   mask |= XCB_CONFIG_WINDOW_Y;
 
-                                                  ::u32 ua[] = { (::u32) x, (::u32) y};
+                                                  unsigned int ua[] = { (unsigned int) x, (unsigned int) y};
 
                                                   auto cookie = xcb_configure_window(xcb_connection(), m_window, mask, ua);
 
@@ -2961,7 +2961,7 @@ namespace windowing_xcb
                                                   mask |= XCB_CONFIG_WINDOW_WIDTH;
                                                   mask |= XCB_CONFIG_WINDOW_HEIGHT;
 
-                                                  ::u32 ua[] = { (::u32) cx, (::u32) cy };
+                                                  unsigned int ua[] = { (unsigned int) cx, (unsigned int) cy };
 
                                                   auto cookie = xcb_configure_window(xcb_connection(), m_window, mask, ua);
 

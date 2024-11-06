@@ -25,24 +25,24 @@ namespace draw2d_xlib
 
 
       bool LoadBitmap(const char * lpszResourceName);
-      bool LoadBitmap(::u32 nIDResource);
-      bool LoadOEMBitmap(::u32 nIDBitmap); // for OBM_/OCR_/OIC_
+      bool LoadBitmap(unsigned int nIDResource);
+      bool LoadOEMBitmap(unsigned int nIDBitmap); // for OBM_/OCR_/OIC_
    #ifndef ___NO_AFXCMN_SUPPORT
-// xxx      bool LoadMappedBitmap(::u32 nIDBitmap, ::u32 nFlags = 0, LPCOLORMAP lpColorMap = nullptr, int nMapSize = 0);
+// xxx      bool LoadMappedBitmap(unsigned int nIDBitmap, unsigned int nFlags = 0, LPCOLORMAP lpColorMap = nullptr, int nMapSize = 0);
    #endif
-      bool CreateBitmap(::draw2d::graphics * pgraphics, int nWidth, int nHeight, ::u32 nPlanes, ::u32 nBitcount, const void * lpBits, int iStride);
+      bool CreateBitmap(::draw2d::graphics * pgraphics, int nWidth, int nHeight, unsigned int nPlanes, unsigned int nBitcount, const void * lpBits, int iStride);
       bool CreateBitmapIndirect(::draw2d::graphics * pgraphics, LPBITMAP lpBitmap);
       bool CreateCompatibleBitmap(::draw2d::graphics * pgraphics, int nWidth, int nHeight);
       bool CreateDiscardableBitmap(::draw2d::graphics * pgraphics, int nWidth, int nHeight);
-      bool CreateDIBSection(::draw2d::graphics * pgraphics, const BITMAPINFO * lpbmi, ::u32 usage, void **ppvBits, int * stride, HANDLE hSection, u32 offset);
-      bool CreateDIBitmap(::draw2d::graphics * pgraphics, const BITMAPINFOHEADER *pbmih, ::u32 flInit, const void *pjBits, const BITMAPINFO *pbmi, ::u32 iUsage);
+      bool CreateDIBSection(::draw2d::graphics * pgraphics, const BITMAPINFO * lpbmi, unsigned int usage, void **ppvBits, int * stride, HANDLE hSection, unsigned int offset);
+      bool CreateDIBitmap(::draw2d::graphics * pgraphics, const BITMAPINFOHEADER *pbmih, unsigned int flInit, const void *pjBits, const BITMAPINFO *pbmi, unsigned int iUsage);
 
 
       int GetBitmap(BITMAP* pBitMap);
 
 
-      ::u32 SetBitmapBits(::u32 dwCount, const void * lpBits);
-      ::u32 GetBitmapBits(::u32 dwCount, LPVOID lpBits) const;
+      unsigned int SetBitmapBits(unsigned int dwCount, const void * lpBits);
+      unsigned int GetBitmapBits(unsigned int dwCount, LPVOID lpBits) const;
       ::size_i32 SetBitmapDimension(int nWidth, int nHeight);
       ::size_i32 GetBitmapDimension() const;
 

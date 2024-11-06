@@ -261,7 +261,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      size_t dwWritten = ::fwrite(contents, 1, (u32)dwWrite, pfile);
+//      size_t dwWritten = ::fwrite(contents, 1, (unsigned int)dwWrite, pfile);
 //
 //      if(dwWritten != dwWrite)
 //      {
