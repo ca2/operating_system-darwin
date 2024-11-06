@@ -3,7 +3,7 @@
 //
 #include "framework.h"
 #include "node.h"
-#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/platform/system.h"
 //#include "apex/operating_system/freedesktop/desktop_file.h"
 #include "apex/platform/application.h"
@@ -57,7 +57,7 @@ namespace apex_darwin
 //
 //         ::file::path path = pnode->get_desktop_file_path(papp);
 //
-//         if(path.has_char() && !acmefile()->exists(path))
+//         if(path.has_char() && !file_system()->exists(path))
 //         {
 //
 //            auto pfile = papp->__create_new< ::freedesktop::desktop_file >();

@@ -15,27 +15,27 @@
 		9AB09AA32B72039A00E2C3A5 /* file_context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AA3F6AE2A945E38004283CA /* file_context.cpp */; };
 		9AB15D2729A8811400DFDF90 /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
-		9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
-		9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
-		9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
+		9AB15D2929A8811400DFDF90 /* directory_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* directory_system.cpp */; };
+		9AB15D2A29A8811400DFDF90 /* file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* file_system.cpp */; };
+		9AB15D2B29A8811400DFDF90 /* path_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* path_system.cpp */; };
 		9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
 		9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
-		9ABBB6F42AEB65CB007611C5 /* darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6DF2AEB6442007611C5 /* darwin.dylib */; };
+		9ABBB6F42AEB65CB007611C5 /* libdarwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */; };
 		9AFD8176297B58F900BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
-		9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
-		9AFD8179297B58F900BAD9DD /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
-		9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
+		9AFD8178297B58F900BAD9DD /* directory_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* directory_system.cpp */; };
+		9AFD8179297B58F900BAD9DD /* file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* file_system.cpp */; };
+		9AFD817A297B58F900BAD9DD /* path_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* path_system.cpp */; };
 		9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
 		9AFD817F297B58FA00BAD9DD /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
 		9AFD8180297B590000BAD9DD /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AFD81A3297B59E200BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD81A4297B59E200BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
-		9AFD81A5297B59E200BAD9DD /* acme_directory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* acme_directory.cpp */; };
-		9AFD81A6297B59E200BAD9DD /* acme_file.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* acme_file.cpp */; };
-		9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* acme_path.cpp */; };
+		9AFD81A5297B59E200BAD9DD /* directory_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C5297B589800BAD9DD /* directory_system.cpp */; };
+		9AFD81A6297B59E200BAD9DD /* file_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80D7297B589800BAD9DD /* file_system.cpp */; };
+		9AFD81A7297B59E200BAD9DD /* path_system.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CB297B589800BAD9DD /* path_system.cpp */; };
 		9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
 		9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AFD81AE297B59E200BAD9DD /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
@@ -141,23 +141,23 @@
 		9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = darwin.xcodeproj; path = ../darwin/darwin.xcodeproj; sourceTree = "<group>"; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFD80C3297B589800BAD9DD /* acme_directory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_directory.h; sourceTree = "<group>"; };
+		9AFD80C3297B589800BAD9DD /* directory_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = directory_system.h; sourceTree = "<group>"; };
 		9AFD80C4297B589800BAD9DD /* aaa_list_serial_ports.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_list_serial_ports.cpp; sourceTree = "<group>"; };
-		9AFD80C5297B589800BAD9DD /* acme_directory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_directory.cpp; sourceTree = "<group>"; };
+		9AFD80C5297B589800BAD9DD /* directory_system.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = directory_system.cpp; sourceTree = "<group>"; };
 		9AFD80C7297B589800BAD9DD /* aaa_node_clang_callstack.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = aaa_node_clang_callstack.cpp; sourceTree = "<group>"; };
 		9AFD80C9297B589800BAD9DD /* dbus.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dbus.cpp; sourceTree = "<group>"; };
 		9AFD80CA297B589800BAD9DD /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		9AFD80CB297B589800BAD9DD /* acme_path.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_path.cpp; sourceTree = "<group>"; };
+		9AFD80CB297B589800BAD9DD /* path_system.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = path_system.cpp; sourceTree = "<group>"; };
 		9AFD80CE297B589800BAD9DD /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
 		9AFD80D4297B589800BAD9DD /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
-		9AFD80D7297B589800BAD9DD /* acme_file.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = acme_file.cpp; sourceTree = "<group>"; };
+		9AFD80D7297B589800BAD9DD /* file_system.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_system.cpp; sourceTree = "<group>"; };
 		9AFD80DE297B589800BAD9DD /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
-		9AFD80DF297B589800BAD9DD /* acme_path.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_path.h; sourceTree = "<group>"; };
+		9AFD80DF297B589800BAD9DD /* path_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = path_system.h; sourceTree = "<group>"; };
 		9AFD80E4297B589800BAD9DD /* file_lock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_lock.h; sourceTree = "<group>"; };
 		9AFD80E5297B589800BAD9DD /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
 		9AFD80E7297B589800BAD9DD /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
 		9AFD80EF297B589800BAD9DD /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
-		9AFD80F4297B589800BAD9DD /* acme_file.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = acme_file.h; sourceTree = "<group>"; };
+		9AFD80F4297B589800BAD9DD /* file_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_system.h; sourceTree = "<group>"; };
 		9AFD80F5297B589800BAD9DD /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,7 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ABBB6F42AEB65CB007611C5 /* darwin.dylib in Frameworks */,
+				9ABBB6F42AEB65CB007611C5 /* libdarwin.dylib in Frameworks */,
 				9A9DCBDC29B83E4700D1255B /* libacme_posix.dylib in Frameworks */,
 				9A8EA53A298079C200B26CB9 /* libacme.dylib in Frameworks */,
 			);
@@ -204,7 +204,7 @@
 		9ABBB6DA2AEB6441007611C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9ABBB6DF2AEB6442007611C5 /* darwin.dylib */,
+				9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */,
 				9AC107542B6ACBF20053DB45 /* libios_darwin.a */,
 				9A682B332AED4F2000A9502D /* libstatic_darwin.a */,
 			);
@@ -243,12 +243,12 @@
 				9A754F882B21266800FFB669 /* _library.h */,
 				9AFD80C4297B589800BAD9DD /* aaa_list_serial_ports.cpp */,
 				9AFD80C7297B589800BAD9DD /* aaa_node_clang_callstack.cpp */,
-				9AFD80C5297B589800BAD9DD /* acme_directory.cpp */,
-				9AFD80C3297B589800BAD9DD /* acme_directory.h */,
-				9AFD80D7297B589800BAD9DD /* acme_file.cpp */,
-				9AFD80F4297B589800BAD9DD /* acme_file.h */,
-				9AFD80CB297B589800BAD9DD /* acme_path.cpp */,
-				9AFD80DF297B589800BAD9DD /* acme_path.h */,
+				9AFD80C5297B589800BAD9DD /* directory_system.cpp */,
+				9AFD80C3297B589800BAD9DD /* directory_system.h */,
+				9AFD80D7297B589800BAD9DD /* file_system.cpp */,
+				9AFD80F4297B589800BAD9DD /* file_system.h */,
+				9AFD80CB297B589800BAD9DD /* path_system.cpp */,
+				9AFD80DF297B589800BAD9DD /* path_system.h */,
 				9A9E55EC29F6D742001559E9 /* darwin.hpp */,
 				9AFD80C9297B589800BAD9DD /* dbus.cpp */,
 				9AA3F6AE2A945E38004283CA /* file_context.cpp */,
@@ -420,10 +420,10 @@
 			remoteRef = 9A9DCB7729B8240E00D1255B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9ABBB6DF2AEB6442007611C5 /* darwin.dylib */ = {
+		9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
-			path = darwin.dylib;
+			path = libdarwin.dylib;
 			remoteRef = 9ABBB6DE2AEB6442007611C5 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
@@ -443,10 +443,10 @@
 			files = (
 				9AB15D2729A8811400DFDF90 /* _.cpp in Sources */,
 				9AB15D2829A8811400DFDF90 /* _factory.cpp in Sources */,
-				9AB15D2929A8811400DFDF90 /* acme_directory.cpp in Sources */,
+				9AB15D2929A8811400DFDF90 /* directory_system.cpp in Sources */,
 				9AB09AA22B72039700E2C3A5 /* file_context.cpp in Sources */,
-				9AB15D2A29A8811400DFDF90 /* acme_file.cpp in Sources */,
-				9AB15D2B29A8811400DFDF90 /* acme_path.cpp in Sources */,
+				9AB15D2A29A8811400DFDF90 /* file_system.cpp in Sources */,
+				9AB15D2B29A8811400DFDF90 /* path_system.cpp in Sources */,
 				9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */,
 				9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */,
 				9AB15D3229A8811400DFDF90 /* node.cpp in Sources */,
@@ -460,9 +460,9 @@
 				9AFD81A3297B59E200BAD9DD /* _.cpp in Sources */,
 				9AB09AA32B72039A00E2C3A5 /* file_context.cpp in Sources */,
 				9AFD81A4297B59E200BAD9DD /* _factory.cpp in Sources */,
-				9AFD81A5297B59E200BAD9DD /* acme_directory.cpp in Sources */,
-				9AFD81A6297B59E200BAD9DD /* acme_file.cpp in Sources */,
-				9AFD81A7297B59E200BAD9DD /* acme_path.cpp in Sources */,
+				9AFD81A5297B59E200BAD9DD /* directory_system.cpp in Sources */,
+				9AFD81A6297B59E200BAD9DD /* file_system.cpp in Sources */,
+				9AFD81A7297B59E200BAD9DD /* path_system.cpp in Sources */,
 				9AFD81A8297B59E200BAD9DD /* dbus.cpp in Sources */,
 				9AFD81AA297B59E200BAD9DD /* framework.cpp in Sources */,
 				9AFD81AE297B59E200BAD9DD /* node.cpp in Sources */,
@@ -477,9 +477,9 @@
 				9A7DCF812B7D8E0A004C0943 /* file_context.cpp in Sources */,
 				9AFD8176297B58F900BAD9DD /* _.cpp in Sources */,
 				9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */,
-				9AFD8178297B58F900BAD9DD /* acme_directory.cpp in Sources */,
-				9AFD8179297B58F900BAD9DD /* acme_file.cpp in Sources */,
-				9AFD817A297B58F900BAD9DD /* acme_path.cpp in Sources */,
+				9AFD8178297B58F900BAD9DD /* directory_system.cpp in Sources */,
+				9AFD8179297B58F900BAD9DD /* file_system.cpp in Sources */,
+				9AFD817A297B58F900BAD9DD /* path_system.cpp in Sources */,
 				9AFD817B297B58FA00BAD9DD /* dbus.cpp in Sources */,
 				9AFD817F297B58FA00BAD9DD /* node.cpp in Sources */,
 			);

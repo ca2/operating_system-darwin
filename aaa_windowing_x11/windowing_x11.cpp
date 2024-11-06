@@ -192,7 +192,7 @@ int_bool _x11_get_cursor_pos(Display * d, POINT_I32 * ppointCursor);
 
 Window g_windowFocus = 0;
 
-i32 _c_XErrorHandler(Display * display, XErrorEvent * perrorevent);
+int _c_XErrorHandler(Display * display, XErrorEvent * perrorevent);
 
 
 //struct MWMHints
@@ -2902,7 +2902,7 @@ else if(detail == 3)
 ////} // namespace aura
 ////
 
-//int_bool set_window_position(oswindow hwnd, oswindow hwndInsertAfter, i32 x, i32 y, i32 cx, i32 cy, ::u32 nFlags)
+//int_bool set_window_position(oswindow hwnd, oswindow hwndInsertAfter, int x, int y, int cx, int cy, ::u32 nFlags)
 //{
 //
 //   synchronous_lock synchronouslock(user_synchronization());
@@ -3115,7 +3115,7 @@ else if(detail == 3)
 
 
 //
-//int_bool WINAPI SetWindowPos(oswindow hWnd,oswindow hWndInsertAfter,i32 X,i32 Y,i32 cx,i32 cy,::u32 uFlags)
+//int_bool WINAPI SetWindowPos(oswindow hWnd,oswindow hWndInsertAfter,int X,int Y,int cx,int cy,::u32 uFlags)
 //{
 //
 //   return hWnd->set_window_position(hWndInsertAfter, X, Y, cx, cy, uFlags);

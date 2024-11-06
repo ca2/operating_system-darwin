@@ -73,7 +73,7 @@ namespace windowing_x11
       void create_window(::user::interaction_impl * pimpl) override;
 
 
-      static Atom get_window_long_atom(i32 nIndex);
+      static Atom get_window_long_atom(int nIndex);
 
 
       inline int net_wm_state(::x11::enum_atom eatom) const
@@ -107,11 +107,11 @@ namespace windowing_x11
       virtual ::e_status initialize_x11_window(::windowing_x11::display * pdisplay, ::Window window, ::Visual *pvisual, int iDepth, int iScreen, Colormap colormap);
 
       virtual void send_client_event(Atom atom, unsigned int numArgs, ...);
-      virtual i32 store_name(const char * psz);
-      virtual i32 select_input(i32 iInput);
-      virtual i32 select_all_input();
-      virtual i32 map_window();
-      virtual i32 unmap_window(bool bWithdraw);
+      virtual int store_name(const char * psz);
+      virtual int select_input(int iInput);
+      virtual int select_all_input();
+      virtual int map_window();
+      virtual int unmap_window(bool bWithdraw);
       virtual void set_wm_class(const char * psz);
 
       void exit_iconify() override;
@@ -146,15 +146,15 @@ namespace windowing_x11
       virtual bool is_iconic() override;
       virtual bool is_window_visible() override;
       void show_window(const ::e_display & edisplay, const ::e_activation & eactivation) override;
-      //virtual iptr get_window_long_ptr(i32 nIndex);
-      //virtual iptr set_window_long_ptr(i32 nIndex, iptr l);
+      //virtual iptr get_window_long_ptr(int nIndex);
+      //virtual iptr set_window_long_ptr(int nIndex, iptr l);
       virtual bool client_to_screen(POINT_I32 * ppoint) override;
 
       bool screen_to_client(POINT_I32 * ppoint) override;
 
 
-      //virtual bool set_window_pos(class::zorder zorder, i32 x, i32 y, i32 cx, i32 cy,::u32 nFlags);
-      //virtual bool _set_window_pos(class::zorder zorder, i32 x, i32 y, i32 cx, i32 cy,::u32 nFlags);
+      //virtual bool set_window_pos(class::zorder zorder, int x, int y, int cx, int cy,::u32 nFlags);
+      //virtual bool _set_window_pos(class::zorder zorder, int x, int y, int cx, int cy,::u32 nFlags);
       
 
       bool is_destroying() override;
@@ -186,7 +186,7 @@ namespace windowing_x11
 
 
 
-      //virtual Atom get_window_long_atom(i32 nIndex);
+      //virtual Atom get_window_long_atom(int nIndex);
       virtual void mapped_net_state_raw(bool add,  WINDOWING_X11_WINDOW_MEMBER int iScreen, Atom state1, Atom state2);
       //virtual void unmapped_net_state_raw( WINDOWING_X11_WINDOW_MEMBER ...);
       virtual bool x11_get_window_rect(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
@@ -217,7 +217,7 @@ namespace windowing_x11
       void set_tool_window(bool bSet) override;
 
 
-      bool set_window_position(const class ::zorder& zorder, i32 x, i32 y, i32 cx, i32 cy, const ::e_activation& eactivation, bool bNoZorder, bool bNoMove, bool bNoSize, bool bShow, bool bHide) override;
+      bool set_window_position(const class ::zorder& zorder, int x, int y, int cx, int cy, const ::e_activation& eactivation, bool bNoZorder, bool bNoMove, bool bNoSize, bool bShow, bool bHide) override;
 
 
 
@@ -262,7 +262,7 @@ namespace windowing_x11
       virtual ::e_status x11_post_message(MESSAGE & msg);
       virtual ::e_status post_ui_message(const MESSAGE & message);
       //virtual bool x11_process_event(osdisplay_data * pdisplaydata, XEvent * pevent, XGenericEventCookie *cookie);
-      //virtual ::e_status set_window_position( WINDOWING_X11_WINDOW_MEMBER const ::zorder & zorder, i32 x, i32 y, i32 cx, i32 cy, ::u32 nFlags);
+      //virtual ::e_status set_window_position( WINDOWING_X11_WINDOW_MEMBER const ::zorder & zorder, int x, int y, int cx, int cy, ::u32 nFlags);
       virtual ::e_status window_rectangle( WINDOWING_X11_WINDOW_MEMBER RECTANGLE_I32 * prectangle);
       virtual ::e_status client_rectangle(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
       //virtual ::e_status wm_full_screen( WINDOWING_X11_WINDOW_MEMBER const ::rectangle_i32 & rectangle);

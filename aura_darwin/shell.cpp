@@ -1,6 +1,6 @@
 #include "framework.h"
 #include "shell.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
+#include "acme/filesystem/filesystem/directory_system.h"
 #include "acme/parallelization/synchronous_lock.h"
 #include "acme/prototype/string/international.h"
 #include "aura/graphics/image/context.h"
@@ -111,7 +111,7 @@ namespace aura_posix
 //
 //      }
 
-//      i32 freebsd::get_image_by_extension(per_fork * pfork, oswindow oswindow, image_key & key, color32_t crBk)
+//      int freebsd::get_image_by_extension(per_fork * pfork, oswindow oswindow, image_key & key, color32_t crBk)
 //      {
 //
 //         return 0x80000000;
@@ -121,10 +121,10 @@ namespace aura_posix
 
 
 
-//      i32 freebsd::get_file_extension_image(oswindow oswindow, const string & strExtension, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
+//      int freebsd::get_file_extension_image(oswindow oswindow, const string & strExtension, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
 //      {
 //
-//         i32 iImage;
+//         int iImage;
 //
 //         wstring wstrFilePath;
 //
@@ -237,7 +237,7 @@ namespace aura_posix
 
    //   if (lpsf == nullptr)
    //      return false;
-   //   i32 iType;
+   //   int iType;
    //   switch (eicon)
    //   {
    //   case icon_normal:
@@ -266,7 +266,7 @@ namespace aura_posix
 
    //   char szPath[_MAX_PATH * 10];
    //   string strPath;
-   //   //   i32 iImage = 0x80000000;
+   //   //   int iImage = 0x80000000;
 
    //   HICON hicon16 = nullptr;
    //   HICON hicon48 = nullptr;
@@ -287,7 +287,7 @@ namespace aura_posix
 
 
 
-   //   i32 iIcon = 0x80000000;
+   //   int iIcon = 0x80000000;
    //   ::u32 uFlags = 0;
 
    //   SHFILEINFO shfi16;
@@ -478,10 +478,10 @@ namespace aura_posix
 
 
 
-   //i32 freebsd::get_image(per_fork * pfork, oswindow oswindow, image_key imagekey, LPITEMIDLIST lpiidlAbsolute, const unichar * lpcszExtra, color32_t crBk)
+   //int freebsd::get_image(per_fork * pfork, oswindow oswindow, image_key imagekey, LPITEMIDLIST lpiidlAbsolute, const unichar * lpcszExtra, color32_t crBk)
    //{
 
-   //   i32 iImage = get_image(pfork, oswindow, imagekey, lpiidlAbsolute, lpiidlChild, lpcszExtra, crBk);
+   //   int iImage = get_image(pfork, oswindow, imagekey, lpiidlAbsolute, lpiidlChild, lpcszExtra, crBk);
 
    //   _017ItemIDListFree(pfork, lpiidlChild);
 
@@ -551,7 +551,7 @@ namespace aura_posix
 
       unicode_to_utf8(strPath, wstrPath);
 
-      if (acmedirectory()->is(strPath))
+      if (directory_system()->is(strPath))
       {
 
          return e_folder_file_system;
@@ -671,10 +671,10 @@ namespace aura_posix
 //
 
 
-//      i32 freebsd::get_image(oswindow oswindow, const string & strPath, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
+//      int freebsd::get_image(oswindow oswindow, const string & strPath, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
 //      {
 //
-//         i32 iImage = 0x80000000;
+//         int iImage = 0x80000000;
 //
 //         {
 //            if (colorref_get_a_value(crBk) != 255)
@@ -744,7 +744,7 @@ namespace aura_posix
 
 
    bool shell::get_image_by_file_extension(_get_file_image_ & getfileimage)
-   //i32 freebsd::get_image_foo(oswindow oswindow, const string & strExtension, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
+   //int freebsd::get_image_foo(oswindow oswindow, const string & strExtension, e_file_attribute eattribute, e_icon eicon, color32_t crBk)
    {
 
       getfileimage.m_iImage = 0x80000000;

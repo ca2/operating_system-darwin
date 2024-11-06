@@ -1,5 +1,5 @@
 #include "framework.h"
-#include "acme_file.h"
+#include "file_system.h"
 #include "node.h"
 #include "acme/operating_system/ansi/_ansi.h"
 #include "acme/platform/system.h"
@@ -163,7 +163,7 @@ namespace acme_posix
 
       auto psystem = pparticle->system();
 
-      auto pacmefile = psystem->m_pacmefile;
+      auto pacmefile = psystem->file_system();
 
       device_number = atoi(pacmefile->first_line(sys_usb_path + "/devnum"));
 
@@ -230,7 +230,7 @@ namespace acme_posix
 
          auto psystem = pparticle->system();
 
-         auto pacmefile = psystem->m_pacmefile;
+         auto pacmefile = psystem->file_system();
 
          if (path_exists(sys_id_path))
          {
@@ -356,7 +356,7 @@ namespace acme_posix
 
       auto psystem = pparticle->system();
 
-      auto pacmefile = psystem->m_pacmefile;
+      auto pacmefile = psystem->file_system();
 
       string serial_number = pacmefile->first_line(sysfs_path + "/serial");
 

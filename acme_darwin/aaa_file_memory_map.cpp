@@ -4,9 +4,9 @@
 #include "framework.h"
 #include "file_memory_map.h"
 #include "mutex.h"
-#include "acme_directory.h"
+#include "directory_system.h"
 #include "acme/operating_system/ansi/file_c.h"
-#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/platform/system.h"
 
 
@@ -51,7 +51,7 @@ namespace acme_darwin
       if (m_pdata != (void *)MAP_FAILED)
       {
          
-         auto size = ::get_system()->m_pacmefile->get_size_fd(m_iFile);
+         auto size = ::get_system()->file_system()->get_size_fd(m_iFile);
          
          ::munmap(m_pdata, size);
             
@@ -95,7 +95,7 @@ namespace acme_darwin
 
       ::file::path path(get_path());
 
-      acmedirectory()->create(path.folder());
+      directory_system()->create(path.folder());
 
       m_iFile = ::open(path, iOpen, S_IRUSR | S_IWUSR);
 
@@ -108,7 +108,7 @@ namespace acme_darwin
 
       }
 
-      acmefile()->set_size(m_iFile, m_size);
+      file_system()->set_size(m_iFile, m_size);
 
       m_pdata = (color32_t *)mmap(nullptr, m_size, (m_bRead ? PROT_READ : 0) | (m_bWrite ? PROT_WRITE : 0), MAP_SHARED, m_iFile, 0);
 

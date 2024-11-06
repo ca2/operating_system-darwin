@@ -3,7 +3,7 @@
 #include "framework.h"
 #include "icon.h"
 #include "acme/exception/interface_only.h"
-#include "acme/filesystem/filesystem/dir_context.h"
+#include "acme/filesystem/filesystem/directory_system.h"
 #include "apex/platform/context.h"
 //#include "_windowing_x11.h"
 

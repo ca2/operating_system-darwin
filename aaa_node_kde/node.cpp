@@ -5,7 +5,7 @@
 #include "node.h"
 #include "appindicator.h"
 #include "aura/windowing/windowing.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
+#include "acme/filesystem/filesystem/directory_system.h"
 #include <kworkspace5/kworkspace.h>
 #include <KColorScheme>
 #include <KFileItem>
@@ -923,7 +923,7 @@ namespace node_kde
 
       ::file::path pathDesktop;
 
-      pathDesktop = acmedirectory()->home() / ".local/share/applications" / (strDesktopFileTitle + ".desktop");
+      pathDesktop = directory_system()->home() / ".local/share/applications" / (strDesktopFileTitle + ".desktop");
 
       kde_open_local_file(m_pqapplication, pathDesktop, "application/x-desktop");
 

@@ -47,7 +47,7 @@ namespace windowing_x11
    }
 
 
-   void keyboard::enum_init(::acme::system * psystem)
+   void keyboard::enum_init(::platform::system * psystem)
    {
 
 //      SET_ENUM_TEXT(::user::e_key_0);
@@ -278,9 +278,9 @@ namespace windowing_x11
    bool keyboard::load_os_layout(const ::file::path & pszPath)
    {
 
-      //i32 iCode;
+      //int iCode;
 
-      //i32 iScan;
+      //int iScan;
 
       //::user::enum_key ekey;
 
@@ -320,7 +320,7 @@ namespace windowing_x11
       //   return false;
       //}
 
-      //for(i32 i = 0; i < doc.root()->get_children_count(); i++)
+      //for(int i = 0; i < doc.root()->get_children_count(); i++)
       //{
 
       //   ::pointer<::xml::node>pnode = doc.root()->child_at(i);
@@ -520,7 +520,7 @@ namespace windowing_x11
 //
 //      Context.dir()->matter_ls_file("keyboard layout", patha);
 //
-//      for(i32 i = 0; i < patha.get_count(); i++)
+//      for(int i = 0; i < patha.get_count(); i++)
 //      {
 //
 //         keyboard_layout_id layoutid;
@@ -567,7 +567,7 @@ namespace windowing_x11
 //
 //      HKL hkl = ::GetKeyboardLayout(0);
 //
-//      for(i32 i = 0; i < layoutida.get_count(); i++)
+//      for(int i = 0; i < layoutida.get_count(); i++)
 //      {
 //         if(layoutida[i].m_hkla.contains(hkl))
 //         {
@@ -575,7 +575,7 @@ namespace windowing_x11
 //         }
 //      }
 //      hkl = (HKL) (((uptr) hkl) & 0xffff);
-//      for(i32 i = 0; i < layoutida.get_count(); i++)
+//      for(int i = 0; i < layoutida.get_count(); i++)
 //      {
 //         if(layoutida[i].m_hkla.contains(hkl))
 //         {
@@ -587,7 +587,7 @@ namespace windowing_x11
 //
 //      string strSymbol = x11_keyboard_get_current_group_symbol();
 //
-//      for(i32 i = 0; i < layoutida.get_count(); i++)
+//      for(int i = 0; i < layoutida.get_count(); i++)
 //      {
 //         if(layoutida[i].m_countrycode.contains_ci(strSymbol))
 //         {
@@ -599,7 +599,7 @@ namespace windowing_x11
 //
 //      string strSymbol = keyboard_input_source();
 //
-//      for(i32 i = 0; i < layoutida.get_count(); i++)
+//      for(int i = 0; i < layoutida.get_count(); i++)
 //      {
 //         if(layoutida[i].m_keylayout.has_char() && strSymbol.contains(layoutida[i].m_keylayout))
 //         {
@@ -672,7 +672,7 @@ namespace windowing_x11
 ////
 ////#ifdef WINDOWS_DESKTOP
 ////
-////      for(i32 i = 0; i < straHkl.get_count(); i++)
+////      for(int i = 0; i < straHkl.get_count(); i++)
 ////      {
 ////         string strHkl = straHkl[i];
 ////         HKL hkl;
@@ -808,7 +808,7 @@ namespace windowing_x11
       if(pkey->m_ekey == ::user::e_key_none)
       {
 
-         pkey->m_ekey = m_mapKey[(i32) pkey->m_iVirtualKey];
+         pkey->m_ekey = m_mapKey[(int) pkey->m_iVirtualKey];
 
       }
 

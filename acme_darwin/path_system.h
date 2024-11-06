@@ -1,5 +1,5 @@
 /*****<3ThomasBorregaardSørensen!!Created by camilo*/
-// From acme_posix/acme_file.h
+// From acme_posix/file_system.h
 // on 2021-08-12
 // 18:18 BRT
 #pragma once
@@ -18,7 +18,7 @@ namespace acme_darwin
    public:
 
 
-      //__creatable_from_library(acme_path, ::acme_path, "acme_posix");
+      //__creatable_from_library(path_system, ::path_system, "acme_posix");
 
 
       path_system();

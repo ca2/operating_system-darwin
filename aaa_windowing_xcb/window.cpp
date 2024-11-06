@@ -820,7 +820,7 @@ namespace windowing_xcb
    }
 
 
-   ::e_status window::_select_input(i32 iInput)
+   ::e_status window::_select_input(int iInput)
    {
 
       windowing_output_debug_string("\nwindow::select_input");
@@ -1362,9 +1362,9 @@ namespace windowing_xcb
 
       xcb_atom_t actual_type = 0;
 
-      i32 actual_format = 0;
+      int actual_format = 0;
 
-      i32 status = 0;
+      int status = 0;
 
       unsigned char * pchar = nullptr;
 
@@ -1643,7 +1643,7 @@ namespace windowing_xcb
    }
 
 
-   bool window::set_window_position(const class ::zorder & zorder, i32 x, i32 y, i32 cx, i32 cy, ::u32 nFlags)
+   bool window::set_window_position(const class ::zorder & zorder, int x, int y, int cx, int cy, ::u32 nFlags)
    {
 
       synchronous_lock sl(user_synchronization());

@@ -17,7 +17,7 @@ namespace acme_darwin
    public:
 
 
-      //__creatable_from_library(acme_directory, ::acme_directory, "acme_posix");
+      //__creatable_from_library(directory_system, ::directory_system, "acme_posix");
 
 
       directory_system();

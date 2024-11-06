@@ -3,7 +3,7 @@
 //
 #include "framework.h"
 #include "node.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/platform/system.h"
 #include "apex/platform/application.h"
 #ifdef WITH_X11
@@ -528,7 +528,7 @@ namespace aura_darwin
 //
 //      ::file::path path;
 //
-//      path = acmedirectory()->home();
+//      path = directory_system()->home();
 //
 //      path /= ".local/share/applications";
 //

@@ -83,7 +83,7 @@ namespace windowing_xcb
       virtual void set_window_text(const char * pszString);
 
 
-      bool set_window_position(const class ::zorder & zorder, i32 x, i32 y, i32 cx, i32 cy, ::u32 nFlags) override;
+      bool set_window_position(const class ::zorder & zorder, int x, int y, int cx, int cy, ::u32 nFlags) override;
 
 
       virtual int_bool IsWindowVisibleRaw();
@@ -216,7 +216,7 @@ namespace windowing_xcb
       virtual string _on_key_down(xcb_keycode_t code, ::u16 state, KeySym * pkeysym);
 
 
-      static xcb_atom_t _get_window_long_atom(i32 nIndex);
+      static xcb_atom_t _get_window_long_atom(int nIndex);
 
 
       virtual ::e_status _change_atom_atom(xcb_atom_t atomWindowType, xcb_atom_t atomWindowTypeValue);
@@ -228,7 +228,7 @@ namespace windowing_xcb
 
       virtual ::e_status _send_client_event(xcb_atom_t atom, unsigned int numArgs, ...);
       virtual ::e_status _store_name(const char * psz);
-      virtual ::e_status _select_input(i32 iInput);
+      virtual ::e_status _select_input(int iInput);
       virtual ::e_status _select_all_input();
       virtual ::e_status _map_window();
       //virtual ::e_status _unmap_window(bool bWithdraw);

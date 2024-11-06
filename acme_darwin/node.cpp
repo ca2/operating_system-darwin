@@ -3,8 +3,8 @@
 //
 #include "framework.h"
 #include "node.h"
-#include "acme_file.h"
-#include "acme_directory.h"
+#include "file_system.h"
+#include "directory_system.h"
 //#include "mutex.h"
 //#include "exclusive.h"
 #include "acme/exception/interface_only.h"
@@ -121,7 +121,7 @@ namespace acme_darwin
 {
 
 
-   ::i32 get_os_process_priority(::enum_priority epriority);
+   int get_os_process_priority(::enum_priority epriority);
 
 
    node::node()
@@ -349,7 +349,7 @@ namespace acme_darwin
 //   bool node::is_process_running(::u32 pid)
 //   {
 //
-//      return ::acme::node::is_process_running(pid);
+//      return ::platform::node::is_process_running(pid);
 //
 //   }
 //
@@ -494,9 +494,9 @@ namespace acme_darwin
 //
 //   path /= lpszName;
 //
-//   auto pacmedirectory = pparticle->acmedirectory();
+//   auto pdirectorysystem = pparticle->directory_system();
 //
-//   pacmedirectory->create(path.folder());
+//   pdirectorysystem->create(path.folder());
 //
 //   int iFd = open(path, O_RDWR, S_IRWXU);
 //
@@ -530,7 +530,7 @@ namespace acme_darwin
 //
 //   key_t key = ftok(strName, 0); //Generate a unique key or supply a value
 //
-//   i32 semid = semget(
+//   int semid = semget(
 //               key, // a unique identifier to identify semaphore set
 //               1,  // number of semaphore in the semaphore set
 //               0666 // permissions (rwxrwxrwx) on the memory_new
@@ -578,7 +578,7 @@ namespace acme_darwin
 ////      atom_array node::module_path_get_pid(const char * pszModulePath, bool bModuleNameIsPropertyFormatted)
 ////      {
 ////
-////         return ::acme::node::module_path_get_pid(pszModulePath, bModuleNameIsPropertyFormatted);
+////         return ::platform::node::module_path_get_pid(pszModulePath, bModuleNameIsPropertyFormatted);
 ////
 ////
 ////      }
@@ -591,7 +591,7 @@ namespace acme_darwin
 //   bool node::process_contains_module(string& strImage, ::u32 processID, const ::string & strLibrary)
 //   {
 //
-//      return ::acme::node::process_contains_module(strImage, processID, strLibrary);
+//      return ::platform::node::process_contains_module(strImage, processID, strLibrary);
 //
 //   }
 //
@@ -618,7 +618,7 @@ namespace acme_darwin
 //   string node::expand_environment_variables(const ::string & str)
 //   {
 //
-//      return ::acme::node::expand_environment_variables(str);
+//      return ::platform::node::expand_environment_variables(str);
 //
 //   }
 //
@@ -649,7 +649,7 @@ namespace acme_darwin
 //   }
 //
 
-      //::i32 nodperformance_core_count() override;
+      //int nodperformance_core_count() override;
 
 //   // http://stackoverflow.com/questions/150355/programmatically-find-the-number-of-cores-on-a-machine
 //   // http://stackoverflow.com/users/1275169/l3x
@@ -686,7 +686,7 @@ namespace acme_darwin
 // //
 // //#else
 // //
-// //      string str = acmefile()->as_string("/proc/stat");
+// //      string str = file_system()->as_string("/proc/stat");
 // //
 // //      string_array stra;
 // //
@@ -702,7 +702,7 @@ namespace acme_darwin
 //   void node::node_post(const ::procedure & procedure)
 //   {
 //
-//      ::acme::node::node_post(procedure);
+//      ::platform::node::node_post(procedure);
 //
 //   }
 //
@@ -885,7 +885,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   i32 node::_create_process3(const ::string & _cmd_line, i32 * pprocessId)
+//   int node::_create_process3(const ::string & _cmd_line, int * pprocessId)
 //   {
 //
 //      //char *   exec_path_name;
@@ -905,7 +905,7 @@ namespace acme_darwin
 //
 //      char * argv[1024 + 1];
 //
-//      i32      argc = 0;
+//      int      argc = 0;
 //
 //      prepare_argc_argv(argc, argv, cmd_line);
 //
@@ -1206,7 +1206,7 @@ namespace acme_darwin
 //
 //      listing.set_folder_listing("/proc");
 //
-//      acmedirectory()->enumerate(listing);
+//      directory_system()->enumerate(listing);
 //
 //      string str(psz);
 //
@@ -1291,7 +1291,7 @@ namespace acme_darwin
 //
 //      str = "/proc/" + ::as_string(iPid) + "/cmdline";
 //
-//      memory mem = acmefile()->as_memory(str);
+//      memory mem = file_system()->as_memory(str);
 //
 //      string strArg;
 //
@@ -1708,7 +1708,7 @@ namespace acme_darwin
 //   }
 
 
-   ::i32 get_os_process_priority(::enum_priority epriority)
+   int get_os_process_priority(::enum_priority epriority)
    {
 
       if (epriority == e_priority_normal)
@@ -1809,7 +1809,7 @@ namespace acme_darwin
 //
 //#ifdef LINUX
 //
-//i32 daemonize_process(const ::string & pszCommandLine, i32 * pprocessId)
+//int daemonize_process(const ::string & pszCommandLine, int * pprocessId)
 //{
 //
 //   string_array stra;
@@ -1934,7 +1934,7 @@ namespace acme_darwin
 //#endif
 //
 //
-//i32 create_process4(const ::string & pszCommandLine, i32 * pprocessId)
+//int create_process4(const ::string & pszCommandLine, int * pprocessId)
 //{
 //
 //   string_array stra;
@@ -2008,7 +2008,7 @@ namespace acme_darwin
 //
 //
 //
-//CLASS_DECL_ACME i32 ca2_main();
+//CLASS_DECL_ACME int ca2_main();
 //
 //
 //

@@ -2,8 +2,8 @@
 // on 2021-08-09 03:19 BRT
 // <3ThomasBorregaardSørensen!!
 #include "framework.h"
-#include "acme_directory.h"
-#include "acme_file.h"
+#include "directory_system.h"
+#include "file_system.h"
 ////#include "acme/exception/exception.h"
 #include "acme/filesystem/filesystem/listing.h"
 #include "acme/_operating_system.h"
@@ -68,21 +68,21 @@ namespace acme_darwin
    }
 
 
-   acme_directory::acme_directory()
+   directory_system::directory_system()
    {
 
 
    }
 
 
-   acme_directory::~acme_directory()
+   directory_system::~directory_system()
    {
 
 
    }
 
 //
-//   ::e_status acme_directory::create(const char * path)
+//   ::e_status directory_system::create(const char * path)
 //   {
 //
 //
@@ -95,7 +95,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::e_status acme_directory::_create(const char * path)
+//   ::e_status directory_system::_create(const char * path)
 //   {
 //
 //      return ::create_directory_path(path);
@@ -103,7 +103,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::e_status acme_directory::create_directory(const char * path)
+//   ::e_status directory_system::create_directory(const char * path)
 //   {
 //
 //      return ::create_directory(path);
@@ -111,7 +111,7 @@ namespace acme_darwin
 //   }
 
 
-//   ::file::path acme_directory::module()
+//   ::file::path directory_system::module()
 //   {
 //
 //      ::file::path pathModule (file_system()->module());
@@ -121,7 +121,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool acme_directory::is(const char * path)
+//   bool directory_system::is(const char * path)
 //   {
 //
 //      bool bDir = false;
@@ -138,7 +138,7 @@ namespace acme_darwin
 //   }
 //
 //
-////   void acme_directory::rls(::file::path_array & stra, const char * psz)
+////   void directory_system::rls(::file::path_array & stra, const char * psz)
 ////   {
 ////
 ////      ::collection::count start = stra.get_count();
@@ -162,7 +162,7 @@ namespace acme_darwin
 ////   }
 //
 //
-////   void acme_directory::rls_dir(::file::path_array & stra, const char * psz)
+////   void directory_system::rls_dir(::file::path_array & stra, const char * psz)
 ////   {
 ////
 ////      ::collection::count start = stra.get_count();
@@ -218,7 +218,7 @@ namespace acme_darwin
 //
 //
 //
-//   bool acme_directory::enumerate(::file::listing & listing)
+//   bool directory_system::enumerate(::file::listing & listing)
 //   {
 //
 //      if (listing.m_pathFinal.is_empty())
@@ -276,7 +276,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool acme_directory::list(string_array & stra, const char * psz, ::file::e_flag eflag)
+//   bool directory_system::list(string_array & stra, const char * psz, ::file::e_flag eflag)
 //   {
 //
 //      DIR * dirp = opendir(psz);
@@ -327,7 +327,7 @@ namespace acme_darwin
 //   }
 //
 //
-////   void acme_directory::ls_dir(::file::path_array & stra, const char * psz)
+////   void directory_system::ls_dir(::file::path_array & stra, const char * psz)
 ////   {
 ////
 ////      DIR * dirp = opendir(psz);
@@ -367,7 +367,7 @@ namespace acme_darwin
 ////   }
 ////
 ////
-////   void acme_directory::ls_file(::file::path_array & stra, const char * psz)
+////   void directory_system::ls_file(::file::path_array & stra, const char * psz)
 ////   {
 ////
 ////      DIR * dirp = opendir(psz);
@@ -407,7 +407,7 @@ namespace acme_darwin
 ////   }
 //
 //
-//   ::file::path acme_directory::pathfind(const string & pszEnv, const string & pszTopic, const string & pszMode)
+//   ::file::path directory_system::pathfind(const string & pszEnv, const string & pszTopic, const string & pszMode)
 //   {
 //
 //      string_array stra;
@@ -416,7 +416,7 @@ namespace acme_darwin
 //
 //      string strCandidate;
 //
-//      for (i32 i = 0; i < stra.get_count(); i++)
+//      for (int i = 0; i < stra.get_count(); i++)
 //      {
 //
 //         if (stra[i].is_empty())
@@ -442,7 +442,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::file::path acme_directory::archive()
+//   ::file::path directory_system::archive()
 //   {
 //
 //
@@ -451,7 +451,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   string acme_directory::get_current()
+//   string directory_system::get_current()
 //   {
 //
 //      auto pszCurrentDirName = get_current_dir_name();
@@ -463,7 +463,7 @@ namespace acme_darwin
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
-//         throw ::exception(estatus, "posix::acme_directory::get_current");
+//         throw ::exception(estatus, "posix::directory_system::get_current");
 //
 //      }
 //
@@ -474,7 +474,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_directory::change_current(const char * psz)
+//   void directory_system::change_current(const char * psz)
 //   {
 //
 //      auto iError = chdir(psz);
@@ -486,7 +486,7 @@ namespace acme_darwin
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
-//         throw ::exception(estatus, "posix::acme_directory::change_current");
+//         throw ::exception(estatus, "posix::directory_system::change_current");
 //
 //      }
 //
@@ -495,7 +495,7 @@ namespace acme_darwin
 //
 //
 //
-////::file::path acme_directory::program_files_x86()
+////::file::path directory_system::program_files_x86()
 ////{
 ////
 ////   ::file::path path("/opt/ca2");
@@ -505,7 +505,7 @@ namespace acme_darwin
 ////}
 ////
 ////
-////::file::path acme_directory::program_files()
+////::file::path directory_system::program_files()
 ////{
 ////
 ////   ::file::path path("/opt/ca2");
@@ -516,7 +516,7 @@ namespace acme_darwin
 //
 //
 ////
-////::file::path acme_directory::home()
+////::file::path directory_system::home()
 ////{
 ////
 ////   return getenv("HOME");
@@ -526,7 +526,7 @@ namespace acme_darwin
 //
 //#if defined(_UWP) || defined(__APPLE__) || defined(LINUX) || defined(ANDROID)
 //
-////::file::path acme_directory::bookmark()
+////::file::path directory_system::bookmark()
 ////{
 ////
 ////   auto psystem = acmesystem();
@@ -544,7 +544,7 @@ namespace acme_darwin
 //#ifdef _UWP
 //
 //
-//::file::path acme_directory::home()
+//::file::path directory_system::home()
 //{
 //
 //   return "";

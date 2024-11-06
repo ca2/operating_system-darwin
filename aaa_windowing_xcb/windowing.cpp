@@ -754,7 +754,7 @@ namespace windowing_xcb
 
       bool bRet = true;
 
-      ::u8 uResponseType = (pgenericevent->response_type & 0x7f);
+      unsigned char uResponseType = (pgenericevent->response_type & 0x7f);
 
       if(uResponseType == XCB_GE_GENERIC)
       {
@@ -1556,7 +1556,7 @@ namespace windowing_xcb
 
             msg.time = pbutton->time;
 
-            i32 iDelta = 0;
+            int iDelta = 0;
 
             if (pbutton->response_type == XCB_BUTTON_PRESS)
             {

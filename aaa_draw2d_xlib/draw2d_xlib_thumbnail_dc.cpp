@@ -6,13 +6,13 @@
 // Helper functions
 
 __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
-   i32 factor, i32 num1, i32 num2,
-   i32 den1, i32 den2)
+   int factor, int num1, int num2,
+   int den1, int den2)
 {
 #ifdef _AFX_PORTABLE
    // make sure that (num1 * num2) does not overflow 31-bits.
    long temp = num1 < 0 ? -num1 : num1;
-   for (i32 nBitsResult = 0; temp != 0; nBitsResult++)
+   for (int nBitsResult = 0; temp != 0; nBitsResult++)
       temp >>= 1;
    temp = num2 < 0 ? -num2 : num2;
    for (; temp != 0; nBitsResult++)
@@ -45,12 +45,12 @@ __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
 #endif
 
    temp = numerator < 0 ? -numerator : numerator;
-   i32 nBitsInNum;
+   int nBitsInNum;
    for (nBitsInNum = 0; temp != 0; nBitsInNum++)
       temp >>= 1;
 
    temp = factor < 0 ? -factor : factor;
-   i32 nBitsInFactor;
+   int nBitsInFactor;
    for (nBitsInFactor = 0; temp != 0; nBitsInFactor++)
       temp >>= 1;
 
@@ -143,7 +143,7 @@ thumbnail_dc::~thumbnail_dc()
    AfxDeleteObject((HGDIOBJ*)&m_hFont);
 }
 
-void thumbnail_dc::SetScaleRatio(i32 nNumerator, i32 nDenominator)
+void thumbnail_dc::SetScaleRatio(int nNumerator, int nDenominator)
 {
    m_nScaleNum = nNumerator;
    m_nScaleDen = nDenominator;
@@ -171,10 +171,10 @@ void thumbnail_dc::dump(dump_context & dumpcontext) const
 }
 #endif
 
-i32 thumbnail_dc::SaveDC()
+int thumbnail_dc::SaveDC()
 {
    ASSERT(get_handle2() != nullptr);
-   i32 nAttribIndex = ::SaveDC(get_handle2());
+   int nAttribIndex = ::SaveDC(get_handle2());
    if (get_os_data() != nullptr)
    {
       // erase font from object
@@ -190,7 +190,7 @@ i32 thumbnail_dc::SaveDC()
    return nAttribIndex;
 }
 
-int_bool thumbnail_dc::RestoreDC(i32 nSavedDC)
+int_bool thumbnail_dc::RestoreDC(int nSavedDC)
 {
    ASSERT(get_handle2() != nullptr);
    int_bool bSuccess = ::RestoreDC(get_handle2(), nSavedDC);
@@ -237,7 +237,7 @@ void thumbnail_dc::MirrorAttributes()
    }
 }
 
-object* thumbnail_dc::SelectStockObject(i32 nIndex)
+object* thumbnail_dc::SelectStockObject(int nIndex)
 {
    ASSERT(get_handle2() != nullptr);
 
@@ -321,8 +321,8 @@ void thumbnail_dc::MirrorFont()
 
    // Is the displayed font too large?
 
-   i32 cyDesired = -logFont.lfHeight;
-   i32 cyActual;
+   int cyDesired = -logFont.lfHeight;
+   int cyActual;
    if (tm.tmHeight < 0)
       cyActual = -tm.tmHeight;
    else
@@ -406,15 +406,15 @@ color32_t thumbnail_dc::SetTextColor(color32_t crColor)
    return ::SetTextColor(get_handle2(), crColor);
 }
 
-i32 thumbnail_dc::SetMapMode(i32 nMapMode)
+int thumbnail_dc::SetMapMode(int nMapMode)
 {
    ASSERT(get_handle2() != nullptr);
-   i32 nModeOld = ::SetMapMode(get_handle2(), nMapMode);
+   int nModeOld = ::SetMapMode(get_handle2(), nMapMode);
    MirrorMappingMode(true);
    return nModeOld;
 }
 
-point_i32 thumbnail_dc::set_origin(i32 x, i32 y)
+point_i32 thumbnail_dc::set_origin(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
    point_i32 ptOrgOld;
@@ -423,7 +423,7 @@ point_i32 thumbnail_dc::set_origin(i32 x, i32 y)
    return ptOrgOld;
 }
 
-point_i32 thumbnail_dc::offset_origin(i32 nWidth, i32 nHeight)
+point_i32 thumbnail_dc::offset_origin(int nWidth, int nHeight)
 {
    ASSERT(get_handle2() != nullptr);
    point_i32 ptOrgOld;
@@ -432,7 +432,7 @@ point_i32 thumbnail_dc::offset_origin(i32 nWidth, i32 nHeight)
    return ptOrgOld;
 }
 
-size_i32 thumbnail_dc::set_context_extents(i32 x, i32 y)
+size_i32 thumbnail_dc::set_context_extents(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
    size_i32 sizeExtOld;
@@ -441,7 +441,7 @@ size_i32 thumbnail_dc::set_context_extents(i32 x, i32 y)
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::scale_context_extents(i32 xNum, i32 xDenom, i32 yNum, i32 yDenom)
+size_i32 thumbnail_dc::scale_context_extents(int xNum, int xDenom, int yNum, int yDenom)
 {
    ASSERT(get_handle2() != nullptr);
    size_i32 sizeExtOld;
@@ -451,7 +451,7 @@ size_i32 thumbnail_dc::scale_context_extents(i32 xNum, i32 xDenom, i32 yNum, i32
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::set_window_ext(i32 x, i32 y)
+size_i32 thumbnail_dc::set_window_ext(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
    size_i32 sizeExtOld;
@@ -460,7 +460,7 @@ size_i32 thumbnail_dc::set_window_ext(i32 x, i32 y)
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::scale_window_ext(i32 xNum, i32 xDenom, i32 yNum, i32 yDenom)
+size_i32 thumbnail_dc::scale_window_ext(int xNum, int xDenom, int yNum, int yDenom)
 {
    ASSERT(get_handle2() != nullptr);
    size_i32 sizeExtOld;
@@ -475,7 +475,7 @@ size_i32 thumbnail_dc::scale_window_ext(i32 xNum, i32 xDenom, i32 yNum, i32 yDen
 
 // private helpers for text_out functions
 
-__STATIC i32 CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(i32 x, ::u32 nTabStops, LPINT lpnTabStops, i32 nTabOrigin, i32 nTabWidth)
+__STATIC int CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(int x, ::u32 nTabStops, LPINT lpnTabStops, int nTabOrigin, int nTabWidth)
 {
    ENSURE(nTabWidth!=0);
    x -= nTabOrigin;        // normalize position to tab origin
@@ -491,9 +491,9 @@ __STATIC i32 CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(i32 x, ::u32 nTabStops, L
 
 // Compute a character delta table for correctly positioning the screen
 // font characters where the printer characters will appear on the page
-size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCount,
-   int_bool bTabbed, ::u32 nTabStops, LPINT lpnTabStops, i32 nTabOrigin,
-   __out_z char * lpszOutputString, i32* pnDxWidths, i32& nRightFixup)
+size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, ::u32 &nCount,
+   int_bool bTabbed, ::u32 nTabStops, LPINT lpnTabStops, int nTabOrigin,
+   __out_z char * lpszOutputString, int* pnDxWidths, int& nRightFixup)
 {
    ASSERT_VALID(this);
 
@@ -516,12 +516,12 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
 
    const char * lpszCurChar = lpszString;
    const char * lpszStartRun = lpszString;
-   i32* pnCurDelta = pnDxWidths;
-   i32 nStartRunPos = x;
-   i32 nCurrentPos = x;
-   i32 nStartOffset = 0;
+   int* pnCurDelta = pnDxWidths;
+   int nStartRunPos = x;
+   int nCurrentPos = x;
+   int nStartOffset = 0;
 
-   i32 nTabWidth = 0;
+   int nTabWidth = 0;
    if (bTabbed)
    {
       if (nTabStops == 1)
@@ -544,12 +544,12 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
          // bSpace will be either true (==1) or false (==0).  For spaces
          // we want the space included in the get_text_extent, for tabs we
          // do not want the tab included
-         i32 nRunLength = (i32)(lpszCurChar - lpszStartRun) + bSpace;
+         int nRunLength = (int)(lpszCurChar - lpszStartRun) + bSpace;
 
          size_i32 sizeExtent;
          ::GetTextExtentPoint32(get_handle2(), lpszStartRun, nRunLength,
             &sizeExtent);
-         i32 nNewPos = nStartRunPos + sizeExtent.cx()
+         int nNewPos = nStartRunPos + sizeExtent.cx()
             - tmAttrib.tmOverhang;
 
          // now, if this is a Tab (!bSpace), compute the next tab stop
@@ -574,7 +574,7 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
       else
       {
          // For the non-tabbed or non-tab-character case
-         i32 cxScreen;
+         int cxScreen;
          if (_istlead(*lpszCurChar))
          {
             cxScreen = tmScreen.tmAveCharWidth;
@@ -598,14 +598,14 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
          // Center character in allotted space
          if (pnCurDelta != pnDxWidths)
          {
-            i32 diff = (*pnCurDelta - cxScreen) / 2;
+            int diff = (*pnCurDelta - cxScreen) / 2;
             *pnCurDelta -= diff;
             *(pnCurDelta - 1) += diff;
          }
          *lpszOutputString++ = *lpszCurChar;
          if (_istlead(*lpszCurChar))
          {
-            *lpszOutputString++ = *(lpszCurChar+1); // copy trailing ::u8
+            *lpszOutputString++ = *(lpszCurChar+1); // copy trailing unsigned char
             *(pnCurDelta + 1) = *pnCurDelta;        // double wide
             nCurrentPos += *pnCurDelta;
             pnCurDelta++;
@@ -634,24 +634,24 @@ size_i32 thumbnail_dc::ComputeDeltas(i32& x, const char * lpszString, ::u32 &nCo
    return sizeExtent;
 }
 
-int_bool thumbnail_dc::text_out(i32 x, i32 y, const char * lpszString, i32 nCount)
+int_bool thumbnail_dc::text_out(int x, int y, const char * lpszString, int nCount)
 {
    return ExtTextOut(x, y, 0, nullptr, lpszString, nCount, nullptr);
 }
 
-int_bool thumbnail_dc::ExtTextOut(i32 x, i32 y, ::u32 nOptions, const ::rectangle_i32 & rectangle,
+int_bool thumbnail_dc::ExtTextOut(int x, int y, ::u32 nOptions, const ::rectangle_i32 & rectangle,
    const char * lpszString, ::u32 nCount, LPINT lpDxWidths)
 {
    ASSERT(get_os_data() != nullptr);
    ASSERT(get_handle2() != nullptr);
    ASSERT(lpszString != nullptr);
    ASSERT(lpDxWidths == nullptr ||
-         fx_is_valid_address(lpDxWidths, sizeof(i32) * nCount, false));
+         fx_is_valid_address(lpDxWidths, sizeof(int) * nCount, false));
    ASSERT(fx_is_valid_address(lpszString, nCount, false));
 
-   i32* pDeltas = nullptr;
+   int* pDeltas = nullptr;
    char * pOutputString = nullptr;
-   i32 nRightFixup = 0;
+   int nRightFixup = 0;
 
    if (lpDxWidths == nullptr)
    {
@@ -660,7 +660,7 @@ int_bool thumbnail_dc::ExtTextOut(i32 x, i32 y, ::u32 nOptions, const ::rectangl
 
       try
       {
-         pDeltas = memory_new i32[nCount];
+         pDeltas = memory_new int[nCount];
          pOutputString = memory_new char[nCount];
       }
       catch(const ::exception & e)
@@ -692,27 +692,27 @@ int_bool thumbnail_dc::ExtTextOut(i32 x, i32 y, ::u32 nOptions, const ::rectangl
    return bSuccess;
 }
 
-size_i32 thumbnail_dc::TabbedTextOut(i32 x, i32 y, const char * lpszString, i32 nCount,
-   i32 nTabPositions, LPINT lpnTabStopPositions, i32 nTabOrigin)
+size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int nCount,
+   int nTabPositions, LPINT lpnTabStopPositions, int nTabOrigin)
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);
    ASSERT(lpszString != nullptr);
    ASSERT(fx_is_valid_address(lpszString, nCount, false));
    ASSERT(lpnTabStopPositions == nullptr ||
-         fx_is_valid_address(lpnTabStopPositions, sizeof(i32) * nTabPositions,
+         fx_is_valid_address(lpnTabStopPositions, sizeof(int) * nTabPositions,
             false));
 
    if (nCount <= 0)
       return (::u32) 0;         // nCount is zero, there is nothing to print
 
-   i32* pDeltas = nullptr;
+   int* pDeltas = nullptr;
    char * pOutputString = nullptr;
-   i32 nRightFixup;
+   int nRightFixup;
 
    try
    {
-      pDeltas = memory_new i32[nCount];
+      pDeltas = memory_new int[nCount];
       pOutputString = memory_new char[nCount];
    }
    catch(const ::exception & e)
@@ -745,7 +745,7 @@ size_i32 thumbnail_dc::TabbedTextOut(i32 x, i32 y, const char * lpszString, i32 
 
 // This one is too complicated to do character-by-character output positioning
 // All we really need to do here is mirror the current position
-i32 thumbnail_dc::DrawText(const char * lpszString, i32 nCount, RECTANGLE_I32 * prectangle,
+int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
    ::u32 nFormat)
 {
    ASSERT(get_handle2() != nullptr);
@@ -757,7 +757,7 @@ i32 thumbnail_dc::DrawText(const char * lpszString, i32 nCount, RECTANGLE_I32 * 
       AfxIsValidString(lpszString) :
       fx_is_valid_address(lpszString, nCount, false));
 
-   i32 retVal = ::DrawText(get_os_data(), lpszString, nCount, rectangle, nFormat);
+   int retVal = ::DrawText(get_os_data(), lpszString, nCount, rectangle, nFormat);
 
    point_i32 pos;
    ::GetCurrentPositionEx(get_os_data(), &pos);
@@ -765,7 +765,7 @@ i32 thumbnail_dc::DrawText(const char * lpszString, i32 nCount, RECTANGLE_I32 * 
    return retVal;
 }
 
-i32 thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, i32 nCount, RECTANGLE_I32 * prectangle,
+int thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
    ::u32 nFormat, LPDRAWTEXTPARAMS lpDTParams)
 {
    ASSERT(get_handle2() != nullptr);
@@ -777,7 +777,7 @@ i32 thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, i32 nCount, 
       AfxIsValidString(lpszString) :
       fx_is_valid_address(lpszString, nCount, false));
 
-   i32 retVal = ::DrawTextEx(get_os_data(), lpszString, nCount, rectangle, nFormat, lpDTParams);
+   int retVal = ::DrawTextEx(get_os_data(), lpszString, nCount, rectangle, nFormat, lpDTParams);
 
    point_i32 pos;
    ::GetCurrentPositionEx(get_os_data(), &pos);
@@ -786,14 +786,14 @@ i32 thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, i32 nCount, 
 }
 
 int_bool thumbnail_dc::GrayString(::draw2d::brush*,
-            int_bool (CALLBACK *)(HDC, LPARAM, i32),
-               LPARAM lpData, i32 nCount, i32 x, i32 y, i32, i32)
+            int_bool (CALLBACK *)(HDC, LPARAM, int),
+               LPARAM lpData, int nCount, int x, int y, int, int)
 {
    information(::aura::trace::category_AppMsg, 0, "text_out() substituted for GrayString() in Print Thumbnail.\n");
    return text_out(x, y, (const char *)lpData, nCount);
 }
 
-i32 thumbnail_dc::Escape(i32 nEscape, i32 nCount, const char * lpszInData, void * lpOutData)
+int thumbnail_dc::Escape(int nEscape, int nCount, const char * lpszInData, void * lpOutData)
 {
    // The tact here is to NOT allow any of the document control escapes
    // to be passed through.  Elimination of StartDoc and EndDoc should
@@ -891,14 +891,14 @@ void thumbnail_dc::MirrorMappingMode(int_bool bCompute)
          m_nScaleDen, ::GetDevicecaps(get_handle2(), LOGPIXELSX));
 
       ASSERT(m_sizeWinExt.cx() != 0);
-      m_sizeVpExt.cx() = (i32)lTempExt;
+      m_sizeVpExt.cx() = (int)lTempExt;
 
       lTempExt = _AfxMultMultDivDiv(m_sizeVpExt.cy(),
          m_nScaleNum, afxData.cyPixelsPerInch,
          m_nScaleDen, ::GetDevicecaps(get_handle2(), LOGPIXELSY));
 
       ASSERT(m_sizeWinExt.cy() != 0);
-      m_sizeVpExt.cy() = (i32)lTempExt;
+      m_sizeVpExt.cy() = (int)lTempExt;
    }
 
    if (get_os_data() != nullptr)
@@ -974,13 +974,13 @@ void thumbnail_dc::PrinterDPtoScreenDP(POINT_I32 * lpPoint) const
       sizePrinterWinExt.cx(), m_sizeVpExt.cx(),
       sizePrinterVpExt.cx(), m_sizeWinExt.cx());
 
-   lpPoint->x = (i32)xScreen;
+   lpPoint->x = (int)xScreen;
 
    long yScreen = _AfxMultMultDivDiv(lpPoint->y,
       sizePrinterWinExt.cy(), m_sizeVpExt.cy(),
       sizePrinterVpExt.cy(), m_sizeWinExt.cy());
 
-   lpPoint->y = (i32)yScreen;
+   lpPoint->y = (int)yScreen;
 }
 
 ////////////////////////////////////////////////////////////////////////////

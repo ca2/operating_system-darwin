@@ -75,7 +75,7 @@ namespace acme_posix
 
       }
 
-      i32 iFlags = bBlock ? 0 : O_NONBLOCK;
+      int iFlags = bBlock ? 0 : O_NONBLOCK;
 
       if (::pipe(m_fd))
       {
@@ -139,7 +139,7 @@ namespace acme_posix
    string pipe::read()
    {
       string str;
-      const i32 BUFSIZE = 1024 * 8;
+      const int BUFSIZE = 1024 * 8;
 
       size_t dwRead;
 
@@ -189,7 +189,7 @@ namespace acme_posix
 
       string str;
 
-      const i32 BUFSIZE = 1024 * 8;
+      const int BUFSIZE = 1024 * 8;
 
       size_t dwRead;
 

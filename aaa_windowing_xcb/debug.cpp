@@ -35,7 +35,7 @@ extern ::particle * user_synchronization();
 //
 
 
-//i32 _c_XErrorHandler(xcb_connection_t * display, XErrorEvent * perrorevent)
+//int _c_XErrorHandler(xcb_connection_t * display, XErrorEvent * perrorevent)
 //{
 //
 //   const char * pszError;

@@ -51,7 +51,7 @@ namespace inotify
 //
 //      synchronous_lock synchronouslock(this->synchronization());
 //
-//      i32 wd = inotify_add_watch (m_iFd, pathFolder, IN_MODIFY | IN_CLOSE_WRITE | IN_MOVED_TO | IN_CREATE | IN_MOVED_FROM | IN_DELETE);
+//      int wd = inotify_add_watch (m_iFd, pathFolder, IN_MODIFY | IN_CLOSE_WRITE | IN_MOVED_TO | IN_CREATE | IN_MOVED_FROM | IN_DELETE);
 //
 //      if (wd < 0)
 //      {
@@ -83,14 +83,14 @@ namespace inotify
 //
 //         listing.set_folder_listing(pathFolder, ::e_depth_recursively);
 //
-//         acmedirectory()->enumerate(listing);
+//         directory_system()->enumerate(listing);
 //
 //         for(index index = 0; index < listing.get_count(); index++)
 //         {
 //
 //            string strDirPath = listing[index];
 //
-//            i32 inaw = inotify_add_watch (m_iFd, strDirPath, IN_MODIFY | IN_CLOSE_WRITE | IN_MOVED_TO | IN_CREATE | IN_MODIFY | IN_MOVED_FROM | IN_DELETE);
+//            int inaw = inotify_add_watch (m_iFd, strDirPath, IN_MODIFY | IN_CLOSE_WRITE | IN_MOVED_TO | IN_CREATE | IN_MODIFY | IN_MOVED_FROM | IN_DELETE);
 //
 //            if(inaw < 0)
 //            {

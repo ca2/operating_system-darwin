@@ -69,7 +69,7 @@ namespace windowing_xcb
    void icon::load_matter(string strMatter)
    {
 
-      auto pcontext = m_pcontext;
+      auto papplication = application();
 
       string strPath = dir()->matter(strMatter);
 

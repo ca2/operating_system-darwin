@@ -621,7 +621,7 @@ namespace multimedia
 
                   }
 
-                  information("ALSA wave_out snd_pcm_avail minimum ::u8 count %d\n", iFramesToWrite);
+                  information("ALSA wave_out snd_pcm_avail minimum unsigned char count %d\n", iFramesToWrite);
 
                   m_eoutstate = ::wave::e_out_state_opened;
 
@@ -645,7 +645,7 @@ namespace multimedia
 
          }
 
-         ::u8 * pdata;
+         unsigned char * pdata;
 
          memory m;
 
@@ -656,7 +656,7 @@ namespace multimedia
 
             pbuffer = m_pwavebuffer->m_buffera[iBuffer];
 
-            pdata = (::u8 *) out_get_buffer_data(iBuffer);
+            pdata = (unsigned char *) out_get_buffer_data(iBuffer);
 
          }
          else
@@ -666,7 +666,7 @@ namespace multimedia
 
             m.zero();
 
-            pdata = (::u8 *) m.get_data();
+            pdata = (unsigned char *) m.get_data();
 
          }
 

@@ -1,7 +1,7 @@
 // from interprocess_communication.cpp by Camilo 2021-10-19 18:58 BRT <3ThomasBorregaardSoerensen
 #include "framework.h"
 #include "interprocess_caller.h"
-#include "acme/filesystem/filesystem/acme_file.h"
+#include "acme/filesystem/filesystem/file_system.h"
 #include "acme/prototype/prototype/memory.h"
 
 
@@ -41,7 +41,7 @@ namespace system_5
       if (!file_exists(strChannel))
       {
 
-         acmefile()->put_contents(strChannel, strChannel);
+         file_system()->put_contents(strChannel, strChannel);
 
       }
 
@@ -132,7 +132,7 @@ namespace system_5
    }
 
 
-//   void interprocess_caller::send(i32 message, void *p, i32 iLen, const time &timeTimeout)
+//   void interprocess_caller::send(int message, void *p, int iLen, const time &timeTimeout)
 //   {
 //
 //      if (message == 1024)
@@ -161,9 +161,9 @@ namespace system_5
 //      // return false;
 //
 //      /* The length is essentially the size_i32 of the structure minus sizeof(mtype) */
-//      /*         i32 length = sizeof(data_struct) - sizeof(long);
+//      /*         int length = sizeof(data_struct) - sizeof(long);
 //
-//               i32 result;
+//               int result;
 //
 //               ::memcpy_dup(data.data, pszMessage, data.size_i32);
 //

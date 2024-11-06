@@ -6,7 +6,7 @@
 #include "acme/constant/id.h"
 #include "acme/operating_system/ansi/pmutex_lock.h"
 #include "acme/operating_system/parallelization.h"
-#include "acme/filesystem/filesystem/acme_directory.h"
+#include "acme/filesystem/filesystem/directory_system.h"
 #include "acme/user/user/os_theme_colors.h"
 #include "acme/user/user/theme_colors.h"
 #include "apex/platform/system.h"
@@ -1142,7 +1142,7 @@ namespace node_gtk
 
       ::file::path pathDesktop;
 
-      pathDesktop = acmedirectory()->home() / ".local/share/applications" / (strDesktopFileTitle + ".desktop");
+      pathDesktop = directory_system()->home() / ".local/share/applications" / (strDesktopFileTitle + ".desktop");
 
       main_asynchronous([this,pathDesktop]()
       {

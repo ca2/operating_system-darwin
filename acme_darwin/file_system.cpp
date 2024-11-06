@@ -2,8 +2,8 @@
 // on 2021-08-12 17:38 BRT
 // <3ThomasBorregaardSørensen!!
 #include "framework.h"
-#include "acme_file.h"
-#include "acme_directory.h"
+#include "file_system.h"
+#include "directory_system.h"
 #include "acme/exception/interface_only.h"
 #include "acme/filesystem/file/exception.h"
 #include "acme/operating_system/ansi/int_handle.h"
@@ -46,20 +46,20 @@ namespace acme_darwin
 {
 
 
-   acme_file::acme_file()
+   file_system::file_system()
    {
 
    }
 
 
-   acme_file::~acme_file() noexcept
+   file_system::~file_system() noexcept
    {
 
 
    }
 
 
-//   bool acme_file::exists(const ::file::path & filename)
+//   bool file_system::exists(const ::file::path & filename)
 //   {
 //
 //
@@ -68,7 +68,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::ensure_exists(const char* path)
+//   void file_system::ensure_exists(const char* path)
 //   {
 //
 //      if(exists(path))
@@ -90,7 +90,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::touch(const char* path)
+//   void file_system::touch(const char* path)
 //   {
 //
 //      int rc = utimes(path, nullptr);
@@ -111,19 +111,19 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::clear_read_only(const char* path)
+//   void file_system::clear_read_only(const char* path)
 //   {
 //
 //   }
 //
 //
-//   void acme_file::set_file_normal(const char* path)
+//   void file_system::set_file_normal(const char* path)
 //   {
 //
 //   }
 //
 //
-//   string  acme_file::get_temporary_file_name(const char * lpszName, const char * pszExtension)
+//   string  file_system::get_temporary_file_name(const char * lpszName, const char * pszExtension)
 //   {
 //
 //      char pPathBuffer[300 * 16];
@@ -161,7 +161,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::set_size(const char * lpszName, filesize size)
+//   void file_system::set_size(const char * lpszName, filesize size)
 //   {
 //
 //      int_handle iFileDescriptor(::open(lpszName, O_RDONLY));
@@ -171,7 +171,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::set_size(i32 iFileDescriptor, filesize size)
+//   void file_system::set_size(int iFileDescriptor, filesize size)
 //   {
 //
 //      if (ftruncate(iFileDescriptor, size) == -1)
@@ -181,14 +181,14 @@ namespace acme_darwin
 //
 //         auto estatus = cerrornumber.estatus();
 //
-//         throw ::exception(estatus, "::posix::acme_file::set_size");
+//         throw ::exception(estatus, "::posix::file_system::set_size");
 //
 //      }
 //
 //   }
 //
 //
-//   void acme_file::set_size(FILE * pfile, filesize size)
+//   void file_system::set_size(FILE * pfile, filesize size)
 //   {
 //
 //      set_size(fileno(pfile), size);
@@ -196,7 +196,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   filesize acme_file::get_size(FILE * pfile)
+//   filesize file_system::get_size(FILE * pfile)
 //   {
 //
 //      return get_size_fd(fileno(pfile));
@@ -204,7 +204,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   filesize acme_file::get_size_fd(i32 iFileDescriptor)
+//   filesize file_system::get_size_fd(int iFileDescriptor)
 //   {
 //
 //      struct stat st = {};
@@ -218,7 +218,7 @@ namespace acme_darwin
 //
 //         ::close(iFileDescriptor);
 //
-//         throw ::exception(estatus, "posix::acme_file::get_size_fd");
+//         throw ::exception(estatus, "posix::file_system::get_size_fd");
 ////
 ////         return -1;
 //
@@ -230,7 +230,7 @@ namespace acme_darwin
 //
 //
 //
-//   void acme_file::put_contents(const char * path, const char * contents, ::collection::count len)
+//   void file_system::put_contents(const char * path, const char * contents, ::collection::count len)
 //   {
 //
 //      directory_system()->create(::file_path_folder(path));
@@ -284,7 +284,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   string acme_file::as_string(const char * path, strsize iReadAtMostByteCount, bool bNoExceptionOnFail)
+//   string file_system::as_string(const char * path, strsize iReadAtMostByteCount, bool bNoExceptionOnFail)
 //   {
 //
 //      string str;
@@ -305,7 +305,7 @@ namespace acme_darwin
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
-//         throw ::exception(estatus, "posix::acme_file::as_string");
+//         throw ::exception(estatus, "posix::file_system::as_string");
 //
 //      }
 //
@@ -325,7 +325,7 @@ namespace acme_darwin
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
-//         throw ::exception(estatus, "posix::acme_file::as_string");
+//         throw ::exception(estatus, "posix::file_system::as_string");
 //
 //      }
 //
@@ -346,7 +346,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   memory acme_file::as_memory(const char * path, strsize iReadAtMostByteCount)
+//   memory file_system::as_memory(const char * path, strsize iReadAtMostByteCount)
 //   {
 //
 //      memory mem;
@@ -358,7 +358,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::as_memory(memory_base & memory, const char * path, strsize iReadAtMostByteCount)
+//   void file_system::as_memory(memory_base & memory, const char * path, strsize iReadAtMostByteCount)
 //   {
 //
 //      FILE_holder pfile(fopen(path, "rb"));
@@ -433,7 +433,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   memsize acme_file::as_memory(const char * path, void * p, memsize s)
+//   memsize file_system::as_memory(const char * path, void * p, memsize s)
 //   {
 //
 //      FILE_holder pfile(fopen(path, "rb"));
@@ -445,7 +445,7 @@ namespace acme_darwin
 //
 //         auto estatus = failed_errno_status(iErrNo);
 //
-//         throw ::exception(estatus, "posix::acme_file::as_memory");
+//         throw ::exception(estatus, "posix::file_system::as_memory");
 //
 //      }
 //
@@ -467,7 +467,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   filesize acme_file::get_size(const char * path)
+//   filesize file_system::get_size(const char * path)
 //   {
 //
 //      struct stat st;
@@ -489,7 +489,7 @@ namespace acme_darwin
 //
 //
 //
-//   ::file::path acme_file::module()
+//   ::file::path file_system::module()
 //   {
 //
 //#if defined(ANDROID) || defined(LINUX)
@@ -542,7 +542,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::copy(const char * pszNew, const char * pszSrc, bool bOverwrite)
+//   void file_system::copy(const char * pszNew, const char * pszSrc, bool bOverwrite)
 //   {
 //
 //      int_handle input;
@@ -551,7 +551,7 @@ namespace acme_darwin
 //
 //      void * source, * target;
 //
-//      i32 flags = O_RDWR | O_CREAT | O_TRUNC;
+//      int flags = O_RDWR | O_CREAT | O_TRUNC;
 //
 //      if (!bOverwrite)
 //      {
@@ -668,7 +668,7 @@ namespace acme_darwin
 //
 //
 //
-////   ::e_status acme_file::delete_file(const char * path)
+////   ::e_status file_system::delete_file(const char * path)
 ////   {
 ////
 ////      return file_delete(path);
@@ -682,14 +682,14 @@ namespace acme_darwin
 //   //int_bool file_path_is_equal(const char * psz1, const char * psz2)
 //   //{
 //   //
-//   //      const i32 iBufSize = MAX_PATH * 8;
+//   //      const int iBufSize = MAX_PATH * 8;
 //   //      wstring pwsz1 = utf8_to_unicode(psz1);
 //   //      wstring pwsz2 = utf8_to_unicode(psz2);
 //   //      //   unichar * pwszFile1;
 //   //      // unichar * pwszFile2;
 //   //      widechar * pwszPath1 = memory_new widechar[iBufSize];
 //   //      widechar * pwszPath2 = memory_new widechar[iBufSize];
-//   //      i32 iCmp = -1;
+//   //      int iCmp = -1;
 //   //      //   if(GetFullPathNameW(pwsz1,iBufSize,pwszPath1,&pwszFile1))
 //   //      // {
 //   //      //  if(GetFullPathNameW(pwsz2,iBufSize,pwszPath2,&pwszFile2))
@@ -714,14 +714,14 @@ namespace acme_darwin
 //
 //
 //
-//   i32 ansi_open(const char * psz, i32 i)
+//   int ansi_open(const char * psz, int i)
 //   {
 //
 //         return open(psz, i);
 //
 //   }
 //
-//   void ansi_get_errno(i32 * perrno)
+//   void ansi_get_errno(int * perrno)
 //   {
 //         *perrno = errno;
 //   }
@@ -787,7 +787,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   string acme_file::first_line(const char * strPath)
+//   string file_system::first_line(const char * strPath)
 //   {
 //
 //      string line;
@@ -834,7 +834,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::earth::time acme_file::modification_time(const char* pszPath)
+//   ::earth::time file_system::modification_time(const char* pszPath)
 //   {
 //
 //      if(is_trimmed_empty(pszPath))
@@ -866,7 +866,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void acme_file::set_modification_time(const char* pszPath, const ::earth::time& time)
+//   void file_system::set_modification_time(const char* pszPath, const ::earth::time& time)
 //   {
 //
 //
@@ -918,7 +918,7 @@ namespace acme_darwin
 //   }
 //
 //
-//    void acme_file::_erase(const char *path)
+//    void file_system::_erase(const char *path)
 //    {
 //
 //        if (::unlink(path) == -1)
