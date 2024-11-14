@@ -871,7 +871,7 @@ namespace windowing_xcb
                      if (pinteraction->m_timeMouseMovePeriod > 0_s)
                      {
 
-                        ::size_i32 sizeDistance(
+                        ::int_size sizeDistance(
                            (pinteraction->m_pointMouseMoveSkip.x - pinteraction->m_pointMouseMove.x),
                            (pinteraction->m_pointMouseMoveSkip.y - pinteraction->m_pointMouseMove.y));
 
@@ -981,7 +981,7 @@ namespace windowing_xcb
 
             status < xcb_get_geometry_reply_t > geometryFound;
 
-            ::rectangle_i32 rectangleFoundFrameExtents;
+            ::int_rectangle rectangleFoundFrameExtents;
 
             for (int i = list.get_upper_bound(); i >= 0;i--)
             {
@@ -1370,9 +1370,9 @@ namespace windowing_xcb
 
             auto pconfigure = (xcb_configure_notify_event_t *) pgenericevent;
 
-            ::point_i32 point(pconfigure->x, pconfigure->y);
+            ::int_point point(pconfigure->x, pconfigure->y);
 
-            ::size_i32 size(pconfigure->width, pconfigure->height);
+            ::int_size size(pconfigure->width, pconfigure->height);
 
             msg.oswindow = m_pdisplay->_window(pconfigure->window);
 
@@ -1453,7 +1453,7 @@ namespace windowing_xcb
                      // (evidence: override_redirect flag - but that when set leave you outside of much more things)
                      // Lets not fight this Xcb "thing"
                      // Accept-"stall" "authocratic" "top-down" window manager set position and size.
-                     // This means setting same size_i32 and position to all three sketch and window states.
+                     // This means setting same int_size and position to all three sketch and window states.
                      // The buffer may need to be resized so don't mess wixcb_th current design state.
 
                      __defer_post_move_and_or_size(pconfigure->window);
@@ -2069,9 +2069,9 @@ namespace windowing_xcb
 
       auto geometry = m_pdisplay->_window_get_geometry(window);
 
-      auto pointWindow = ::point_i32(geometry.x, geometry.y);
+      auto pointWindow = ::int_point(geometry.x, geometry.y);
 
-      auto sizeWindow = ::size_i32(geometry.width, geometry.height);
+      auto sizeWindow = ::int_size(geometry.width, geometry.height);
 
       oswindow oswindow = m_pdisplay->_window(window);
 

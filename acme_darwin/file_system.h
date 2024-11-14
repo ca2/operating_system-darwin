@@ -36,10 +36,10 @@ namespace acme_darwin
 //      void set_file_normal(const char* path) override;
 //
 //
-//      memory as_memory(const char * path, strsize iReadAtMostByteCount = -1) override;
+//      memory as_memory(const char * path, character_count iReadAtMostByteCount = -1) override;
 //      memsize as_memory(const char * path, void * p, memsize s) override;
-//      string as_string(const char * path, strsize iReadAtMostByteCount = -1, bool bNoExceptionOnOpen = true) override;
-//      void as_memory(memory_base & memory, const char * path, strsize iReadAtMostByteCount) override;
+//      string as_string(const char * path, character_count iReadAtMostByteCount = -1, bool bNoExceptionOnOpen = true) override;
+//      void as_memory(memory_base & memory, const char * path, character_count iReadAtMostByteCount) override;
 //
 //
 //      string get_temporary_file_name(const char * lpszName, const char * pszExtension) override;
@@ -52,8 +52,8 @@ namespace acme_darwin
 //
 //      ::file::path module() override;
 //
-//      void put_contents(const char * path, const char * contents, strsize len) override;
-//      //bool get_temporary_file_name_template(char * szRet, strsize iBufferSize, const char * lpszName, const char * pszExtension, const char * pszTemplate) override;
+//      void put_contents(const char * path, const char * contents, character_count len) override;
+//      //bool get_temporary_file_name_template(char * szRet, character_count iBufferSize, const char * lpszName, const char * pszExtension, const char * pszTemplate) override;
 //      filesize get_size(const char * path) override;
 //      filesize get_size(FILE * pfile) override;
 //      filesize get_size_fd(int iFileDescriptor) override;
@@ -69,7 +69,7 @@ namespace acme_darwin
 ////   virtual filesize FILE_tell(FILE * fp);
 ////   virtual filesize FILE_read(void * buffer, memsize size, memsize count, FILE * str);
 ////   virtual filesize FILE_write(const void * buffer, memsize size, memsize count, FILE * str);
-////   virtual char * FILE_gets(char * str, strsize n, FILE * s);
+////   virtual char * FILE_gets(char * str, character_count n, FILE * s);
 ////   virtual int FILE_getc(FILE * s);
 ////   virtual int FILE_ungetc(int c, FILE * s);
 ////   virtual int FILE_error(FILE * s);

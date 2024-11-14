@@ -554,8 +554,8 @@ namespace windowing_x11
             {
 
                // window managers generally "don't like" windows that starts "docked/snapped".
-               // initial (XCreateWindow) size_i32 and position maybe not be honored.
-               // so requesting the same change again in a effort to set the "docked/snapped" size_i32 and position.
+               // initial (XCreateWindow) int_size and position maybe not be honored.
+               // so requesting the same change again in a effort to set the "docked/snapped" int_size and position.
 
                //set_window_position(e_zorder_top, pusersystem->m_createstruct.x, pusersystem->m_createstruct.y,
                //                  pusersystem->m_createstruct.cx(), pusersystem->m_createstruct.cy(), SWP_SHOWWINDOW);
@@ -573,7 +573,7 @@ namespace windowing_x11
       //if(pshowwindow->m_bShow)
       {
 
-         //::rectangle_i32 rect32;
+         //::int_rectangle rect32;
 
          //(::window_rectangle((oswindow) get_handle(), rect32))
          {
@@ -1235,7 +1235,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
    image_source imagesource(pimage->g(), pimage->rectangle());
 
-   rectangle_f64 rectangle(image1->rectangle());
+   double_rectangle rectangle(image1->rectangle());
 
    image_drawing_options imagedrawingoptions(rectangle);
 
@@ -1511,7 +1511,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   ::point_i32 window::get_mouse_cursor_position()
+   ::int_point window::get_mouse_cursor_position()
    {
 
       return m_pointCursor;
@@ -1801,10 +1801,10 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   void window::full_screen(const ::rectangle_i32 & rectangle)
+   void window::full_screen(const ::int_rectangle & rectangle)
    {
 
-      ::rectangle_i32 rBest;
+      ::int_rectangle rBest;
 
       int iMonitor = m_pdisplay->get_best_monitor(&rBest, rectangle);
 
@@ -1836,7 +1836,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
       }
 
-      ::rectangle_i32 rWindow;
+      ::int_rectangle rWindow;
 
       rWindow.left = attr.x;
       rWindow.top = attr.y;
@@ -2229,10 +2229,10 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-//   void oswindow_data::wm_full_screen(const ::rectangle_i32 & rectangle)
+//   void oswindow_data::wm_full_screen(const ::int_rectangle & rectangle)
 //   {
 //
-//      ::rectangle_i32 rBest;
+//      ::int_rectangle rBest;
 //
 //      int iMonitor = best_xinerama_monitor(m_puserinteractionimpl->m_puserinteraction, rectangle, rBest);
 //
@@ -2262,7 +2262,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 //
 //      }
 //
-//      ::rectangle_i32 rWindow;
+//      ::int_rectangle rWindow;
 //
 //      rWindow.left      = attr.x;
 //      rWindow.top       = attr.y;
@@ -2901,7 +2901,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
    }
 
 
-   void window::upper_window_rects(rectangle_int_array & ra)
+   void window::upper_window_rects(int_rectangle_array & ra)
    {
 
       synchronous_lock synchronouslock(user_synchronization());
@@ -2938,7 +2938,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
       }
 
-      ::rectangle_i32 rectangle;
+      ::int_rectangle rectangle;
 
       x11_get_window_rect(rectangle);
 
@@ -2946,14 +2946,14 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
 //string strTopic = x11_get_name(x11_display(), Window());
 
-      ::rectangle_i32 rectangleTest;
+      ::int_rectangle rectangleTest;
 
       for (iFind++; iFind < windowa.get_size(); iFind++)
       {
 
 //string strItem = x11_get_name(x11_display(), windowa[iFind]);
 
-         ::rectangle_i32 rectangleHigher;
+         ::int_rectangle rectangleHigher;
 
          if (::x11_get_window_rect(Display(), windowa[iFind], rectangleHigher))
          {

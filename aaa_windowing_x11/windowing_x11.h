@@ -72,7 +72,7 @@ bool x11_get_client_rect(Display * d, Window window, RECTANGLE_I32 * prectangle)
 
 
 //int best_xinerama_monitor(::user::interaction * pinteraction, RECTANGLE_I32 * prectRet);
-//int best_xinerama_monitor(::user::interaction * pinteraction, const ::rectangle_i32 & rectangle, RECTANGLE_I32 * lprectRet);
+//int best_xinerama_monitor(::user::interaction * pinteraction, const ::int_rectangle & rectangle, RECTANGLE_I32 * lprectRet);
 
 
 //#include "acme/prototype/prototype/matter.h"

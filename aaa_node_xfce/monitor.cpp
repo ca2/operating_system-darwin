@@ -74,7 +74,7 @@ namespace node_xfce
 
       gdk_monitor_get_geometry(pmonitor, &rect);
 
-      ::rectangle_i32 rectangle;
+      ::int_rectangle rectangle;
 
       copy(&m_rectangle, &rect);
 

@@ -16,8 +16,8 @@ namespace node_gnome
 
 
       //::collection::index                                               m_iIndex;
-      //::rectangle_i32                                       m_rectangle;
-      //::rectangle_i32                                       m_rectangleWorkspace;
+      //::int_rectangle                                       m_rectangle;
+      //::int_rectangle                                       m_rectangleWorkspace;
 
 
       monitor();

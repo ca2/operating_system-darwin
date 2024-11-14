@@ -48,7 +48,7 @@ namespace windowing_xcb
       xcb_visualid_t                               m_visualid;
       htask_t                                      m_htask;
       class ::time                                       m_timeLastMouseMove;
-      ::point_i32                                  m_pointMouseCursor;
+      ::int_point                                  m_pointMouseCursor;
 
 
       window();
@@ -108,7 +108,7 @@ namespace windowing_xcb
       void show_window(const ::e_display & edisplay, const ::e_activation & eactivation) override;
 
       void exit_iconify()override;
-      void full_screen(const ::rectangle_i32 & rect = nullptr)override;
+      void full_screen(const ::int_rectangle & rect = nullptr)override;
       void exit_full_screen()override;
       void exit_zoomed() override;
 
@@ -131,7 +131,7 @@ namespace windowing_xcb
 
       virtual ::e_status set_mouse_cursor2(::windowing::cursor * pcursor);
 
-      ::point_i32 get_mouse_cursor_position() override;
+      ::int_point get_mouse_cursor_position() override;
 
       void set_keyboard_focus() override;
       void set_mouse_capture() override;
@@ -146,7 +146,7 @@ namespace windowing_xcb
       bool has_keyboard_focus() const override;
 
 
-      virtual rectangle_int_array upper_window_rects();
+      virtual int_rectangle_array upper_window_rects();
 
 
 

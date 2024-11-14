@@ -696,7 +696,7 @@ namespace windowing_xcb
 //   }
 
 
-//   void keyboard::show_software_keyboard(::user::primitive* pprimitive, string str, strsize iBeg, strsize iEnd)
+//   void keyboard::show_software_keyboard(::user::primitive* pprimitive, string str, character_count iBeg, character_count iEnd)
 //   {
 //
 //      synchronous_lock synchronouslock(this->synchronization());

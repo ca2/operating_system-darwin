@@ -284,7 +284,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   string file_system::as_string(const char * path, strsize iReadAtMostByteCount, bool bNoExceptionOnFail)
+//   string file_system::as_string(const char * path, character_count iReadAtMostByteCount, bool bNoExceptionOnFail)
 //   {
 //
 //      string str;
@@ -346,7 +346,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   memory file_system::as_memory(const char * path, strsize iReadAtMostByteCount)
+//   memory file_system::as_memory(const char * path, character_count iReadAtMostByteCount)
 //   {
 //
 //      memory mem;
@@ -358,7 +358,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void file_system::as_memory(memory_base & memory, const char * path, strsize iReadAtMostByteCount)
+//   void file_system::as_memory(memory_base & memory, const char * path, character_count iReadAtMostByteCount)
 //   {
 //
 //      FILE_holder pfile(fopen(path, "rb"));

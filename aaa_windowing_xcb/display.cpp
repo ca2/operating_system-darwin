@@ -61,7 +61,7 @@ namespace windowing_xcb
 #ifdef _DEBUG
 
 
-   i64 display::get_ref_count()
+   huge_integer display::get_ref_count()
    {
 
       return m_countReference;
@@ -69,7 +69,7 @@ namespace windowing_xcb
    }
 
 
-   i64 display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -77,7 +77,7 @@ namespace windowing_xcb
    }
 
 
-   i64 display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -85,7 +85,7 @@ namespace windowing_xcb
    }
 
 
-   i64 display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::release(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -892,12 +892,12 @@ namespace windowing_xcb
    }
 
 
-   ::rectangle_i32 display::_window_get_frame_extents(xcb_window_t window)
+   ::int_rectangle display::_window_get_frame_extents(xcb_window_t window)
    {
 
       synchronous_lock synchronouslock(user_synchronization());
 
-      ::rectangle_i32 r;
+      ::int_rectangle r;
 
       auto property = intern_atom("_NET_FRAME_EXTENTS"); // l, r, t, b CARDINAL[4]/32bit
 
@@ -1041,14 +1041,14 @@ namespace windowing_xcb
 
          windowa = _window_enumerate();
 
-         ::rectangle_i32 rectangleTest;
+         ::int_rectangle rectangleTest;
 
          for (index i = 0; i < windowa.get_size(); i++)
          {
 
             //string strItem = ::_window_get(xcb_connection(), windowa[i]);
 
-            ::rectangle_i32 rectangleHigher;
+            ::int_rectangle rectangleHigher;
 
             if (::is_set(pwindowxcbExclude) && windowa[i] == pwindowxcbExclude->xcb_window())
             {
@@ -1060,9 +1060,9 @@ namespace windowing_xcb
             if (_window_get_window_rectangle(windowa[i], rectangleHigher))
             {
 
-               ::rectangle_i32 rectangleHitTest;
+               ::int_rectangle rectangleHitTest;
 
-               rectangleHitTest.set(rectangleHigher.origin(), ::size_i32());
+               rectangleHitTest.set(rectangleHigher.origin(), ::int_size());
 
                rectangleHitTest.inflate(iMargin + 1);
 

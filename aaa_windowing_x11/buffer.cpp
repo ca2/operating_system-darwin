@@ -101,7 +101,7 @@ namespace windowing_x11
    }
 
 
-   bool buffer::create_os_buffer(const ::size_i32 & size, int iStrideParam)
+   bool buffer::create_os_buffer(const ::int_size & size, int iStrideParam)
    {
 
 //      synchronous_lock sl(synchronization());
@@ -338,7 +338,7 @@ namespace windowing_x11
 
       display_lock displayLock(x11_window()->x11_display()->Display());
 
-      //XImage * pximage = (XImage *)pimage->payload("pximage").i64();
+      //XImage * pximage = (XImage *)pimage->payload("pximage").huge_integer();
 
       XImage * pximage;
 
@@ -374,7 +374,7 @@ namespace windowing_x11
                sizeof(color32_t) * 8,
                pimage->scan_size());
 
-         //pimage->payload("pximage") = (::i64) pximage;
+         //pimage->payload("pximage") = (::huge_integer) pximage;
 
       }
 

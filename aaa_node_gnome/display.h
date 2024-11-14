@@ -77,7 +77,7 @@ namespace node_gnome
 //   Atom net_wm_state_atom(bool bCreate);
 
 
-//   inline i64 get_ref_count()
+//   inline huge_integer get_ref_count()
 //   {
 //
 //      return m_countReference;
@@ -85,7 +85,7 @@ namespace node_gnome
 //   }
 //
 //
-//   inline i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+//   inline huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 //   {
 //
 //#ifdef WINDOWS
@@ -105,7 +105,7 @@ namespace node_gnome
 //   }
 //
 //
-//   inline i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+//   inline huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 //   {
 //
 //#ifdef WINDOWS
@@ -125,10 +125,10 @@ namespace node_gnome
 //   }
 //
 //
-//   inline i64 release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+//   inline huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 //   {
 //
-//      i64 i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+//      huge_integer i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 //
 //      if (i == 0)
 //      {

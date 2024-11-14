@@ -548,7 +548,7 @@ void node::os_calc_user_dark_mode()
    }
 
 
-//   void * node::node_wrap_window(void * pvoidDisplay, i64 window)
+//   void * node::node_wrap_window(void * pvoidDisplay, huge_integer window)
 //   {
 //
 //      Display * pdisplay = (Display *) pvoidDisplay;

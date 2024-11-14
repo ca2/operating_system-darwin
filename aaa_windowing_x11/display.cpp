@@ -59,7 +59,7 @@ namespace windowing_x11
 #ifdef _DEBUG
 
 
-   i64 display::get_ref_count()
+   huge_integer display::get_ref_count()
    {
 
       return m_countReference;
@@ -67,7 +67,7 @@ namespace windowing_x11
    }
 
 
-   i64 display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
 #ifdef WINDOWS
@@ -87,7 +87,7 @@ namespace windowing_x11
    }
 
 
-   i64 display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
 #ifdef WINDOWS
@@ -107,10 +107,10 @@ namespace windowing_x11
    }
 
 
-   i64 display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   huge_integer display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
-      i64 i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+      huge_integer i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 
       return i;
 
@@ -838,14 +838,14 @@ namespace windowing_x11
 
          auto windowa = x11_window_list();
 
-         ::rectangle_i32 rectangleTest;
+         ::int_rectangle rectangleTest;
 
          for (index i = 0; i < windowa.get_size(); i++)
          {
 
             string strItem = ::x11_get_name(Display(), windowa[i]);
 
-            ::rectangle_i32 rectangleHigher;
+            ::int_rectangle rectangleHigher;
 
             if (::is_set(pwindowxcbExclude) && windowa[i] == pwindowxcbExclude->Window())
             {
@@ -857,9 +857,9 @@ namespace windowing_x11
             if (::x11_get_window_rect(Display(), windowa[i], rectangleHigher))
             {
 
-               ::rectangle_i32 rectangleHitTest;
+               ::int_rectangle rectangleHitTest;
 
-               rectangleHitTest.set(rectangleHigher.origin(), ::size_i32());
+               rectangleHitTest.set(rectangleHigher.origin(), ::int_size());
 
                rectangleHitTest.inflate(iMargin + 1);
 

@@ -39,9 +39,9 @@ __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
    long numerator = (long)num1 * (long)num2;   // no overflow
    long denominator = (long)den1 * (long)den2; // no overflow
 #else
-   i64 numerator = (i64)num1 * (i64)num2;   // no overflow
-   i64 denominator = (i64)den1 * (i64)den2; // no overflow
-   i64 temp;
+   huge_integer numerator = (huge_integer)num1 * (huge_integer)num2;   // no overflow
+   huge_integer denominator = (huge_integer)den1 * (huge_integer)den2; // no overflow
+   huge_integer temp;
 #endif
 
    temp = numerator < 0 ? -numerator : numerator;
@@ -66,7 +66,7 @@ __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
       numerator = -numerator;
    }
 
-   // get the product of factor * numerator representable in a long/i64
+   // get the product of factor * numerator representable in a long/huge_integer
    // while distributing loss of presision across all three numerator terms
    // Adjust denominator as well
    //
@@ -328,9 +328,9 @@ void thumbnail_dc::MirrorFont()
    else
       cyActual = tm.tmHeight - tm.tmInternalLeading;
 
-   size_i32 sizeWinExt;
+   int_size sizeWinExt;
    VERIFY(::GetWindowExtEx(get_os_data(), &sizeWinExt));
-   size_i32 sizeVpExt;
+   int_size sizeVpExt;
    VERIFY(::Get_wiewportExtEx(get_os_data(), &sizeVpExt));
 
    // Only interested in Extent Magnitudes, not direction
@@ -414,56 +414,56 @@ int thumbnail_dc::SetMapMode(int nMapMode)
    return nModeOld;
 }
 
-point_i32 thumbnail_dc::set_origin(int x, int y)
+int_point thumbnail_dc::set_origin(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
-   point_i32 ptOrgOld;
+   int_point ptOrgOld;
    VERIFY(::SetContextOrgEx(get_handle2(), x, y, &ptOrgOld));
    MirrorContextOrg();
    return ptOrgOld;
 }
 
-point_i32 thumbnail_dc::offset_origin(int nWidth, int nHeight)
+int_point thumbnail_dc::offset_origin(int nWidth, int nHeight)
 {
    ASSERT(get_handle2() != nullptr);
-   point_i32 ptOrgOld;
+   int_point ptOrgOld;
    VERIFY(::OffsetContextOrgEx(get_handle2(), nWidth, nHeight, &ptOrgOld));
    MirrorContextOrg();
    return ptOrgOld;
 }
 
-size_i32 thumbnail_dc::set_context_extents(int x, int y)
+int_size thumbnail_dc::set_context_extents(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
-   size_i32 sizeExtOld;
+   int_size sizeExtOld;
    VERIFY(::Set_wiewportExtEx(get_handle2(), x, y, &sizeExtOld));
    MirrorMappingMode(true);
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::scale_context_extents(int xNum, int xDenom, int yNum, int yDenom)
+int_size thumbnail_dc::scale_context_extents(int xNum, int xDenom, int yNum, int yDenom)
 {
    ASSERT(get_handle2() != nullptr);
-   size_i32 sizeExtOld;
+   int_size sizeExtOld;
    VERIFY(::scale_context_extentsEx(get_handle2(), xNum, xDenom,
       yNum, yDenom, &sizeExtOld));
    MirrorMappingMode(true);
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::set_window_ext(int x, int y)
+int_size thumbnail_dc::set_window_ext(int x, int y)
 {
    ASSERT(get_handle2() != nullptr);
-   size_i32 sizeExtOld;
+   int_size sizeExtOld;
    VERIFY(::SetWindowExtEx(get_handle2(), x, y, &sizeExtOld));
    MirrorMappingMode(true);
    return sizeExtOld;
 }
 
-size_i32 thumbnail_dc::scale_window_ext(int xNum, int xDenom, int yNum, int yDenom)
+int_size thumbnail_dc::scale_window_ext(int xNum, int xDenom, int yNum, int yDenom)
 {
    ASSERT(get_handle2() != nullptr);
-   size_i32 sizeExtOld;
+   int_size sizeExtOld;
    VERIFY(::ScaleWindowExtEx(get_handle2(), xNum, xDenom, yNum, yDenom,
       &sizeExtOld));
    MirrorMappingMode(true);
@@ -491,7 +491,7 @@ __STATIC int CLASS_DECL_DRAW2D_XLIB _AfxComputeNextTab(int x, unsigned int nTabS
 
 // Compute a character delta table for correctly positioning the screen
 // font characters where the printer characters will appear on the page
-size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned int &nCount,
+int_size thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned int &nCount,
    int_bool bTabbed, unsigned int nTabStops, LPINT lpnTabStops, int nTabOrigin,
    __out_z char * lpszOutputString, int* pnDxWidths, int& nRightFixup)
 {
@@ -502,10 +502,10 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned i
    ::GetTextMetrics(get_handle2(), &tmAttrib);
    ::GetTextMetrics(get_os_data(), &tmScreen);
 
-   size_i32 sizeExtent;
+   int_size sizeExtent;
    ::GetTextExtentPoint32A(get_handle2(), "A", 1, &sizeExtent);
 
-   point_i32 ptCurrent;
+   int_point ptCurrent;
    unsigned int nAlignment = ::GetTextAlign(get_handle2());
    int_bool bUpdateCP = (nAlignment & TA_UPDATECP) != 0;
    if (bUpdateCP)
@@ -530,7 +530,7 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned i
       }
       else
       {
-         // get default size_i32 of a tab
+         // get default int_size of a tab
          nTabWidth = LOWORD(::GetTabbedTextExtentA(get_handle2(),
             "\t", 1, 0, nullptr));
       }
@@ -546,7 +546,7 @@ size_i32 thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned i
          // do not want the tab included
          int nRunLength = (int)(lpszCurChar - lpszStartRun) + bSpace;
 
-         size_i32 sizeExtent;
+         int_size sizeExtent;
          ::GetTextExtentPoint32(get_handle2(), lpszStartRun, nRunLength,
             &sizeExtent);
          int nNewPos = nStartRunPos + sizeExtent.cx()
@@ -639,7 +639,7 @@ int_bool thumbnail_dc::text_out(int x, int y, const char * lpszString, int nCoun
    return ExtTextOut(x, y, 0, nullptr, lpszString, nCount, nullptr);
 }
 
-int_bool thumbnail_dc::ExtTextOut(int x, int y, unsigned int nOptions, const ::rectangle_i32 & rectangle,
+int_bool thumbnail_dc::ExtTextOut(int x, int y, unsigned int nOptions, const ::int_rectangle & rectangle,
    const char * lpszString, unsigned int nCount, LPINT lpDxWidths)
 {
    ASSERT(get_os_data() != nullptr);
@@ -682,7 +682,7 @@ int_bool thumbnail_dc::ExtTextOut(int x, int y, unsigned int nOptions, const ::r
                                           nCount, lpDxWidths);
    if (nRightFixup != 0 && bSuccess && (GetTextAlign() & TA_UPDATECP))
    {
-      ::point_i32 point;
+      ::int_point point;
       ::GetCurrentPositionEx(get_os_data(), &point);
       MoveTo(point.x - nRightFixup, point.y);
    }
@@ -692,7 +692,7 @@ int_bool thumbnail_dc::ExtTextOut(int x, int y, unsigned int nOptions, const ::r
    return bSuccess;
 }
 
-size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int nCount,
+int_size thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int nCount,
    int nTabPositions, LPINT lpnTabStopPositions, int nTabOrigin)
 {
    ASSERT(get_handle2() != nullptr);
@@ -724,7 +724,7 @@ size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
 
 
    unsigned int uCount = nCount;
-   size_i32 sizeFinalExtent = ComputeDeltas(x, lpszString, uCount, true,
+   int_size sizeFinalExtent = ComputeDeltas(x, lpszString, uCount, true,
                      nTabPositions, lpnTabStopPositions, nTabOrigin,
                      pOutputString, pDeltas, nRightFixup);
 
@@ -735,7 +735,7 @@ size_i32 thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
 
    if (bSuccess && (GetTextAlign() & TA_UPDATECP))
    {
-      ::point_i32 point;
+      ::int_point point;
       ::GetCurrentPositionEx(get_os_data(), &point);
       MoveTo(point.x - nRightFixup, point.y);
    }
@@ -759,7 +759,7 @@ int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * 
 
    int retVal = ::DrawText(get_os_data(), lpszString, nCount, rectangle, nFormat);
 
-   point_i32 pos;
+   int_point pos;
    ::GetCurrentPositionEx(get_os_data(), &pos);
    ::MoveToEx(get_handle2(), pos.x, pos.y, nullptr);
    return retVal;
@@ -779,7 +779,7 @@ int thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, int nCount, 
 
    int retVal = ::DrawTextEx(get_os_data(), lpszString, nCount, rectangle, nFormat, lpDTParams);
 
-   point_i32 pos;
+   int_point pos;
    ::GetCurrentPositionEx(get_os_data(), &pos);
    ::MoveToEx(get_handle2(), pos.x, pos.y, nullptr);
    return retVal;
@@ -917,18 +917,18 @@ void thumbnail_dc::MirrorContextOrg()
    if (get_handle2() == nullptr || get_os_data() == nullptr)
       return;
 
-   point_i32 ptVpOrg;
+   int_point ptVpOrg;
    VERIFY(::GetContextOrgEx(get_handle2(), &ptVpOrg));
    PrinterDPtoScreenDP(&ptVpOrg);
    ptVpOrg += m_sizeTopLeft;
    ::SetContextOrgEx(get_os_data(), ptVpOrg.x, ptVpOrg.y, nullptr);
 
-   point_i32 ptWinOrg;
+   int_point ptWinOrg;
    VERIFY(::GetWindowOrgEx(get_handle2(), &ptWinOrg));
    ::SetWindowOrgEx(get_os_data(), ptWinOrg.x, ptWinOrg.y, nullptr);
 }
 
-void thumbnail_dc::SetTopLeftOffset(const ::size_i32 & sizeTopLeft)
+void thumbnail_dc::SetTopLeftOffset(const ::int_size & sizeTopLeft)
 {
    ASSERT(get_handle2() != nullptr);
    m_sizeTopLeft = sizeTopLeft;
@@ -939,12 +939,12 @@ void thumbnail_dc::ClipToPage()
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);
-   // create a rectangle_i32 in Screen Device coordinates that is one pixel larger
+   // create a int_rectangle in Screen Device coordinates that is one pixel larger
    // on all sides than the actual page.  This is to hide the fact that
    // the printer to screen mapping mode is approximate and may result
    // in rounding error.
 
-   ::point_i32 point(::GetDevicecaps(get_handle2(), HORZRES),
+   ::int_point point(::GetDevicecaps(get_handle2(), HORZRES),
             ::GetDevicecaps(get_handle2(), VERTRES));
    PrinterDPtoScreenDP(&point);
 
@@ -965,9 +965,9 @@ void thumbnail_dc::PrinterDPtoScreenDP(POINT_I32 * lpPoint) const
 {
    ASSERT(get_handle2() != nullptr);
 
-   size_i32 sizePrinterVpExt;
+   int_size sizePrinterVpExt;
    VERIFY(::Get_wiewportExtEx(get_handle2(), &sizePrinterVpExt));
-   size_i32 sizePrinterWinExt;
+   int_size sizePrinterWinExt;
    VERIFY(::GetWindowExtEx(get_handle2(), &sizePrinterWinExt));
 
    long xScreen = _AfxMultMultDivDiv(lpPoint->x,

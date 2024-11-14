@@ -47,10 +47,10 @@ namespace windowing_xcb
 #ifdef _DEBUG
 
 
-      virtual i64 get_ref_count();
-      virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual i64 release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual huge_integer get_ref_count();
+      virtual huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
 
 #endif
@@ -123,7 +123,7 @@ namespace windowing_xcb
       virtual string _window_get_name(xcb_window_t window);
       virtual status < xcb_get_window_attributes_reply_t > _window_get_window_attributes(xcb_window_t window);
       virtual status < xcb_get_geometry_reply_t > _window_get_geometry(xcb_window_t window);
-      virtual ::rectangle_i32 _window_get_frame_extents(xcb_window_t window);
+      virtual ::int_rectangle _window_get_frame_extents(xcb_window_t window);
       virtual ::e_status _window_get_window_rectangle(xcb_window_t window, RECTANGLE_I32 * prectangle);
       virtual ::e_status _window_get_client_rectangle(xcb_window_t window, RECTANGLE_I32 * prectangle);
 

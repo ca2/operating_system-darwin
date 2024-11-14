@@ -30,7 +30,7 @@ namespace windowing_x11
       //memory                        m_mem;
       //XImage *                      m_pimage;
       //bool                          m_bMapped;
-      ::rectangle_i32                 m_rectangleLast;
+      ::int_rectangle                 m_rectangleLast;
       //::image_pointer                         m_pimage;
 
 
@@ -45,7 +45,7 @@ namespace windowing_x11
       void destroy() override;
 
 
-      virtual bool create_os_buffer(const ::size_i32 & size, int iStride = -1);
+      virtual bool create_os_buffer(const ::int_size & size, int iStride = -1);
       virtual void destroy_os_buffer();
 
 

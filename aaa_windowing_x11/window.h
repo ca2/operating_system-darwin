@@ -48,10 +48,10 @@ namespace windowing_x11
       //Colormap                                     m_colormap;
       class ::time                                       m_timeLastMouseMove;
       //Window                                       m_parent;
-      ::rectangle_i32                              m_rect;
+      ::int_rectangle                              m_rect;
       string                                       m_strWMClass;
       int                                          m_iaNetWmState2[::x11::e_atom_net_wm_state_last-::x11::e_atom_net_wm_state_first+1];
-      ::point_i32                                  m_pointCursor;
+      ::int_point                                  m_pointCursor;
       //static oswindow_dataptra *                 s_pdataptra;
       //static::pointer< ::mutex >                            s_pmutex;
 
@@ -116,7 +116,7 @@ namespace windowing_x11
 
       void exit_iconify() override;
 
-      void full_screen(const ::rectangle_i32 & rect = nullptr) override;
+      void full_screen(const ::int_rectangle & rect = nullptr) override;
 
       void exit_full_screen() override;
 
@@ -133,7 +133,7 @@ namespace windowing_x11
       //virtual ::Window get_parent_handle();
       ::oswindow get_parent_oswindow() const override;
 
-      ::point_i32 get_mouse_cursor_position() override;
+      ::int_point get_mouse_cursor_position() override;
 
       //virtual ::Window get_parent_handle() const;
 
@@ -198,7 +198,7 @@ namespace windowing_x11
       //virtual unsigned long x11_get_long_property( WINDOWING_X11_WINDOW_MEMBER char* property_name);
       virtual string x11_get_name( WINDOWING_X11_WINDOW_MEMBER );
       //virtual ::e_status set_active_window();
-      virtual void upper_window_rects( WINDOWING_X11_WINDOW_MEMBER  rectangle_int_array & ra);
+      virtual void upper_window_rects( WINDOWING_X11_WINDOW_MEMBER  int_rectangle_array & ra);
       //virtual oswindow set_active_window( WINDOWING_X11_WINDOW_MEMBER );
 //      virtual  WINDOWING_X11_WINDOW_MEMBER _get_if_found(Window w);
       //virtual oswindow get_parent( WINDOWING_X11_WINDOW_MEMBER );
@@ -265,7 +265,7 @@ namespace windowing_x11
       //virtual ::e_status set_window_position( WINDOWING_X11_WINDOW_MEMBER const ::zorder & zorder, int x, int y, int cx, int cy, unsigned int nFlags);
       virtual ::e_status window_rectangle( WINDOWING_X11_WINDOW_MEMBER RECTANGLE_I32 * prectangle);
       virtual ::e_status client_rectangle(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
-      //virtual ::e_status wm_full_screen( WINDOWING_X11_WINDOW_MEMBER const ::rectangle_i32 & rectangle);
+      //virtual ::e_status wm_full_screen( WINDOWING_X11_WINDOW_MEMBER const ::int_rectangle & rectangle);
 
       virtual ::e_status x11_store_name(const char * pszName);
       //virtual ::e_status set_foreground_window();

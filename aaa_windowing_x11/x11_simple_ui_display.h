@@ -14,7 +14,7 @@ public:
    string                           m_strFontName;
 
    Window                           m_window;
-   ::point_i32                          m_point;
+   ::int_point                          m_point;
    ::size                           m_size;
 
    int                              m_iLineHeight;
@@ -70,9 +70,9 @@ public:
    ~simple_ui_display();
 
 
-   virtual i64 increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-   virtual i64 decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-   virtual i64 release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
 
    void common_construct();

@@ -18,7 +18,7 @@ namespace windowing_xcb
 
       string m_strTrayIconName;
 
-      array<concrete<::size_i32> > m_sizea;
+      array<concrete<::int_size> > m_sizea;
 
 
       icon();
@@ -32,10 +32,10 @@ namespace windowing_xcb
       void set_tray_icon_name(const string & strTrayIconName) override;
 
 
-      void get_sizes(array<concrete<::size_i32> > & a);
+      void get_sizes(array<concrete<::int_size> > & a);
 
 
-      void * get_os_data(const ::size_i32 & size) const;
+      void * get_os_data(const ::int_size & size) const;
 
 
       void load_matter(string strPath);
@@ -45,7 +45,7 @@ namespace windowing_xcb
       void load_file(string strPath);
 
 
-      image_pointer get_image(const concrete<::size_i32> & size);
+      image_pointer get_image(const concrete<::int_size> & size);
 
 
    };
