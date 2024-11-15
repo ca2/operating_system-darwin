@@ -143,7 +143,7 @@ CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const in
 //::pointer< ::mutex > g_pmutexXcbRunnable = nullptr;
 //list < ::pointer<::matter >>* g_prunnableptrlXcb = nullptr;
 //::pointer< ::mutex > g_pmutexXcbSync = nullptr;
-//manual_reset_event * g_peventXcbSync = nullptr;
+//manual_reset_happening * g_peventXcbSync = nullptr;
 //::pointer<::matter>g_prunnableXcbSync;
 xcb_window_t g_windowXcbClient = 0;
 
@@ -155,7 +155,7 @@ int_bool _xcb_get_cursor_pos(xcb_connection_t * d, POINT_I32 * ppointCursor);
 //extern ::pointer< ::mutex >g_pmutexXcbRunnable;
 //extern list<::pointer<::matter >>*g_prunnableptrlXcb;
 //extern ::pointer< ::mutex >g_pmutexXcbSync;
-//extern manual_reset_event *g_peventXcbSync;
+//extern manual_reset_happening *g_peventXcbSync;
 //extern ::pointer<::matter>g_prunnableXcbSync;
 
 
@@ -728,7 +728,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 
 //      g_pmutexXcbSync = memory_new ::pointer < ::mutex >();
 
-//      g_peventXcbSync = memory_new manual_reset_event();
+//      g_peventXcbSync = memory_new manual_reset_happening();
 
       //oswindow_data::s_pdataptra = memory_new oswindow_dataptra;
 
@@ -1370,7 +1370,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 ////
 ////         g_prunnableXcbSync.release();
 ////
-////         g_peventXcbSync->SetEvent();
+////         g_peventXcbSync->set_happening();
 ////
 ////         bDoneMuchThings = true;
 ////

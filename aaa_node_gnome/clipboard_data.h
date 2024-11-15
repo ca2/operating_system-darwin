@@ -6,7 +6,7 @@
 
 #include "aura/user/user/copydesk.h"
 //#include "acme/filesystem/filesystem/path_array.h"
-#include "acme/parallelization/manual_reset_event.h"
+#include "acme/parallelization/manual_reset_happening.h"
 
 
 //
@@ -36,7 +36,7 @@ public:
 
       m_eclipboard = eclipboard;
 
-      m_event.ResetEvent();
+      m_happening.reset_happening();
 
       initialize(pparticle);
 
@@ -44,7 +44,7 @@ public:
 
    ::user::copydesk::enum_op  m_eop;
    enum_clipboard             m_eclipboard;
-   manual_reset_event         m_event;
+   manual_reset_happening         m_happening;
    string                     m_str;
    ::image_pointer            m_pimage;
    ::file::path_array              m_patha;

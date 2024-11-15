@@ -66,7 +66,7 @@ namespace acme_darwin
 
          payloadLength = (iptr)stat.st_size;
 
-         ((::file::path &)path).m_iSize = payloadLength.m_i64;
+         ((::file::path &)path).m_iSize = payloadLength.m_hi;
 
       }
 

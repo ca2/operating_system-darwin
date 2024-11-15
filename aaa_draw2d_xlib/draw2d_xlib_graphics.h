@@ -289,10 +289,10 @@ namespace draw2d_xlib
       bool Pie(int x1, int y1, int x2, int y2, int x3, int y3, int x4, int y4);
       bool Pie(const ::int_rectangle & rectangle, const ::int_point & pointStart, const ::int_point & pointEnd);
 
-      virtual bool fill_polygon(const POINT_F64 * lpPoints, int nCount);
+      virtual bool fill_polygon(const DOUBLE_POINT * lpPoints, int nCount);
       virtual bool fill_polygon(const POINT_I32* lpPoints, int nCount);
 
-      virtual bool draw_polygon(const POINT_F64 * lpPoints, int nCount);
+      virtual bool draw_polygon(const DOUBLE_POINT * lpPoints, int nCount);
       virtual bool draw_polygon(const POINT_I32* lpPoints, int nCount);
 
 

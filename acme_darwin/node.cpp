@@ -1236,7 +1236,7 @@ namespace acme_darwin
 //            //}
 //            ::file::path path = module_path_from_pid(iPid);
 //
-//            if (path.has_char())
+//            if (path.has_character())
 //            {
 //
 //               //output_debug_string(path + "\n");
@@ -1331,7 +1331,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      if (strArg.has_char())
+//      if (strArg.has_character())
 //      {
 //
 //         if (strArg.find_first_in(" \t\n") >= 0)

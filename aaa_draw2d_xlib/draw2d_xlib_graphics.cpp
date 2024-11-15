@@ -1108,7 +1108,7 @@ namespace draw2d_xlib
 
    }
 
-   bool graphics::fill_polygon(const POINT_F64 * pa, int iCount)
+   bool graphics::fill_polygon(const DOUBLE_POINT * pa, int iCount)
    {
 
       if(iCount <= 0)
@@ -1165,7 +1165,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::draw_polygon(const POINT_F64 * pa, int iCount)
+   bool graphics::draw_polygon(const DOUBLE_POINT * pa, int iCount)
    {
 
       if(iCount <= 0)

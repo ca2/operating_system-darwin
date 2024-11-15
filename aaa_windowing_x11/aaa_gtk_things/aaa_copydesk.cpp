@@ -114,7 +114,7 @@ namespace node_gnome
 
       g_source_attach(idle_source, g_main_context_default());
 
-      if(!pdata->m_event.wait(seconds(5)).succeeded())
+      if(!pdata->m_happening.wait(seconds(5)).succeeded())
       {
 
          return false;
@@ -166,7 +166,7 @@ namespace node_gnome
 
       g_source_attach(idle_source, g_main_context_default());
 
-      if(!pdata->m_event.wait(seconds(5)).succeeded())
+      if(!pdata->m_happening.wait(seconds(5)).succeeded())
       {
 
          return false;
@@ -191,7 +191,7 @@ namespace node_gnome
 
       g_source_attach(idle_source, g_main_context_default());
 
-      if(!pdata->m_event.wait(seconds(5)).succeeded() || pdata->m_eclipboard == e_clipboard_error)
+      if(!pdata->m_happening.wait(seconds(5)).succeeded() || pdata->m_eclipboard == e_clipboard_error)
       {
 
          return false;
@@ -224,7 +224,7 @@ namespace node_gnome
 
       g_source_attach(idle_source, g_main_context_default());
 
-      if(!pdata->m_event.wait(seconds(5)).succeeded())
+      if(!pdata->m_happening.wait(seconds(5)).succeeded())
       {
 
          return false;
@@ -253,7 +253,7 @@ namespace node_gnome
 
       g_source_attach(idle_source, g_main_context_default());
 
-      if(!pdata->m_event.wait(seconds(5)).succeeded() || pdata->m_eclipboard == e_clipboard_error)
+      if(!pdata->m_happening.wait(seconds(5)).succeeded() || pdata->m_eclipboard == e_clipboard_error)
       {
 
          return false;
@@ -326,7 +326,7 @@ namespace node_gnome
 //
 //   }
 //
-//   pdata->m_event.SetEvent();
+//   pdata->m_happening.set_happening();
 //
 //}
 //
@@ -383,7 +383,7 @@ namespace node_gnome
 //
 //   }
 //
-//   pdata->m_event.SetEvent();
+//   pdata->m_happening.set_happening();
 //
 //}
 //
@@ -405,7 +405,7 @@ namespace node_gnome
 //
 //      pdata->m_eclipboard = e_clipboard_error;
 //
-//      pdata->m_event.SetEvent();
+//      pdata->m_happening.set_happening();
 //
 //      return;
 //
@@ -430,7 +430,7 @@ namespace node_gnome
 //
 //      pdata->m_eclipboard = e_clipboard_error;
 //
-//      pdata->m_event.SetEvent();
+//      pdata->m_happening.set_happening();
 //
 //      return;
 //
@@ -447,7 +447,7 @@ namespace node_gnome
 //
 //   }
 //
-//   pdata->m_event.SetEvent();
+//   pdata->m_happening.set_happening();
 //
 //}
 //
@@ -531,7 +531,7 @@ namespace node_gnome
 //
 //   }
 //
-//   pdata->m_event.SetEvent();
+//   pdata->m_happening.set_happening();
 //
 //}
 //
@@ -567,7 +567,7 @@ namespace node_gnome
 //
 //      gtk_clipboard_set_with_data(clipboard, entrya, 2, &clipboard_get_func, &clipboard_clear_func, pdata);
 //
-//      pdata->m_event.SetEvent();
+//      pdata->m_happening.set_happening();
 //
 //   }
 //   else if(pdata->m_eclipboard == e_clipboard_get_patha)
@@ -618,7 +618,7 @@ namespace node_gnome
 //
 //      }
 //
-//      pdata->m_event.SetEvent();
+//      pdata->m_happening.set_happening();
 //
 ////      GdkPixbuf * pixbuf = gtk_clipboard_wait_for_image(clipboard);
 ////
@@ -682,7 +682,7 @@ namespace node_gnome
 ////
 ////      }
 ////
-////      pdata->m_event.SetEvent();
+////      pdata->m_happening.set_happening();
 //
 //
 //   }

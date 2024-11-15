@@ -121,7 +121,7 @@ serial_impl::serial_impl(const string & port, unsigned long baudrate,
 {
    pthread_mutex_init(&this->m_pmutexRead, nullptr);
    pthread_mutex_init(&this->m_pmutexWrite, nullptr);
-   if (m_strPort.has_char())
+   if (m_strPort.has_character())
       open();
 }
 

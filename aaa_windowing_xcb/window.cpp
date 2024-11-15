@@ -371,7 +371,7 @@ namespace windowing_xcb
 
          string strWindowText = pimpl->m_puserinteraction->get_window_text();
 
-         if (strWindowText.has_char())
+         if (strWindowText.has_character())
          {
 
             strName = strWindowText;
@@ -380,7 +380,7 @@ namespace windowing_xcb
 
       }
 
-      if(strName.has_char())
+      if(strName.has_character())
       {
 
          _store_name(strName);

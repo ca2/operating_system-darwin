@@ -1858,7 +1858,7 @@ namespace windowing_xcb
 
             }
 
-            if (strText.has_char() && !(pkeyevent->state & XCB_MOD_MASK_CONTROL))
+            if (strText.has_character() && !(pkeyevent->state & XCB_MOD_MASK_CONTROL))
             {
 
                auto pkey = __create_new < ::message::key >();
