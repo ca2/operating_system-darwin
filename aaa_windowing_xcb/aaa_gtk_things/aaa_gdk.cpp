@@ -354,7 +354,7 @@ namespace node_gnome
 
       bool bOk = false;
 
-      auto edesktop = System.get_edesktop();
+      auto edesktop = System.get_eoperating_ambient();
 
       switch (edesktop)
       {
@@ -412,7 +412,7 @@ namespace node_gnome
 
       string strWallpaper;
 
-      auto edesktop = System.get_edesktop();
+      auto edesktop = System.get_eoperating_ambient();
 
       switch (edesktop)
       {

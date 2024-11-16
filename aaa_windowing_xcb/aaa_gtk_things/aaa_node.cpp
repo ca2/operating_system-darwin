@@ -241,7 +241,7 @@ void node::os_calc_user_dark_mode()
 
       // indirect wall-changer sourceforge.net contribution
 
-      auto edesktop = System.get_edesktop();
+      auto edesktop = System.get_eoperating_ambient();
 
       switch (edesktop)
       {
@@ -322,7 +322,7 @@ void node::os_calc_user_dark_mode()
 
       auto pnode = Node;
 
-      auto edesktop = System.get_edesktop();
+      auto edesktop = System.get_eoperating_ambient();
 
       switch (edesktop)
       {
@@ -370,7 +370,7 @@ void node::os_calc_user_dark_mode()
    void node::enable_wallpaper_change_notification()
    {
 
-      auto edesktop = System.get_edesktop();
+      auto edesktop = System.get_eoperating_ambient();
 
       switch (edesktop)
       {

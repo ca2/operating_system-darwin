@@ -420,7 +420,7 @@ namespace node_xfce
 //
 //      auto pnode = psystem->node();
 //
-//      auto edesktop = pnode->get_edesktop();
+//      auto edesktop = pnode->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {
@@ -505,7 +505,7 @@ namespace node_xfce
 //
 //      auto pnode = psystem->node();
 //
-//      auto edesktop = pnode->get_edesktop();
+//      auto edesktop = pnode->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {
@@ -559,7 +559,7 @@ namespace node_xfce
 //
 //      auto pnode = psystem->node();
 //
-//      auto edesktop = pnode->get_edesktop();
+//      auto edesktop = pnode->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {

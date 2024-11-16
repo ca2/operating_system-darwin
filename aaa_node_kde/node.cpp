@@ -486,7 +486,7 @@ namespace node_kde
 //
 //      auto psystem = acmesystem()->m_paurasystem;
 //
-//      auto edesktop = psystem->get_edesktop();
+//      auto edesktop = psystem->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {
@@ -574,7 +574,7 @@ namespace node_kde
 //
 //      auto pnode = psystem->node();
 //
-//      auto edesktop = psystem->get_edesktop();
+//      auto edesktop = psystem->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {
@@ -629,7 +629,7 @@ namespace node_kde
 //
 //      auto pnode = psystem->node();
 //
-//      auto edesktop = psystem->get_edesktop();
+//      auto edesktop = psystem->get_eoperating_ambient();
 //
 //      switch (edesktop)
 //      {

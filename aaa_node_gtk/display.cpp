@@ -317,7 +317,7 @@ namespace node_gtk
 
       bool bOk = false;
 
-      auto edesktop = acmenode()->get_edesktop();
+      auto edesktop = acmenode()->get_eoperating_ambient();
 
       if(edesktop & ::user::e_desktop_gnome)
       {
