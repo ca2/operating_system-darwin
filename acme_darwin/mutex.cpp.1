@@ -219,9 +219,9 @@ namespace acme_posix
 
    pacmedirectory->create(::file::path(strName).folder());
 
-         ::acmefile()->put_contents(strName, strName);
+         ::file_system()->put_contents(strName, strName);
 
-         string strTest = acmefile()->as_string(strName);
+         string strTest = file_system()->as_string(strName);
 
          //int isCreator = 0;
 
@@ -385,7 +385,7 @@ namespace acme_posix
 
    pacmedirectory->create(path.folder());
 
-         ::acmefile()->put_contents(path, m_pszName);
+         ::file_system()->put_contents(path, m_pszName);
 
          m_key = ftok(path, 1); //Generate a unique key or supply a value
 
