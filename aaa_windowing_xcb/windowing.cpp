@@ -64,7 +64,7 @@ namespace windowing_xcb
    ::windowing::window * windowing::new_window(::user::interaction_impl * pimpl)
    {
 
-      ::pointer<::windowing_xcb::window>pwindow = pimpl->__create < ::windowing::window >();
+      ::pointer<::windowing_xcb::window>pwindow = pimpl->__øcreate < ::windowing::window >();
 
       if(!pwindow)
       {
@@ -112,12 +112,12 @@ namespace windowing_xcb
 
       initialize_windowing();
 
-      auto pdisplay = __create < ::windowing::display >();
+      auto pdisplay = __øcreate < ::windowing::display >();
 
 //      if(!pdisplay)
 //      {
 //
-//         output_debug_string("\nFailed to __create < ::windowing::display > at windowing_xcb::windowing::initialize");
+//         output_debug_string("\nFailed to __øcreate < ::windowing::display > at windowing_xcb::windowing::initialize");
 //
 //         //return ::error_no_factory;
 //
@@ -349,7 +349,7 @@ namespace windowing_xcb
 
       auto cursor = m_pdisplay->_create_font_cursor(iCursor);
 
-      auto pcursorX11 = __create < ::windowing_xcb::cursor >();
+      auto pcursorX11 = __øcreate < ::windowing_xcb::cursor >();
 
       pcursor = pcursorX11;
 
@@ -759,9 +759,9 @@ namespace windowing_xcb
       if(uResponseType == XCB_GE_GENERIC)
       {
 
-         auto pgeevent = (xcb_ge_event_t *) pgenericevent;
+         auto pgehappening = (xcb_ge_event_t *) pgenericevent;
 
-         return xcb_process_ge_event(pgeevent);
+         return xcb_process_ge_event(pgehappening);
 
       }
 
@@ -770,7 +770,7 @@ namespace windowing_xcb
       case XCB_LEAVE_NOTIFY:
       {
 
-         auto pevent = (xcb_leave_notify_event_t *) pgenericevent;
+         auto pevent = (xcb_leave_notify_happening_t *) pgenericevent;
 
          ::minimum(m_pointCursor.x);
 
@@ -1368,7 +1368,7 @@ namespace windowing_xcb
          case XCB_CONFIGURE_NOTIFY:
          {
 
-            auto pconfigure = (xcb_configure_notify_event_t *) pgenericevent;
+            auto pconfigure = (xcb_configure_notify_happening_t *) pgenericevent;
 
             ::int_point point(pconfigure->x, pconfigure->y);
 

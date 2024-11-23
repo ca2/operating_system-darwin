@@ -76,7 +76,7 @@ namespace node_gnome
 
       auto pnode = psystem->node();
 
-      __construct(m_pindicator);
+      __øconstruct(m_pindicator);
 
       m_pindicator->create(m_strId, strAppName, pathFolder, this);
 

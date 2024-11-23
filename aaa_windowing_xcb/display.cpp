@@ -170,7 +170,7 @@ namespace windowing_xcb
 //      if (!pwindow)
 //      {
 //
-//         __construct(pwindow);
+//         __øconstruct(pwindow);
 //
 //         pwindow->m_window = window;
 //
