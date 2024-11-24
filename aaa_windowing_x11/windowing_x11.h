@@ -54,8 +54,8 @@ CLASS_DECL_WINDOWING_X11 void x11_main();
 string x11_get_name(Display * display, Window w);
 
 
-bool x11_get_window_rect(Display * d, Window window, RECTANGLE_I32 * prectangle);
-bool x11_get_client_rect(Display * d, Window window, RECTANGLE_I32 * prectangle);
+bool x11_get_window_rect(Display * d, Window window, INT_RECTANGLE * prectangle);
+bool x11_get_client_rect(Display * d, Window window, INT_RECTANGLE * prectangle);
 
 //CLASS_DECL_WINDOWING_X11 ::Display * x11_get_display();
 
@@ -67,12 +67,12 @@ bool x11_get_client_rect(Display * d, Window window, RECTANGLE_I32 * prectangle)
 
 
 //CLASS_DECL_ACME int xinerama_get_monitor_count();
-//CLASS_DECL_ACME int xinerama_get_monitor_rect(index i, RECTANGLE_I32 * prectangle);
+//CLASS_DECL_ACME int xinerama_get_monitor_rect(index i, INT_RECTANGLE * prectangle);
 //CLASS_DECL_ACME int xinerama_get_screen_size(int& width, int& height);
 
 
-//int best_xinerama_monitor(::user::interaction * pinteraction, RECTANGLE_I32 * prectRet);
-//int best_xinerama_monitor(::user::interaction * pinteraction, const ::int_rectangle & rectangle, RECTANGLE_I32 * lprectRet);
+//int best_xinerama_monitor(::user::interaction * pinteraction, INT_RECTANGLE * prectRet);
+//int best_xinerama_monitor(::user::interaction * pinteraction, const ::int_rectangle & rectangle, INT_RECTANGLE * lprectRet);
 
 
 //#include "acme/prototype/prototype/matter.h"

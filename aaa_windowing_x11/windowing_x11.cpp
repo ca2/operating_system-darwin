@@ -165,7 +165,7 @@ Window g_windowX11Client = 0;
 
 
 
-int_bool _x11_get_cursor_pos(Display * d, POINT_I32 * ppointCursor);
+int_bool _x11_get_cursor_pos(Display * d, INT_POINT * ppointCursor);
 
 
 //extern ::pointer< ::mutex >g_pmutexX11Runnable;
@@ -186,7 +186,7 @@ int_bool _x11_get_cursor_pos(Display * d, POINT_I32 * ppointCursor);
 //CLASS_DECL_AURA int_bool mq_remove_window_from_all_queues(oswindow oswindow);
 //
 //
-//int_bool x11_get_cursor_pos(POINT_I32 * ppointCursor);
+//int_bool x11_get_cursor_pos(INT_POINT * ppointCursor);
 
 
 
@@ -557,7 +557,7 @@ namespace windowing_x11
 //   }
 
 
-//   bool display::point_is_window_origin(POINT_I32 pointHitTest, ::windowing::window *pwindowExclude, int iMargin)
+//   bool display::point_is_window_origin(INT_POINT pointHitTest, ::windowing::window *pwindowExclude, int iMargin)
 //   {
 //
 //      bool bIsOrigin = false;
@@ -2915,7 +2915,7 @@ else if(detail == 3)
 
 
 
-//int_bool window_rectangle(oswindow hwnd, RECTANGLE_I32 * prectangle)
+//int_bool window_rectangle(oswindow hwnd, INT_RECTANGLE * prectangle)
 //{
 //
 //   synchronous_lock synchronouslock(user_synchronization());
@@ -2937,7 +2937,7 @@ else if(detail == 3)
 
 
 //
-//int_bool ca2_GetClientRect(oswindow window, RECTANGLE_I32 * prectangle)
+//int_bool ca2_GetClientRect(oswindow window, INT_RECTANGLE * prectangle)
 //{
 //
 //   synchronous_lock synchronouslock(window->m_pimpl->m_puserinteraction->synchronization());
@@ -2954,7 +2954,7 @@ else if(detail == 3)
 
 
 //
-//int_bool GetCursorPos(POINT_I32 * ppointCursor)
+//int_bool GetCursorPos(INT_POINT * ppointCursor)
 //{
 //
 //   x11_sync([&]()
@@ -3468,7 +3468,7 @@ else if(detail == 3)
 //
 //
 //
-//int_bool _x11_get_cursor_pos(Display * d, POINT_I32 * ppointCursor);
+//int_bool _x11_get_cursor_pos(Display * d, INT_POINT * ppointCursor);
 //
 
 
@@ -3484,7 +3484,7 @@ else if(detail == 3)
 //CLASS_DECL_AURA int_bool mq_remove_window_from_all_queues(oswindow oswindow);
 //
 //
-//int_bool x11_get_cursor_pos(POINT_I32 * ppointCursor);
+//int_bool x11_get_cursor_pos(INT_POINT * ppointCursor);
 //
 
 //
@@ -3641,7 +3641,7 @@ const char *g_pszaNetWmState[] =
 //}
 
 
-bool x11_get_client_rect(Display * pdisplay, Window window, RECTANGLE_I32 *prectangle)
+bool x11_get_client_rect(Display * pdisplay, Window window, INT_RECTANGLE *prectangle)
 {
 
    synchronous_lock synchronouslock(user_synchronization());
@@ -3691,7 +3691,7 @@ string x11_get_name(Display * display, Window w)
 
 
 
-bool x11_get_window_rect(Display * d, Window window, RECTANGLE_I32 * prectangle)
+bool x11_get_window_rect(Display * d, Window window, INT_RECTANGLE * prectangle)
 {
 
    XWindowAttributes attrs;

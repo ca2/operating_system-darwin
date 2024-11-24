@@ -148,9 +148,9 @@ namespace windowing_x11
       void show_window(const ::e_display & edisplay, const ::e_activation & eactivation) override;
       //virtual iptr get_window_long_ptr(int nIndex);
       //virtual iptr set_window_long_ptr(int nIndex, iptr l);
-      virtual bool client_to_screen(POINT_I32 * ppoint) override;
+      virtual bool client_to_screen(INT_POINT * ppoint) override;
 
-      bool screen_to_client(POINT_I32 * ppoint) override;
+      bool screen_to_client(INT_POINT * ppoint) override;
 
 
       //virtual bool set_window_pos(class::zorder zorder, int x, int y, int cx, int cy,unsigned int nFlags);
@@ -189,8 +189,8 @@ namespace windowing_x11
       //virtual Atom get_window_long_atom(int nIndex);
       virtual void mapped_net_state_raw(bool add,  WINDOWING_X11_WINDOW_MEMBER int iScreen, Atom state1, Atom state2);
       //virtual void unmapped_net_state_raw( WINDOWING_X11_WINDOW_MEMBER ...);
-      virtual bool x11_get_window_rect(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
-      virtual bool x11_get_client_rect(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
+      virtual bool x11_get_window_rect(  WINDOWING_X11_WINDOW_MEMBER  INT_RECTANGLE * prectangle);
+      virtual bool x11_get_client_rect(  WINDOWING_X11_WINDOW_MEMBER  INT_RECTANGLE * prectangle);
       //virtual oswindow set_capture( WINDOWING_X11_WINDOW_MEMBER );
       //virtual int_bool release_capture();
       //virtual oswindow set_focus( WINDOWING_X11_WINDOW_MEMBER );
@@ -263,8 +263,8 @@ namespace windowing_x11
       virtual ::e_status post_ui_message(const MESSAGE & message);
       //virtual bool x11_process_event(osdisplay_data * pdisplaydata, XEvent * pevent, XGenericEventCookie *cookie);
       //virtual ::e_status set_window_position( WINDOWING_X11_WINDOW_MEMBER const ::zorder & zorder, int x, int y, int cx, int cy, unsigned int nFlags);
-      virtual ::e_status window_rectangle( WINDOWING_X11_WINDOW_MEMBER RECTANGLE_I32 * prectangle);
-      virtual ::e_status client_rectangle(  WINDOWING_X11_WINDOW_MEMBER  RECTANGLE_I32 * prectangle);
+      virtual ::e_status window_rectangle( WINDOWING_X11_WINDOW_MEMBER INT_RECTANGLE * prectangle);
+      virtual ::e_status client_rectangle(  WINDOWING_X11_WINDOW_MEMBER  INT_RECTANGLE * prectangle);
       //virtual ::e_status wm_full_screen( WINDOWING_X11_WINDOW_MEMBER const ::int_rectangle & rectangle);
 
       virtual ::e_status x11_store_name(const char * pszName);

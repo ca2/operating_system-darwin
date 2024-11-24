@@ -745,14 +745,14 @@ int_size thumbnail_dc::TabbedTextOut(int x, int y, const char * lpszString, int 
 
 // This one is too complicated to do character-by-character output positioning
 // All we really need to do here is mirror the current position
-int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
+int thumbnail_dc::DrawText(const char * lpszString, int nCount, INT_RECTANGLE * prectangle,
    unsigned int nFormat)
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);
    ASSERT(lpszString != nullptr);
    ASSERT(rectangle != nullptr);
-   ASSERT(fx_is_valid_address(rectangle, sizeof(RECTANGLE_I32)));
+   ASSERT(fx_is_valid_address(rectangle, sizeof(INT_RECTANGLE)));
    ASSERT(nCount == -1 ?
       AfxIsValidString(lpszString) :
       fx_is_valid_address(lpszString, nCount, false));
@@ -765,14 +765,14 @@ int thumbnail_dc::DrawText(const char * lpszString, int nCount, RECTANGLE_I32 * 
    return retVal;
 }
 
-int thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, int nCount, RECTANGLE_I32 * prectangle,
+int thumbnail_dc::DrawTextEx(__in_ecount(nCount) char * lpszString, int nCount, INT_RECTANGLE * prectangle,
    unsigned int nFormat, LPDRAWTEXTPARAMS lpDTParams)
 {
    ASSERT(get_handle2() != nullptr);
    ASSERT(get_os_data() != nullptr);
    ASSERT(lpszString != nullptr);
    ASSERT(rectangle != nullptr);
-   ASSERT(fx_is_valid_address(rectangle, sizeof(RECTANGLE_I32)));
+   ASSERT(fx_is_valid_address(rectangle, sizeof(INT_RECTANGLE)));
    ASSERT(nCount == -1 ?
       AfxIsValidString(lpszString) :
       fx_is_valid_address(lpszString, nCount, false));
@@ -961,7 +961,7 @@ void thumbnail_dc::ClipToPage()
 
 // these conversion functions can be used without an attached screen DC
 
-void thumbnail_dc::PrinterDPtoScreenDP(POINT_I32 * lpPoint) const
+void thumbnail_dc::PrinterDPtoScreenDP(INT_POINT * lpPoint) const
 {
    ASSERT(get_handle2() != nullptr);
 

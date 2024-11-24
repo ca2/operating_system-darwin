@@ -36,8 +36,8 @@ namespace node_gnome
       bool adjust_monitor( unsigned int dwTemperature, double dBrightness, double dwGamma) override;
 
 
-//      virtual ::e_status get_monitor_rectangle(::RECTANGLE_I32 * prectangle) override;
-//      virtual ::e_status get_workspace_rectangle(::RECTANGLE_I32 * prectangle) override;
+//      virtual ::e_status get_monitor_rectangle(::INT_RECTANGLE * prectangle) override;
+//      virtual ::e_status get_workspace_rectangle(::INT_RECTANGLE * prectangle) override;
 //
 //
 //      virtual ::e_status _get_monitor_rectangle();

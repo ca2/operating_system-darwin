@@ -140,7 +140,7 @@ namespace node_gtk
    }
 
 
-   void monitor::get_monitor_rectangle(::RECTANGLE_I32 & rectangle)
+   void monitor::get_monitor_rectangle(::INT_RECTANGLE & rectangle)
    {
 
       auto predicate = [this]() { _get_monitor_rectangle(); };
@@ -152,7 +152,7 @@ namespace node_gtk
    }
 
 
-   void monitor::get_workspace_rectangle(::RECTANGLE_I32 & rectangle)
+   void monitor::get_workspace_rectangle(::INT_RECTANGLE & rectangle)
    {
 
       auto predicate = [this]() { _get_workspace_rectangle(); };

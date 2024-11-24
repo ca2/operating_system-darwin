@@ -307,7 +307,7 @@ namespace windowing_x11
    }
 
 
-   bool display::get_monitor_rectangle(index iMonitor, RECTANGLE_I32 & rectangle)
+   bool display::get_monitor_rectangle(index iMonitor, INT_RECTANGLE & rectangle)
    {
 
       return ::windowing::display::get_monitor_rectangle(iMonitor, rectangle);
@@ -315,7 +315,7 @@ namespace windowing_x11
    }
 
 
-   bool display::get_workspace_rectangle(index iMonitor, RECTANGLE_I32 & rectangle)
+   bool display::get_workspace_rectangle(index iMonitor, INT_RECTANGLE & rectangle)
    {
 
       return ::windowing::display::get_workspace_rectangle(iMonitor, rectangle);
@@ -603,7 +603,7 @@ namespace windowing_x11
    }
 
 
-   bool display::get_cursor_position(POINT_I32 *ppointCursor)
+   bool display::get_cursor_position(INT_POINT *ppointCursor)
    {
 
       Window root_return;
@@ -792,7 +792,7 @@ namespace windowing_x11
    }
 
 
-   bool display::point_is_window_origin(POINT_I32 pointHitTest, ::windowing::window *pwindowExclude, int iMargin)
+   bool display::point_is_window_origin(INT_POINT pointHitTest, ::windowing::window *pwindowExclude, int iMargin)
    {
 
       bool bIsOrigin = false;
