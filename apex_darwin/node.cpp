@@ -51,7 +51,7 @@ namespace apex_darwin
 //
 //         auto psystem = acmesystem();
 //
-//         auto pnode = psystem->node()->m_papexnode;
+//         auto pnode = psystem->node();
 //
 //         auto papp = papplication;
 //
