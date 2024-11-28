@@ -18,11 +18,6 @@
 		9AB15E9729A8848C00DFDF90 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6929928A770042465F /* _factory.cpp */; };
 		9AB15E9929A8848C00DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E4729928A770042465F /* node.cpp */; };
 		9AB15E9A29A8848C00DFDF90 /* app_launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A5FB483299ED2C000094E43 /* app_launcher.cpp */; };
-		9AB15E9C29A8848C00DFDF90 /* libacme_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB929928B780042465F /* libacme_darwin.dylib */; };
-		9AB15E9D29A8848C00DFDF90 /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865E3B29928A5C0042465F /* libapex_posix.dylib */; };
-		9AB15E9E29A8848C00DFDF90 /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECE29928E720042465F /* libacme_posix.dylib */; };
-		9AB15E9F29A8848C00DFDF90 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC529928E430042465F /* libapex.dylib */; };
-		9AB15EA029A8848C00DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC329928E3C0042465F /* libacme.dylib */; };
 		9AC9818A2A71B53F00B1BCF3 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E6929928A770042465F /* _factory.cpp */; };
 		9AC9818C2A71B53F00B1BCF3 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E4729928A770042465F /* node.cpp */; };
 		9AC9818D2A71B53F00B1BCF3 /* app_launcher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A5FB483299ED2C000094E43 /* app_launcher.cpp */; };
@@ -141,18 +136,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9AB15E9B29A8848C00DFDF90 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AB15E9C29A8848C00DFDF90 /* libacme_darwin.dylib in Frameworks */,
-				9AB15E9D29A8848C00DFDF90 /* libapex_posix.dylib in Frameworks */,
-				9AB15E9E29A8848C00DFDF90 /* libacme_posix.dylib in Frameworks */,
-				9AB15E9F29A8848C00DFDF90 /* libapex.dylib in Frameworks */,
-				9AB15EA029A8848C00DFDF90 /* libacme.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9AFD808D297B57C400BAD9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,7 +256,6 @@
 			buildPhases = (
 				9AB15E9529A8848C00DFDF90 /* Headers */,
 				9AB15E9629A8848C00DFDF90 /* Sources */,
-				9AB15E9B29A8848C00DFDF90 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,7 +312,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					9AFD808E297B57C400BAD9DD = {
 						CreatedOnToolsVersion = 14.2;

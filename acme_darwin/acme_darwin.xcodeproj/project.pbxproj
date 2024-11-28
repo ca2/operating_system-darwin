@@ -21,7 +21,6 @@
 		9AB15D2C29A8811400DFDF90 /* dbus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80C9297B589800BAD9DD /* dbus.cpp */; };
 		9AB15D2E29A8811400DFDF90 /* framework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CA297B589800BAD9DD /* framework.cpp */; };
 		9AB15D3229A8811400DFDF90 /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80CE297B589800BAD9DD /* node.cpp */; };
-		9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A8EA539298079C200B26CB9 /* libacme.dylib */; };
 		9ABBB6F42AEB65CB007611C5 /* libdarwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9ABBB6DF2AEB6442007611C5 /* libdarwin.dylib */; };
 		9AFD8176297B58F900BAD9DD /* _.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80DE297B589800BAD9DD /* _.cpp */; };
 		9AFD8177297B58F900BAD9DD /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AFD80EF297B589800BAD9DD /* _factory.cpp */; };
@@ -162,14 +161,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9AB15D3329A8811400DFDF90 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9AB15D3429A8811400DFDF90 /* libacme.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9AFD807D297B578700BAD9DD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -297,7 +288,6 @@
 			buildPhases = (
 				9AB15D2529A8811400DFDF90 /* Headers */,
 				9AB15D2629A8811400DFDF90 /* Sources */,
-				9AB15D3329A8811400DFDF90 /* Frameworks */,
 			);
 			buildRules = (
 			);
