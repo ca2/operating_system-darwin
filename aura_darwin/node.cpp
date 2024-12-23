@@ -35,7 +35,7 @@ namespace aura_darwin
 //
 //#endif
 
-      m_pAuraPosix = this;
+      //m_pAuraPosix = this;
 
    }
 
