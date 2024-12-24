@@ -136,8 +136,8 @@
 		9AB15B8629A871CA00DFDF90 /* _factory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
 		9AB15B8729A871CA00DFDF90 /* _x11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _x11.h; sourceTree = "<group>"; };
 		9AB15B8829A871CA00DFDF90 /* _.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
-		9AB15BBA29A8725B00DFDF90 /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../operating_system-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = "<group>"; };
-		9AB15BC829A8727C00DFDF90 /* apex_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_darwin.xcodeproj; path = ../apex_darwin/apex_darwin.xcodeproj; sourceTree = "<group>"; };
+		9AB15BBA29A8725B00DFDF90 /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../operating_system-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		9AB15BC829A8727C00DFDF90 /* apex_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_darwin.xcodeproj; path = ../apex_darwin/apex_darwin.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AB15C8129A87CAC00DFDF90 /* libios_aura_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_aura_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB1605729A89BF600DFDF90 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB1606E29A89D2D00DFDF90 /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };

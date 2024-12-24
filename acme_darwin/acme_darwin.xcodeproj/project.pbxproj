@@ -130,14 +130,14 @@
 /* Begin PBXFileReference section */
 		9A754F882B21266800FFB669 /* _library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _library.h; sourceTree = "<group>"; };
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = "<group>"; };
+		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9A9E55EC29F6D742001559E9 /* darwin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = darwin.hpp; sourceTree = "<group>"; };
 		9AA3F6AE2A945E38004283CA /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
 		9AA3F6B02A945E38004283CA /* file_context.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = file_context.h; sourceTree = "<group>"; };
 		9AB15D3929A8811400DFDF90 /* libios_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libios_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AB5228D2A4C07DB001EB2F0 /* _____release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____release.xcconfig"; sourceTree = "<group>"; };
 		9AB5228F2A4C07DB001EB2F0 /* _____debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "_____debug.xcconfig"; sourceTree = "<group>"; };
-		9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = darwin.xcodeproj; path = ../darwin/darwin.xcodeproj; sourceTree = "<group>"; };
+		9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = darwin.xcodeproj; path = ../darwin/darwin.xcodeproj; sourceTree = SOURCE_ROOT; };
 		9AFD807F297B578700BAD9DD /* libacme_darwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libacme_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80BA297B584000BAD9DD /* libstatic_acme_darwin.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libstatic_acme_darwin.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFD80C3297B589800BAD9DD /* directory_system.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = directory_system.h; sourceTree = "<group>"; };
