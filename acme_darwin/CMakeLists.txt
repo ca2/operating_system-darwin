@@ -95,26 +95,25 @@ if (MSVC)
    add_dependencies(${PROJECT_NAME} draw2d_gdiplus)
 
 
-elseif (${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
+elseif (${FREEBSD})
 
 
    target_compile_features(${PROJECT_NAME} PRIVATE cxx_std_20)
-   #set_target_properties(${PROJECT_NAME} PROPERTIES CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
    target_compile_features(static_${PROJECT_NAME} PRIVATE cxx_std_20)
 
 
-   if (NOT ${DONT_USE_PKG_CONFIG})
-      pkg_check_modules(PKGCONFIG dbus-glib-1)
-   endif ()
+   #if (NOT ${DONT_USE_PKG_CONFIG})
+      #pkg_check_modules(${PROJECT_NAME}_PKGCONFIG dbus-glib-1)
+   #endif ()
    target_compile_options(${PROJECT_NAME} PRIVATE -fpermissive)
    target_compile_options(static_${PROJECT_NAME} PRIVATE -fpermissive)
    target_compile_definitions(static_${PROJECT_NAME} PRIVATE CUBE)
 
 
-   target_compile_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
-   target_compile_options(static_${PROJECT_NAME} PRIVATE ${PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
-   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${PKGCONFIG_LIBRARIES})
-   target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${PKGCONFIG_LIBRARIES})
+   target_compile_options(${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
+   target_compile_options(static_${PROJECT_NAME} PRIVATE ${${PROJECT_NAME}_PKGCONFIG_CFLAGS} ${GLOBAL_EXTRA_COMPILER_FLAGS})
+   target_link_libraries(${PROJECT_NAME} PRIVATE ${library_references} ${${PROJECT_NAME}_PKGCONFIG_LIBRARIES})
+   target_link_libraries(static_${PROJECT_NAME} PRIVATE ${static_library_references} ${${PROJECT_NAME}_PKGCONFIG_LIBRARIES})
    target_link_options(${PROJECT_NAME} PRIVATE ${PKGCONFIG_LDFLAGS} ${GLOBAL_EXTRA_LINKER_FLAGS} -Wl${GLOBAL_EXTRA_LINK_FLAGS},-z,defs)
    # target_link_options(static_${PROJECT_NAME} PRIVATE --whole-archive)
 
