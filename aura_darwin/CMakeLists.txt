@@ -51,8 +51,8 @@ list(APPEND library_references
 #      list(APPEND library_source
 #      x11/display_lock.cpp
 #      x11/display_lock.h
-#     x11/startup-notification.cpp
-#     x11/startup-notification.h
+#     x11/startupxxx-notification.cpp
+#     x11/startupxxx-notification.h
 #      x11/xim_keyboard.cpp
 #      x11/xim_keyboard.h
 #         )
@@ -107,27 +107,30 @@ if (MSVC)
 elseif(${LINUX} OR ${FREEBSD} OR ${OPENBSD} OR ${NETBSD})
 
 
-   list(APPEND extra_pkg_modules
-      libstartup-notification-1.0
-      )
+   if(${WITH_XCB} OR ${WITH_X11})
+      list(APPEND extra_pkg_modules
+         #libstartupxxx-notification-1.0
+         )
 
-if(WITH_XCB)
-
-
-   list(APPEND extra_pkg_modules
-               x11 x11-xcb
-      )
+   if(WITH_XCB)
 
 
-else()
+      list(APPEND extra_pkg_modules
+                  x11 x11-xcb
+         )
 
 
-   list(APPEND extra_pkg_modules
-               x11
-      )
+   else()
 
 
-endif()
+      list(APPEND extra_pkg_modules
+                  x11
+         )
+
+
+   endif()
+
+   endif()
 
 
    if(NOT DONT_USE_PKG_CONFIG)

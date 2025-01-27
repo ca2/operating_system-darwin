@@ -6,11 +6,13 @@
 #include "acme/filesystem/filesystem/file_system.h"
 #include "acme/platform/system.h"
 #include "apex/platform/application.h"
+#if !defined(HAS_GTK3) && !defined(HAS_GTK4) && !defined(HAS_KDE5) && !defined(HAS_KDE6)
 #ifdef WITH_X11
 #include <X11/Xlib.h>
 #endif
 #ifdef WITH_XCB
 #include <X11/Xlib-xcb.h>
+#endif
 #endif
 
 
