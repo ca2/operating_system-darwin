@@ -61,7 +61,7 @@ namespace windowing_xcb
 #ifdef _DEBUG
 
 
-   huge_integer display::get_ref_count()
+   long long display::get_ref_count()
    {
 
       return m_countReference;
@@ -69,7 +69,7 @@ namespace windowing_xcb
    }
 
 
-   huge_integer display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   long long display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -77,7 +77,7 @@ namespace windowing_xcb
    }
 
 
-   huge_integer display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   long long display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -85,7 +85,7 @@ namespace windowing_xcb
    }
 
 
-   huge_integer display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+   long long display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
    {
 
       return ::windowing::display::release(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);

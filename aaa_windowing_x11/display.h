@@ -59,10 +59,10 @@ namespace windowing_x11
 #ifdef _DEBUG
 
 
-      virtual huge_integer get_ref_count();
-      virtual huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
-      virtual huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
-      virtual huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual long long get_ref_count();
+      virtual long long increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual long long decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
+      virtual long long release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS) override;
 
 
 #endif

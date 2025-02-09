@@ -70,9 +70,9 @@ public:
    ~simple_ui_display();
 
 
-   virtual huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-   virtual huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-   virtual huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual long long increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual long long decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+   virtual long long release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
 
    void common_construct();

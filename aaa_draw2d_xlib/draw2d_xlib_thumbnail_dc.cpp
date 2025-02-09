@@ -39,9 +39,9 @@ __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
    long numerator = (long)num1 * (long)num2;   // no overflow
    long denominator = (long)den1 * (long)den2; // no overflow
 #else
-   huge_integer numerator = (huge_integer)num1 * (huge_integer)num2;   // no overflow
-   huge_integer denominator = (huge_integer)den1 * (huge_integer)den2; // no overflow
-   huge_integer temp;
+   long long numerator = (long long)num1 * (long long)num2;   // no overflow
+   long long denominator = (long long)den1 * (long long)den2; // no overflow
+   long long temp;
 #endif
 
    temp = numerator < 0 ? -numerator : numerator;
@@ -66,7 +66,7 @@ __STATIC long CLASS_DECL_DRAW2D_XLIB _AfxMultMultDivDiv(
       numerator = -numerator;
    }
 
-   // get the product of factor * numerator representable in a long/huge_integer
+   // get the product of factor * numerator representable in a long/long long
    // while distributing loss of presision across all three numerator terms
    // Adjust denominator as well
    //

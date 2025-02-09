@@ -65,7 +65,7 @@ simple_ui_display::simple_ui_display(const string & strMessageParam, const strin
 }
 
 
-huge_integer simple_ui_display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+long long simple_ui_display::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
 {
 
    return xcb_hook::increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -73,7 +73,7 @@ huge_integer simple_ui_display::increment_reference_count(OBJECT_REFERENCE_COUNT
 }
 
 
-huge_integer simple_ui_display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+long long simple_ui_display::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
 {
 
    return xcb_hook::decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
@@ -81,7 +81,7 @@ huge_integer simple_ui_display::decrement_reference_count(OBJECT_REFERENCE_COUNT
 }
 
 
-huge_integer simple_ui_display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
+long long simple_ui_display::release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS_DEF)
 {
 
    return xcb_hook::release(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);

@@ -338,7 +338,7 @@ namespace windowing_x11
 
       display_lock displayLock(x11_window()->x11_display()->Display());
 
-      //XImage * pximage = (XImage *)pimage->payload("pximage").huge_integer();
+      //XImage * pximage = (XImage *)pimage->payload("pximage").long_long;
 
       XImage * pximage;
 
@@ -374,7 +374,7 @@ namespace windowing_x11
                sizeof(color32_t) * 8,
                pimage->scan_size());
 
-         //pimage->payload("pximage") = (::huge_integer) pximage;
+         //pimage->payload("pximage") = (long long) pximage;
 
       }
 

@@ -75,7 +75,7 @@
 ////   Atom net_wm_state_atom(bool bCreate);
 //
 //
-////   inline huge_integer get_ref_count()
+////   inline long long get_ref_count()
 ////   {
 ////
 ////      return m_countReference;
@@ -83,7 +83,7 @@
 ////   }
 ////
 ////
-////   inline huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+////   inline long long increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 ////   {
 ////
 ////#ifdef WINDOWS
@@ -103,7 +103,7 @@
 ////   }
 ////
 ////
-////   inline huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+////   inline long long decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 ////   {
 ////
 ////#ifdef WINDOWS
@@ -123,10 +123,10 @@
 ////   }
 ////
 ////
-////   inline huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
+////   inline long long release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS)
 ////   {
 ////
-////      huge_integer i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
+////      long long i = decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_ARGS);
 ////
 ////      if (i == 0)
 ////      {

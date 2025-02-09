@@ -26,8 +26,8 @@ namespace draw2d_xlib
       int                 m_iType;
       //bool                    m_bForeColor;
       //bool                    m_bBackColor;
-      //huge_natural                m_uiForeColor;
-      //huge_natural                m_uiBackColor;
+      //unsigned long long                m_uiForeColor;
+      //unsigned long long                m_uiBackColor;
       //color32_t                m_colorTextColor;
       //xxx ::Gdiplus::GraphicsPath *     m_ppath;
       //xxx ::Gdiplus::GraphicsPath *     m_ppathPaint;

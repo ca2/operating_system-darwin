@@ -47,10 +47,10 @@ namespace windowing_xcb
 #ifdef _DEBUG
 
 
-      virtual huge_integer get_ref_count();
-      virtual huge_integer increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual huge_integer decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
-      virtual huge_integer release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual long long get_ref_count();
+      virtual long long increment_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual long long decrement_reference_count(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
+      virtual long long release(OBJECT_REFERENCE_COUNT_DEBUG_PARAMETERS);
 
 
 #endif

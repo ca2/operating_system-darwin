@@ -340,7 +340,7 @@ namespace windowing_xcb
 
       //display_lock displayLock(xcb_window()->xcb_display());
 
-      //xcb_image_t * pximage = (xcb_image_t *)pimage->payload("pximage").huge_integer();
+      //xcb_image_t * pximage = (xcb_image_t *)pimage->payload("pximage").long_long;
 
 //      xcb_image_t * pximage;
 //
@@ -380,7 +380,7 @@ namespace windowing_xcb
 ////               sizeof(color32_t) * 8,
 ////               pimage->scan_size());
 ////
-//         //pimage->payload("pximage") = (::huge_integer) pximage;
+//         //pimage->payload("pximage") = (long long) pximage;
 //
 //      }
 

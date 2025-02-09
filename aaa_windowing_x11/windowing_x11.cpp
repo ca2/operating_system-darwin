@@ -1595,9 +1595,9 @@ else if(detail == 3)
                if(emessage != e_message_null)
                {
 
-                  ::huge_integer iWparam = 'a';
+                  long long iWparam = 'a';
 
-                  ::huge_integer iLparam = XK_a;
+                  long long iLparam = XK_a;
 
                   if (emessage == e_message_key_down || emessage == e_message_key_up)
                   {
@@ -3026,7 +3026,7 @@ else if(detail == 3)
    }
 //
 //
-//huge_integer oswindow_id(oswindow w)
+//long long oswindow_id(oswindow w)
 //{
 //
 //   return w->window();
