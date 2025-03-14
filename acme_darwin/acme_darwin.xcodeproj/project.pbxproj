@@ -130,6 +130,7 @@
 /* Begin PBXFileReference section */
 		9A754F882B21266800FFB669 /* _library.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _library.h; sourceTree = "<group>"; };
 		9A8EA539298079C200B26CB9 /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A9979482D844F1600A1FC11 /* File.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = File.txt; sourceTree = "<group>"; };
 		9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = acme_posix.xcodeproj; path = "../../operating_system-posix/acme_posix/acme_posix.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		9A9E55EC29F6D742001559E9 /* darwin.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = darwin.hpp; sourceTree = "<group>"; };
 		9AA3F6AE2A945E38004283CA /* file_context.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = file_context.cpp; sourceTree = "<group>"; };
@@ -205,6 +206,7 @@
 		9AFD8076297B578700BAD9DD = {
 			isa = PBXGroup;
 			children = (
+				9A9979482D844F1600A1FC11 /* File.txt */,
 				9ABBB6D92AEB6441007611C5 /* darwin.xcodeproj */,
 				9A9DCB6C29B8240E00D1255B /* acme_posix.xcodeproj */,
 				9AFD80BE297B589800BAD9DD /* acme_darwin */,
