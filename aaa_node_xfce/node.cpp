@@ -647,7 +647,7 @@ namespace node_xfce
 //   }
 
 
-//   void node::on_subject(::promise::topic * ptopic, ::context * pcontext)
+//   void node::on_subject(::promise::topic * ptopic, ::handler_context * pcontext)
 //   {
 //
 //      if(ptopic->m_atom == ::id_os_user_theme)

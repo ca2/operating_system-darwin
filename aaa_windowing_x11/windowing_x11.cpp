@@ -1625,7 +1625,7 @@ else if(detail == 3)
 
                   }
 
-                  //::topic::context context;
+                  //::topic::handler_context context;
 
                   for (auto & p : *m_pobjectaExtendedEventListener)
                   {
@@ -1640,7 +1640,7 @@ else if(detail == 3)
 //               {
 ////                  auto ptopic = psystem->topic(eid);
 //
-//  //                ::topic::context context;
+//  //                ::topic::handler_context context;
 //
 //                  int iKey = XK_A;
 //
@@ -1662,7 +1662,7 @@ else if(detail == 3)
 ////
 ////                  ptopic->payload("space") = is_space_key(prawevent);
 //
-//                  //::topic::context context;
+//                  //::topic::handler_context context;
 //
 ////                  for(auto & p : *m_pobjectaExtendedEventListener)
 ////                  {

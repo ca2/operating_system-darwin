@@ -65,7 +65,7 @@ namespace node_xfce
 
       virtual void node_post_quit() override;
 
-      //virtual void on_subject(::promise::topic * ptopic, ::context * pcontext) override;
+      //virtual void on_subject(::promise::topic * ptopic, ::handler_context * pcontext) override;
 
       //virtual void _on_change_os_user_theme(string strTheme);
 

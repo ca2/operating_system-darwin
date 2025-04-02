@@ -37,7 +37,7 @@ namespace node_gnome
 
       //int os_launch_uri(const ::string & strUri, char * pszError = nullptr, int iBufferSize = 0) override;
 
-      void handle(::topic * ptopic, ::context * pcontext) override;
+      void handle(::topic * ptopic, ::handler_context * pcontext) override;
 
 
    };
