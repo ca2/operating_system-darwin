@@ -434,12 +434,6 @@ namespace aura_darwin
 
    //}
 
-   //void node::delete_this()
-   //{
-
-   //   ::aura::node::delete_this();
-
-   //}
 
 
 //#if defined(WITH_X11) || defined(WITH_XCB)

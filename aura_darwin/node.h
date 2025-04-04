@@ -78,9 +78,7 @@ namespace aura_darwin
       //string get_environment_variable(const ::string & pszEnvironmentVariable) override;
       //string expand_environment_variables(const ::string & str) override;
 
-      //void delete_this() override;
-
-
+  
 //#if defined(WITH_X11) || defined(WITH_XCB)
 //
 //      virtual ::e_status _allocate_Display_and_connection();
