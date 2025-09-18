@@ -86,7 +86,7 @@ namespace aura_posix
 
       //estatus =
       //
-      __øconstruct(m_pcontextimage);
+      øconstruct(m_pcontextimage);
 
 //         if(!estatus)
 //         {
@@ -536,22 +536,22 @@ namespace aura_posix
 //
 
 
-   shell::enum_folder shell::get_folder_type(::particle * pparticle, const ::string & str)
+   //shell::enum_folder shell::get_folder_type(::particle * pparticle, const ::string & str)
+   //{
+
+     // return get_folder_type(pparticle, utf8_to_unicode(str));
+
+   //}
+
+
+   shell::enum_folder shell::get_folder_type(::particle * pparticle, const ::scoped_string & scopedstrPath)
    {
 
-      return get_folder_type(pparticle, utf8_to_unicode(str));
+      //string strPath;
 
-   }
+      ///unicode_to_utf8(strPath, wstrPath);
 
-
-   shell::enum_folder shell::get_folder_type(::particle * pparticle, const ::wstring & wstrPath)
-   {
-
-      string strPath;
-
-      unicode_to_utf8(strPath, wstrPath);
-
-      if (directory_system()->is(strPath))
+      if (directory_system()->is(scopedstrPath))
       {
 
          return e_folder_file_system;
@@ -784,7 +784,7 @@ namespace aura_posix
 
             synchronous_lock synchronouslock(this->synchronization());
 
-            if (m_imagemap.lookup(getfileimage.m_imagekey, getfileimage.m_iImage))
+            if (m_imagemap.find(getfileimage.m_imagekey, getfileimage.m_iImage))
             {
 
                return getfileimage.m_iImage;

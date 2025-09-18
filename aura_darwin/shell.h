@@ -38,8 +38,8 @@ namespace aura_posix
       bool _get_file_image(_get_file_image_ & getfileimage) override;
 
 
-      ::user::shell::enum_folder get_folder_type(::particle * pparticle, const ::wstring & lpcszPath) override;
-      ::user::shell::enum_folder get_folder_type(::particle * pparticle, const ::string & lpcszPath) override;
+      //::user::shell::enum_folder get_folder_type(::particle * pparticle, const ::wstring & lpcszPath) override;
+      ::user::shell::enum_folder get_folder_type(::particle * pparticle, const ::scoped_string & scopedstrPath) override;
 
       int add_icon_path(::file::path path, color32_t crBk);
 
