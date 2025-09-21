@@ -63,8 +63,8 @@ namespace node_xfce
 
       ::user::interaction::install_message_routing(pchannel);
 
-      MESSAGE_LINK(MessageNotifyIcon, pchannel, this, &notify_icon::_001OnNotifyIconMessage);
-      MESSAGE_LINK(MESSAGE_DESTROY, pchannel, this, &notify_icon::_001OnDestroy);
+      USER_MESSAGE_LINK(MessageNotifyIcon, pchannel, this, &notify_icon::_001OnNotifyIconMessage);
+      USER_MESSAGE_LINK(MESSAGE_DESTROY, pchannel, this, &notify_icon::_001OnDestroy);
 
 #endif
 
@@ -175,7 +175,7 @@ namespace node_xfce
                                          {
 
 
-                                            auto estatus = __øconstruct(m_pindicator);
+                                            auto estatus = øconstruct(m_pindicator);
 
                                             m_pindicator->create(m_strId, "notify_icon_128", pathFolder, this);
 

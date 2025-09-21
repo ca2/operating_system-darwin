@@ -65,7 +65,7 @@ namespace windowing_x11
    ::windowing::window *windowing::new_window(::user::interaction_impl *pimpl)
    {
 
-      ::pointer<::windowing_x11::window>pwindow = pimpl->__øcreate<::windowing::window>();
+      ::pointer<::windowing_x11::window>pwindow = pimpl->øcreate<::windowing::window>();
 
       if (!pwindow)
       {
@@ -115,12 +115,12 @@ namespace windowing_x11
    void windowing::_initialize_windowing()
    {
 
-   auto pdisplay = __øcreate < ::windowing::display >();
+   auto pdisplay = øcreate < ::windowing::display >();
 
 //      if(!pdisplay)
 //      {
 //
-//         output_debug_string("\nFailed to __øcreate < ::windowing::display > at windowing_x11::windowing::initialize");
+//         output_debug_string("\nFailed to øcreate < ::windowing::display > at windowing_x11::windowing::initialize");
 //
 //         return ::error_no_factory;
 //
@@ -319,7 +319,7 @@ _libsn_start_context();
          //auto estatus =
          //
          //
-         __construct_new(m_pcursormanager);
+         øconstruct_new(m_pcursormanager);
 
 //         if (!estatus)
 //         {
@@ -411,7 +411,7 @@ _libsn_start_context();
 
       auto cursor = XCreateFontCursor(m_pdisplay->Display(), iCursor);
 
-      auto pcursorX11 = __øcreate < ::windowing_x11::cursor >();
+      auto pcursorX11 = øcreate < ::windowing_x11::cursor >();
 
       pcursor = pcursorX11;
 

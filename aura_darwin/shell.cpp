@@ -874,7 +874,7 @@ namespace aura_posix
 //         if (!m_pshell)
 //         {
 //
-//            estatus = __øconstruct(m_pshell, __new(::freebsd::shell));
+//            estatus = øconstruct(m_pshell, __new(::freebsd::shell));
 //
 //            if (!estatus)
 //            {

@@ -144,7 +144,7 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 //        }
        
        //printf("%s (%s) at ", host, inet_ntoa(sin->sin_addr));
-//       auto paddress = __create_new<::networking_bsd::address>();
+//       auto paddress = øcreate_new<::networking_bsd::address>();
 //
 //       paddress->set_address(*sin->sin_addr);
 //
@@ -183,7 +183,7 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
 //   //                result |= IFACE_IPv6;
 //   //        }
 //
-//         auto paddress = __create_new<::networking_bsd::address>();
+//         auto paddress = øcreate_new<::networking_bsd::address>();
 //
 //         paddress->set_address(*curr->ifa_addr);
 //

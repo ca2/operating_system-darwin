@@ -60,7 +60,7 @@ namespace apex_darwin
 //         if(path.has_character() && !file_system()->exists(path))
 //         {
 //
-//            auto pfile = papp->__create_new< ::freedesktop::desktop_file >();
+//            auto pfile = papp->øcreate_new< ::freedesktop::desktop_file >();
 //
 //            pfile->set_app_id(papp->m_strAppId);
 //
