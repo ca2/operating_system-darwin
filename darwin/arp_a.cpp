@@ -1,5 +1,5 @@
 // Created by Camilo on 2023-10-27 00:30 <3ThomasBorregaardSorensen!!
-#include "configuration/config.h"
+#include "configuration/common/config.h"
 #include <stdio.h>
 #include <stdlib.h>
 
