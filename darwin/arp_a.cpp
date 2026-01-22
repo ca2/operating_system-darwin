@@ -1,4 +1,65 @@
 // Created by Camilo on 2023-10-27 00:30 <3ThomasBorregaardSorensen!!
+
+#if defined(__APPLE__)
+
+#include <TargetConditionals.h>
+
+#if TARGET_OS_IOS
+#define CA2_IOS_RESTRICTED_NET 1
+#else
+#define CA2_IOS_RESTRICTED_NET 0
+#endif
+
+#else
+
+#define CA2_IOS_RESTRICTED_NET 0
+
+#endif
+
+
+#if CA2_IOS_RESTRICTED_NET
+
+
+#include <ifaddrs.h>
+#include <net/if.h>
+#include <netinet/in.h>
+#include <arpa/inet.h>
+
+const char * arp_a(
+    void * p,
+    void(*callback)(void * p, unsigned int uIp, const char * status))
+{
+    struct ifaddrs *ifaddr = nullptr;
+
+    if (getifaddrs(&ifaddr) != 0)
+        return "getifaddrs failed";
+
+    for (struct ifaddrs *ifa = ifaddr; ifa; ifa = ifa->ifa_next)
+    {
+        if (!ifa->ifa_addr)
+            continue;
+
+        if (ifa->ifa_addr->sa_family != AF_INET)
+            continue;
+
+        if (!(ifa->ifa_flags & IFF_UP))
+            continue;
+
+        auto *sin = (struct sockaddr_in *)ifa->ifa_addr;
+
+        unsigned int ip = sin->sin_addr.s_addr;
+
+        // iOS cannot expose ARP / MAC info
+        callback(p, ip, "local-interface (ARP unavailable on iOS)");
+    }
+
+    freeifaddrs(ifaddr);
+    return nullptr;
+}
+
+
+#else
+
 #include "configuration/common/config.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -209,6 +270,9 @@ const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const c
                         return nullptr;
 
    }
+
+
+#endif
 
 
 #endif
