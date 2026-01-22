@@ -876,7 +876,7 @@ namespace windowing_xcb
                            (pinteraction->m_pointMouseMoveSkip.y - pinteraction->m_pointMouseMove.y));
 
                         if (!pinteraction->m_timeMouseMoveSkip.timeout(pinteraction->m_timeMouseMovePeriod)
-                            && sizeDistance.cx() * sizeDistance.cx() + sizeDistance.cy() * sizeDistance.cy() <
+                            && sizeDistance.cx * sizeDistance.cx + sizeDistance.cy * sizeDistance.cy <
                                pinteraction->m_iMouseMoveSkipSquareDistance)
                         {
 
@@ -1606,7 +1606,7 @@ namespace windowing_xcb
                information("XCB_BUTTON_PRESS %d,%d window %d,%d %d,%d",
                                      pbutton->root_x, pbutton->root_y,
                                      origin.x, origin.y,
-                                     origin.x + size.cx(), origin.y + size.cy());
+                                     origin.x + size.cx, origin.y + size.cy);
 
             }
             else if (pbutton->response_type == XCB_BUTTON_RELEASE)
@@ -1642,7 +1642,7 @@ namespace windowing_xcb
                information("XCB_BUTTON_RELEASE %d,%d window %d,%d %d,%d",
                                      pbutton->root_x, pbutton->root_y,
                                      origin.x, origin.y,
-                                     origin.x + size.cx(), origin.y + size.cy());
+                                     origin.x + size.cx, origin.y + size.cy);
 
             }
             else

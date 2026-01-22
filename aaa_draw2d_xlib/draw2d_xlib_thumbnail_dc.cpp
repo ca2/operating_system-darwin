@@ -98,7 +98,7 @@ thumbnail_dc::thumbnail_dc()
 {
    // Initial scale factor and top-left offset
    m_nScaleNum = m_nScaleDen = 1;
-   m_sizeTopLeft.cx() = m_sizeTopLeft.cy() = 8;
+   m_sizeTopLeft.cx = m_sizeTopLeft.cy = 8;
    m_hFont = m_hPrinterFont = nullptr;
 }
 
@@ -334,16 +334,16 @@ void thumbnail_dc::MirrorFont()
    VERIFY(::Get_wiewportExtEx(get_os_data(), &sizeVpExt));
 
    // Only interested in Extent Magnitudes, not direction
-   if (sizeWinExt.cy() < 0)
-      sizeWinExt.cy() = -sizeWinExt.cy();
-   if (sizeVpExt.cy() < 0)
-      sizeVpExt.cy() = -sizeVpExt.cy();
+   if (sizeWinExt.cy < 0)
+      sizeWinExt.cy = -sizeWinExt.cy;
+   if (sizeVpExt.cy < 0)
+      sizeVpExt.cy = -sizeVpExt.cy;
 
    // Convert to screen device coordinates to eliminate rounding
    // errors as a source of SmallFont aliasing
 
-   cyDesired = MulDiv(cyDesired, sizeVpExt.cy(), sizeWinExt.cy());
-   cyActual = MulDiv(cyActual, sizeVpExt.cy(), sizeWinExt.cy());
+   cyDesired = MulDiv(cyDesired, sizeVpExt.cy, sizeWinExt.cy);
+   cyActual = MulDiv(cyActual, sizeVpExt.cy, sizeWinExt.cy);
 
    ASSERT(cyDesired >= 0 && cyActual >= 0);
 
@@ -549,7 +549,7 @@ int_size thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned i
          int_size sizeExtent;
          ::GetTextExtentPoint32(get_handle2(), lpszStartRun, nRunLength,
             &sizeExtent);
-         int nNewPos = nStartRunPos + sizeExtent.cx()
+         int nNewPos = nStartRunPos + sizeExtent.cx
             - tmAttrib.tmOverhang;
 
          // now, if this is a Tab (!bSpace), compute the next tab stop
@@ -617,7 +617,7 @@ int_size thumbnail_dc::ComputeDeltas(int& x, const char * lpszString, unsigned i
    }
 
    nAlignment &= TA_CENTER|TA_RIGHT;
-   sizeExtent.cx() = nCurrentPos - x;
+   sizeExtent.cx = nCurrentPos - x;
    nRightFixup = 0;
 
    if (nAlignment == TA_LEFT)
@@ -872,40 +872,40 @@ void thumbnail_dc::MirrorMappingMode(int_bool bCompute)
       VERIFY(::Get_wiewportExtEx(get_handle2(), &m_sizeVpExt));
       VERIFY(::GetWindowExtEx(get_handle2(), &m_sizeWinExt));
 
-      while (m_sizeWinExt.cx() > -0x4000 && m_sizeWinExt.cx() < 0x4000 &&
-            m_sizeVpExt.cx()  > -0x4000 && m_sizeVpExt.cx()  < 0x4000)
+      while (m_sizeWinExt.cx > -0x4000 && m_sizeWinExt.cx < 0x4000 &&
+            m_sizeVpExt.cx  > -0x4000 && m_sizeVpExt.cx  < 0x4000)
       {
-         m_sizeWinExt.cx() <<= 1;
-         m_sizeVpExt.cx()  <<= 1;
+         m_sizeWinExt.cx <<= 1;
+         m_sizeVpExt.cx  <<= 1;
       }
 
-      while (m_sizeWinExt.cy() > -0x4000 && m_sizeWinExt.cy() < 0x4000 &&
-            m_sizeVpExt.cy()  > -0x4000 && m_sizeVpExt.cy()  < 0x4000)
+      while (m_sizeWinExt.cy > -0x4000 && m_sizeWinExt.cy < 0x4000 &&
+            m_sizeVpExt.cy  > -0x4000 && m_sizeVpExt.cy  < 0x4000)
       {
-         m_sizeWinExt.cy() <<= 1;
-         m_sizeVpExt.cy()  <<= 1;
+         m_sizeWinExt.cy <<= 1;
+         m_sizeVpExt.cy  <<= 1;
       }
 
-      long lTempExt = _AfxMultMultDivDiv(m_sizeVpExt.cx(),
+      long lTempExt = _AfxMultMultDivDiv(m_sizeVpExt.cx,
          m_nScaleNum, afxData.cxPixelsPerInch,
          m_nScaleDen, ::GetDevicecaps(get_handle2(), LOGPIXELSX));
 
-      ASSERT(m_sizeWinExt.cx() != 0);
-      m_sizeVpExt.cx() = (int)lTempExt;
+      ASSERT(m_sizeWinExt.cx != 0);
+      m_sizeVpExt.cx = (int)lTempExt;
 
-      lTempExt = _AfxMultMultDivDiv(m_sizeVpExt.cy(),
+      lTempExt = _AfxMultMultDivDiv(m_sizeVpExt.cy,
          m_nScaleNum, afxData.cyPixelsPerInch,
          m_nScaleDen, ::GetDevicecaps(get_handle2(), LOGPIXELSY));
 
-      ASSERT(m_sizeWinExt.cy() != 0);
-      m_sizeVpExt.cy() = (int)lTempExt;
+      ASSERT(m_sizeWinExt.cy != 0);
+      m_sizeVpExt.cy = (int)lTempExt;
    }
 
    if (get_os_data() != nullptr)
    {
       ::SetMapMode(get_os_data(), MM_ANISOTROPIC);
-      ::SetWindowExtEx(get_os_data(), m_sizeWinExt.cx(), m_sizeWinExt.cy(), nullptr);
-      ::Set_wiewportExtEx(get_os_data(), m_sizeVpExt.cx(), m_sizeVpExt.cy(), nullptr);
+      ::SetWindowExtEx(get_os_data(), m_sizeWinExt.cx, m_sizeWinExt.cy, nullptr);
+      ::Set_wiewportExtEx(get_os_data(), m_sizeVpExt.cx, m_sizeVpExt.cy, nullptr);
 
       // Now that the Logical Units are synchronized, we can set the Context Org
       MirrorContextOrg();
@@ -952,7 +952,7 @@ void thumbnail_dc::ClipToPage()
 
    ::SetMapMode(get_os_data(), MM_TEXT);
    ::SetWindowOrgEx(get_os_data(), 0, 0, nullptr);
-   ::SetContextOrgEx(get_os_data(), m_sizeTopLeft.cx(), m_sizeTopLeft.cy(), nullptr);
+   ::SetContextOrgEx(get_os_data(), m_sizeTopLeft.cx, m_sizeTopLeft.cy, nullptr);
    ::IntersectClipRect(get_os_data(), -1, -1, point.x + 2, point.y + 2);
 
    // Resynchronize the mapping mode
@@ -971,14 +971,14 @@ void thumbnail_dc::PrinterDPtoScreenDP(INT_POINT * lpPoint) const
    VERIFY(::GetWindowExtEx(get_handle2(), &sizePrinterWinExt));
 
    long xScreen = _AfxMultMultDivDiv(lpPoint->x,
-      sizePrinterWinExt.cx(), m_sizeVpExt.cx(),
-      sizePrinterVpExt.cx(), m_sizeWinExt.cx());
+      sizePrinterWinExt.cx, m_sizeVpExt.cx,
+      sizePrinterVpExt.cx, m_sizeWinExt.cx);
 
    lpPoint->x = (int)xScreen;
 
    long yScreen = _AfxMultMultDivDiv(lpPoint->y,
-      sizePrinterWinExt.cy(), m_sizeVpExt.cy(),
-      sizePrinterVpExt.cy(), m_sizeWinExt.cy());
+      sizePrinterWinExt.cy, m_sizeVpExt.cy,
+      sizePrinterVpExt.cy, m_sizeWinExt.cy);
 
    lpPoint->y = (int)yScreen;
 }
