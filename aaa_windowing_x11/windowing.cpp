@@ -319,7 +319,7 @@ _libsn_start_context();
          //auto estatus =
          //
          //
-         øconstruct_new(m_pcursormanager);
+         construct_newø(m_pcursormanager);
 
 //         if (!estatus)
 //         {
