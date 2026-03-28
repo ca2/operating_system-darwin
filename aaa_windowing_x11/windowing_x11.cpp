@@ -2619,7 +2619,7 @@ else if(detail == 3)
                if (strText.has_character() && !(e.xkey.state & ControlMask))
                {
 
-                  auto pkey = øcreate_new<::message::key>();
+                  auto pkey = create_newø<::message::key>();
 
                   pkey->set(oswindow, oswindow, e_message_text_composition, 0, 0);
 

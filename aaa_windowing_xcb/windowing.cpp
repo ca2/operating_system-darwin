@@ -64,7 +64,7 @@ namespace windowing_xcb
    ::windowing::window * windowing::new_window(::user::interaction_impl * pimpl)
    {
 
-      ::pointer<::windowing_xcb::window>pwindow = pimpl->øcreate < ::windowing::window >();
+      ::pointer<::windowing_xcb::window>pwindow = pimpl->createø < ::windowing::window >();
 
       if(!pwindow)
       {
@@ -112,12 +112,12 @@ namespace windowing_xcb
 
       initialize_windowing();
 
-      auto pdisplay = øcreate < ::windowing::display >();
+      auto pdisplay = createø < ::windowing::display >();
 
 //      if(!pdisplay)
 //      {
 //
-//         output_debug_string("\nFailed to øcreate < ::windowing::display > at windowing_xcb::windowing::initialize");
+//         output_debug_string("\nFailed to createø < ::windowing::display > at windowing_xcb::windowing::initialize");
 //
 //         //return ::error_no_factory;
 //
@@ -349,7 +349,7 @@ namespace windowing_xcb
 
       auto cursor = m_pdisplay->_create_font_cursor(iCursor);
 
-      auto pcursorX11 = øcreate < ::windowing_xcb::cursor >();
+      auto pcursorX11 = createø < ::windowing_xcb::cursor >();
 
       pcursor = pcursorX11;
 
@@ -1861,7 +1861,7 @@ namespace windowing_xcb
             if (strText.has_character() && !(pkeyevent->state & XCB_MOD_MASK_CONTROL))
             {
 
-               auto pkey = øcreate_new < ::message::key >();
+               auto pkey = create_newø < ::message::key >();
 
                pkey->set(pwindow, pwindow, e_message_text_composition, 0, 0);
 
