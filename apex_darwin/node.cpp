@@ -41,48 +41,48 @@ namespace apex_darwin
    }
 
 
-   void node::on_start_application(::apex::application *papplication)
-   {
+//   void node::on_start_application(::apex::application *papplication)
+//   {
 
-//#if !defined(RASPBIAN) && !defined(ANDROID)
-//
-//      try
-//      {
-//
-//         auto psystem = acmesystem();
-//
-//         auto pnode = psystem->node();
-//
-//         auto papp = papplication;
-//
-//         ::file::path path = pnode->get_desktop_file_path(papp);
-//
-//         if(path.has_character() && !file_system()->exists(path))
-//         {
-//
-//            auto pfile = papp->create_newø< ::freedesktop::desktop_file >();
-//
-//            pfile->set_app_id(papp->m_strAppId);
-//
-//            pfile->set_file_path(path);
-//
-//            pfile->create();
-//
-//            pfile->write();
-//
-//         }
-//
-//      }
-//      catch(...)
-//      {
-//
-//         information("Could not create .desktop shortcut file for the Linux papp for the current user.");
-//
-//      }
-//
-//#endif
+////#if !defined(RASPBIAN) && !defined(ANDROID)
+////
+////      try
+////      {
+////
+////         auto psystem = acmesystem();
+////
+////         auto pnode = psystem->node();
+////
+////         auto papp = papplication;
+////
+////         ::file::path path = pnode->get_desktop_file_path(papp);
+////
+////         if(path.has_character() && !file_system()->exists(path))
+////         {
+////
+////            auto pfile = papp->create_newø< ::freedesktop::desktop_file >();
+////
+////            pfile->set_app_id(papp->m_strAppId);
+////
+////            pfile->set_file_path(path);
+////
+////            pfile->create();
+////
+////            pfile->write();
+////
+////         }
+////
+////      }
+////      catch(...)
+////      {
+////
+////         information("Could not create .desktop shortcut file for the Linux papp for the current user.");
+////
+////      }
+////
+////#endif
 
-   }
+//   }
 
 
 bool node::is_alias(const ::file::path & path)
