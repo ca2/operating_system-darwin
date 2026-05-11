@@ -646,7 +646,7 @@ namespace acme_darwin
 //
 //
 //   //
-//   //int_bool file_is_equal_path_dup(const char * psz1, const char * psz2)
+//   //::i32_bool file_is_equal_path_dup(const char * psz1, const char * psz2)
 //   //{
 //   //      if (ansi_compare_ci(psz1, psz2) == 0)
 //   //         return true;
@@ -679,7 +679,7 @@ namespace acme_darwin
 //
 //   //
 //   //
-//   //int_bool file_path_is_equal(const char * psz1, const char * psz2)
+//   //::i32_bool file_path_is_equal(const char * psz1, const char * psz2)
 //   //{
 //   //
 //   //      const int iBufSize = MAX_PATH * 8;
