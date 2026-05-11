@@ -102,7 +102,7 @@ namespace multimedia
       }
 
 
-      void wave_out::out_open_ex(thread * pthreadCallback, unsigned int uiSamplesPerSec, unsigned int uiChannelCount, unsigned int uiBitsPerSample, ::wave::enum_purpose epurpose)
+      void wave_out::out_open_ex(thread * pthreadCallback, ::u32 uiSamplesPerSec, ::u32 uiChannelCount, ::u32 uiBitsPerSample, ::wave::enum_purpose epurpose)
       {
 
          synchronous_lock sl(synchronization());
@@ -179,13 +179,13 @@ namespace multimedia
 //
 //         }
 
-         //unsigned int uBufferSize = snd_pcm_frames_to_bytes(m_ppcm, m_framesPeriodSize);
+         //::u32 uBufferSize = snd_pcm_frames_to_bytes(m_ppcm, m_framesPeriodSize);
 
 //         m_uiBufferTime = m_framesBuffer * 1000 * 1000 / uiSamplesPerSec;
 
          printf("snd_pcm_frames_to_bytes %" PRIu64 "\n", m_frameCount);
 
-         unsigned int uBufferSize = snd_pcm_frames_to_bytes(m_ppcm, m_frameCount);
+         ::u32 uBufferSize = snd_pcm_frames_to_bytes(m_ppcm, m_frameCount);
 
          out_get_buffer()->PCMOutOpen(this, uBufferSize, m_iBufferCount, 128, m_pwaveformat, m_pwaveformat);
 

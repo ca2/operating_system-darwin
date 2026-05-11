@@ -43,7 +43,7 @@ namespace acme_darwin
    //   else
    //   {
    //
-   //      varRet = (((unsigned long long) data.nFileSizeHigh) << 32) | (unsigned long long) data.nFileSizeLow;
+   //      varRet = (((::u64) data.nFileSizeHigh) << 32) | (::u64) data.nFileSizeLow;
    //
    //      ((::file::path &) path).m_iSize = varRet.m_hi;
    //

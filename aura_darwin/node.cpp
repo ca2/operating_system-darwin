@@ -249,7 +249,7 @@ namespace aura_darwin
    //}
    //
 
-   //void node::call_async(const ::string & pszPath, const ::string & pszParam, const ::string & pszDir, ::e_display edisplay, bool bPrivileged, unsigned int * puiPid)
+   //void node::call_async(const ::string & pszPath, const ::string & pszParam, const ::string & pszDir, ::e_display edisplay, bool bPrivileged, ::u32 * puiPid)
    //{
 
    //   ::apex::posix::node::call_async(pszPath, pszParam, pszDir, edisplay, bPrivileged, puiPid);
@@ -326,7 +326,7 @@ namespace aura_darwin
    //}
 
 
-   //void node::create_process(const string_base<char> & str, unsigned int * puId)
+   //void node::create_process(const string_base<char> & str, ::u32 * puId)
    //{
 
    //   ::apex::posix::node::create_process(str, puId);
@@ -342,7 +342,7 @@ namespace aura_darwin
    //}
 
 
-   //bool node::process_modules(string_array & stra, unsigned int processID)
+   //bool node::process_modules(string_array & stra, ::u32 processID)
    //{
 
    //   return ::apex::posix::node::process_modules(stra, processID);
@@ -372,7 +372,7 @@ namespace aura_darwin
    //}
 
 
-   //string node::module_path_from_pid(unsigned int pid)
+   //string node::module_path_from_pid(::u32 pid)
    //{
 
    //   return ::apex::posix::node::module_path_from_pid(pid);
@@ -380,13 +380,13 @@ namespace aura_darwin
    //}
    //
    //
-   //string node::command_line_from_pid(unsigned int pid)
+   //string node::command_line_from_pid(::u32 pid)
    //{
 
    //   return ::apex::posix::node::command_line_from_pid(pid);
 
    //}
-   //   bool node::is_shared_library_busy(unsigned int processid, const string_array & stra)
+   //   bool node::is_shared_library_busy(::u32 processid, const string_array & stra)
    //{
 
    //   return ::apex::posix::node::is_shared_library_busy(processid, stra);
@@ -399,7 +399,7 @@ namespace aura_darwin
    //   return ::apex::posix::node::is_shared_library_busy(stra);
 
    //}
-   //   bool node::process_contains_module(string & strImage, unsigned int processID, const ::string & pszLibrary)
+   //   bool node::process_contains_module(string & strImage, ::u32 processID, const ::string & pszLibrary)
    //{
 
    //   return ::apex::posix::node::process_contains_module(strImage, processID, pszLibrary);
@@ -414,7 +414,7 @@ namespace aura_darwin
    //}
    //
    //
-   //bool node::is_process_running(unsigned int pid)
+   //bool node::is_process_running(::u32 pid)
    //{
 
    //   return ::apex::posix::node::is_process_running(pid);

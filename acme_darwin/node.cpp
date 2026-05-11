@@ -153,7 +153,7 @@ namespace acme_darwin
    }
 
 
-//      ::e_status node::call_async(const char * pszPath, const char * pszParam, const char * pszDir, ::e_display edisplay, bool bPrivileged, unsigned int * puiPid)
+//      ::e_status node::call_async(const char * pszPath, const char * pszParam, const char * pszDir, ::e_display edisplay, bool bPrivileged, ::u32 * puiPid)
 //      {
 //
 //         throw ::interface_only();
@@ -346,7 +346,7 @@ namespace acme_darwin
 //   // void node::is_shared_library_busy see process.cpp
 //   // void node::is_shared_library_busy see process.cpp
 //
-//   bool node::is_process_running(unsigned int pid)
+//   bool node::is_process_running(::u32 pid)
 //   {
 //
 //      return ::platform::node::is_process_running(pid);
@@ -354,7 +354,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool node::process_modules(string_array& stra, unsigned int processID)
+//   bool node::process_modules(string_array& stra, ::u32 processID)
 //   {
 //
 //      throw ::interface_only();
@@ -588,7 +588,7 @@ namespace acme_darwin
 //
 //
 //
-//   bool node::process_contains_module(string& strImage, unsigned int processID, const ::string & strLibrary)
+//   bool node::process_contains_module(string& strImage, ::u32 processID, const ::string & strLibrary)
 //   {
 //
 //      return ::platform::node::process_contains_module(strImage, processID, strLibrary);
@@ -742,7 +742,7 @@ namespace acme_darwin
 //
 //
 //   void node::call_async(const ::string & pszPath, const ::string & pszParam, const ::string & pszDir, ::e_display edisplay,
-//      bool bPrivileged, unsigned int * puiPid)
+//      bool bPrivileged, ::u32 * puiPid)
 //   {
 //
 //      string strCmdLine;
@@ -758,7 +758,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      unsigned int processId;
+//      ::u32 processId;
 //
 //      create_process(strCmdLine, &processId);
 //
@@ -789,7 +789,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      unsigned int processId;
+//      ::u32 processId;
 //
 //      create_process(strCmdLine, &processId);
 //
@@ -812,7 +812,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   void node::create_process(const ::string & pszCommandLine, unsigned int * pprocessId)
+//   void node::create_process(const ::string & pszCommandLine, ::u32 * pprocessId)
 //   {
 //
 //      string_array stra;
@@ -1041,7 +1041,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      unsigned int processId;
+//      ::u32 processId;
 //
 //      create_process(strCmdLine, &processId);
 //      //         {
@@ -1083,7 +1083,7 @@ namespace acme_darwin
 //   //}
 //
 //
-//   string node::module_path_from_pid(unsigned int iPid)
+//   string node::module_path_from_pid(::u32 iPid)
 //   {
 //
 //      struct stat sb;
@@ -1160,10 +1160,10 @@ namespace acme_darwin
 //   }
 //
 //
-//   //      int_array node::module_path_get_pid(const ::string & pszPath)
+//   //      i32_array node::module_path_get_pid(const ::string & pszPath)
 //   //      {
 //   //
-//   //         int_array ia;
+//   //         i32_array ia;
 //   //
 //   //         ::file::path_array stra;
 //   //
@@ -1282,7 +1282,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   string node::command_line_from_pid(unsigned int iPid)
+//   string node::command_line_from_pid(::u32 iPid)
 //   {
 //
 //      string_array stra;
@@ -1366,7 +1366,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   bool node::is_shared_library_busy(unsigned int processid, const string_array & stra)
+//   bool node::is_shared_library_busy(::u32 processid, const string_array & stra)
 //   {
 //
 //      return false;
@@ -1761,7 +1761,7 @@ namespace acme_darwin
    }
 
 
-   void node::arp_a(void *p, void(*callback)(void *p, unsigned int uIp, const char * status))
+   void node::arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status))
    {
    
       auto pszError = ::arp_a(p, callback);

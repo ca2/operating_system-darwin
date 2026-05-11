@@ -262,7 +262,7 @@ namespace multimedia
 
          }
 
-         unsigned int uiFreq = pformat->m_waveformat.nSamplesPerSec;
+         ::u32 uiFreq = pformat->m_waveformat.nSamplesPerSec;
 
          int dir = 0;
 
@@ -286,7 +286,7 @@ namespace multimedia
 
          }
 
-         unsigned int uPeriodMin = 0;
+         ::u32 uPeriodMin = 0;
 
          int dirPeriodMin = 0;
 
@@ -303,7 +303,7 @@ namespace multimedia
 
          }
 
-         unsigned int uPeriodMax = 0;
+         ::u32 uPeriodMax = 0;
 
          int dirPeriodMax = 0;
 

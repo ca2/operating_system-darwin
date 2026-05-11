@@ -2,7 +2,7 @@
 #include "framework.h"
 
 
-const char * arp_a(void *p, void(*callback)(void *p, unsigned int uIp, const char * status));
+const char * arp_a(void *p, void(*callback)(void *p, ::u32 uIp, const char * status));
 
 
 
