@@ -560,7 +560,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      if ((output.m_i = ::open(pszNew, flags, 0666)) == -1)
+//      if ((output.m_i32 = ::open(pszNew, flags, 0666)) == -1)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -572,7 +572,7 @@ namespace acme_darwin
 //      }
 //
 //
-//      if ((input.m_i = ::open(pszSrc, O_RDONLY)) == -1)
+//      if ((input.m_i32 = ::open(pszSrc, O_RDONLY)) == -1)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -583,7 +583,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      off_t filesize = lseek(input.m_i, 0, SEEK_END);
+//      off_t filesize = lseek(input.m_i32, 0, SEEK_END);
 //
 //      if(filesize < 0)
 //      {
@@ -596,7 +596,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      if(ftruncate(output.m_i, filesize) < 0)
+//      if(ftruncate(output.m_i32, filesize) < 0)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -607,7 +607,7 @@ namespace acme_darwin
 //
 //      }
 //
-//      if ((source = mmap(0, filesize, PROT_READ, MAP_PRIVATE, input.m_i, 0)) == (void *)-1)
+//      if ((source = mmap(0, filesize, PROT_READ, MAP_PRIVATE, input.m_i32, 0)) == (void *)-1)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -619,7 +619,7 @@ namespace acme_darwin
 //      }
 //
 //
-//      if ((target = mmap(0, filesize, PROT_WRITE, MAP_SHARED, output.m_i, 0)) == (void *)-1)
+//      if ((target = mmap(0, filesize, PROT_WRITE, MAP_SHARED, output.m_i32, 0)) == (void *)-1)
 //      {
 //
 //         auto cerrornumber = c_error_number();
@@ -898,7 +898,7 @@ namespace acme_darwin
 //
 //      utimbuf.actime = statAttribute.st_atime;
 //
-//      utimbuf.modtime = time.m_i;
+//      utimbuf.modtime = time.m_i32;
 //
 //      if(utime(pszPath, &utimbuf))
 //      {
