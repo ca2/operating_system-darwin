@@ -82,11 +82,11 @@ const char * arp_a(
 #ifdef __APPLE__
 #include <TargetConditionals.h>
 #endif
-const char * arp_a(void * p, void(*callback)(void * p, ::u32 uIp, const char * status));
+const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status));
 
 #if defined(APPLE_IOS)
 
-const char * arp_a(void * p, void(*callback)(void * p, ::u32 uIp, const char * status))
+const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status))
 {
    
    return nullptr; // A-ha!! this is first version of arp_a (returns nullptr)
@@ -150,7 +150,7 @@ ether_sprint(char * s, int buffer_size, u_char * cp)
 }
 
 
-const char * arp_a(void * p, void(*callback)(void * p, ::u32 uIp, const char * status))
+const char * arp_a(void * p, void(*callback)(void * p, unsigned int uIp, const char * status))
 {
    
    //int nflag;
