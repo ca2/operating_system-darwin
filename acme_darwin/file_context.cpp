@@ -3,7 +3,7 @@
 //
 #include "framework.h"
 #include "file_context.h"
-#include "acme/operating_system/shared_posix/c_error_number.h"
+#include "acme/operating_system/shared_posix/c_errno.h"
 #include <sys/stat.h>
 
 #if defined(FREEBSD) || defined(__APPLE__)
@@ -98,14 +98,14 @@ bool file_context::is_read_only(const ::file::path &psz)
       if (unlink(psz) != 0)
       {
       
-         auto cerrornumber = c_error_number();
+         auto cerrno = c_errno();
       
-         if (cerrornumber.m_iErrorNumber != ENOENT) // already does not exist - consider removal successful - does not issue an exception
+         if (cerrno != ENOENT) // already does not exist - consider removal successful - does not issue an exception
          {
          
             string strError;
          
-            strError.formatf("Failed to delete file error=%d", cerrornumber.m_iErrorNumber);
+            strError.formatf("Failed to delete file error=%d", cerrno.m_iErrNo);
          
             throw ::exception(error_failed, strError);
       

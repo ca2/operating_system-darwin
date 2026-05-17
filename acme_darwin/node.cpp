@@ -1461,7 +1461,7 @@ namespace acme_darwin
 //      if(iError != 0)
 //      {
 //
-//         auto cerrornumber = c_error_number();
+//         auto cerrno = c_errno();
 //
 //         estatus = errno_status(iErrNo);
 //
@@ -1476,7 +1476,7 @@ namespace acme_darwin
 //      if(iError != 0)
 //      {
 //
-//         auto cerrornumber = c_error_number();
+//         auto cerrno = c_errno();
 //
 //         estatus = errno_status(iErrNo);
 //
