@@ -892,12 +892,12 @@ namespace windowing_xcb
    }
 
 
-   ::int_rectangle display::_window_get_frame_extents(xcb_window_t window)
+   ::i32_rectangle display::_window_get_frame_extents(xcb_window_t window)
    {
 
       synchronous_lock synchronouslock(user_synchronization());
 
-      ::int_rectangle r;
+      ::i32_rectangle r;
 
       auto property = intern_atom("_NET_FRAME_EXTENTS"); // l, r, t, b CARDINAL[4]/32bit
 
@@ -1041,14 +1041,14 @@ namespace windowing_xcb
 
          windowa = _window_enumerate();
 
-         ::int_rectangle rectangleTest;
+         ::i32_rectangle rectangleTest;
 
          for (index i = 0; i < windowa.get_size(); i++)
          {
 
             //string strItem = ::_window_get(xcb_connection(), windowa[i]);
 
-            ::int_rectangle rectangleHigher;
+            ::i32_rectangle rectangleHigher;
 
             if (::is_set(pwindowxcbExclude) && windowa[i] == pwindowxcbExclude->xcb_window())
             {
@@ -1060,9 +1060,9 @@ namespace windowing_xcb
             if (_window_get_window_rectangle(windowa[i], rectangleHigher))
             {
 
-               ::int_rectangle rectangleHitTest;
+               ::i32_rectangle rectangleHitTest;
 
-               rectangleHitTest.set(rectangleHigher.origin(), ::int_size());
+               rectangleHitTest.set(rectangleHigher.origin(), ::i32_size());
 
                rectangleHitTest.inflate(iMargin + 1);
 

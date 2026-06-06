@@ -44,7 +44,7 @@
 //list < ::pointer<::matter >>* g_prunnableptrlX11 = nullptr;
 
 
-//::int_point g_pointX11Cursor;
+//::i32_point g_pointX11Cursor;
 
 
 message_queue * get_message_queue(itask_t idthread, bool bCreate);
@@ -53,7 +53,7 @@ message_queue * get_message_queue(itask_t idthread, bool bCreate);
 void oswindow_set_active_window(oswindow oswindow);
 
 
-CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const int_point & pointCursor);
+CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const i32_point & pointCursor);
 
 bool is_return_key(XIRawEvent *event)
 {
@@ -610,14 +610,14 @@ namespace windowing_x11
 //
 //                  }
 //
-//                  ::int_rectangle rectangleTest;
+//                  ::i32_rectangle rectangleTest;
 //
 //                  for (index i = 0; i < windowa.get_size(); i++)
 //                  {
 //
 //                     string strItem = ::x11_get_name(Display(), windowa[i]);
 //
-//                     ::int_rectangle rectangleHigher;
+//                     ::i32_rectangle rectangleHigher;
 //
 //                     if (::is_set(pwindowx11Exclude) && windowa[i] == pwindowx11Exclude->Window())
 //                     {
@@ -629,9 +629,9 @@ namespace windowing_x11
 //                     if (::x11_get_window_rect(Display(), windowa[i], rectangleHigher))
 //                     {
 //
-//                        ::int_rectangle rectangleHitTest;
+//                        ::i32_rectangle rectangleHitTest;
 //
-//                        rectangleHitTest.set(rectangleHigher.origin(), ::int_size());
+//                        rectangleHitTest.set(rectangleHigher.origin(), ::i32_size());
 //
 //                        rectangleHitTest.inflate(iMargin + 1);
 //
@@ -706,7 +706,7 @@ namespace windowing_x11
 
 //    }
 
-//    ::int_rectangle rectangle;
+//    ::i32_rectangle rectangle;
 
 //    x11_get_window_rect(display, oswindow->window(), rectangle);
 
@@ -714,14 +714,14 @@ namespace windowing_x11
 
 //    string strTopic = x11_get_name(display, oswindow->window());
 
-//    ::int_rectangle rectangleTest;
+//    ::i32_rectangle rectangleTest;
 
 //    for(iFind++; iFind < windowa.get_size(); iFind++)
 //    {
 
 //       string strItem = x11_get_name(display, windowa[iFind]);
 
-//       ::int_rectangle rectangleHigher;
+//       ::i32_rectangle rectangleHigher;
 
 //       if(x11_get_window_rect(display, windowa[iFind], rectangleHigher))
 //       {
@@ -822,7 +822,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 //
 //   synchronous_lock synchronouslock(user_synchronization());
 //
-//   pgraphics->fill_rectangle(::int_rectangle(*psize), rgb(84, 90, 80));
+//   pgraphics->fill_rectangle(::i32_rectangle(*psize), rgb(84, 90, 80));
 //
 //   ::draw2d::brush_pointer pen(e_create_new);
 //
@@ -1820,7 +1820,7 @@ else if(detail == 3)
                            if (pinteraction->m_timeMouseMovePeriod > 0_s)
                            {
 
-                              ::int_size sizeDistance(
+                              ::i32_size sizeDistance(
                                  (pinteraction->m_pointMouseMoveSkip.x - pinteraction->m_pointMouseMove.x),
                                  (pinteraction->m_pointMouseMoveSkip.y - pinteraction->m_pointMouseMove.y));
 
@@ -2223,13 +2223,13 @@ else if(detail == 3)
 
                      //_x11_defer_check_configuration(msg.oswindow);
 
-                     ::int_point point(e.xconfigure.x, e.xconfigure.y);
+                     ::i32_point point(e.xconfigure.x, e.xconfigure.y);
 
-                     ::int_size size(e.xconfigure.width, e.xconfigure.height);
+                     ::i32_size size(e.xconfigure.width, e.xconfigure.height);
 
-                     //::int_point point(attrs.x, attrs.y);
+                     //::i32_point point(attrs.x, attrs.y);
 
-                     //::int_size size(attrs.width, attrs.height);
+                     //::i32_size size(attrs.width, attrs.height);
 
                      auto pointWindow = pinteraction->screen_origin();
 
@@ -2261,7 +2261,7 @@ else if(detail == 3)
                      // (evidence: override_redirect flag - but that when set leave you outside of much more things)
                      // Lets not fight this X11 "thing"
                      // Accept-"stall" "authocratic" "top-down" window manager set position and size.
-                     // This means setting same int_size and position to all three sketch and window states.
+                     // This means setting same i32_size and position to all three sketch and window states.
                      // The buffer may need to be resized so don't mess with current design state.
 
                      bool bPositionFix = pointWindow != point;
@@ -2491,7 +2491,7 @@ else if(detail == 3)
 //      int w = msg.oswindow->m_pimpl->m_puserinteraction->layout().sketch().m_size.cx;
 //      int h = msg.oswindow->m_pimpl->m_puserinteraction->layout().sketch().m_size.cy;
 //
-//      ::int_rectangle r;
+//      ::i32_rectangle r;
 //
 //      window_rectangle(msg.oswindow, &r);
 //
@@ -2979,7 +2979,7 @@ else if(detail == 3)
 //}
 
 //
-//void wm_full_screen(oswindow w, const ::int_rectangle & rectangle)
+//void wm_full_screen(oswindow w, const ::i32_rectangle & rectangle)
 //
 //{
 //
@@ -3463,7 +3463,7 @@ else if(detail == 3)
 //void oswindow_set_active_window(oswindow oswindow);
 //
 //
-//CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const int_point & pointCursor);
+//CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const i32_point & pointCursor);
 //
 //
 //

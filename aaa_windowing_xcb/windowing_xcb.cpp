@@ -37,7 +37,7 @@ message_queue * get_message_queue(itask_t idthread, bool bCreate);
 void oswindow_set_active_window(oswindow oswindow);
 
 
-CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const int_point & pointCursor);
+CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const i32_point & pointCursor);
 
 //bool is_return_key(XIRawEvent *event)
 //{
@@ -476,7 +476,7 @@ namespace windowing_xcb
 
 //    }
 
-//    ::int_rectangle rectangle;
+//    ::i32_rectangle rectangle;
 
 //    xcb_get_window_rect(display, oswindow->window(), rectangle);
 
@@ -484,14 +484,14 @@ namespace windowing_xcb
 
 //    string strTopic = xcb_get_name(display, oswindow->window());
 
-//    ::int_rectangle rectangleTest;
+//    ::i32_rectangle rectangleTest;
 
 //    for(iFind++; iFind < windowa.get_size(); iFind++)
 //    {
 
 //       string strItem = xcb_get_name(display, windowa[iFind]);
 
-//       ::int_rectangle rectangleHigher;
+//       ::i32_rectangle rectangleHigher;
 
 //       if(xcb_get_window_rect(display, windowa[iFind], rectangleHigher))
 //       {
@@ -592,7 +592,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 //
 //   synchronous_lock synchronouslock(user_synchronization());
 //
-//   pgraphics->fill_rectangle(::int_rectangle(*psize), rgb(84, 90, 80));
+//   pgraphics->fill_rectangle(::i32_rectangle(*psize), rgb(84, 90, 80));
 //
 //   ::draw2d::brush_pointer pen(e_create_new);
 //
@@ -1084,7 +1084,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 //void oswindow_set_active_window(oswindow oswindow);
 //
 //
-//CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const int_point & pointCursor);
+//CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const i32_point & pointCursor);
 //
 //
 //

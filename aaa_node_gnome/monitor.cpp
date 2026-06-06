@@ -75,7 +75,7 @@ namespace node_gnome
 //
 //      gdk_monitor_get_geometry(pmonitor, &rect);
 //
-//      ::int_rectangle rectangle;
+//      ::i32_rectangle rectangle;
 //
 //      copy(m_rectangle, rect);
 //

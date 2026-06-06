@@ -14,7 +14,7 @@ namespace draw2d_xlib
 //      ::user::interaction   m_ui;
       ::Pixmap                m_pixmap;
       memory     m_mem;
-      ::int_size                  m_size;
+      ::i32_size                  m_size;
 
 
       bitmap(::particle * pparticle);
@@ -43,8 +43,8 @@ namespace draw2d_xlib
 
       unsigned int SetBitmapBits(unsigned int dwCount, const void * lpBits);
       unsigned int GetBitmapBits(unsigned int dwCount, LPVOID lpBits) const;
-      ::int_size SetBitmapDimension(int nWidth, int nHeight);
-      ::int_size GetBitmapDimension() const;
+      ::i32_size SetBitmapDimension(int nWidth, int nHeight);
+      ::i32_size GetBitmapDimension() const;
 
       // void dump(dump_context & dumpcontext) const override;
 

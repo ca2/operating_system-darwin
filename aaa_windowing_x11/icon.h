@@ -17,7 +17,7 @@ namespace windowing_x11
    public:
 
 
-      array < concrete < ::int_size > >         m_sizea;
+      array < concrete < ::i32_size > >         m_sizea;
 
 
       icon();
@@ -30,10 +30,10 @@ namespace windowing_x11
       void set_tray_icon_name(const string & strTrayIconName) override;
 
 
-      void get_sizes(array < concrete < ::int_size > > & a) override;
+      void get_sizes(array < concrete < ::i32_size > > & a) override;
 
 
-      void * get_os_data(const ::int_size & size) const override;
+      void * get_os_data(const ::i32_size & size) const override;
 
 
       virtual void load_matter(const ::string & strPath) override;
@@ -41,7 +41,7 @@ namespace windowing_x11
       virtual void load_file(const ::string & strPath) override;
 
 
-      virtual image_pointer get_image(const concrete < ::int_size > & size) override;
+      virtual image_pointer get_image(const concrete < ::i32_size > & size) override;
 
       
    };

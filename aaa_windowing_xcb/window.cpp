@@ -1159,10 +1159,10 @@ namespace windowing_xcb
    }
 
 
-   void window::full_screen(const ::int_rectangle &rectangle)
+   void window::full_screen(const ::i32_rectangle &rectangle)
    {
 
-      ::int_rectangle rBest;
+      ::i32_rectangle rBest;
 
       int iMonitor = m_pdisplay->get_best_monitor(&rBest, rectangle);
 
@@ -1190,7 +1190,7 @@ namespace windowing_xcb
 //
 //      }
 
-      ::int_rectangle rWindow;
+      ::i32_rectangle rWindow;
 
       rWindow.left = m_geometry.x;
       rWindow.top = m_geometry.y;
@@ -1845,7 +1845,7 @@ namespace windowing_xcb
    }
 
 
-   ::int_point window::get_mouse_cursor_position()
+   ::i32_point window::get_mouse_cursor_position()
    {
 
       return m_pointMouseCursor;
@@ -1961,12 +1961,12 @@ namespace windowing_xcb
    }
 
 
-   ::int_rectangle_array window::upper_window_rects()
+   ::i32_rectangle_array window::upper_window_rects()
    {
 
       synchronous_lock synchronouslock(user_synchronization());
 
-      int_rectangle_array recta;
+      i32_rectangle_array recta;
 
       windowing_output_debug_string("\n::GetFocus 1");
 
@@ -1999,7 +1999,7 @@ namespace windowing_xcb
 
       }
 
-      ::int_rectangle rectangle;
+      ::i32_rectangle rectangle;
 
       auto estatus = _get_window_rectangle(&rectangle);
 
@@ -2013,7 +2013,7 @@ namespace windowing_xcb
       for (iFind++; iFind < windowa.get_size(); iFind++)
       {
 
-         ::int_rectangle rectangleHigher;
+         ::i32_rectangle rectangleHigher;
 
          if (xcb_display()->_window_get_window_rectangle(windowa[iFind], rectangleHigher))
          {

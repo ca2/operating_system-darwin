@@ -20,7 +20,7 @@ namespace windowing_xcb
    public:
 
 
-      ::int_rectangle                              m_rectangleLast;
+      ::i32_rectangle                              m_rectangleLast;
       ::pointer<windowing_xcb::display>      m_pdisplay;
       xcb_gcontext_t                               m_gcontext;
 
@@ -37,7 +37,7 @@ namespace windowing_xcb
 
 
 
-      virtual bool create_os_buffer(const ::int_size & size, int iStride = -1) ;
+      virtual bool create_os_buffer(const ::i32_size & size, int iStride = -1) ;
       virtual void destroy_os_buffer() ;
 
 

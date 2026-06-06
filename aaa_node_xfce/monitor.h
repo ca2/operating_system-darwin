@@ -13,8 +13,8 @@ namespace node_xfce
 
 
       //::collection::index                                               m_iIndex;
-      //::int_rectangle                                       m_rectangle;
-      //::int_rectangle                                       m_rectangleWorkspace;
+      //::i32_rectangle                                       m_rectangle;
+      //::i32_rectangle                                       m_rectangleWorkspace;
 
 
       monitor();

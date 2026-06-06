@@ -838,14 +838,14 @@ namespace windowing_x11
 
          auto windowa = x11_window_list();
 
-         ::int_rectangle rectangleTest;
+         ::i32_rectangle rectangleTest;
 
          for (index i = 0; i < windowa.get_size(); i++)
          {
 
             string strItem = ::x11_get_name(Display(), windowa[i]);
 
-            ::int_rectangle rectangleHigher;
+            ::i32_rectangle rectangleHigher;
 
             if (::is_set(pwindowxcbExclude) && windowa[i] == pwindowxcbExclude->Window())
             {
@@ -857,9 +857,9 @@ namespace windowing_x11
             if (::x11_get_window_rect(Display(), windowa[i], rectangleHigher))
             {
 
-               ::int_rectangle rectangleHitTest;
+               ::i32_rectangle rectangleHitTest;
 
-               rectangleHitTest.set(rectangleHigher.origin(), ::int_size());
+               rectangleHitTest.set(rectangleHigher.origin(), ::i32_size());
 
                rectangleHitTest.inflate(iMargin + 1);
 

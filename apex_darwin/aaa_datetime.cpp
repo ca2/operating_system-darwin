@@ -375,7 +375,7 @@
 // {
 //    int bias;
 
-// //xxx    information("(%point, %int_point)\n", LocalTime, SystemTime);
+// //xxx    information("(%point, %i32_point)\n", LocalTime, SystemTime);
 
 //    bias = TIME_GetBias();
 //    *SystemTime = *LocalTime + bias * (long long)TICKSPERSEC;
@@ -400,7 +400,7 @@
 // {
 //    int bias;
 
-// //xxx    information("(%point, %int_point)\n", SystemTime, LocalTime);
+// //xxx    information("(%point, %i32_point)\n", SystemTime, LocalTime);
 
 //    bias = TIME_GetBias();
 //    *LocalTime = *SystemTime - bias * (long long)TICKSPERSEC;

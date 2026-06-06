@@ -48,7 +48,7 @@ namespace windowing_xcb
    }
 
 
-   void * icon::get_os_data(const ::int_size & size) const
+   void * icon::get_os_data(const ::i32_size & size) const
    {
 
       return nullptr;
@@ -108,7 +108,7 @@ namespace windowing_xcb
    }
 
 
-   image_pointer icon::get_image(const concrete < ::int_size > & size)
+   image_pointer icon::get_image(const concrete < ::i32_size > & size)
    {
 
       throw ::interface_only();
@@ -118,7 +118,7 @@ namespace windowing_xcb
    }
 
 
-   void icon::get_sizes(array < concrete < ::int_size > > & a)
+   void icon::get_sizes(array < concrete < ::i32_size > > & a)
    {
 
 

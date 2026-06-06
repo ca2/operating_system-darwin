@@ -101,7 +101,7 @@ namespace windowing_x11
    }
 
 
-   bool buffer::create_os_buffer(const ::int_size & size, int iStrideParam)
+   bool buffer::create_os_buffer(const ::i32_size & size, int iStrideParam)
    {
 
 //      synchronous_lock sl(synchronization());
