@@ -1262,11 +1262,11 @@ namespace draw2d_xlib
    bool graphics::rectangle(int x1, int y1, int x2, int y2)
    {
 
-      /*      Gdiplus::RectF float_rectangle((Gdiplus::REAL) x1, (Gdiplus::REAL) y1, (Gdiplus::REAL) (x2 - x1), (Gdiplus::REAL) (y2 - y1));
+      /*      Gdiplus::RectF f32_rectangle((Gdiplus::REAL) x1, (Gdiplus::REAL) y1, (Gdiplus::REAL) (x2 - x1), (Gdiplus::REAL) (y2 - y1));
 
-            bool bOk1 = m_pgraphics->FillRectangle(gdiplus_brush(), float_rectangle) == Gdiplus::Status::Ok;
+            bool bOk1 = m_pgraphics->FillRectangle(gdiplus_brush(), f32_rectangle) == Gdiplus::Status::Ok;
 
-            bool bOk2 = m_pgraphics->DrawRectangle(gdiplus_pen(), float_rectangle) == Gdiplus::Status::Ok;
+            bool bOk2 = m_pgraphics->DrawRectangle(gdiplus_pen(), f32_rectangle) == Gdiplus::Status::Ok;
 
             return bOk1 && bOk2;*/
 
@@ -4022,14 +4022,14 @@ namespace draw2d_xlib
    }
 
 
-   double_point graphics::MoveTo(double x, double y)
+   f64_point graphics::MoveTo(double x, double y)
    {
 
       m_pdc->m_point.x = x;
 
       m_pdc->m_point.y = y;
 
-      return double_point(x, y);
+      return f64_point(x, y);
 
    }
 
@@ -4752,7 +4752,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::get_text_extent(double_size & size, const char * lpszString, character_count nCount, int iIndex) const
+   bool graphics::get_text_extent(f64_size & size, const char * lpszString, character_count nCount, int iIndex) const
    {
 
       synchronous_lock ml(&xlib_mutex());
@@ -4768,7 +4768,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::get_text_extent(double_size & size, const char * lpszString, character_count nCount) const
+   bool graphics::get_text_extent(f64_size & size, const char * lpszString, character_count nCount) const
    {
 
       return get_text_extent(size, lpszString, nCount, 0);
@@ -4776,7 +4776,7 @@ namespace draw2d_xlib
    }
 
 
-   bool graphics::get_text_extent(double_size & size, const string & str) const
+   bool graphics::get_text_extent(f64_size & size, const string & str) const
    {
 
       return get_text_extent(size, str, 0);

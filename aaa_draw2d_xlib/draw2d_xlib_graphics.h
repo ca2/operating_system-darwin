@@ -224,7 +224,7 @@ namespace draw2d_xlib
       i32_point GetCurrentPosition() const;
       using ::draw2d::graphics::MoveTo;
       i32_point MoveTo(int x, int y);
-      double_point MoveTo(double x, double y);
+      f64_point MoveTo(double x, double y);
       //    i32_point MoveTo(const ::i32_point & point);
       using ::draw2d::graphics::LineTo;
       bool LineTo(double x, double y);
@@ -366,9 +366,9 @@ namespace draw2d_xlib
       i32_size get_text_extent(const char * lpszString, character_count nCount, int iIndex) const;
       i32_size get_text_extent(const char * lpszString, character_count nCount) const;
       i32_size get_text_extent(const string & str) const;
-      bool get_text_extent(double_size & size, const char * lpszString, character_count nCount, int iIndex) const;
-      bool get_text_extent(double_size & size, const char * lpszString, character_count nCount) const;
-      bool get_text_extent(double_size & size, const string & str) const;
+      bool get_text_extent(f64_size & size, const char * lpszString, character_count nCount, int iIndex) const;
+      bool get_text_extent(f64_size & size, const char * lpszString, character_count nCount) const;
+      bool get_text_extent(f64_size & size, const string & str) const;
       i32_size GetOutputTextExtent(const char * lpszString, character_count nCount) const;
       i32_size GetOutputTextExtent(const string & str) const;
       i32_size GetTabbedTextExtent(const char * lpszString, character_count nCount, int nTabPositions, LPINT lpnTabStopPositions) const;

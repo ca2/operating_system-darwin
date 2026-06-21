@@ -1235,7 +1235,7 @@ image1->g()->set_interpolation_mode(::draw2d::e_interpolation_mode_high_quality_
 
    image_source imagesource(pimage->g(), pimage->rectangle());
 
-   double_rectangle rectangle(image1->rectangle());
+   f64_rectangle rectangle(image1->rectangle());
 
    image_drawing_options imagedrawingoptions(rectangle);
 
