@@ -7,161 +7,161 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9A865EC029928BA40042465F /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865E8529928AD10042465F /* node.cpp */; };
-		9A865EC129928BA90042465F /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A865EA629928AD10042465F /* _factory.cpp */; };
-		9A865EC929928E4E0042465F /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EC829928E4E0042465F /* libacme.dylib */; };
-		9A865ECB29928E520042465F /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECA29928E520042465F /* libapex.dylib */; };
-		9A865ECD29928E580042465F /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865ECC29928E580042465F /* libaura.dylib */; };
-		9A865EE2299296310042465F /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EE1299296310042465F /* libacme_posix.dylib */; };
-		9A865EE42992964B0042465F /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EE32992964B0042465F /* libapex_posix.dylib */; };
-		9A865EE52992966B0042465F /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865EB029928B2B0042465F /* libapex_darwin.dylib */; };
-		9A865EE6299296730042465F /* libaura_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A865E7229928AC50042465F /* libaura_posix.dylib */; };
+		F7C60665A25884D1A8AE95DB /* node.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E33AF3186B449E43AB560734 /* node.cpp */; };
+		4AED7B0EBF9BF222107DE152 /* _factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7774ED43E024E9C1504B9B0 /* _factory.cpp */; };
+		C3DD4311A191AEF551FC461A /* libacme.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B9037E2E7709D5B7C923B5E /* libacme.dylib */; };
+		D1D4879E84D425AFB543B8C4 /* libapex.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F4B0BD8F4F87EF5DE3E8D064 /* libapex.dylib */; };
+		CAC636648E461AE773F187C3 /* libaura.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E4A36867FF539AA2275861 /* libaura.dylib */; };
+		CA9CC60461EDCA53B0486BCC /* libacme_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B8AD6C322BF73E3098B96CCB /* libacme_posix.dylib */; };
+		F31D76F070A4D2DD83FEFBC2 /* libapex_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F02576263743B9361329879 /* libapex_posix.dylib */; };
+		C123748AA6C05A5EA590F6AF /* libapex_darwin.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FE6CAC56ECC7DE406F12EF0D /* libapex_darwin.dylib */; };
+		B7A30753925EAA9FEC23D93F /* libaura_posix.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BA36D6E467C943B9E5AA2CF7 /* libaura_posix.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A865E7129928AC50042465F /* PBXContainerItemProxy */ = {
+		9210C8A105FF74E8F5141282 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865E6B29928AC50042465F /* aura_posix.xcodeproj */;
+			containerPortal = 0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = A1CFD778154F5EAA007447E2;
+			remoteGlobalIDString = D7E95DD7986DF59F61489478;
 			remoteInfo = aura_posix;
 		};
-		9A865E7329928AC50042465F /* PBXContainerItemProxy */ = {
+		F7725436A493AE9BFAA710A3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865E6B29928AC50042465F /* aura_posix.xcodeproj */;
+			containerPortal = 0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 07B657B8190F3CBF002DAADE;
+			remoteGlobalIDString = E171E4550A9D2EA9490C7586;
 			remoteInfo = ios_aura_posix;
 		};
-		9A865E7529928AC50042465F /* PBXContainerItemProxy */ = {
+		E6D91F0E0F2FEDC977EF0850 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865E6B29928AC50042465F /* aura_posix.xcodeproj */;
+			containerPortal = 0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 07B657C7190F3CBF002DAADE;
+			remoteGlobalIDString = 19586CBE9358EE1B18F4313C;
 			remoteInfo = music_midi_core_audio_iosTests;
 		};
-		9A865EA929928B090042465F /* PBXContainerItemProxy */ = {
+		5898F5BA1323291E8BACBF43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865E6B29928AC50042465F /* aura_posix.xcodeproj */;
+			containerPortal = 0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = A1CFD777154F5EAA007447E2;
+			remoteGlobalIDString = 0BBFD0780D444446F80BA21C;
 			remoteInfo = aura_posix;
 		};
-		9A865EAF29928B2B0042465F /* PBXContainerItemProxy */ = {
+		934B666548D4EF7CC492358F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865EAB29928B2B0042465F /* apex_darwin.xcodeproj */;
+			containerPortal = 1F4603BBBD19DCD2BF20F383 /* apex_darwin.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 9AFD808F297B57C400BAD9DD;
+			remoteGlobalIDString = FE0E459F89B57C29CBA098A3;
 			remoteInfo = apex_darwin;
 		};
-		9A865EB129928B3B0042465F /* PBXContainerItemProxy */ = {
+		6A08FF8016708CB076970A88 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 9A865EAB29928B2B0042465F /* apex_darwin.xcodeproj */;
+			containerPortal = 1F4603BBBD19DCD2BF20F383 /* apex_darwin.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 9AFD808E297B57C400BAD9DD;
+			remoteGlobalIDString = 070EFF21CD2E6AA68412D6B3;
 			remoteInfo = apex_darwin;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9A865E6B29928AC50042465F /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../operating_system-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = SOURCE_ROOT; };
-		9A865E8229928AD10042465F /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
-		9A865E8529928AD10042465F /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
-		9A865E8A29928AD10042465F /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
-		9A865E8C29928AD10042465F /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
-		9A865E8E29928AD10042465F /* user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
-		9A865E8F29928AD10042465F /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
-		9A865EA129928AD10042465F /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
-		9A865EA629928AD10042465F /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
-		9A865EA829928AD10042465F /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
-		9A865EAB29928B2B0042465F /* apex_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_darwin.xcodeproj; path = ../apex_darwin/apex_darwin.xcodeproj; sourceTree = SOURCE_ROOT; };
-		9A865EC829928E4E0042465F /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A865ECA29928E520042465F /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A865ECC29928E580042465F /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A865EE1299296310042465F /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9A865EE32992964B0042465F /* libapex_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
-		9AFD809F297B57D500BAD9DD /* lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; name = lib.dylib; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = aura_posix.xcodeproj; path = "../../operating_system-posix/aura_posix/aura_posix.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		7CE3C4592D8CBFBB335820C9 /* framework.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = framework.cpp; sourceTree = "<group>"; };
+		E33AF3186B449E43AB560734 /* node.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = node.cpp; sourceTree = "<group>"; };
+		35FF6D82A4328CBDE7BFE0E9 /* node.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = node.h; sourceTree = "<group>"; };
+		BE730D9A26AF1B48B653B453 /* _.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _.cpp; sourceTree = "<group>"; };
+		34A0C1491DC096EDA56B33B7 /* user.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = user.h; sourceTree = "<group>"; };
+		6A5CA278AE47E2C603F2BD8F /* resource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = resource.h; sourceTree = "<group>"; };
+		29D441175D1A368ED9259038 /* framework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = framework.h; sourceTree = "<group>"; };
+		F7774ED43E024E9C1504B9B0 /* _factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _factory.cpp; sourceTree = "<group>"; };
+		81FF0C3A95874E58D5F92D36 /* _.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _.h; sourceTree = "<group>"; };
+		1F4603BBBD19DCD2BF20F383 /* apex_darwin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = apex_darwin.xcodeproj; path = ../apex_darwin/apex_darwin.xcodeproj; sourceTree = SOURCE_ROOT; };
+		0B9037E2E7709D5B7C923B5E /* libacme.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4B0BD8F4F87EF5DE3E8D064 /* libapex.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		96E4A36867FF539AA2275861 /* libaura.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libaura.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8AD6C322BF73E3098B96CCB /* libacme_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libacme_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F02576263743B9361329879 /* libapex_posix.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = libapex_posix.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		24AA0C53D6417CE72184FBCA /* lib.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; name = lib.dylib; path = libaura_darwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9AFD809D297B57D500BAD9DD /* Frameworks */ = {
+		417E273FDE258B8184F819E7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A865EE6299296730042465F /* libaura_posix.dylib in Frameworks */,
-				9A865EE52992966B0042465F /* libapex_darwin.dylib in Frameworks */,
-				9A865EE42992964B0042465F /* libapex_posix.dylib in Frameworks */,
-				9A865EE2299296310042465F /* libacme_posix.dylib in Frameworks */,
-				9A865ECD29928E580042465F /* libaura.dylib in Frameworks */,
-				9A865ECB29928E520042465F /* libapex.dylib in Frameworks */,
-				9A865EC929928E4E0042465F /* libacme.dylib in Frameworks */,
+				B7A30753925EAA9FEC23D93F /* libaura_posix.dylib in Frameworks */,
+				C123748AA6C05A5EA590F6AF /* libapex_darwin.dylib in Frameworks */,
+				F31D76F070A4D2DD83FEFBC2 /* libapex_posix.dylib in Frameworks */,
+				CA9CC60461EDCA53B0486BCC /* libacme_posix.dylib in Frameworks */,
+				CAC636648E461AE773F187C3 /* libaura.dylib in Frameworks */,
+				D1D4879E84D425AFB543B8C4 /* libapex.dylib in Frameworks */,
+				C3DD4311A191AEF551FC461A /* libacme.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9A865E6C29928AC50042465F /* Products */ = {
+		A00561CF45CA4B8D3A3D541B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A865E7229928AC50042465F /* libaura_posix.dylib */,
-				9A865E7429928AC50042465F /* libios_aura_posix.a */,
-				9A865E7629928AC50042465F /* music_midi_core_audio_iosTests.xctest */,
+				BA36D6E467C943B9E5AA2CF7 /* libaura_posix.dylib */,
+				47822D3702769FC9DBE22CA0 /* libios_aura_posix.a */,
+				CC0793C6031E0F0C30049E01 /* music_midi_core_audio_iosTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A865E7729928AD10042465F /* aura_darwin */ = {
+		60C74DB70380FADAA924212B /* aura_darwin */ = {
 			isa = PBXGroup;
 			children = (
-				9A865E8C29928AD10042465F /* _.cpp */,
-				9A865EA829928AD10042465F /* _.h */,
-				9A865EA629928AD10042465F /* _factory.cpp */,
-				9A865E8229928AD10042465F /* framework.cpp */,
-				9A865EA129928AD10042465F /* framework.h */,
-				9A865E8529928AD10042465F /* node.cpp */,
-				9A865E8A29928AD10042465F /* node.h */,
-				9A865E8F29928AD10042465F /* resource.h */,
-				9A865E8E29928AD10042465F /* user.h */,
+				BE730D9A26AF1B48B653B453 /* _.cpp */,
+				81FF0C3A95874E58D5F92D36 /* _.h */,
+				F7774ED43E024E9C1504B9B0 /* _factory.cpp */,
+				7CE3C4592D8CBFBB335820C9 /* framework.cpp */,
+				29D441175D1A368ED9259038 /* framework.h */,
+				E33AF3186B449E43AB560734 /* node.cpp */,
+				35FF6D82A4328CBDE7BFE0E9 /* node.h */,
+				6A5CA278AE47E2C603F2BD8F /* resource.h */,
+				34A0C1491DC096EDA56B33B7 /* user.h */,
 			);
 			name = aura_darwin;
 			sourceTree = "<group>";
 		};
-		9A865EAC29928B2B0042465F /* Products */ = {
+		A376656864DF01681048370D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9A865EB029928B2B0042465F /* libapex_darwin.dylib */,
+				FE6CAC56ECC7DE406F12EF0D /* libapex_darwin.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9A865EC729928E4E0042465F /* Frameworks */ = {
+		50A0D153B2D11E50DD49F592 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9A865EE32992964B0042465F /* libapex_posix.dylib */,
-				9A865EE1299296310042465F /* libacme_posix.dylib */,
-				9A865ECC29928E580042465F /* libaura.dylib */,
-				9A865ECA29928E520042465F /* libapex.dylib */,
-				9A865EC829928E4E0042465F /* libacme.dylib */,
+				5F02576263743B9361329879 /* libapex_posix.dylib */,
+				B8AD6C322BF73E3098B96CCB /* libacme_posix.dylib */,
+				96E4A36867FF539AA2275861 /* libaura.dylib */,
+				F4B0BD8F4F87EF5DE3E8D064 /* libapex.dylib */,
+				0B9037E2E7709D5B7C923B5E /* libacme.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		9AFD8096297B57D500BAD9DD = {
+		5BA90C718F795591EDA45CA4 = {
 			isa = PBXGroup;
 			children = (
-				9A865E6B29928AC50042465F /* aura_posix.xcodeproj */,
-				9A865EAB29928B2B0042465F /* apex_darwin.xcodeproj */,
-				9A865E7729928AD10042465F /* aura_darwin */,
-				9AFD80A0297B57D500BAD9DD /* Products */,
-				9A865EC729928E4E0042465F /* Frameworks */,
+				0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */,
+				1F4603BBBD19DCD2BF20F383 /* apex_darwin.xcodeproj */,
+				60C74DB70380FADAA924212B /* aura_darwin */,
+				80F8AE5A2F91EC7CB31A9672 /* Products */,
+				50A0D153B2D11E50DD49F592 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		9AFD80A0297B57D500BAD9DD /* Products */ = {
+		80F8AE5A2F91EC7CB31A9672 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9AFD809F297B57D500BAD9DD /* lib.dylib */,
+				24AA0C53D6417CE72184FBCA /* lib.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		9AFD809B297B57D500BAD9DD /* Headers */ = {
+		01125A45981A8E32ADB84887 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -179,40 +179,40 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		9AFD809E297B57D500BAD9DD /* aura_darwin */ = {
+		F1EEAF3F08927094605C952C /* aura_darwin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9AFD80A3297B57D500BAD9DD /* Build configuration list for PBXNativeTarget "aura_darwin" */;
+			buildConfigurationList = 834DB43A619554689BE3934D /* Build configuration list for PBXNativeTarget "aura_darwin" */;
 			buildPhases = (
-				9AFD809B297B57D500BAD9DD /* Headers */,
-				9AFD809C297B57D500BAD9DD /* Sources */,
-				9AFD809D297B57D500BAD9DD /* Frameworks */,
+				01125A45981A8E32ADB84887 /* Headers */,
+				C8737FB33F1D14379DD859D2 /* Sources */,
+				417E273FDE258B8184F819E7 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9A865EB229928B3B0042465F /* PBXTargetDependency */,
-				9A865EAA29928B090042465F /* PBXTargetDependency */,
+				ADC9110D340DEFB7DD41E19D /* PBXTargetDependency */,
+				6077EB9AA3988A06F7D134F5 /* PBXTargetDependency */,
 			);
 			name = aura_darwin;
 			productName = aura_darwin;
-			productReference = 9AFD809F297B57D500BAD9DD /* lib.dylib */;
+			productReference = 24AA0C53D6417CE72184FBCA /* lib.dylib */;
 			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9AFD8097297B57D500BAD9DD /* Project object */ = {
+		B3026D282A0F397D42E25B49 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					9AFD809E297B57D500BAD9DD = {
+					F1EEAF3F08927094605C952C = {
 						CreatedOnToolsVersion = 14.2;
 					};
 				};
 			};
-			buildConfigurationList = 9AFD809A297B57D500BAD9DD /* Build configuration list for PBXProject "aura_darwin" */;
+			buildConfigurationList = 70D4BABE0B93EB5242BDCE48 /* Build configuration list for PBXProject "aura_darwin" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -220,84 +220,84 @@
 				en,
 				Base,
 			);
-			mainGroup = 9AFD8096297B57D500BAD9DD;
-			productRefGroup = 9AFD80A0297B57D500BAD9DD /* Products */;
+			mainGroup = 5BA90C718F795591EDA45CA4;
+			productRefGroup = 80F8AE5A2F91EC7CB31A9672 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A865EAC29928B2B0042465F /* Products */;
-					ProjectRef = 9A865EAB29928B2B0042465F /* apex_darwin.xcodeproj */;
+					ProductGroup = A376656864DF01681048370D /* Products */;
+					ProjectRef = 1F4603BBBD19DCD2BF20F383 /* apex_darwin.xcodeproj */;
 				},
 				{
-					ProductGroup = 9A865E6C29928AC50042465F /* Products */;
-					ProjectRef = 9A865E6B29928AC50042465F /* aura_posix.xcodeproj */;
+					ProductGroup = A00561CF45CA4B8D3A3D541B /* Products */;
+					ProjectRef = 0ED7CE15E51B76D25CB56A2D /* aura_posix.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				9AFD809E297B57D500BAD9DD /* aura_darwin */,
+				F1EEAF3F08927094605C952C /* aura_darwin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A865E7229928AC50042465F /* libaura_posix.dylib */ = {
+		BA36D6E467C943B9E5AA2CF7 /* libaura_posix.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libaura_posix.dylib;
-			remoteRef = 9A865E7129928AC50042465F /* PBXContainerItemProxy */;
+			remoteRef = 9210C8A105FF74E8F5141282 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A865E7429928AC50042465F /* libios_aura_posix.a */ = {
+		47822D3702769FC9DBE22CA0 /* libios_aura_posix.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
 			path = libios_aura_posix.a;
-			remoteRef = 9A865E7329928AC50042465F /* PBXContainerItemProxy */;
+			remoteRef = F7725436A493AE9BFAA710A3 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A865E7629928AC50042465F /* music_midi_core_audio_iosTests.xctest */ = {
+		CC0793C6031E0F0C30049E01 /* music_midi_core_audio_iosTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = music_midi_core_audio_iosTests.xctest;
-			remoteRef = 9A865E7529928AC50042465F /* PBXContainerItemProxy */;
+			remoteRef = E6D91F0E0F2FEDC977EF0850 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		9A865EB029928B2B0042465F /* libapex_darwin.dylib */ = {
+		FE6CAC56ECC7DE406F12EF0D /* libapex_darwin.dylib */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.dylib";
 			path = libapex_darwin.dylib;
-			remoteRef = 9A865EAF29928B2B0042465F /* PBXContainerItemProxy */;
+			remoteRef = 934B666548D4EF7CC492358F /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9AFD809C297B57D500BAD9DD /* Sources */ = {
+		C8737FB33F1D14379DD859D2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A865EC129928BA90042465F /* _factory.cpp in Sources */,
-				9A865EC029928BA40042465F /* node.cpp in Sources */,
+				4AED7B0EBF9BF222107DE152 /* _factory.cpp in Sources */,
+				F7C60665A25884D1A8AE95DB /* node.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9A865EAA29928B090042465F /* PBXTargetDependency */ = {
+		6077EB9AA3988A06F7D134F5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = aura_posix;
-			targetProxy = 9A865EA929928B090042465F /* PBXContainerItemProxy */;
+			targetProxy = 5898F5BA1323291E8BACBF43 /* PBXContainerItemProxy */;
 		};
-		9A865EB229928B3B0042465F /* PBXTargetDependency */ = {
+		ADC9110D340DEFB7DD41E19D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = apex_darwin;
-			targetProxy = 9A865EB129928B3B0042465F /* PBXContainerItemProxy */;
+			targetProxy = 6A08FF8016708CB076970A88 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		9AFD80A1297B57D500BAD9DD /* Debug */ = {
+		8CC76B5983B0C2E626B029FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -391,7 +391,7 @@
 			};
 			name = Debug;
 		};
-		9AFD80A2297B57D500BAD9DD /* Release */ = {
+		4AB49D94A360A6202926A507 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -480,7 +480,7 @@
 			};
 			name = Release;
 		};
-		9AFD80A4297B57D500BAD9DD /* Debug */ = {
+		A3051D3DC4D1164CEBFD4F9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
@@ -488,7 +488,7 @@
 			};
 			name = Debug;
 		};
-		9AFD80A5297B57D500BAD9DD /* Release */ = {
+		BEF6D9650E99949F652D14D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				EXECUTABLE_PREFIX = lib;
@@ -499,25 +499,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9AFD809A297B57D500BAD9DD /* Build configuration list for PBXProject "aura_darwin" */ = {
+		70D4BABE0B93EB5242BDCE48 /* Build configuration list for PBXProject "aura_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AFD80A1297B57D500BAD9DD /* Debug */,
-				9AFD80A2297B57D500BAD9DD /* Release */,
+				8CC76B5983B0C2E626B029FF /* Debug */,
+				4AB49D94A360A6202926A507 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9AFD80A3297B57D500BAD9DD /* Build configuration list for PBXNativeTarget "aura_darwin" */ = {
+		834DB43A619554689BE3934D /* Build configuration list for PBXNativeTarget "aura_darwin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9AFD80A4297B57D500BAD9DD /* Debug */,
-				9AFD80A5297B57D500BAD9DD /* Release */,
+				A3051D3DC4D1164CEBFD4F9F /* Debug */,
+				BEF6D9650E99949F652D14D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9AFD8097297B57D500BAD9DD /* Project object */;
+	rootObject = B3026D282A0F397D42E25B49 /* Project object */;
 }

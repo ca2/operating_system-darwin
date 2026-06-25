@@ -27,7 +27,7 @@
 
 const char * arp_a(
     void * p,
-    void(*callback)(void * p, ::u32 uIp, const char * status))
+    void(*callback)(void * p, unsigned int uIp, const char * status))
 {
     struct ifaddrs *ifaddr = nullptr;
 
@@ -47,7 +47,7 @@ const char * arp_a(
 
         auto *sin = (struct sockaddr_in *)ifa->ifa_addr;
 
-        ::u32 ip = sin->sin_addr.s_addr;
+        unsigned int ip = sin->sin_addr.s_addr;
 
         // iOS cannot expose ARP / MAC info
         callback(p, ip, "local-interface (ARP unavailable on iOS)");
