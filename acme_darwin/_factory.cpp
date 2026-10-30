@@ -29,7 +29,7 @@ IMPLEMENT_FACTORY(acme_darwin)
 //   pfactory->add_factory_item < ::acme_posix::exception_translator   , ::exception_translator >();
 //
 //
-//   pfactory->add_factory_item < ::acme_posix::mutex                  , ::mutex >();
+//   pfactory->add_factory_item < ::acme_posix::mutex                  , ::parallelization::mutex >();
 
 }
 

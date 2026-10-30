@@ -384,7 +384,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::pointer < ::mutex > node::create_local_named_mutex(::particle * pparticleContext, bool bInitialOwner, const ::string & strName, security_attributes * psecurityattributes)
+//   ::pointer < ::parallelization::mutex > node::create_local_named_mutex(::particle * pparticleContext, bool bInitialOwner, const ::string & strName, security_attributes * psecurityattributes)
 //   {
 //
 //      return __new(mutex(pparticleContext, bInitialOwner, "Local\\" + strName));
@@ -392,7 +392,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::pointer < ::mutex > node::create_global_named_mutex(::particle * pparticleContext, bool bInitialOwner, const ::string & strName, security_attributes * psecurityattributes)
+//   ::pointer < ::parallelization::mutex > node::create_global_named_mutex(::particle * pparticleContext, bool bInitialOwner, const ::string & strName, security_attributes * psecurityattributes)
 //   {
 //
 //      return __new(mutex(pparticleContext, bInitialOwner, "Global\\" + strName));
@@ -401,7 +401,7 @@ namespace acme_darwin
 //
 //
 //
-//   ::pointer<::mutex>node::open_named_mutex(::particle * pparticle, const char * lpszName)
+//   ::pointer<::parallelization::mutex>node::open_named_mutex(::particle * pparticle, const char * lpszName)
 //{
 //
 //#ifdef WINDOWS
@@ -552,7 +552,7 @@ namespace acme_darwin
 //}
 //
 //
-//   ::pointer < ::mutex > node::open_local_named_mutex(::particle * pparticleContext, const ::string & strName)
+//   ::pointer < ::parallelization::mutex > node::open_local_named_mutex(::particle * pparticleContext, const ::string & strName)
 //   {
 //
 //      return open_named_mutex(pparticleContext, "Local/" + strName);
@@ -560,7 +560,7 @@ namespace acme_darwin
 //   }
 //
 //
-//   ::pointer < ::mutex > node::open_global_named_mutex(::particle * pparticleContext, const ::string & strName)
+//   ::pointer < ::parallelization::mutex > node::open_global_named_mutex(::particle * pparticleContext, const ::string & strName)
 //   {
 //
 //      return open_named_mutex(pparticleContext, "Global/" + strName);

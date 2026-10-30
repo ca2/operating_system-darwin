@@ -64,13 +64,13 @@ namespace acme_darwin
 //      atom_array get_pids() override;
 //
 //
-//      ::pointer < ::mutex > create_local_named_mutex(::particle * pparticleContext, bool bInitiallyOwned, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
-//      ::pointer < ::mutex > create_global_named_mutex(::particle * pparticleContext, bool bInitiallyOwned, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
+//      ::pointer < ::parallelization::mutex > create_local_named_mutex(::particle * pparticleContext, bool bInitiallyOwned, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
+//      ::pointer < ::parallelization::mutex > create_global_named_mutex(::particle * pparticleContext, bool bInitiallyOwned, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
 //
-//      ::pointer<::mutex> open_named_mutex(::particle * pparticle, const char * lpszName);
+//      ::pointer<::parallelization::mutex> open_named_mutex(::particle * pparticle, const char * lpszName);
 //
-//      ::pointer < ::mutex > open_local_named_mutex(::particle * pparticleContext, const ::string & strName) override;
-//      ::pointer < ::mutex > open_global_named_mutex(::particle * pparticleContext, const ::string & strName) override;
+//      ::pointer < ::parallelization::mutex > open_local_named_mutex(::particle * pparticleContext, const ::string & strName) override;
+//      ::pointer < ::parallelization::mutex > open_global_named_mutex(::particle * pparticleContext, const ::string & strName) override;
 //
 //      ::pointer < ::acme::exclusive > get_exclusive(::particle * pparticleContext, const ::string & strName, security_attributes * psecurityattributes = nullptr) override;
 //

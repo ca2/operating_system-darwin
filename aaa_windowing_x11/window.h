@@ -53,7 +53,7 @@ namespace windowing_x11
       int                                          m_iaNetWmState2[::x11::e_atom_net_wm_state_last-::x11::e_atom_net_wm_state_first+1];
       ::i32_point                                  m_pointCursor;
       //static oswindow_dataptra *                 s_pdataptra;
-      //static::pointer< ::mutex >                            s_pmutex;
+      //static::pointer< ::parallelization::mutex >                            s_pmutex;
 
       //static Atom                                s_atomLongType;
       //static Atom                                s_atomLongStyle;

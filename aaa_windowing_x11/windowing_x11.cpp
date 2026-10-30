@@ -40,7 +40,7 @@
 //bool x11_runnable_step();
 
 
-//::pointer< ::mutex > g_pmutexX11Runnable = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexX11Runnable = nullptr;
 //list < ::pointer<::matter >>* g_prunnableptrlX11 = nullptr;
 
 
@@ -156,9 +156,9 @@ bool is_space_key(XIRawEvent *event)
 
 
 // Tutor Exilius Q(t)List streaming contribution
-//::pointer< ::mutex > g_pmutexX11Runnable = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexX11Runnable = nullptr;
 //list < ::pointer<::matter >>* g_prunnableptrlX11 = nullptr;
-//::pointer< ::mutex > g_pmutexX11Sync = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexX11Sync = nullptr;
 //manual_reset_happening * g_peventX11Sync = nullptr;
 //::pointer<::matter>g_prunnableX11Sync;
 Window g_windowX11Client = 0;
@@ -168,9 +168,9 @@ Window g_windowX11Client = 0;
 int_bool _x11_get_cursor_pos(Display * d, INT_POINT * ppointCursor);
 
 
-//extern ::pointer< ::mutex >g_pmutexX11Runnable;
+//extern ::pointer< ::parallelization::mutex >g_pmutexX11Runnable;
 //extern list<::pointer<::matter >>*g_prunnableptrlX11;
-//extern ::pointer< ::mutex >g_pmutexX11Sync;
+//extern ::pointer< ::parallelization::mutex >g_pmutexX11Sync;
 //extern manual_reset_happening *g_peventX11Sync;
 //extern ::pointer<::matter>g_prunnableX11Sync;
 
@@ -3041,21 +3041,21 @@ else if(detail == 3)
 //
 //      //acme_defer_os_init_windowing();
 //
-//      //g_pmutexX11Runnable = memory_new ::pointer < ::mutex >();
+//      //g_pmutexX11Runnable = memory_new ::pointer < ::parallelization::mutex >();
 //
 //      //g_prunnableptrlX11 = memory_new list<::pointer<::matter >>);
 //
-////      g_pmutexX11Sync = memory_new ::pointer < ::mutex >();
+////      g_pmutexX11Sync = memory_new ::pointer < ::parallelization::mutex >();
 //
 ////      g_peventX11Sync = memory_new manual_reset_happening();
 //
 //      //oswindow_data::s_pdataptra = memory_new oswindow_dataptra;
 //
-//      //oswindow_data::s_pmutex = memory_new ::pointer < ::mutex >;
+//      //oswindow_data::s_pmutex = memory_new ::pointer < ::parallelization::mutex >;
 //
 //      //osdisplay_data::s_pdataptra = memory_new osdisplay_dataptra;
 //
-//      //osdisplay_data::s_pmutex = memory_new ::pointer < ::mutex >;
+//      //osdisplay_data::s_pmutex = memory_new ::pointer < ::parallelization::mutex >;
 //
 //      //return true;
 //
@@ -3747,7 +3747,7 @@ bool x11_get_window_rect(Display * d, Window window, INT_RECTANGLE * prectangle)
 
    XSetErrorHandler(_c_XErrorHandler);
 
-   //g_pmutexX11 = memory_new ::pointer < ::mutex >();
+   //g_pmutexX11 = memory_new ::pointer < ::parallelization::mutex >();
 
    return ::success;
 

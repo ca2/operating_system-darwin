@@ -140,9 +140,9 @@ CLASS_DECL_AURA void update_application_session_cursor(void * pvoidApp, const i3
 
 
 // Tutor Exilius Q(t)List streaming contribution
-//::pointer< ::mutex > g_pmutexXcbRunnable = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexXcbRunnable = nullptr;
 //list < ::pointer<::matter >>* g_prunnableptrlXcb = nullptr;
-//::pointer< ::mutex > g_pmutexXcbSync = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexXcbSync = nullptr;
 //manual_reset_happening * g_peventXcbSync = nullptr;
 //::pointer<::matter>g_prunnableXcbSync;
 xcb_window_t g_windowXcbClient = 0;
@@ -152,9 +152,9 @@ xcb_window_t g_windowXcbClient = 0;
 int_bool _xcb_get_cursor_pos(xcb_connection_t * d, INT_POINT * ppointCursor);
 
 
-//extern ::pointer< ::mutex >g_pmutexXcbRunnable;
+//extern ::pointer< ::parallelization::mutex >g_pmutexXcbRunnable;
 //extern list<::pointer<::matter >>*g_prunnableptrlXcb;
-//extern ::pointer< ::mutex >g_pmutexXcbSync;
+//extern ::pointer< ::parallelization::mutex >g_pmutexXcbSync;
 //extern manual_reset_happening *g_peventXcbSync;
 //extern ::pointer<::matter>g_prunnableXcbSync;
 
@@ -722,21 +722,21 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
    bool windowing::initialize_windowing()
    {
 
-      //g_pmutexXcbRunnable = memory_new ::pointer < ::mutex >();
+      //g_pmutexXcbRunnable = memory_new ::pointer < ::parallelization::mutex >();
 
       //g_prunnableptrlXcb = memory_new list<::pointer<::matter >>);
 
-//      g_pmutexXcbSync = memory_new ::pointer < ::mutex >();
+//      g_pmutexXcbSync = memory_new ::pointer < ::parallelization::mutex >();
 
 //      g_peventXcbSync = memory_new manual_reset_happening();
 
       //oswindow_data::s_pdataptra = memory_new oswindow_dataptra;
 
-      //oswindow_data::s_pmutex = memory_new ::pointer < ::mutex >;
+      //oswindow_data::s_pmutex = memory_new ::pointer < ::parallelization::mutex >;
 
       //osdisplay_data::s_pdataptra = memory_new osdisplay_dataptra;
 
-      //osdisplay_data::s_pmutex = memory_new ::pointer < ::mutex >;
+      //osdisplay_data::s_pmutex = memory_new ::pointer < ::parallelization::mutex >;
 
       return true;
 
@@ -1407,7 +1407,7 @@ Retrieved from: http://en.literateprograms.org/Hello_World_(C,_Cairo)?oldid=1038
 //::e_status initialize_xcb();
 //
 //
-//::pointer< ::mutex > g_pmutexXcb = nullptr;
+//::pointer< ::parallelization::mutex > g_pmutexXcb = nullptr;
 //
 //
 //::e_status g_estatusInitializeXcb = error_not_initialized;

@@ -24,7 +24,7 @@ namespace windowing_x11
    public:
 
 
-      //::pointer < ::mutex >                         m_pmutexPixmap;
+      //::pointer < ::parallelization::mutex >                         m_pmutexPixmap;
       //pixmap                        m_pixmap;
       GC                            m_gc;
       //memory                        m_mem;
